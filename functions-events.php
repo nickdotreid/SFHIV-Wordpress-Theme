@@ -40,33 +40,5 @@ function sfhiv_add_event_filter(){
 	endif;
 }
 
-add_action('get_sidebar','sfhiv_add_event_groups',30);
-function sfhiv_add_event_groups(){
-	$archive_type = mini_archive_on_page(get_the_ID());
-	if(is_page() && $archive_type && $archive_type=='event'):
-		$events = mini_archive_get_query();
-		$event_ids = array();
-		foreach($events->posts as $event){
-			array_push($event_ids,$event->ID);
-		}
-		
-		$groups = new WP_Query( array(
-		  'connected_type' => 'group_events',
-		  'connected_items' => implode(",",$event_ids),
-		  'nopaging' => true,
-		));
-		?>
-		<nav>
-			<ul class="menu filters events">
-				<li class="menu-item"><a class="filter default" type="group" value="all" href="#all"><?_e("All Groups");?></a>
-				<?	foreach($groups->posts as $group):	?>
-				<li class="menu-item"><a class="filter" type="group" value="<?=$group->ID;?>" href="#group-<?=$group->ID;?>"><?=$group->post_title;?></a></li>
-				<?	endforeach;	?>
-			</ul>
-		</nav>
-		<?
-	endif;
-}
-
 
 ?>
