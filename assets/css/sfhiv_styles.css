@@ -71,7 +71,7 @@ a, a:visited {
   margin: 0px;
   padding: 0px;
 }
-.menu .menu-item {
+.menu li {
   list-style-type: none;
 }
 .date_mix.date {
@@ -166,7 +166,7 @@ a, a:visited {
   margin: 0px;
   padding: 0px;
 }
-#access .menu .menu-item {
+#access .menu li {
   list-style-type: none;
 }
 #access .menu .menu-item {
@@ -236,7 +236,7 @@ a, a:visited {
   margin: 0px;
   padding: 0px;
 }
-.sidebar .menu .menu-item {
+.sidebar .menu li {
   list-style-type: none;
 }
 .sidebar .menu a, .sidebar .menu a:visited, .sidebar .menu a:hover {
@@ -371,7 +371,7 @@ a, a:visited {
   margin: 0px;
   padding: 0px;
 }
-.footer .menu .menu-item {
+.footer .menu li {
   list-style-type: none;
 }
 .footer .menu .menu-item {
