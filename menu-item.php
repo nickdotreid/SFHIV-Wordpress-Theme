@@ -1,0 +1,1 @@
+<li><a href="<?the_permalink();?>" class="menu-item" group-id="<?the_ID();?>" slug="<?=$post->post_name;?>" ><?the_title();?></a></li>

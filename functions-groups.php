@@ -1,0 +1,96 @@
+<?php
+
+add_action('wp_head','sfhiv_groups_add_scripts',16);
+function sfhiv_groups_add_scripts(){
+	?>
+	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/groups.js"></script>
+	<?
+}
+
+add_action('get_footer','sfhiv_add_group_members_list',5);
+function sfhiv_add_group_members_list(){
+	if(!is_singular( array( 'group' ))):
+		return true;
+	endif;
+	$users = get_users( array(
+	  'connected_type' => 'group_members',
+	  'connected_items' => get_the_ID(),
+	));
+	if(count($users)>0):
+	?>
+	<aside id="members" class="list">
+		<h2>Members</h2>
+		<?	foreach($users as $user):
+				include(locate_template('list-member.php'));
+		endforeach; ?>
+	</aside>
+	<?
+	endif;
+}
+
+add_action('get_footer','sfhiv_add_group_events_list',5);
+function sfhiv_add_group_events_list(){
+	if(!is_singular(array('group'))){
+		return true;
+	}
+	$events = new WP_Query( array(
+		'connected_type' => 'group_events',
+		'connected_items' => get_the_ID(),
+	));
+	if($events->have_posts()):
+	?>
+	<aside id="meetings" class="list">
+		<h2>Meetings</h2>
+		<?
+		while($events->have_posts()): $events->the_post();
+			get_template_part('list','event');
+		endwhile;
+		wp_reset_postdata();
+		?>
+	</aside>
+	<?	endif;
+}
+
+add_action('get_sidebar','sfhiv_add_mini_archive_group_sidebar',25);
+function sfhiv_add_mini_archive_group_sidebar(){
+	if(is_page()){
+		$archive_type = mini_archive_on_page(get_the_ID());
+		if($archive_type){
+			$query = mini_archive_get_query(get_the_ID());
+			$groups = sfhiv_get_groups_in($query);
+			$query = new WP_Query( array( 'post__in' => $groups, 'post_type'=>'group' ) );
+			if($query->post_count > 0):
+				?><nav><ul class="menu groups filters"><?
+				if($query->post_count > 1){
+					?><li class="" slug=""><a href="" slug="">All Groups</a></li><?
+				}
+				while($query->have_posts()):
+					$query->the_post();
+					get_template_part('menu-item','group');
+				endwhile;
+				?></ul></nav><?
+			endif;
+			wp_reset_postdata();
+		}
+	}
+}
+
+function sfhiv_get_groups_in($query){
+	$groups = array();
+	foreach($query->posts as $post){
+		$post_groups = new WP_Query( array(
+			'connected_type' => 'group_events',
+			'connected_items' => $post->ID,
+		));
+		foreach($post_groups as $group){
+			if(isset($group->ID)){
+				if(!in_array($group->ID,$groups)){
+					array_push($groups,$group->ID);
+				}
+			}
+		}
+	}
+	return $groups;
+}
+
+?>

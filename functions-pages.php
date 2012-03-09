@@ -1,0 +1,57 @@
+<?
+add_action('get_sidebar','sfhiv_add_page_navigation',20);
+function sfhiv_add_page_navigation(){
+	if(is_page()){
+		?><nav><?
+		$children = get_pages(array(
+			"parent"=>get_the_ID(),
+			"hierarchical" => 0,
+			));
+		$children_IDs = array();
+		foreach($children as $child){
+			array_push($children_IDs,$child->ID);
+		}
+		$children_IDs = implode(",",$children_IDs);
+		$parents = get_ancestors(get_the_ID(),'page');
+		$parent_IDs = implode(",",$parents);
+		$page_IDs = $parent_IDs.",".$children_IDs.",".get_the_ID();
+		if(count($parents)>0){
+			$parent_ID = $parents[0];
+			$sibling_IDs = array();
+			$siblings = get_pages(array(
+				"parent"=>$parent_ID,
+				"hierarchical" => 0,
+			));
+			foreach($siblings as $sibling){
+				array_push($sibling_IDs,$sibling->ID);
+			}
+			$page_IDs .= ",".implode(",",$sibling_IDs);
+		}
+		wp_page_menu(array( 
+			'show_home' => false,
+			'sort_column' => 'menu_order',
+			'include' => $page_IDs,
+			));
+		?></nav><?
+	}
+}
+
+add_action('sfhiv-preview-menu','sfhiv_add_mini_archive_menu');
+function sfhiv_add_mini_archive_menu(){
+	$archive_type = mini_archive_on_page(get_the_ID());
+	if($archive_type):
+		$output_archive = false;
+		$archive_filters = mini_archive_get_filters();
+		if(!$output_archive):
+			$query = mini_archive_get_query(get_the_ID(),3);
+			?><nav><ul class="menu"><?
+			while($query && $query->have_posts()){
+				$query->the_post();
+				get_template_part( 'menu-item', $archive_type );
+			}
+			?></ul></nav><?
+		endif;
+	endif;
+}
+
+?>
