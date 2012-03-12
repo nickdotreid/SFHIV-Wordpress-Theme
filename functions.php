@@ -10,6 +10,8 @@ include_once('functions-groups.php');
 
 include_once('functions-years.php');
 
+include_once('functions-contact-user.php');
+
 add_action( 'init', 'sfhiv_create_group_type' );
 function sfhiv_create_group_type() {
 	register_post_type( 'group',
@@ -73,6 +75,12 @@ function sfhiv_connection_types() {
 	p2p_register_connection_type( array(
 		'name' => 'group_members',
 		'from' => 'group',
+		'to' => 'user'
+	) );
+	
+	p2p_register_connection_type( array(
+		'name' => 'contact_user',
+		'from' => array('group','event','page','post'),
 		'to' => 'user'
 	) );
 	
