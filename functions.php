@@ -22,6 +22,7 @@ function sfhiv_create_group_type() {
 		'has_archive' => true,
 		)
 	);
+	add_post_type_support( 'group', 'excerpt' );
 }
 
 add_action( 'init', 'sfhiv_create_group_categories' );
@@ -41,7 +42,7 @@ function sfhiv_create_group_categories() {
 
   register_taxonomy('group_category',array('group','event'),array(
     'hierarchical' => true,
-    'labels' => $labels
+    'labels' => $labels,
   ));
 }
 
@@ -79,6 +80,12 @@ function sfhiv_connection_types() {
 		'name' => 'group_events',
 		'from' => 'group',
 		'to' => 'event',
+	) );
+	
+	p2p_register_connection_type( array(
+		'name' => 'parent_page',
+		'from' => array('group','event'),
+		'to' => 'page',
 	) );
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
