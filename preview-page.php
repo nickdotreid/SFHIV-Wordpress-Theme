@@ -9,7 +9,7 @@
 		<h1 class="entry-title"><a href="<? the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
-		<? the_content(); ?>
+		<? the_excerpt(); ?>
 	</div><!-- .entry-content -->
 	<nav>
 	<?
