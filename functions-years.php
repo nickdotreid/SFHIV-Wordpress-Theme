@@ -45,6 +45,14 @@ function sfhiv_get_years_in($query,$fields=false){
 			}
 		}
 	}
+	if(!$fields){
+		usort($years,function($a,$b){
+			if($a->term_order > $b->term_order){
+				return 1;
+			}
+			return 0;
+		});
+	}
 	return $years;
 }
 
