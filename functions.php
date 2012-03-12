@@ -75,7 +75,14 @@ function sfhiv_connection_types() {
 	p2p_register_connection_type( array(
 		'name' => 'group_members',
 		'from' => 'group',
-		'to' => 'user'
+		'to' => 'user',
+		'fields' => array(
+				'title' => 'Title',
+				'incomplete' => array(
+					'title' => 'Incomplete',
+					'type' => 'checkbox'
+				),
+			)
 	) );
 	
 	p2p_register_connection_type( array(
