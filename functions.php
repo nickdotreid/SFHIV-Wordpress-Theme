@@ -113,4 +113,19 @@ add_action('get_sidebar','sfhiv_group_sidebar_end',20000);
 function sfhiv_group_sidebar_end(){
 	echo '</div><!-- .sidebar -->';
 }
+
+add_action('init','sfhiv_add_reports_type');
+function sfhiv_add_reports_type(){
+	register_post_type( 'report',
+		array(
+			'labels' => array(
+				'name' => __( 'Report' ),
+				'singular_name' => __( 'Report' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		)
+	);
+	add_post_type_support( 'report', 'excerpt' );
+}
 ?>
