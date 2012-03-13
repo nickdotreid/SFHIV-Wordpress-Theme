@@ -41,8 +41,8 @@ function sfhiv_services_hours_op_meta($post){
 	$minutes = array();
 	$num = 0;
 	while($num < 60){
-		$num += 15;
 		array_push($minutes,$num);
+		$num += 15;
 	}
 	$ampm = array('AM','PM');
 	
@@ -51,7 +51,13 @@ function sfhiv_services_hours_op_meta($post){
 		$days = explode(",",$days);	
 	}
 	$start = get_post_meta($post->ID, 'sfhiv_service_start',true);
-	$end = get_post_meta($post->ID, 'sfhiv_service_end');
+	$start_hour = date('g',$start);
+	$start_minute = date('i',$start);
+	$start_ampm = date('A',$start);
+	$end = get_post_meta($post->ID, 'sfhiv_service_end',true);
+	$end_hour = date('g',$end);
+	$end_minute = date('i',$end);
+	$end_ampm = date('A',$end);
 	$appointment = get_post_meta($post->ID, 'sfhiv_service_appointment');
 	
 	?>
@@ -68,21 +74,21 @@ function sfhiv_services_hours_op_meta($post){
 			<label>Hour
 				<select name="hours[start][hour]">
 				<?	foreach($hours as $hour):	?>
-					<option value="<?=$hour;?>"><?=$hour;?></option>
+					<option value="<?=$hour;?>" <?	if($hour==$start_hour){	echo 'selected="true"'; }	?>><?=$hour;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
 			<label>Minute
 				<select name="hours[start][minute]">
 				<?	foreach($minutes as $minute):	?>
-					<option value="<?=$minute;?>"><?=$minute;?></option>
+					<option value="<?=$minute;?>" <?	if($minute==$start_minute){	echo 'selected="true"'; }	?>><?=$minute;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
 			<label>
 				<select name="hours[start][ampm]">
 				<?	foreach($ampm as $time):	?>
-					<option value="<?=$time;?>"><?=$time;?></option>
+					<option value="<?=$time;?>" <?	if($time==$start_ampm){	echo 'selected="true"'; }	?>><?=$time;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
@@ -92,21 +98,21 @@ function sfhiv_services_hours_op_meta($post){
 			<label>Hour
 				<select name="hours[end][hour]">
 				<?	foreach($hours as $hour):	?>
-					<option value="<?=$hour;?>"><?=$hour;?></option>
+					<option value="<?=$hour;?>" <?	if($hour==$end_hour){	echo 'selected="true"'; }	?>><?=$hour;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
 			<label>Minute
 				<select name="hours[end][minute]">
 				<?	foreach($minutes as $minute):	?>
-					<option value="<?=$minute;?>"><?=$minute;?></option>
+					<option value="<?=$minute;?>" <?	if($minute==$end_minute){	echo 'selected="true"'; }	?>><?=$minute;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
 			<label>
 				<select name="hours[end][ampm]">
 				<?	foreach($ampm as $time):	?>
-					<option value="<?=$time;?>"><?=$time;?></option>
+					<option value="<?=$time;?>" <?	if($time==$end_ampm){	echo 'selected="true"'; }	?>><?=$time;?></option>
 				<?	endforeach;	?>
 				</select>
 			</label>
