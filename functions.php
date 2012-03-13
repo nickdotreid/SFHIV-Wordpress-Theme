@@ -98,6 +98,12 @@ function sfhiv_connection_types() {
 	) );
 	
 	p2p_register_connection_type( array(
+		'name' => 'group_services',
+		'from' => 'group',
+		'to' => 'service',
+	) );
+	
+	p2p_register_connection_type( array(
 		'name' => 'parent_page',
 		'from' => array('group','event'),
 		'to' => 'page',

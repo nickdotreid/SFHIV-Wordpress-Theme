@@ -50,7 +50,7 @@ function sfhiv_services_hours_op_meta($post){
 	if($days){
 		$days = explode(",",$days);	
 	}
-	$start = get_post_meta($post->ID, 'sfhiv_service_start');
+	$start = get_post_meta($post->ID, 'sfhiv_service_start',true);
 	$end = get_post_meta($post->ID, 'sfhiv_service_end');
 	$appointment = get_post_meta($post->ID, 'sfhiv_service_appointment');
 	
@@ -128,25 +128,35 @@ function sfhiv_service_hours_save($post_ID,$post){
 		$days = implode(",",$_POST['hours']['day_of_week']);
 		update_post_meta($post_ID, 'sfhiv_service_days', $days);
 	}
-	if(isset($_POST['hours']['start']) && 
-		isset($_POST['hours']['start']['hour']) &&
-		isset($_POST['hours']['start']['minute']) &&
-		isset($_POST['hours']['start']['ampm'])
-	){
-		$time = $_POST['hours']['start']['hour'].":".$_POST['hours']['start']['minute']." ".$_POST['hours']['start']['ampm'];
-		update_post_meta($post_ID, 'sfhiv_service_start', $time);
+	if(isset($_POST['hours']['start'])){
+		$seconds = sfhiv_service_post_to_seconds($_POST['hours']['start']);
+		update_post_meta($post_ID, 'sfhiv_service_start', $seconds);
 	}
-	if(isset($_POST['hours']['end']) && 
-		isset($_POST['hours']['end']['hour']) &&
-		isset($_POST['hours']['end']['minute']) &&
-		isset($_POST['hours']['end']['ampm'])
-	){
-		$time = $_POST['hours']['end']['hour'].":".$_POST['hours']['end']['minute']." ".$_POST['hours']['end']['ampm'];
-		update_post_meta($post_ID, 'sfhiv_service_end', $time);
+	if(isset($_POST['hours']['end'])){
+		$seconds = sfhiv_service_post_to_seconds($_POST['hours']['end']);
+		update_post_meta($post_ID, 'sfhiv_service_end', $seconds);
 	}
 	if(isset($_POST['hours']['appointment'])){
 		update_post_meta($post_ID, 'sfhiv_service_appointment', $_POST['hours']['appointment']);
 	}
+}
+
+function sfhiv_service_post_to_seconds($arr){
+	$seconds = 0;
+	if(isset($arr['hour'])){
+		if($arr['hour']==12 && isset($arr['ampm'])){
+			// add 0 because it will be added later
+		}else{
+			$seconds += $arr['hour']*60*60;
+		}
+	}
+	if(isset($arr['minute'])){
+		$seconds += $arr['hour']*60;
+	}
+	if(isset($arr['ampm']) && strtolower($arr['ampm'])=="pm"){
+		$seconds += 43200; // number of seconds in 12 hours
+	}
+	return $seconds;
 }
 
 ?>
