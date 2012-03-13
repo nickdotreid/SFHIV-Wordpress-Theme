@@ -42,7 +42,7 @@ function sfhiv_create_group_categories() {
     'new_item_name' => __( 'New Group Category Name' ),
   ); 	
 
-  register_taxonomy('group_category',array('group','event'),array(
+  register_taxonomy('group_category',array('group','event','report'),array(
     'hierarchical' => true,
     'labels' => $labels,
   ));
@@ -61,7 +61,7 @@ function sfhiv_create_years() {
     'new_item_name' => __( 'New Year Name' ),
   ); 	
 
-  register_taxonomy('year',array('group','event'),array(
+  register_taxonomy('year',array('group','event','report'),array(
     'hierarchical' => true,
     'labels' => $labels
   ));
