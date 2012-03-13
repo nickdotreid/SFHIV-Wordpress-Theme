@@ -9,7 +9,7 @@ include_once('functions-events.php');
 include_once('functions-groups.php');
 
 include_once('functions-years.php');
-
+include_once('functions-services.php');
 include_once('functions-contact-user.php');
 
 add_action( 'init', 'sfhiv_create_group_type' );
