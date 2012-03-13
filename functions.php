@@ -124,6 +124,7 @@ function sfhiv_add_reports_type(){
 			),
 		'public' => true,
 		'has_archive' => true,
+		'hierarchical' => true,
 		)
 	);
 	add_post_type_support( 'report', 'excerpt' );
