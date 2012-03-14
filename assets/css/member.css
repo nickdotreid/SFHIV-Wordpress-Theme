@@ -1,0 +1,32 @@
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+#mini_archive .member,
+#members .member {
+  display: block;
+  width: 125px;
+  float: left;
+  margin: 0em 0.4em 0.4em 0em;
+}
+#mini_archive .member .name,
+#members .member .name {
+  display: block;
+  text-align: center;
+}
+#mini_archive .member .image,
+#members .member .image {
+  display: block;
+  margin: 0.2em auto;
+}

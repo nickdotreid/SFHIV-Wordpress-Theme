@@ -13,3 +13,6 @@
 .date_mix.date span span {
   display: inline;
 }
+.event .date {
+  color: #FFF;
+}
