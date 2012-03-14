@@ -61,6 +61,28 @@ h3 a:hover:hover,
 h4 a:hover:hover {
   text-decoration: underline;
 }
+#main h1 {
+  padding: 21px 0px 14px;
+  font-size: 1.6em;
+  clear: both;
+}
+#main h2 {
+  padding: 14px 0px 7px;
+  font-size: 1.4em;
+  clear: both;
+}
+#main h3 {
+  padding: 7px 0px 3.5px;
+  font-size: 1em;
+  clear: both;
+  font-weight: bold;
+}
+#main h4 {
+  clear: both;
+  font-size: 1em;
+  font-weight: bold;
+  color: #2e3c62;
+}
 .clear {
   clear: both;
 }
@@ -430,10 +452,4 @@ footer {
 #mini_archive .group {
   border-top: 1px #bcbcbc solid;
   padding: 1em 0px;
-}
-#meetings h2,
-#members h2 {
-  padding-top: 1.5em;
-  clear: both;
-  font-size: 1.4em;
 }
