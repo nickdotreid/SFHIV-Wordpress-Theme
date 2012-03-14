@@ -173,10 +173,17 @@ a,a:visited{
 
 
 @media all and (min-width: @size_medium) {
+	#main{
+		background-image:url('../i/main-back-medium.gif');
+	}
 	#primary,.list{
 		width:@block_width*2;
 		float:right;
 		clear:none;
+	}
+	.list{
+		width:@block_width*2 - @space_size*2;
+		margin-left:@space_size*2;
 	}
 	#primary{
 		#content{
@@ -188,10 +195,9 @@ a,a:visited{
 	}
 	.sidebar{
 		display:block;
-		width:@block_width - @border_width;
+		width:@block_width;
 		float:left;
 		clear:left;
-		border-right:@border_width solid @secondary_color;
 	}
 }
 
@@ -203,6 +209,7 @@ a,a:visited{
 
 #splash{
 	.divider_mix();
+	background-color:#FFF;
 	article{
 		width:@block_width;
 		float:left;
@@ -210,7 +217,6 @@ a,a:visited{
 		margin:0px;
 		padding:12px 0px;
 		border-bottom:1px @secondary_color solid;
-		border-right:1px @secondary_color solid;
 		.entry-header,.entry-content,nav{
 			margin:0px 7px;
 		}
@@ -242,6 +248,7 @@ a,a:visited{
 }
 @media all and (min-width: @size_medium) {
 	#splash{
+		background-color:#FFF;
 		article{
 			width:(@block_width)-1;
 		}
@@ -256,6 +263,7 @@ a,a:visited{
 }
 
 .footer{
+	background:#FFF;
 	.section;
 	border-top:1px @secondary_color solid;
 	padding:@space_size 0px;
