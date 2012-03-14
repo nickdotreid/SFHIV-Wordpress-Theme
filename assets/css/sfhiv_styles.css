@@ -282,12 +282,18 @@ footer {
   margin: 0px;
   padding: 0px;
   position: relative;
+  display: block;
+  background-color: #FFF;
+}
+#splash .divider {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  display: block;
-  background-color: #FFF;
 }
 #splash article {
   width: 260px;
@@ -338,15 +344,20 @@ footer {
 }
 @media all and (min-width: 800px) {
   #splash {
-    background-color: #FFF;
+    background-image: url('../i/splash-back-medium.gif');
+    background-repeat: repeat-y;
+    background-position: top left;
   }
   #splash article {
-    width: 259px;
+    width: 260px;
   }
 }
 @media all and (min-width: 1100px) {
+  #splash {
+    background-image: url('../i/splash-back-large.gif');
+  }
   #splash article {
-    width: 345.6666666666667px;
+    width: 346.6666666666667px;
   }
 }
 .footer {

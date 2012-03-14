@@ -208,9 +208,12 @@ a,a:visited{
 }
 
 #splash{
-	.divider_mix();
+	.section();
 	display:block;
 	background-color:#FFF;
+	.divider{
+		.divider_mix();
+	}
 	article{
 		width:@block_width;
 		float:left;
@@ -249,16 +252,19 @@ a,a:visited{
 }
 @media all and (min-width: @size_medium) {
 	#splash{
-		background-color:#FFF;
+		background-image:url('../i/splash-back-medium.gif');
+		background-repeat:repeat-y;
+		background-position:top left;
 		article{
-			width:(@block_width)-1;
+			width:@block_width;
 		}
 	}
 }
 @media all and (min-width: @size_large) {
 	#splash{
+		background-image:url('../i/splash-back-large.gif');
 		article{
-			width:((@block_width*4)/3)-1;
+			width:(@block_width*4)/3;
 		}
 	}
 }

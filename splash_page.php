@@ -31,6 +31,7 @@ $children = get_pages(array(
 	));
 ?>
 <nav id="splash">
+	<div class="divider"></div>
 <? foreach($children as $child):	?>
 <? setup_postdata($child);
 $post = $child;	# why both?
