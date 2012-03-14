@@ -152,7 +152,7 @@ footer {
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  padding-bottom: 27px;
+  padding: 0px 0px 27px;
   background-position: left bottom;
 }
 #branding #site-title {
