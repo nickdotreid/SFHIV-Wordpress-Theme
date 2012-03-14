@@ -269,6 +269,8 @@ footer {
 @media all and (min-width: 800px) {
   #main {
     background-image: url('../i/main-back-medium.gif');
+    background-repeat: repeat-y;
+    background-position: top left;
   }
   #primary,
   .list {
