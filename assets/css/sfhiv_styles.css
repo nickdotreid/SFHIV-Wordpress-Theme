@@ -385,13 +385,20 @@ footer {
 .footer .menu .menu-item {
   display: block;
 }
-.footer .menu .menu-item a {
+.footer .menu .menu-item a,
+.footer .menu .menu-item a:visited {
   color: #2e3c62;
   text-decoration: none;
 }
-.footer .menu .menu-item a:hover {
+.footer .menu .menu-item a:hover,
+.footer .menu .menu-item a:visited:hover {
   color: #f09938;
   text-decoration: underline;
+}
+.footer .menu .menu-item.current-menu-item a,
+.footer .menu .menu-item.current-menu-item a:visited,
+.footer .menu .menu-item.current-menu-item a:hover {
+  color: #f09938;
 }
 @media all and (min-width: 800px) {
   .footer .menu {

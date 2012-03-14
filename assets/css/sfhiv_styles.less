@@ -279,12 +279,17 @@ a,a:visited{
 		text-align:center;
 		.menu-item{
 			display:block;
-			a{
+			a,a:visited{
 				color:@text_color;
 				text-decoration:none;
 				&:hover{
 					color:@highlight_color;
 					text-decoration:underline;
+				}
+			}
+			&.current-menu-item{
+				a,a:visited,a:hover{
+					color:@highlight_color;
 				}
 			}
 		}
