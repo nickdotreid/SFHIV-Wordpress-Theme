@@ -176,15 +176,19 @@ a,a:visited{
 		clear:none;
 	}
 	#primary{
+		#content{
+			margin-left:@space_size*2;
+		}
 		.entry-title{
 			width:@block_width;
 		}
 	}
 	.sidebar{
 		display:block;
-		width:@block_width;
+		width:@block_width - @border_width;
 		float:left;
 		clear:left;
+		border-right:@border_width solid @secondary_color;
 	}
 }
 

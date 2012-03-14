@@ -65,3 +65,8 @@
   padding-left: 21px;
   text-decoration: underline;
 }
+@media all and (min-width: 800px) {
+  .sidebar .menu {
+    margin-right: 14px;
+  }
+}
