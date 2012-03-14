@@ -78,4 +78,11 @@ function sfhiv_add_mini_archive_menu(){
 	endif;
 }
 
+add_action('get_footer','sfhiv_page_meta',20);
+function sfhiv_page_meta(){
+	if(is_singular()){
+		get_template_part('meta-data',get_post_type());
+	}
+}
+
 ?>

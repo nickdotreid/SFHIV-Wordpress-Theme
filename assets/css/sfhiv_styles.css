@@ -266,6 +266,15 @@ footer {
   display: block;
   padding: 28px 7px 7px;
 }
+.meta {
+  display: block;
+  clear: both;
+  font-size: 10px;
+  color: #2e3c62;
+  border-top: 1px #bcbcbc solid;
+  background: #FFF;
+  padding: 7px 21px;
+}
 @media all and (min-width: 800px) {
   #main {
     background-image: url('../i/main-back-medium.gif');
