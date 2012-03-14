@@ -6,25 +6,27 @@
 		display:block;
 		.menu_mix();
 		padding-bottom:@space_size*3;
-		font-size:1.1em;
+		font-size:@font_size;
 		a,a:visited,a:hover{
 			display:block;
 			border-bottom:1px solid @secondary_color;
 			padding:@space_size 0px;
 		}
 		.current_page_ancestor,.current_page_parent{
+			font-size:@small_font_size;
 			a{
 				padding-left:@space_size*2;
 				color:@link_color;
-				font-size:0.8em;
 				text-decoration:none;
 			}
-			.children a{
-				background-color:transparent;
-				padding-left:0px;
-				color:@link_color;
-				font-size:1em;
-				text-decoration:underline;
+			.children{
+				font-size:@font_size;
+				a{
+					background-color:transparent;
+					padding-left:0px;
+					color:@link_color;
+					text-decoration:underline;
+				}
 			}
 		}
 		.current_page_item{

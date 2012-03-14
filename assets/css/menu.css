@@ -19,7 +19,7 @@
   margin: 0px;
   padding: 0px;
   padding-bottom: 21px;
-  font-size: 1.1em;
+  font-size: 14px;
 }
 .sidebar .menu ul {
   margin: 0px;
@@ -35,19 +35,25 @@
   border-bottom: 1px solid #bcbcbc;
   padding: 7px 0px;
 }
+.sidebar .menu .current_page_ancestor,
+.sidebar .menu .current_page_parent {
+  font-size: 10px;
+}
 .sidebar .menu .current_page_ancestor a,
 .sidebar .menu .current_page_parent a {
   padding-left: 14px;
   color: #918bb3;
-  font-size: 0.8em;
   text-decoration: none;
+}
+.sidebar .menu .current_page_ancestor .children,
+.sidebar .menu .current_page_parent .children {
+  font-size: 14px;
 }
 .sidebar .menu .current_page_ancestor .children a,
 .sidebar .menu .current_page_parent .children a {
   background-color: transparent;
   padding-left: 0px;
   color: #918bb3;
-  font-size: 1em;
   text-decoration: underline;
 }
 .sidebar .menu .current_page_item a,
