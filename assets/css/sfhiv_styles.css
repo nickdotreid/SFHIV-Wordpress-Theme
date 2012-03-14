@@ -294,9 +294,11 @@ footer {
   }
 }
 @media all and (min-width: 1100px) {
-  #primary,
-  .list {
+  #primary {
     width: 780px;
+  }
+  .list {
+    width: 766px;
   }
 }
 #splash {

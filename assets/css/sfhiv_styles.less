@@ -226,8 +226,11 @@ a,a:visited{
 }
 
 @media all and (min-width: @size_large) {
-	#primary,.list{
+	#primary{
 		width:@block_width*3;
+	}
+	.list{
+		width:@block_width*3 - @space_size*2;
 	}
 }
 
