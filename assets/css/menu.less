@@ -12,24 +12,25 @@
 			border-bottom:1px solid @secondary_color;
 			padding:@space_size 0px;
 		}
-		.current_page_ancestor,.current_page_parent{
+
+		.current_page_ancestor,.current_page_parent, .current_page_ancestor .children{
 			font-size:@small_font_size;
 			a{
-				padding-left:@space_size*2;
+				padding:@space_size/2 0px @space_size/2 @space_size*2;
 				color:@link_color;
 				text-decoration:none;
 			}
-			.children{
-				font-size:@font_size;
-				a{
-					background-color:transparent;
-					padding-left:0px;
-					color:@link_color;
-					text-decoration:underline;
-				}
+		}
+		.children, .current_page_parent .children{
+			font-size:@font_size;
+			a{
+				background-color:transparent;
+				padding:@space_size*2 0px @space_size;
+				color:@link_color;
+				text-decoration:underline;
 			}
 		}
-		.current_page_item{
+		.current_page_item, .children .current_page_item, .current_page_ancestor .children .current_page_item{
 			a,a:visited,a:hover{
 				background:transparent;
 				color:@highlight_color;

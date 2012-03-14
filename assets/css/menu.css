@@ -36,37 +36,51 @@
   padding: 7px 0px;
 }
 .sidebar .menu .current_page_ancestor,
-.sidebar .menu .current_page_parent {
+.sidebar .menu .current_page_parent,
+.sidebar .menu .current_page_ancestor .children {
   font-size: 10px;
 }
 .sidebar .menu .current_page_ancestor a,
-.sidebar .menu .current_page_parent a {
-  padding-left: 14px;
+.sidebar .menu .current_page_parent a,
+.sidebar .menu .current_page_ancestor .children a {
+  padding: 3.5px 0px 3.5px 14px;
   color: #918bb3;
   text-decoration: none;
 }
-.sidebar .menu .current_page_ancestor .children,
+.sidebar .menu .children,
 .sidebar .menu .current_page_parent .children {
   font-size: 14px;
 }
-.sidebar .menu .current_page_ancestor .children a,
+.sidebar .menu .children a,
 .sidebar .menu .current_page_parent .children a {
   background-color: transparent;
-  padding-left: 0px;
+  padding: 14px 0px 7px;
   color: #918bb3;
   text-decoration: underline;
 }
 .sidebar .menu .current_page_item a,
+.sidebar .menu .children .current_page_item a,
+.sidebar .menu .current_page_ancestor .children .current_page_item a,
 .sidebar .menu .current_page_item a:visited,
-.sidebar .menu .current_page_item a:hover {
+.sidebar .menu .children .current_page_item a:visited,
+.sidebar .menu .current_page_ancestor .children .current_page_item a:visited,
+.sidebar .menu .current_page_item a:hover,
+.sidebar .menu .children .current_page_item a:hover,
+.sidebar .menu .current_page_ancestor .children .current_page_item a:hover {
   background: transparent;
   color: #f09938;
   text-decoration: none;
   padding-top: 14px;
 }
 .sidebar .menu .current_page_item .children a,
+.sidebar .menu .children .current_page_item .children a,
+.sidebar .menu .current_page_ancestor .children .current_page_item .children a,
 .sidebar .menu .current_page_item .children a:visited,
-.sidebar .menu .current_page_item .children a:hover {
+.sidebar .menu .children .current_page_item .children a:visited,
+.sidebar .menu .current_page_ancestor .children .current_page_item .children a:visited,
+.sidebar .menu .current_page_item .children a:hover,
+.sidebar .menu .children .current_page_item .children a:hover,
+.sidebar .menu .current_page_ancestor .children .current_page_item .children a:hover {
   color: #918bb3;
   padding-left: 21px;
   text-decoration: underline;
