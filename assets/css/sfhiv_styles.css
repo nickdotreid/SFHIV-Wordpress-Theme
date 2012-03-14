@@ -121,6 +121,18 @@ footer {
   padding: 0px;
   position: relative;
 }
+#branding {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  padding-bottom: 27px;
+  background-position: left bottom;
+}
 #branding #site-title {
   display: block;
   position: relative;
@@ -202,18 +214,13 @@ footer {
 #access .menu .menu-item.current-page-ancestor a:hover {
   color: #FFF;
 }
-#main {
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  padding-top: 27px;
-  background-position: 0px 18px;
+/*
+#main{
+	.divider_mix();
+	padding-top:27px;
+	background-position:0px 18px;
 }
+*/
 .list,
 #primary {
   display: block;
