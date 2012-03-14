@@ -37,6 +37,7 @@ $post = $child;	# why both?
 	?>
 <?php get_template_part( 'preview', 'page' ); ?>
 <?	endforeach;	?>
+	<br class="clear" />
 </nav>
 <? the_post(); #reset $post ?>
 <?php get_footer(); ?>

@@ -286,6 +286,7 @@ footer {
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  display: block;
   background-color: #FFF;
 }
 #splash article {
@@ -294,7 +295,7 @@ footer {
   display: block;
   margin: 0px;
   padding: 12px 0px;
-  border-bottom: 1px #bcbcbc solid;
+  border-top: 1px #bcbcbc solid;
 }
 #splash article .entry-header,
 #splash article .entry-content,
