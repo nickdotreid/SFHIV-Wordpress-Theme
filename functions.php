@@ -125,15 +125,16 @@ function sfhiv_add_reports_type(){
 	register_post_type( 'report',
 		array(
 			'labels' => array(
-				'name' => __( 'Report' ),
+				'name' => __( 'Reports' ),
 				'singular_name' => __( 'Report' )
 			),
 		'public' => true,
 		'has_archive' => true,
 		'hierarchical' => true,
+		'capability_type' => 'page',
+		'supports' => array('title','author','editor','excerpt','thumbnail','page-attributes'),
 		)
 	);
-	add_post_type_support( 'report', 'excerpt' );
 }
 add_action( 'init', 'sfhiv_create_report_categories' );
 function sfhiv_create_report_categories() {
