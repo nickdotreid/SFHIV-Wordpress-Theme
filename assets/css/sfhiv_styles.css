@@ -214,13 +214,6 @@ footer {
 #access .menu .menu-item.current-page-ancestor a:hover {
   color: #FFF;
 }
-/*
-#main{
-	.divider_mix();
-	padding-top:27px;
-	background-position:0px 18px;
-}
-*/
 .list,
 #primary {
   display: block;
