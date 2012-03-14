@@ -202,7 +202,6 @@ footer {
 #access .menu .menu-item.current-page-ancestor a:hover {
   color: #FFF;
 }
-.list,
 #main {
   clear: both;
   margin: 0px;
@@ -212,11 +211,23 @@ footer {
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  padding-top: 27px;
+  background-position: 0px 18px;
 }
 .list,
 #primary {
   display: block;
   width: auto;
+}
+.list {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
 }
 #primary {
   margin: 0px;
