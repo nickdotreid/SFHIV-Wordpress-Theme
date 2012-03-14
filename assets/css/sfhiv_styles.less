@@ -261,7 +261,7 @@ a,a:visited{
 .footer{
 	.section;
 	border-top:1px @secondary_color solid;
-	padding:1em 0px;
+	padding:@space_size 0px;
 	.menu{
 		.menu_mix();
 		text-align:center;
@@ -282,10 +282,11 @@ a,a:visited{
 	.footer{
 		.menu{
 			text-align:left;
-			height:1em;
+			height:@space_size*2;
 			.menu-item{
 				float:left;
-				padding:0px 0.7em;
+				padding:0px @space_size;
+				margin:0px;
 			}
 		}
 	}

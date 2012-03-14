@@ -345,7 +345,7 @@ footer {
   padding: 0px;
   position: relative;
   border-top: 1px #bcbcbc solid;
-  padding: 1em 0px;
+  padding: 7px 0px;
 }
 .footer .menu {
   display: block;
@@ -374,11 +374,12 @@ footer {
 @media all and (min-width: 800px) {
   .footer .menu {
     text-align: left;
-    height: 1em;
+    height: 14px;
   }
   .footer .menu .menu-item {
     float: left;
-    padding: 0px 0.7em;
+    padding: 0px 7px;
+    margin: 0px;
   }
 }
 #mini_archive p {
