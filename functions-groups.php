@@ -26,14 +26,14 @@ function sfhiv_group_menu_items($ID = false){
 		'connected_type' => 'group_events',
 		'connected_items' => $ID,
 	));
-	if(count($events)>0){
+	if(count($events->posts)>0){
 		array_push($items,"events");
 	}
 	$services = new WP_Query( array(
 		'connected_type' => 'group_services',
 		'connected_items' => $ID,
 	));
-	if(count($services)>0){
+	if(count($services->posts)>0){
 		array_push($items,"services");
 	}
 	

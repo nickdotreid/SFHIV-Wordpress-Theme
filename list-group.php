@@ -6,8 +6,10 @@
 		<?=the_content();?>
 	</div>
 	<nav>
-		<a href="<?=the_permalink();?>#members"><?=__('View Members','sfhiv_theme');?></a>
-		<a href="<?=the_permalink();?>#meetings"><?=__('View Meetings','sfhiv_theme');?></a>
+		<?	$items = sfhiv_group_menu_items();	?>
+		<?	foreach($items as $item):	?>
+		<a href="<?=the_permalink();?><?=$item;?>"><?=__('View '.$item,'sfhiv_theme');?></a>
+		<?	endforeach;	?>
 		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 	</nav>
 </article>

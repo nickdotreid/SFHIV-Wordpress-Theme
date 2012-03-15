@@ -2,10 +2,12 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-	<nav class="toc">
+	<nav class="table_of_contents">
+		<?	$items = sfhiv_group_menu_items();	?>
 		<ul class="menu">
-			<li class="menu-item"><a href="#members">Members</a></li>
-			<li class="menu-item"><a href="#meetings">Meetings</a></li>
+			<?	foreach($items as $item):	?>
+			<li class="menu-item"><a href="#<?=$item;?>"><?=$item;?></a></li>
+			<?	endforeach;	?>
 		</ul>
 	</nav>
 	<div class="entry-content">
