@@ -12,6 +12,11 @@ include_once('functions-years.php');
 include_once('functions-services.php');
 include_once('functions-contact-user.php');
 
+add_action('init','sfhiv_add_excerpt_to_page');
+function sfhiv_add_excerpt_to_page(){
+	add_post_type_support( 'page', 'excerpt' );
+}
+
 add_action( 'init', 'sfhiv_create_group_type' );
 function sfhiv_create_group_type() {
 	register_post_type( 'group',
