@@ -18,6 +18,27 @@ function sfhiv_add_services_type(){
 	add_post_type_support( 'service', 'excerpt' );
 }
 
+add_action('init','sfhiv_add_population_tag');
+function sfhiv_add_population_tag(){
+	$labels = array(
+    'name' => _x( 'Population Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Population Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Population Categories' ),
+    'all_items' => __( 'All Population Categories' ),
+    'parent_item' => __( 'Parent Population Category' ),
+    'parent_item_colon' => __( 'Parent Population Category:' ),
+    'edit_item' => __( 'Edit Population Category' ),
+    'update_item' => __( 'Update Population Category' ),
+    'add_new_item' => __( 'Add New Population Category' ),
+    'new_item_name' => __( 'New Group Population Name' ),
+  ); 	
+
+  register_taxonomy('population_category',array('group','event','report','service'),array(
+    'hierarchical' => true,
+    'labels' => $labels,
+  ));
+}
+
 function sfhiv_add_services_meta_boxes(){
 	add_meta_box( 'sfhiv_services_hours', 'Hours of Operation', 'sfhiv_services_hours_op_meta', 'service', 'normal' );
 }
