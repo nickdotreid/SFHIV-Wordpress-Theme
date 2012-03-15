@@ -18,6 +18,27 @@ function sfhiv_add_services_type(){
 	add_post_type_support( 'service', 'excerpt' );
 }
 
+add_action('init','sfhiv_add_service_category');
+function sfhiv_add_service_category(){
+	$labels = array(
+    'name' => _x( 'Service Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Service Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Service Categories' ),
+    'all_items' => __( 'All Service Categories' ),
+    'parent_item' => __( 'Parent Service Category' ),
+    'parent_item_colon' => __( 'Parent Service Category:' ),
+    'edit_item' => __( 'Edit Service Category' ),
+    'update_item' => __( 'Update Service Category' ),
+    'add_new_item' => __( 'Add New Service Category' ),
+    'new_item_name' => __( 'New Group Service Name' ),
+  ); 	
+
+  register_taxonomy('service_category',array('service'),array(
+    'hierarchical' => true,
+    'labels' => $labels,
+  ));
+}
+
 add_action('init','sfhiv_add_population_tag');
 function sfhiv_add_population_tag(){
 	$labels = array(
