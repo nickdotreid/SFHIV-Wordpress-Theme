@@ -7,6 +7,39 @@ function sfhiv_groups_add_scripts(){
 	<?
 }
 
+function sfhiv_group_menu_items($ID = false){
+	if(!$ID && get_post_type() == 'group'){
+		$ID = get_the_ID();
+	}
+	if(!$ID){
+		return array();
+	}
+	$items = array();
+	$members = get_users( array(
+	  'connected_type' => 'group_members',
+	  'connected_items' => $ID,
+	));
+	if(count($members)>0){
+		array_push($items,"members");
+	}
+	$events = new WP_Query( array(
+		'connected_type' => 'group_events',
+		'connected_items' => $ID,
+	));
+	if(count($events)>0){
+		array_push($items,"events");
+	}
+	$services = new WP_Query( array(
+		'connected_type' => 'group_services',
+		'connected_items' => $ID,
+	));
+	if(count($services)>0){
+		array_push($items,"services");
+	}
+	
+	return $items;
+}
+
 add_action('get_footer','sfhiv_add_group_members_list',5);
 function sfhiv_add_group_members_list(){
 	if(!is_singular( array( 'group' ))):
