@@ -4,7 +4,7 @@
 	
 	<?	while($wp_query->have_posts()):	$wp_query->the_post();?>
 	
-	<?	get_template_part( 'list' );	?>
+	<?	get_template_part( 'list', $wp_query->query_vars['post_type'] );	?>
 	
 	<?	endwhile;	?>
 
