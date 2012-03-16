@@ -1,6 +1,6 @@
 <?php
 
-add_action('get_sidebar','sfhiv_get_contact_user',5);
+add_action('get_sidebar','sfhiv_get_contact_user',105);
 function sfhiv_get_contact_user(){
 	if(in_array(get_post_type(),array('event','group','page','post'))):
 	$users = get_users( array(
