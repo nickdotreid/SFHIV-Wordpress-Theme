@@ -7,8 +7,8 @@ function sfhiv_years_add_scripts(){
 	<?
 }
 
-add_action('get_sidebar','sfhiv_add_mini_archive_years_sidebar',20);
-function sfhiv_add_mini_archive_years_sidebar(){
+add_action('get_sidebar','sfhiv_add_query_years_sidebar',20);
+function sfhiv_add_query_years_sidebar(){
 	global $wp_query;
 	$query = false;
 	if(is_page()){
