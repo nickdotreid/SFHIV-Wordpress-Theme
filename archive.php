@@ -5,7 +5,7 @@
 				<header>
 					<h1 class="entry-title"><?=$wp_query->queried_object->label;?></h1>
 				</header>
-				<? get_template_part("loop");	?>
+				<? get_template_part("loop",$wp_query->query_vars['post_type']);	?>
 		</article><!-- #archive -->
 	</div><!-- #content -->
 </div><!--	#primary -->
