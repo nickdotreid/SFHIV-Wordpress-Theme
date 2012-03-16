@@ -49,7 +49,7 @@ function sfhiv_add_mini_archive_menu(){
 		$archive_filters = mini_archive_get_filters();
 		foreach($archive_filters as $filter){
 			if(!$output_archive){
-				$years = sfhiv_get_years_in($query);
+				$years = sfhiv_get_taxonomy_in($query,'sfhiv_years');
 				if(count($years) > 1){
 					$output_archive = true;
 					?>
