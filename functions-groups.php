@@ -112,7 +112,7 @@ function sfhiv_groups_in_query_sidebar(){
 		// get wp_query
 	}
 	if(!$query): return; endif;
-	$groups = sfhiv_get_groups_in($query);
+	$groups = sfhiv_get_related_in($query,'group_events');
 	if(count($groups)>0){
 		$query = new WP_Query( array( 'post__in' => $groups, 'post_type'=>'sfhiv_group' ) );
 		if($query->post_count > 0):
@@ -130,22 +130,24 @@ function sfhiv_groups_in_query_sidebar(){
 	}
 }
 
-function sfhiv_get_groups_in($query){
-	$groups = array();
+function sfhiv_get_related_in($query,$relation){
+	if ( !function_exists( 'p2p_register_connection_type' ) )
+		return;
+	$related_objects = array();
 	foreach($query->posts as $post){
-		$post_groups = new WP_Query( array(
-			'connected_type' => 'group_events',
+		$post_relations = new WP_Query( array(
+			'connected_type' => $relation,
 			'connected_items' => $post->ID,
 		));
-		foreach($post_groups as $group){
-			if(isset($group->ID)){
-				if(!in_array($group->ID,$groups)){
-					array_push($groups,$group->ID);
+		foreach($post_relations as $related){
+			if(isset($related->ID)){
+				if(!in_array($related->ID,$related_objects)){
+					array_push($related_objects,$related->ID);
 				}
 			}
 		}
 	}
-	return $groups;
+	return $related_objects;
 }
 
 ?>
