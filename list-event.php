@@ -8,7 +8,7 @@ if($event->location_id){
 $args = array( 'post_type' => 'attachment', 'numberposts' => -1, 'post_status' => null, 'post_parent' => get_the_ID() ); 
 $attachments = get_posts($args);
 
-$additional_classes = "event";
+$additional_classes = "event list-item";
 if($attachments){
 	$additional_classes .= " has_attachments";
 }

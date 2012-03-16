@@ -1,4 +1,4 @@
-<article id="post-<?=the_ID();?>" <?php post_class(); ?>>
+<article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?>>
 	<header>
 		<h1><?=the_title();?></h1>
 	</header>

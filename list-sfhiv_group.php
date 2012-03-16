@@ -1,4 +1,4 @@
-<article id="post-<?=the_ID();?>" <?php post_class(); ?> years="<?=implode(",",wp_get_object_terms(get_the_ID(),'year',array("fields"=>"slugs")));?>">
+<article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?> years="<?=implode(",",wp_get_object_terms(get_the_ID(),'year',array("fields"=>"slugs")));?>">
 	<header>
 		<h1><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
