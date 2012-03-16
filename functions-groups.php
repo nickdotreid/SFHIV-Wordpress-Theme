@@ -150,4 +150,36 @@ function sfhiv_get_related_in($query,$relation){
 	return $related_objects;
 }
 
+add_action('get_sidebar','sfhiv_add_query_group_cat_sidebar',21);
+function sfhiv_add_query_group_cat_sidebar(){
+	global $wp_query;
+	$query = false;
+	if(is_page()){
+		$archive_type = mini_archive_on_page(get_the_ID());
+		if($archive_type){
+			$query = mini_archive_get_query(get_the_ID());
+		}
+	}
+	if(is_archive()){
+		// get wp_query
+		$wp_query->rewind_posts();
+		$query = $wp_query;
+	}
+	if(!$query): return; endif;
+	$groups = sfhiv_get_taxonomy_in($query,'sfhiv_group_category','ids');
+	if(count($groups)>0):
+		?><nav>
+			<ul class="menu filters groups"><?
+			if(count($groups)>1):
+				?><li class="menu-item"><a href="#" class="js-only filter default">All Groups</a></li><?
+			endif;
+	wp_list_categories(array(
+		'taxonomy' => 'sfhiv_group_category',
+		'include' => implode(",",$groups),
+		'title_li' => false,
+	));
+		?></ul></nav><?
+	endif;
+}
+
 ?>
