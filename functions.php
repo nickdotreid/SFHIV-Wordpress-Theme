@@ -72,6 +72,4 @@ function sfhiv_group_sidebar_end(){
 	echo '</div><!-- .sidebar -->';
 }
 
-}
-
 ?>
