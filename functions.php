@@ -23,36 +23,16 @@ function sfhiv_connection_types() {
 	// Make sure the Posts 2 Posts plugin is active.
 	if ( !function_exists( 'p2p_register_connection_type' ) )
 		return;
-
-	p2p_register_connection_type( array(
-		'name' => 'group_members',
-		'from' => 'group',
-		'to' => 'user',
-		'fields' => array(
-				'title' => 'Title',
-				'incomplete' => array(
-					'title' => 'Incomplete',
-					'type' => 'checkbox'
-				),
-			)
-	) );
 	
 	p2p_register_connection_type( array(
 		'name' => 'contact_user',
-		'from' => array('group','event','page','post'),
+		'from' => array(
+			'sfhiv_group',
+			'event',
+			'page',
+			'post'
+		),
 		'to' => 'user'
-	) );
-	
-	p2p_register_connection_type( array(
-		'name' => 'group_events',
-		'from' => 'group',
-		'to' => 'event',
-	) );
-	
-	p2p_register_connection_type( array(
-		'name' => 'group_services',
-		'from' => 'group',
-		'to' => 'service',
 	) );
 	
 	p2p_register_connection_type( array(
