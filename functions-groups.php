@@ -8,7 +8,7 @@ function sfhiv_groups_add_scripts(){
 }
 
 function sfhiv_group_menu_items($ID = false){
-	if(!$ID && get_post_type() == 'group'){
+	if(!$ID && get_post_type() == 'sfhiv_group'){
 		$ID = get_the_ID();
 	}
 	if(!$ID){
@@ -106,7 +106,7 @@ function sfhiv_add_mini_archive_group_sidebar(){
 		if($archive_type){
 			$query = mini_archive_get_query(get_the_ID());
 			$groups = sfhiv_get_groups_in($query);
-			$query = new WP_Query( array( 'post__in' => $groups, 'post_type'=>'group' ) );
+			$query = new WP_Query( array( 'post__in' => $groups, 'post_type'=>'sfhiv_group' ) );
 			if($query->post_count > 0):
 				?><nav><ul class="menu groups filters"><?
 				if($query->post_count > 1){
@@ -114,7 +114,7 @@ function sfhiv_add_mini_archive_group_sidebar(){
 				}
 				while($query->have_posts()):
 					$query->the_post();
-					get_template_part('menu-item','group');
+					get_template_part('menu-item','sfhiv_group');
 				endwhile;
 				?></ul></nav><?
 			endif;
