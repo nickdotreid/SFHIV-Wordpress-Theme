@@ -19,20 +19,7 @@ function sfhiv_add_excerpt_to_page(){
 	add_post_type_support( 'page', 'excerpt' );
 }
 
-add_action( 'init', 'sfhiv_create_group_type' );
-function sfhiv_create_group_type() {
-	register_post_type( 'group',
-		array(
-			'labels' => array(
-				'name' => __( 'Groups' ),
-				'singular_name' => __( 'Group' )
-			),
-		'public' => true,
-		'has_archive' => true,
-		)
-	);
-	add_post_type_support( 'group', 'excerpt' );
-}
+
 
 add_action( 'init', 'sfhiv_create_group_categories' );
 function sfhiv_create_group_categories() {
