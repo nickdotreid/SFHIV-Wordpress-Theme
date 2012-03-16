@@ -63,25 +63,28 @@ h4 a:hover:hover {
 }
 #main h1 {
   padding: 21px 0px 14px;
-  font-size: 1.6em;
+  font-size: 24px;
   clear: both;
 }
 #main h2 {
   padding: 14px 0px 7px;
-  font-size: 1.4em;
+  font-size: 18px;
   clear: both;
 }
 #main h3 {
   padding: 7px 0px 3.5px;
-  font-size: 1em;
+  font-size: 14px;
   clear: both;
   font-weight: bold;
 }
 #main h4 {
   clear: both;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: bold;
   color: #2e3c62;
+}
+p {
+  margin: 0px 0px 7px;
 }
 .clear {
   clear: both;
@@ -152,7 +155,7 @@ footer {
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  padding: 0px 0px 27px;
+  padding: 0px 0px 28px;
   background-position: left bottom;
 }
 #branding #site-title {
@@ -173,9 +176,9 @@ footer {
 }
 #branding #site-description {
   color: #2e3c62;
-  font-size: 1.4em;
+  font-size: 18px;
   font-weight: normal;
-  padding: 0.5em 0.2em;
+  padding: 14px 7px;
 }
 @media all and (min-width: 800px) {
   #branding #site-title {
@@ -197,7 +200,7 @@ footer {
   display: block;
   margin: 0px;
   padding: 0px;
-  font-size: 1.3em;
+  font-size: 18px;
   padding: 14px 0px;
 }
 #access .menu ul {
@@ -259,12 +262,23 @@ footer {
   padding-top: 0px;
 }
 #primary .entry-title {
-  font-size: 1.8em;
+  font-size: 28px;
   font-weight: normal;
   color: #FFF;
   background: #2e3c62;
   display: block;
   padding: 28px 7px 7px;
+}
+#primary .table_of_contents {
+  clear: both;
+  height: 35px;
+  border-bottom: 1px #bcbcbc solid;
+}
+#primary .table_of_contents .menu-item {
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 7px 7px 7px;
 }
 .meta {
   display: block;
@@ -311,6 +325,13 @@ footer {
   .list {
     width: 766px;
   }
+}
+#main .list .list-item {
+  border-top: 1px #bcbcbc solid;
+}
+#main .list .list-item .entry-title {
+  font-size: 18px;
+  padding: 7px 0px;
 }
 #splash {
   clear: both;
