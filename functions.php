@@ -72,22 +72,6 @@ function sfhiv_group_sidebar_end(){
 	echo '</div><!-- .sidebar -->';
 }
 
-add_action('init','sfhiv_add_reports_type');
-function sfhiv_add_reports_type(){
-	register_post_type( 'report',
-		array(
-			'labels' => array(
-				'name' => __( 'Reports' ),
-				'singular_name' => __( 'Report' )
-			),
-		'public' => true,
-		'has_archive' => true,
-		'hierarchical' => true,
-		'capability_type' => 'page',
-		'supports' => array('title','author','editor','excerpt','thumbnail','page-attributes'),
-		)
-	);
-}
 add_action( 'init', 'sfhiv_create_report_categories' );
 function sfhiv_create_report_categories() {
  $labels = array(
