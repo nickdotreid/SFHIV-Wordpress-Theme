@@ -32,12 +32,15 @@ $children = get_pages(array(
 ?>
 <nav id="splash">
 	<div class="divider"></div>
+	<div class="" style="display:block;clear:both;">
 <? foreach($children as $child):	?>
 <? setup_postdata($child);
 $post = $child;	# why both?
 	?>
 <?php get_template_part( 'preview', 'page' ); ?>
 <?	endforeach;	?>
+<br class="clear"/>
+</div>
 	<br class="clear" />
 </nav>
 <? the_post(); #reset $post ?>
