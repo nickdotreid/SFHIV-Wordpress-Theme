@@ -77,6 +77,16 @@ a,a:visited{
 	.menu_mix();
 }
 
+.attachments, ul.attachments{
+	padding:0px;
+	margin:@space_size 0px;
+	li{
+		list-style:none;
+	}
+	.attachment{
+		padding-left:@space_size*2;
+	}
+}
 
 
 #page{
@@ -279,6 +289,7 @@ a,a:visited{
 		border-top:@secondary_color @border_width*3 solid;
 	}
 	.list-item{
+		position:relative;
 		border-top:@border_width @secondary_color solid;
 		padding:0px 0px @space_size;
 		.entry-title{
@@ -288,6 +299,9 @@ a,a:visited{
 			width:auto;
 		}
 	}
+}
+@media all and (min-width: @size_medium) {
+	
 }
 
 #splash{

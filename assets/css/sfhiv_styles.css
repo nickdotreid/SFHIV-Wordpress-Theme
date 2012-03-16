@@ -116,6 +116,19 @@ a:visited {
 .menu li {
   list-style-type: none;
 }
+.attachments,
+ul.attachments {
+  padding: 0px;
+  margin: 7px 0px;
+}
+.attachments li,
+ul.attachments li {
+  list-style: none;
+}
+.attachments .attachment,
+ul.attachments .attachment {
+  padding-left: 14px;
+}
 #page {
   display: block;
   width: 260px;
@@ -339,6 +352,7 @@ footer {
 }
 #main .list .list-item,
 #main #primary .list .list-item {
+  position: relative;
   border-top: 1px #bcbcbc solid;
   padding: 0px 0px 7px;
 }
@@ -348,6 +362,9 @@ footer {
   padding: 7px 0px;
   background-color: transparent;
   width: auto;
+}
+@media all and (min-width: 800px) {
+  
 }
 #splash {
   clear: both;

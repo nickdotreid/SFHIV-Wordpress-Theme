@@ -18,11 +18,11 @@ function sfhiv_get_date($time,$end_time=false){
 	$formatted .= '</span>';
 	$formatted .= '</div>';
 	$formatted .= '<div class="time">';
-	$formatted .= '<span class="start">'.date($time_format,$time).'</span>';
 	if($end_time && $end_time!=$time){
-		$formatted .= '<span class="end">';
-		$formatted .= '<span class="connector">'.__("until").'</span>';
-		$formatted .= date($time_format,$end_time).'</span>';
+		$formatted .= '<span class="start"><span class="label">Starts:</span>'.date($time_format,$time).'</span>';
+		$formatted .= '<span class="end"><span class="label">Ends:</span>'.date($time_format,$end_time).'</span>';
+	}else{
+		$formatted .= '<span class="start">'.date($time_format,$time).'</span>';
 	}
 	$formatted .= '</div>';
 	return $formatted;

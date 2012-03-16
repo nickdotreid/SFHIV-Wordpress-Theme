@@ -3,6 +3,38 @@
 
 .event{
 	.date {
-	  color: #FFF;
-	}	
+		color: #FFF;
+		background:@highlight_color;
+		padding:@space_size @space_size*2;
+	}
+	.time{
+		padding:@space_size @space_size*2;
+		span{
+			display:block;
+			font-weight:bold;
+			.label{
+				float:left;
+				padding:0px @space_size 0px 0px;
+				font-weight:normal;
+				font-size:@small_font_size;
+			}
+		}
+	}
+}
+@media all and (min-width: @size_medium) {
+	.event,#main .event.list-item{
+		padding-left:@block_width/2;
+		padding-right:@block_width/2;
+		.event_date_time,.attachments{
+			width:@block_width/2-@space_size;
+			position:absolute;
+			top:@space_size;
+		}
+		.event_date_time{
+			left:0px;
+		}
+		.attachments{
+			right:0px;
+		}
+	}
 }

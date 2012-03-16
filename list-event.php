@@ -5,13 +5,13 @@ if($event->location_id){
 	$location = em_get_location($event->location_id);
 }
 
-$args = array( 'post_type' => 'attachment', 'numberposts' => -1, 'post_status' => null, 'post_parent' => get_the_ID() ); 
-$attachments = get_posts($args);
+$attachments = get_posts(array(
+	'post_type' => 'attachment',
+	'numberposts' => -1,
+	'post_status' => null,
+	'post_parent' => get_the_ID(),
+	));
 
-$additional_classes = "event list-item";
-if($attachments){
-	$additional_classes .= " has_attachments";
-}
 
 $groups = new WP_Query( array(
   'connected_type' => 'group_events',
@@ -24,7 +24,7 @@ foreach($groups->posts as $group){
 }
 
 ?>
-<article id="post-<?=the_ID();?>" <?php post_class($additional_classes); ?> start="<?=$event->start*1000;?>" end="<?=$event->end*1000;?>" groups="<?=implode(",",$group_slugs);?>">
+<article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?> start="<?=$event->start*1000;?>" end="<?=$event->end*1000;?>" groups="<?=implode(",",$group_slugs);?>">
 	<header>
 		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
@@ -40,15 +40,16 @@ foreach($groups->posts as $group){
 	<div class="entry-content">
 		<?=the_content();?>
 	</div>
-	<?	if ($attachments):	?>
-	<ul class="event-attachments">
-	<?	foreach ( $attachments as $attachment ):	?>
-			<? $attachment_icon =  wp_get_attachment_image_src( $attachment->ID, "thumbnail", true );?>
-			<li class="attachment" style="background-image:url('<?=$attachment_icon[0];?>');"><?	the_attachment_link( $attachment->ID , false );	?></li>
-	<?	endforeach;	?>
-	</ul>
-	<?	endif;	?>
 	<nav>
 		<a href="<?=the_permalink();?>"><?_e("View Event");?></a>
 	</nav>
+	<?	if ($attachments):	?>
+	<nav>
+	<ul class="attachments">
+	<?	foreach ( $attachments as $attachment ):	?>
+			<li class="attachment"><?	the_attachment_link( $attachment->ID , true );	?></li>
+	<?	endforeach;	?>
+	</ul>
+	</nav>
+	<?	endif;	?>
 </article>
