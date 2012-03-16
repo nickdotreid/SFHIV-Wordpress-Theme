@@ -9,6 +9,7 @@ function sfhiv_years_add_scripts(){
 
 add_action('get_sidebar','sfhiv_add_mini_archive_years_sidebar',20);
 function sfhiv_add_mini_archive_years_sidebar(){
+	global $wp_query;
 	$query = false;
 	if(is_page()){
 		$archive_type = mini_archive_on_page(get_the_ID());
@@ -18,9 +19,11 @@ function sfhiv_add_mini_archive_years_sidebar(){
 	}
 	if(is_archive()){
 		// get wp_query
+		$wp_query->rewind_posts();
+		$query = $wp_query;
 	}
 	if(!$query): return; endif;
-	$years = sfhiv_get_taxonomy_in($query,'sfhiv_years','ids');
+	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
 	if(count($years)>0):
 		?><nav>
 			<ul class="menu filters years"><?
@@ -28,7 +31,7 @@ function sfhiv_add_mini_archive_years_sidebar(){
 				?><li class="menu-item"><a href="#" class="js-only filter default">All Years</a></li><?
 			endif;
 	wp_list_categories(array(
-		'taxonomy' => 'year',
+		'taxonomy' => 'sfhiv_year',
 		'include' => implode(",",$years),
 		'title_li' => false,
 	));
@@ -52,7 +55,7 @@ function sfhiv_get_taxonomy_in($query,$taxonomy_name,$fields=false){
 		}
 	}
 	foreach($taxonomies as $taxonomy){	// loop all entries to error check
-		if(isset($taxonomy['invalid_taxonomy'])){
+		if(array_key_exists('invalid_taxonomy',$taxonomy)){
 			return array();
 		}
 	}
