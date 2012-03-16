@@ -42,7 +42,7 @@ function sfhiv_group_menu_items($ID = false){
 
 add_action('get_footer','sfhiv_add_group_members_list',5);
 function sfhiv_add_group_members_list(){
-	if(!is_singular( array( 'group' ))):
+	if(!is_singular( array( 'sfhiv_group' ))):
 		return true;
 	endif;
 	$users = get_users( array(
@@ -63,7 +63,7 @@ function sfhiv_add_group_members_list(){
 
 add_action('get_footer','sfhiv_add_group_events_list',5);
 function sfhiv_add_group_events_list(){
-	if(!is_singular(array('group'))){
+	if(!is_singular(array('sfhiv_group'))){
 		return true;
 	}
 	$events = new WP_Query( array(
@@ -86,7 +86,7 @@ function sfhiv_add_group_events_list(){
 
 add_action('get_sidebar','sfhiv_add_parent_page_sidebar',20);
 function sfhiv_add_parent_page_sidebar(){
-	if(get_post_type()=='group' || get_post_type()=='event'){
+	if(get_post_type()=='sfhiv_group' || get_post_type()=='event'){
 		$parent_query = new WP_Query( array(
 			'connected_type' => 'parent_page',
 			'connected_items' => get_the_ID(),
