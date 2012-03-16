@@ -19,25 +19,6 @@ function sfhiv_add_excerpt_to_page(){
 	add_post_type_support( 'page', 'excerpt' );
 }
 
-add_action( 'init', 'sfhiv_create_years' );
-function sfhiv_create_years() {
- $labels = array(
-    'name' => _x( 'Years', 'taxonomy general name' ),
-    'singular_name' => _x( 'Year', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Years' ),
-    'all_items' => __( 'All Years' ),
-    'edit_item' => __( 'Edit Year' ),
-    'update_item' => __( 'Update Year' ),
-    'add_new_item' => __( 'Add New Year' ),
-    'new_item_name' => __( 'New Year Name' ),
-  ); 	
-
-  register_taxonomy('year',array('group','event','report'),array(
-    'hierarchical' => true,
-    'labels' => $labels
-  ));
-}
-
 function sfhiv_connection_types() {
 	// Make sure the Posts 2 Posts plugin is active.
 	if ( !function_exists( 'p2p_register_connection_type' ) )
