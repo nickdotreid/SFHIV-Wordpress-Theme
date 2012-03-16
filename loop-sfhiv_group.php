@@ -5,7 +5,7 @@
 	$years = sfhiv_get_taxonomy_in($wp_query,'sfhiv_year');
 	if(count($years) > 1):
 		foreach($years as $year):
-			?><h2 class="year" year-slug="<?=$year->slug;?>"><?=$year->name;?></h2><?
+			?><h2 class="year list-heading" year-slug="<?=$year->slug;?>"><?=$year->name;?></h2><?
 			while($wp_query->have_posts()):	$wp_query->the_post();
 				$post_terms = wp_get_post_terms($post->ID, 'sfhiv_year', array("fields" => "ids"));
 				if(in_array($year->term_id,$post_terms) && !in_array($post->ID,$printed)):

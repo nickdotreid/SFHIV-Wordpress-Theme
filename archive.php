@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="primary">
 	<div id="content" role="main">
-			<article id="archive">
+			<article id="archive" class="list">
 				<header>
 					<h1 class="entry-title"><?=$wp_query->queried_object->label;?></h1>
 				</header>

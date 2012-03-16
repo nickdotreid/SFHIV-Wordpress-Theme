@@ -254,6 +254,10 @@ footer {
   background-repeat: repeat-x;
   background-position: 0px 0px;
 }
+.list#archive {
+  background-image: none;
+  padding-top: 0px;
+}
 #primary {
   margin: 0px;
   padding: 0px;
@@ -326,12 +330,24 @@ footer {
     width: 766px;
   }
 }
-#main .list .list-item {
-  border-top: 1px #bcbcbc solid;
+#main .list .list-heading,
+#main #primary .list .list-heading {
+  padding: 7px 14px 7px;
+  font-size: 24px;
+  color: #2e3c62;
+  border-top: #bcbcbc 3px solid;
 }
-#main .list .list-item .entry-title {
+#main .list .list-item,
+#main #primary .list .list-item {
+  border-top: 1px #bcbcbc solid;
+  padding: 0px 0px 7px;
+}
+#main .list .list-item .entry-title,
+#main #primary .list .list-item .entry-title {
   font-size: 18px;
   padding: 7px 0px;
+  background-color: transparent;
+  width: auto;
 }
 #splash {
   clear: both;
