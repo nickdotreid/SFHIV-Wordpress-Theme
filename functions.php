@@ -40,11 +40,11 @@ function sfhiv_connection_types() {
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
 
-add_action('get_sidebar','sfhiv_group_sidebar_start',1);
+add_action('get_sidebar','sfhiv_group_sidebar_start',10);
 function sfhiv_group_sidebar_start(){
 	echo '<div class="sidebar">';
 }
-add_action('get_sidebar','sfhiv_group_sidebar_end',20000);
+add_action('get_sidebar','sfhiv_group_sidebar_end',100);
 function sfhiv_group_sidebar_end(){
 	echo '</div><!-- .sidebar -->';
 }
