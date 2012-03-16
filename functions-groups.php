@@ -99,8 +99,8 @@ function sfhiv_add_parent_page_sidebar(){
 	}
 }
 
-add_action('get_sidebar','sfhiv_add_mini_archive_group_sidebar',25);
-function sfhiv_add_mini_archive_group_sidebar(){
+add_action('get_sidebar','sfhiv_groups_in_query_sidebar',25);
+function sfhiv_groups_in_query_sidebar(){
 	$query = false;
 	if(is_page()){
 		$archive_type = mini_archive_on_page(get_the_ID());
