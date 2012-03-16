@@ -7,15 +7,9 @@ function sfhiv_get_contact_user(){
 	  'connected_type' => 'contact_user',
 	  'connected_items' => get_the_ID(),
 	));
-	?>
-	<aside id="contact_user">
-	<?
 	foreach($users as $user):
-		include(locate_template('list-member.php'));
+		include(locate_template('contact-member.php'));
 	endforeach;
-	?>
-	</aside>
-	<?
 	endif;
 }
 

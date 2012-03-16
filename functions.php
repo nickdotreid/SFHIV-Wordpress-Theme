@@ -32,7 +32,10 @@ function sfhiv_connection_types() {
 			'page',
 			'post'
 		),
-		'to' => 'user'
+		'to' => 'user',
+		'fields' => array(
+				'subject' => 'Subject',
+				),
 	) );
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
