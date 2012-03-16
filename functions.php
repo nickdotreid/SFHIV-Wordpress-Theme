@@ -34,12 +34,6 @@ function sfhiv_connection_types() {
 		),
 		'to' => 'user'
 	) );
-	
-	p2p_register_connection_type( array(
-		'name' => 'parent_page',
-		'from' => array('group','event'),
-		'to' => 'page',
-	) );
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
 
