@@ -6,6 +6,7 @@
 		<?=the_content();?>
 	</div>
 	<nav>
+		<a href="<?=the_permalink();?>"><?=__('View '.get_the_title(),'sfhiv_theme');?></a>
 		<?	$items = sfhiv_group_menu_items();	?>
 		<?	foreach($items as $item):	?>
 		<a href="<?=the_permalink();?>#<?=$item;?>"><?=__('View '.$item,'sfhiv_theme');?></a>
