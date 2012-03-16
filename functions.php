@@ -1,5 +1,7 @@
 <?php
 
+require_once('models/models.php');
+
 include_once('functions-menus.php');
 
 include_once('functions-assets.php');
