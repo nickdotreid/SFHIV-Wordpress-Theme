@@ -89,8 +89,8 @@ p {
 .clear {
   clear: both;
   width: 100%;
-  height: 150px;
   line-height: 0px;
+  height: 0px;
 }
 a,
 a:visited {
@@ -310,28 +310,34 @@ footer {
   padding: 7px 21px;
 }
 @media all and (min-width: 800px) {
-  #main {
+  #primary .entry-title {
+    width: 260px;
+  }
+  .page-template-default #main,
+  .page-template-splash_page-php #main {
     background-image: url('../i/main-back-medium.gif');
     background-repeat: repeat-y;
     background-position: top left;
   }
-  #primary,
-  .list {
+  .page-template-default #primary,
+  .page-template-splash_page-php #primary,
+  .page-template-default .list,
+  .page-template-splash_page-php .list {
     width: 520px;
     float: right;
     clear: none;
   }
-  .list {
+  .page-template-default .list,
+  .page-template-splash_page-php .list {
     width: 506px;
     margin-left: 14px;
   }
-  #primary #content {
+  .page-template-default #primary #content,
+  .page-template-splash_page-php #primary #content {
     margin-left: 14px;
   }
-  #primary .entry-title {
-    width: 260px;
-  }
-  .sidebar {
+  .page-template-default .sidebar,
+  .page-template-splash_page-php .sidebar {
     display: block;
     width: 260px;
     float: left;
@@ -339,10 +345,12 @@ footer {
   }
 }
 @media all and (min-width: 1100px) {
-  #primary {
+  .page-template-default #primary,
+  .page-template-splash_page-php #primary {
     width: 780px;
   }
-  .list {
+  .page-template-default .list,
+  .page-template-splash_page-php .list {
     width: 766px;
   }
 }

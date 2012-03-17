@@ -57,8 +57,8 @@ p{
 .clear{
 	clear:both;
 	width:100%;
-	height:150px;
 	line-height:0px;
+	height:0px;
 }
 
 a,a:visited{
@@ -241,42 +241,48 @@ a,a:visited{
 
 
 @media all and (min-width: @size_medium) {
-	#main{
-		background-image:url('../i/main-back-medium.gif');
-		background-repeat:repeat-y;
-		background-position:top left;
-	}
-	#primary,.list{
-		width:@block_width*2;
-		float:right;
-		clear:none;
-	}
-	.list{
-		width:@block_width*2 - @space_size*2;
-		margin-left:@space_size*2;
-	}
 	#primary{
-		#content{
-			margin-left:@space_size*2;
-		}
 		.entry-title{
 			width:@block_width;
 		}
 	}
-	.sidebar{
-		display:block;
-		width:@block_width;
-		float:left;
-		clear:left;
+	.page-template-default,.page-template-splash_page-php{
+		#main{
+			background-image:url('../i/main-back-medium.gif');
+			background-repeat:repeat-y;
+			background-position:top left;
+		}
+		#primary,.list{
+			width:@block_width*2;
+			float:right;
+			clear:none;
+		}
+		.list{
+			width:@block_width*2 - @space_size*2;
+			margin-left:@space_size*2;
+		}
+		#primary{
+			#content{
+				margin-left:@space_size*2;
+			}
+		}
+		.sidebar{
+			display:block;
+			width:@block_width;
+			float:left;
+			clear:left;
+		}
 	}
 }
 
 @media all and (min-width: @size_large) {
-	#primary{
-		width:@block_width*3;
-	}
-	.list{
-		width:@block_width*3 - @space_size*2;
+	.page-template-default,.page-template-splash_page-php{
+		#primary{
+			width:@block_width*3;
+		}
+		.list{
+			width:@block_width*3 - @space_size*2;
+		}
 	}
 }
 
