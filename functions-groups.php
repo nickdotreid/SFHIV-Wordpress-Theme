@@ -48,14 +48,53 @@ function sfhiv_add_group_members_list(){
 	$users = get_users( array(
 	  'connected_type' => 'group_members',
 	  'connected_items' => get_the_ID(),
+		'orderby' => 'display_name',
 	));
 	if(count($users)>0):
+		usort($users,function($a,$b){
+			$a_order = p2p_get_meta( $a->p2p_id, 'order', true );
+			$b_order = p2p_get_meta( $b->p2p_id, 'order', true );
+			if($a_order && $b_order){
+				if($a_order < $b_order){
+					return -1;
+				}else{
+					return 1;
+				}
+			}
+			if($a_order){
+				return -1;
+			}
+			if($b_order){
+				return 1;
+			}
+			return 0;
+		});
 	?>
 	<aside id="members" class="list">
 		<h2>Members</h2>
-		<?	foreach($users as $user):
+		<?
+		$printed = array();
+		foreach($users as $user):
+			if(p2p_get_meta( $user->p2p_id, 'title', true ) && !p2p_get_meta( $user->p2p_id, 'incomplete', true ) && !in_array($user->ID,$printed)):
+				array_push($printed,$user->ID);
 				include(locate_template('list-member.php'));
-		endforeach; ?>
+			endif;
+		endforeach;
+		foreach($users as $user):
+			if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ) && !in_array($user->ID,$printed)):
+				array_push($printed,$user->ID);
+				include(locate_template('list-member.php'));
+			endif;
+		endforeach;
+		?><h3>Members unable to complete term.</h3><?
+		foreach($users as $user):
+			if(!in_array($user->ID,$printed)):
+				array_push($printed,$user->ID);
+				include(locate_template('list-member.php'));
+			endif;
+		endforeach;
+		?>
+		<br class="clear" />
 	</aside>
 	<?
 	endif;

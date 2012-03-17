@@ -13,20 +13,40 @@
 .date_mix.date span span {
   display: inline;
 }
-#mini_archive .member,
-#members .member {
+.list .member {
+  min-height: 80px;
+  position: relative;
   display: block;
-  width: 125px;
-  float: left;
-  margin: 0em 0.4em 0.4em 0em;
+  width: auto;
+  clear: both;
+  margin: 7px 0px;
 }
-#mini_archive .member .name,
-#members .member .name {
+.list .member .avatar {
   display: block;
-  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
-#mini_archive .member .image,
-#members .member .image {
+.list .member .info {
+  margin-left: 87px;
   display: block;
-  margin: 0.2em auto;
+}
+.list .member .info .label {
+  font-size: 10px;
+  display: block;
+}
+.list .member .name {
+  color: #f09938;
+  font-weight: bold;
+  font-size: 18px;
+}
+.list .member .title {
+  font-weight: bold;
+}
+@media all and (min-width: 800px) {
+  .list .member {
+    float: left;
+    clear: none;
+    width: 246px;
+  }
 }
