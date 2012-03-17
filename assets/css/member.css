@@ -13,7 +13,8 @@
 .date_mix.date span span {
   display: inline;
 }
-.list .member {
+.list .member,
+.contact .member {
   min-height: 80px;
   position: relative;
   display: block;
@@ -21,26 +22,31 @@
   clear: both;
   margin: 7px 0px;
 }
-.list .member .avatar {
+.list .member .avatar,
+.contact .member .avatar {
   display: block;
   position: absolute;
   top: 0px;
   left: 0px;
 }
-.list .member .info {
+.list .member .info,
+.contact .member .info {
   margin-left: 87px;
   display: block;
 }
-.list .member .info .label {
+.list .member .info .label,
+.contact .member .info .label {
   font-size: 10px;
   display: block;
 }
-.list .member .name {
+.list .member .name,
+.contact .member .name {
   color: #f09938;
   font-weight: bold;
   font-size: 18px;
 }
-.list .member .title {
+.list .member .title,
+.contact .member .title {
   font-weight: bold;
 }
 @media all and (min-width: 800px) {
