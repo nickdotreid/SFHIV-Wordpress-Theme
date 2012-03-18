@@ -32,18 +32,18 @@
   font-size: 10px;
 }
 @media all and (min-width: 800px) {
-  .event,
+  .list .event,
   #main .event.list-item,
   #main .list .event.list-item,
   #main #primary .list .event.list-item {
     padding-left: 130px;
     padding-right: 130px;
   }
-  .event .event_date_time,
+  .list .event .event_date_time,
   #main .event.list-item .event_date_time,
   #main .list .event.list-item .event_date_time,
   #main #primary .list .event.list-item .event_date_time,
-  .event .attachments,
+  .list .event .attachments,
   #main .event.list-item .attachments,
   #main .list .event.list-item .attachments,
   #main #primary .list .event.list-item .attachments {
@@ -51,13 +51,13 @@
     position: absolute;
     top: 7px;
   }
-  .event .event_date_time,
+  .list .event .event_date_time,
   #main .event.list-item .event_date_time,
   #main .list .event.list-item .event_date_time,
   #main #primary .list .event.list-item .event_date_time {
     left: 0px;
   }
-  .event .attachments,
+  .list .event .attachments,
   #main .event.list-item .attachments,
   #main .list .event.list-item .attachments,
   #main #primary .list .event.list-item .attachments {
