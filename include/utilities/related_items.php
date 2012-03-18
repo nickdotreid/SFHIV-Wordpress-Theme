@@ -11,8 +11,8 @@ function sfhiv_get_related_in($query,$relation){
 		));
 		foreach($post_relations as $related){
 			if(isset($related->ID)){
-				if(!in_array($related->ID,$related_objects)){
-					array_push($related_objects,$related->ID);
+				if(!in_array($related,$related_objects)){
+					array_push($related_objects,$related);
 				}
 			}
 		}
