@@ -135,27 +135,29 @@ function sfhiv_add_group_members_list(){
 	endif;
 }
 
-add_action('get_footer','sfhiv_add_group_events_list',5);
-function sfhiv_add_group_events_list(){
-	if(!is_singular(array('sfhiv_group'))){
-		return true;
+function sfhiv_group_has_events($ID=false){
+	if(!$ID){
+		$ID = get_the_ID();
 	}
 	$events = new WP_Query( array(
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
 	));
-	if($events->have_posts()):
-	?>
-	<aside id="meetings" class="list">
-		<h2>Meetings</h2>
-		<?
-		while($events->have_posts()): $events->the_post();
-			get_template_part('list','event');
-		endwhile;
-		wp_reset_postdata();
-		?>
-	</aside>
-	<?	endif;
+	if($events->have_posts()){
+		return true;
+	}
+	return false;
+}
+
+function sfhiv_group_get_events($id=false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$events = new WP_Query( array(
+		'connected_type' => 'group_events',
+		'connected_items' => get_the_ID(),
+	));
+	return $events;
 }
 
 add_action('get_sidebar','sfhiv_add_parent_page_sidebar',20);

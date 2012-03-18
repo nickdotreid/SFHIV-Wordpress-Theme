@@ -31,6 +31,18 @@
 				<br class="clear" />
 			</section><!-- #members -->
 			<?	endif;	?>
+			<?	if(sfhiv_group_has_events()):	?>
+			<?	$events = sfhiv_group_get_events();	?>
+			<section id="events" class="list">
+				<h2>Events</h2>
+				<?
+				while($events->have_posts()): $events->the_post();
+					get_template_part('list','event');
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</section><!-- #events -->
+			<?	endif;	?>
 		</div><!-- #primary -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
