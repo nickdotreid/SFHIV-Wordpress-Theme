@@ -16,6 +16,21 @@
 			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content -->
+			<?	if(sfhiv_group_has_members()):	?>
+			<?	$users = sfhiv_group_get_members();	?>
+			<section id="members" class="list">
+				<h2>Members</h2>
+				<?	foreach($users as $user):
+					if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
+				endforeach	?>
+				<h3>Members unable to complete term.</h3>
+				<?	foreach($users as $user):
+					if(p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
+				endforeach;
+				?>
+				<br class="clear" />
+			</section><!-- #members -->
+			<?	endif;	?>
 		</div><!-- #primary -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

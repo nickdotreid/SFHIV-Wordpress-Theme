@@ -40,6 +40,67 @@ function sfhiv_group_menu_items($ID = false){
 	return $items;
 }
 
+function sfhiv_group_has_members($ID=false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$users = get_users( array(
+	  'connected_type' => 'group_members',
+	  'connected_items' => get_the_ID(),
+		'orderby' => 'display_name',
+	));
+	if(count($users)>0){
+		return true;
+	}
+	return false;
+}
+
+function sfhiv_group_get_members($ID = false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$users = get_users( array(
+	  'connected_type' => 'group_members',
+	  'connected_items' => get_the_ID(),
+		'orderby' => 'display_name',
+	));
+	if(count($users)<1) return array();
+	usort($users,function($a,$b){
+		$a_title = p2p_get_meta( $a->p2p_id, 'title', true );
+		$b_title = p2p_get_meta( $b->p2p_id, 'title', true );
+		if($a_title && $b_title){
+			if($a_title < $b_title){
+				return -1;
+			}else{
+				return 1;
+			}
+		}
+		if($a_title){
+			return -1;
+		}
+		if($b_title){
+			return 1;
+		}
+		$a_order = p2p_get_meta( $a->p2p_id, 'order', true );
+		$b_order = p2p_get_meta( $b->p2p_id, 'order', true );
+		if($a_order && $b_order){
+			if($a_order < $b_order){
+				return -1;
+			}else{
+				return 1;
+			}
+		}
+		if($a_order){
+			return -1;
+		}
+		if($b_order){
+			return 1;
+		}
+		return 0;
+	});
+	return $users;
+}
+
 add_action('get_footer','sfhiv_add_group_members_list',5);
 function sfhiv_add_group_members_list(){
 	if(!is_singular( array( 'sfhiv_group' ))):
@@ -70,32 +131,6 @@ function sfhiv_add_group_members_list(){
 			return 0;
 		});
 	?>
-	<aside id="members" class="list">
-		<h2>Members</h2>
-		<?
-		$printed = array();
-		foreach($users as $user):
-			if(p2p_get_meta( $user->p2p_id, 'title', true ) && !p2p_get_meta( $user->p2p_id, 'incomplete', true ) && !in_array($user->ID,$printed)):
-				array_push($printed,$user->ID);
-				include(locate_template('list-member.php'));
-			endif;
-		endforeach;
-		foreach($users as $user):
-			if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ) && !in_array($user->ID,$printed)):
-				array_push($printed,$user->ID);
-				include(locate_template('list-member.php'));
-			endif;
-		endforeach;
-		?><h3>Members unable to complete term.</h3><?
-		foreach($users as $user):
-			if(!in_array($user->ID,$printed)):
-				array_push($printed,$user->ID);
-				include(locate_template('list-member.php'));
-			endif;
-		endforeach;
-		?>
-		<br class="clear" />
-	</aside>
 	<?
 	endif;
 }
