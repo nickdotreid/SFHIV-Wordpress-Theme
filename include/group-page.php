@@ -1,69 +1,37 @@
 <?php
 
+require_once('utilities/query_mapper.php');
+
 add_action('get_sidebar','sfhiv_group_page_groups_by_year',20);
 function sfhiv_group_page_groups_by_year(){
+	global $wp_query;
 	if (!is_singular('sfhiv_group')) return;
-	$tax_query = array(
-		'relation' => 'and',
-	);
-	foreach(get_object_taxonomies('sfhiv_group') as $taxonomy){
-		$tax_ids = wp_get_object_terms(get_the_ID(),$taxonomy,array('fields'=>'ids'));
-		if(count($tax_ids)>0){
-			array_push($tax_query,array(
-				'taxonomy' => $taxonomy,
-				'field' => 'id',
-				'terms' => $tax_ids,
-			));
-		}
+	$query = get_similar_to(get_post(get_the_ID()));
+	if($query->post_count > 0 ){
+		$orginal_query = $wp_query;
+		$wp_query = $query;
+		get_template_part('menu',get_post_type());
+		$wp_query = $orginal_query;
+		wp_reset_postdata();
 	}
-	$query = new WP_Query(array(
-		'post_type' => 'sfhiv_group',
-		'tax_query' => $tax_query,
-	));
-	?>
-	<nav><ul class="menu">
-	<?
-	while($query->have_posts()):
-		$query->the_post();
-		get_template_part('menu-item','sfhiv_group');
-	endwhile;
-	wp_reset_postdata();
-	?>
-	</ul></nav>
-	<?
 }
 
 add_action('get_sidebar','sfhiv_group_page_group_by_years',21);
 function sfhiv_group_page_group_by_years(){
+	global $wp_query;
 	if (!is_singular('sfhiv_group')) return;
-	$tax_query = array(
-		'relation' => 'and',
-	);
-	foreach(get_object_taxonomies('sfhiv_group') as $taxonomy){
-		if($taxonomy!='sfhiv_year'):
-			$tax_ids = wp_get_object_terms(get_the_ID(),$taxonomy,array('fields'=>'ids'));
-			if(count($tax_ids)>0){
-				array_push($tax_query,array(
-					'taxonomy' => $taxonomy,
-					'field' => 'id',
-					'terms' => $tax_ids,
-				));
-			}
-		endif;
-	}
-	$query = new WP_Query(array(
-		'post_type' => 'sfhiv_group',
-		'tax_query' => $tax_query,
-	));
+	$query = get_similar_to(get_post(get_the_ID()),array('sfhiv_year'));
 	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year');
 	?>
 	<nav><ul class="menu">
 	<?
-	foreach($years as $year){
-		?>
-		<li><a href="/groups/?sfhiv_year=<?=$year->slug;?>"><?=$year->name;?></a></li>
-		<?
-	}
+	$current_categories =  wp_get_object_terms(get_the_ID(),'sfhiv_year',array('fields'=>'ids'));
+	wp_list_categories(array(
+		'taxonomy' => 'sfhiv_year',
+		'title_li' => false,
+		'include' => implode(",",$service_categories),
+		'current_category' => $current_categories[0],
+	));
 	?></ul></nav><?
 }
 ?>
