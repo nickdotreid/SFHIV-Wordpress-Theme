@@ -9,11 +9,7 @@ function sfhiv_group_page_groups_by_year(){
 	if (!is_singular('sfhiv_group')) return;
 	$query = get_similar_to(get_post(get_the_ID()));
 	if($query->post_count > 0 ){
-		$orginal_query = $wp_query;
-		$wp_query = $query;
-		get_template_part('menu',get_post_type());
-		$wp_query = $orginal_query;
-		wp_reset_postdata();
+		sfhiv_draw_menu($query->posts);
 	}
 }
 

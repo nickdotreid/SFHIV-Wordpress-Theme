@@ -1,7 +1,23 @@
 <?php
 
-function sfhiv_draw_menu($args){
-	
+function sfhiv_draw_menu($posts=array()){
+	$menu_templates = array('menu.php');
+	$template = locate_template($menu_templates);
+	if($template){
+		include $template;
+	}
+}
+
+function sfhiv_draw_menu_item($post){
+	$menu_templates = array();
+	if($post && $post->post_type){
+		array_push($menu_templates,'menu-item'.$post->post_type.'.php');
+	}
+	array_push($menu_templates,'menu-item.php');
+	$template = locate_template($menu_templates);
+	if($template){
+		include $template;
+	}
 }
 
 function sfhiv_draw_taxonomy_menu($args){
