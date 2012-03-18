@@ -1,7 +1,7 @@
 <?php
 
 require_once('utilities/query_mapper.php');
-require_once('utilities/menu.php');
+require_once('utilities/menu_wrapper.php');
 
 add_action('get_sidebar','sfhiv_group_page_groups_by_year',20);
 function sfhiv_group_page_groups_by_year(){
