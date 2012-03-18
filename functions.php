@@ -30,7 +30,10 @@ function sfhiv_connection_types() {
 			'sfhiv_group',
 			'event',
 			'page',
-			'post'
+			'post',
+			'sfhiv_training',
+			'sfhiv_document',
+			'sfhiv_report',
 		),
 		'to' => 'user',
 		'fields' => array(
