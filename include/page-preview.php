@@ -18,24 +18,14 @@ function sfhiv_add_mini_archive_menu(){
 		$archive_filters = mini_archive_get_filters();
 		foreach($archive_filters as $filter){
 			if(!$output_archive){
-				$years = sfhiv_get_taxonomy_in($query,'sfhiv_years');
+				$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
 				if(count($years) > 1){
 					$output_archive = true;
 					sfhiv_draw_taxonomy_menu(array(
-						'taxonomy' => 'sfhiv_years',
-						
+						'taxonomy' => 'sfhiv_year',
+						'title_li' => false,
+						'include' => implode(',',$years),
 					));
-					?>
-					<nav><ul class="menu">
-					<?
-					foreach($years as $year){
-						?>
-						<li class="menu-item"><a href="<?the_permalink();?>#<?=$year->slug;?>"><?=$year->name;?></a></li>
-						<?
-					}
-					?>
-					</ul></nav>
-					<?
 				}
 			}
 		}
