@@ -1,8 +1,5 @@
 <?php
 
-require_once('include/group-page.php');
-require_once('include/group-archive.php');
-
 add_action('wp_head','sfhiv_groups_add_scripts',16);
 function sfhiv_groups_add_scripts(){
 	?>

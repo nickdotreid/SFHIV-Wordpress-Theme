@@ -9,7 +9,9 @@ include_once('functions-assets.php');
 include_once('functions-pages.php');
 include_once('functions-events.php');
 
-include_once('functions-groups.php');
+include_once('include/group-functions.php');
+include_once('include/group-archive.php');
+include_once('include/group-page.php');
 
 include_once('functions-years.php');
 include_once('functions-services.php');
