@@ -7,7 +7,8 @@ include_once('functions-menus.php');
 
 include_once('functions-assets.php');
 include_once('functions-pages.php');
-include_once('functions-events.php');
+
+include_once('include/event-functions.php');
 
 include_once('include/group-functions.php');
 include_once('include/group-archive.php');
