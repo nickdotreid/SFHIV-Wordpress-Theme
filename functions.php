@@ -6,7 +6,9 @@ require_once('include/utilities/utilities.php');
 include_once('functions-menus.php');
 
 include_once('functions-assets.php');
-include_once('functions-pages.php');
+
+include_once('include/page-page.php');
+include_once('include/page-preview.php');
 
 include_once('include/common-page.php');
 
