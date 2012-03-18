@@ -1,3 +1,3 @@
 <li class="<?	if(get_the_ID() == $post->ID) echo 'current_item';	?>">
-	<a href="<?the_permalink($post->ID);?>" class="menu-item" group-id="<?the_ID($post->ID);?>" slug="<?=$post->post_name;?>" ><?=$post->post_title;?></a>
+	<a href="<?=get_permalink($post->ID);?>" class="menu-item" slug="<?=$post->post_name;?>" ><?=get_the_title($post->ID);?></a>
 </li>
