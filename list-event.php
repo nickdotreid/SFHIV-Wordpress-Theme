@@ -24,7 +24,7 @@ foreach($groups->posts as $group){
 }
 
 ?>
-<article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?> start="<?=$event->start*1000;?>" end="<?=$event->end*1000;?>" groups="<?=implode(",",$group_slugs);?>">
+<article id="post-<?=the_ID();?>" <?php post_class("event list-item"); ?> start="<?=$event->start*1000;?>" end="<?=$event->end*1000;?>" groups="<?=implode(",",$group_slugs);?>">
 	<header>
 		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
