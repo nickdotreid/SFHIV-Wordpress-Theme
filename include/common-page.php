@@ -15,4 +15,11 @@ function sfhiv_add_parent_page_sidebar(){
 	}
 }
 
+add_action('get_footer','sfhiv_page_meta',200);
+function sfhiv_page_meta(){
+	if(is_singular()){
+		get_template_part('meta-data',get_post_type());
+	}
+}
+
 ?>

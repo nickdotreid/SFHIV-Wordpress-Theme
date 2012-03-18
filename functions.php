@@ -8,6 +8,8 @@ include_once('functions-menus.php');
 include_once('functions-assets.php');
 include_once('functions-pages.php');
 
+include_once('include/common-page.php');
+
 include_once('include/event-functions.php');
 
 include_once('include/group-functions.php');
