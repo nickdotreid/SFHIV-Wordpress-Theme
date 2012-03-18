@@ -18,13 +18,13 @@ function sfhiv_add_mini_archive_menu(){
 		$archive_filters = mini_archive_get_filters();
 		foreach($archive_filters as $filter){
 			if(!$output_archive){
-				$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
-				if(count($years) > 1){
+				$taxes = sfhiv_get_taxonomy_in($query,$filter['type'],'ids');
+				if(count($taxes) > 1){
 					$output_archive = true;
 					sfhiv_draw_taxonomy_menu(array(
-						'taxonomy' => 'sfhiv_year',
+						'taxonomy' => $filter['type'],
 						'title_li' => false,
-						'include' => implode(',',$years),
+						'include' => implode(',',$taxes),
 					));
 				}
 			}
