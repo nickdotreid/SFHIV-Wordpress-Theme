@@ -15,7 +15,7 @@ include_once('include/group-page.php');
 
 include_once('functions-years.php');
 include_once('functions-services.php');
-include_once('functions-contact-user.php');
+include_once('include/contact-user.php');
 
 include_once('include/document-page.php');
 
