@@ -130,8 +130,6 @@ function sfhiv_add_group_members_list(){
 			}
 			return 0;
 		});
-	?>
-	<?
 	endif;
 }
 
