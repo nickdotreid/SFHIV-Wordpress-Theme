@@ -22,6 +22,7 @@ function sfhiv_group_page_group_by_years(){
 		'title_li' => false,
 		'include' => implode(",",$service_categories),
 		'current_category' => $current_categories[0],
+		'base_link' =>  get_post_type_archive_link( 'sfhiv_group' ),
 	));
 }
 ?>
