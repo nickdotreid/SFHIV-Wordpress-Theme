@@ -7,30 +7,19 @@ function sfhiv_years_add_scripts(){
 	<?
 }
 
-add_action('get_sidebar','sfhiv_add_query_years_sidebar',20);
-function sfhiv_add_query_years_sidebar(){
-	global $wp_query;
-	$query = false;
-	if(is_page()){
-		$archive_type = mini_archive_on_page(get_the_ID());
-		if($archive_type){
-			$query = mini_archive_get_query(get_the_ID());
-		}
-	}
-	if(is_archive()){
-		$wp_query->rewind_posts();
-		$query = $wp_query;
-	}
-	if(!$query): return; endif;
-	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
-	if(count($years)>1):
-	sfhiv_draw_taxonomy_filter(array(
+function sfhiv_draw_years_category_sidebar($query,$args=array()){
+	// make sure query post_type is related to sfhiv_year
+	$categories = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
+	if(!isset($args['min_display'])) $args['min_display'] = 2;
+	if(count($categories) < $args['min_display']) return;
+	$args = array_merge($args,array(
 		'taxonomy' => 'sfhiv_year',
-		'include' => implode(",",$years),
-		'title_li' => false,
+		'include' => implode(",",$categories),
 	));
-	endif;
-	
+	if(!isset($args['base_link']) && is_page()){
+		$args['base_link'] = get_permalink();
+	}
+	sfhiv_draw_taxonomy_menu($args);
 }
 
 ?>

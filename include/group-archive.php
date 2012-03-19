@@ -1,21 +1,11 @@
 <?php
+include_once('years_archive.php');
 
 add_action('get_sidebar','sfhiv_group_archive_filter_by_years',22);
 function sfhiv_group_archive_filter_by_years(){
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_group') return;
-	$categories = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
-	if(count($categories)<2) return;
-	$base_link = get_post_type_archive_link( 'sfhiv_group' );
-	if(is_page()){
-		$base_link = get_permalink();
-	}
-	sfhiv_draw_taxonomy_menu(array(
-		'taxonomy' => 'sfhiv_year',
-		'include' => implode(",",$categories),
-		'title_li' => false,
-		'base_link' =>  $base_link,
-	));
+	sfhiv_draw_years_category_sidebar($query);
 }
 
 add_action('get_sidebar','sfhiv_groups_in_query_sidebar',25);
