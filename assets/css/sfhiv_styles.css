@@ -139,6 +139,11 @@ ul.attachments .attachment {
   padding: 0px 7px;
   background-color: #FFF;
 }
+@media all and (min-width: 530px) {
+  #page {
+    width: 520px;
+  }
+}
 @media all and (min-width: 800px) {
   #page {
     width: 780px;
@@ -309,6 +314,15 @@ footer {
   background: #FFF;
   padding: 7px 21px;
 }
+@media all and (min-width: 530px) {
+  #primary,
+  .list {
+    width: 520px;
+  }
+  #primary .entry-title {
+    width: 260px;
+  }
+}
 @media all and (min-width: 800px) {
   #main {
     background-image: url('../i/main-back-medium.gif');
@@ -321,15 +335,12 @@ footer {
     float: right;
     clear: none;
   }
-  .list {
-    width: 506px;
-    margin-left: 14px;
-  }
   #primary #content {
     margin-left: 14px;
   }
-  #primary .entry-title {
-    width: 260px;
+  .list {
+    width: 506px;
+    margin-left: 14px;
   }
   .sidebar {
     display: block;

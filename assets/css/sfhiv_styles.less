@@ -99,6 +99,11 @@ a,a:visited{
 	padding:0px @space_size;
 	background-color:#FFF;
 }
+@media all and (min-width: @size_tablet) {
+	#page{
+		width:@block_width*2;
+	}	
+}
 @media all and (min-width: @size_medium) {
 	#page{
 		width:@block_width*3;
@@ -238,7 +243,16 @@ a,a:visited{
 	background:#FFF;
 	padding:@space_size @space_size*3;
 }
-
+@media all and (min-width: @size_tablet) {
+	#primary,.list{
+		width:@block_width*2;
+	}
+	#primary{
+		.entry-title{
+			width:@block_width;
+		}
+	}
+}
 
 @media all and (min-width: @size_medium) {
 	#main{
@@ -251,17 +265,14 @@ a,a:visited{
 		float:right;
 		clear:none;
 	}
-	.list{
-		width:@block_width*2 - @space_size*2;
-		margin-left:@space_size*2;
-	}
 	#primary{
 		#content{
 			margin-left:@space_size*2;
 		}
-		.entry-title{
-			width:@block_width;
-		}
+	}
+	.list{
+		width:@block_width*2 - @space_size*2;
+		margin-left:@space_size*2;
 	}
 	.sidebar{
 		display:block;
