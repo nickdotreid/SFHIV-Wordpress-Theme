@@ -20,4 +20,35 @@ function sfhiv_get_related_in($query,$relation){
 	return $related_objects;
 }
 
+
+function sfhiv_get_taxonomy_in($query,$taxonomy_name,$fields=false){
+	$taxonomies = array();
+	$args = array();
+	if($fields){
+		$args['fields'] = $fields;
+	}
+	foreach($query->posts as $post){
+		$post_taxonomies = wp_get_object_terms($post->ID,$taxonomy_name,$args);
+		foreach($post_taxonomies as $taxonomy){
+			if(!in_array($taxonomy,$taxonomies)){
+				array_push($taxonomies,$taxonomy);
+			}
+		}
+	}
+	foreach($taxonomies as $taxonomy){	// loop all entries to error check
+		if(array_key_exists('invalid_taxonomy',$taxonomy)){
+			return array();
+		}
+	}
+	if(!$fields){
+		usort($taxonomies,function($a,$b){
+			if($a->term_order > $b->term_order){
+				return 1;
+			}
+			return 0;
+		});
+	}
+	return $taxonomies;
+}
+
 ?>
