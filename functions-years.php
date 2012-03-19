@@ -24,7 +24,7 @@ function sfhiv_add_query_years_sidebar(){
 	if(!$query): return; endif;
 	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
 	if(count($years)>0):
-	sfhiv_draw_taxonomy_menu(array(
+	sfhiv_draw_taxonomy_filter(array(
 		'taxonomy' => 'sfhiv_year',
 		'include' => implode(",",$years),
 		'title_li' => false,
