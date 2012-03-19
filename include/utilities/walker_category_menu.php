@@ -72,6 +72,11 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 				elseif ( $category->term_id == $_current_category->parent )
 					$class .=  ' current-cat-parent';
 			}
+			if(in_array($category->taxonomy,array_keys($_GET))){
+				if($_GET[$category->taxonomy]==$category->slug){
+					$class .= " current-cat";
+				}
+			}
 			$output .=  ' class="' . $class . '"';
 			$output .= ">$link\n";
 		} else {

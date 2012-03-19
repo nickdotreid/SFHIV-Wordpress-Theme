@@ -30,13 +30,24 @@ function sfhiv_remove_url_vars_from_query($query){
 		'relation' => $query->query_vars['tax_query']['relation'],
 	);
 	$url_keys = array_keys($_GET);
-	
+	foreach($url_keys as $key){
+		if(isset($new_args[$key]) &&
+			$new_args[$key] == $_GET[$key]){
+			$replace = true;
+			unset($new_args[$key]);
+		}
+		if($new_args['taxonomy']==$key && $new_args['term']==$_GET[$key]){
+			$replace = true;
+			unset($new_args['taxonomy']);
+			unset($new_args['term']);
+		}
+	}
 	foreach($query->query_vars['tax_query'] as $tax_query){
 		if(in_array($tax_query['taxonomy'],$url_keys) &&
 			($tax_query['terms'] == $_GET[$tax_query['taxonomy']])){
 			$replace = true;
 		}else{
-			array_push($new_args,$tax_query);
+			array_push($new_args['tax_query'],$tax_query);
 		}
 	}
 	

@@ -24,10 +24,12 @@ function sfhiv_draw_taxonomy_menu($args){
 	?>
 	<nav><ul class="menu menu-<?=$args['taxonomy'];?>">
 	<?
-	$current_categories =  wp_get_object_terms(get_the_ID(),$args['taxonomy'],array('fields'=>'ids'));
-	if(count($current_categories) > 0){
-		$args['current_category'] = $current_categories[0];
-	}
+	if(is_singular()):
+		$current_categories =  wp_get_object_terms(get_the_ID(),$args['taxonomy'],array('fields'=>'ids'));
+		if(count($current_categories) > 0){
+			$args['current_category'] = $current_categories[0];
+		}
+	endif;
 	$args['walker'] = new SFHIV_Category_Walker_Menu();
 	wp_list_categories($args);
 	?></ul></nav><?

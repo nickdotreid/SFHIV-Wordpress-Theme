@@ -3,7 +3,12 @@
 	<div id="content" role="main">
 			<article id="archive" class="list">
 				<header>
-					<h1 class="entry-title"><?=$wp_query->queried_object->label;?></h1>
+					<h1 class="entry-title">
+					<?
+					$obj = get_post_type_object($wp_query->query['post_type']);
+					print $obj->label;
+					?>
+					</h1>
 				</header>
 				<? get_template_part("loop",$wp_query->query_vars['post_type']);	?>
 		</article><!-- #archive -->
