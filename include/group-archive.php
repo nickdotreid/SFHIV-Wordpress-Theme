@@ -48,18 +48,12 @@ function sfhiv_add_query_group_cat_sidebar(){
 	}
 	if(!$query): return; endif;
 	$groups = sfhiv_get_taxonomy_in($query,'sfhiv_group_category','ids');
-	if(count($groups)>0):
-		?><nav>
-			<ul class="menu filters groups"><?
-			if(count($groups)>1):
-				?><li class="menu-item"><a href="#" class="js-only filter default">All Groups</a></li><?
-			endif;
-	wp_list_categories(array(
+	if(count($groups)>1):
+	sfhiv_draw_taxonomy_filter(array(
 		'taxonomy' => 'sfhiv_group_category',
 		'include' => implode(",",$groups),
 		'title_li' => false,
 	));
-		?></ul></nav><?
 	endif;
 }
 
