@@ -27,7 +27,6 @@ function sfhiv_document_page_service_categories(){
 
 add_action('get_sidebar','sfhiv_document_page_similar_menu',23);
 function sfhiv_document_page_similar_menu(){
-	global $wp_query;
 	if (!is_singular('sfhiv_document')) return;
 	$query = get_similar_to(get_post(get_the_ID()));
 	if($query->post_count > 0 ){
