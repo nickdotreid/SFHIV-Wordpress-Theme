@@ -28,6 +28,7 @@ function sfhiv_draw_taxonomy_menu($args){
 	if(count($current_categories) > 0){
 		$args['current_category'] = $current_categories[0];
 	}
+	$args['walker'] = new SFHIV_Category_Walker_Menu();
 	wp_list_categories($args);
 	?></ul></nav><?
 }

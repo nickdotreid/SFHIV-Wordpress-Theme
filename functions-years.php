@@ -18,24 +18,17 @@ function sfhiv_add_query_years_sidebar(){
 		}
 	}
 	if(is_archive()){
-		// get wp_query
 		$wp_query->rewind_posts();
 		$query = $wp_query;
 	}
 	if(!$query): return; endif;
 	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
 	if(count($years)>0):
-		?><nav>
-			<ul class="menu filters years"><?
-			if(count($years)>1):
-				?><li class="menu-item"><a href="#" class="js-only filter default">All Years</a></li><?
-			endif;
-	wp_list_categories(array(
+	sfhiv_draw_taxonomy_menu(array(
 		'taxonomy' => 'sfhiv_year',
 		'include' => implode(",",$years),
 		'title_li' => false,
 	));
-		?></ul></nav><?
 	endif;
 	
 }
