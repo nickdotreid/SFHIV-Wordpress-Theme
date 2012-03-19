@@ -7,17 +7,18 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		$cat_name = esc_attr( $category->name );
 		$cat_name = apply_filters( 'list_cats', $cat_name, $category );
 		$link = '<a href="';
+		$href = "";
 		if(!empty($base_link) && $base_link){
-			$link .= $base_link;
+			$href .= $base_link;
 			if(strpos($base_link,"?")===false)
-				$link .= "?";
+				$href .= "?";
 			else
-				$link .= "&";
-			$link .= $category->taxonomy."=".$category->slug;
+				$href .= "&";
+			$href .= $category->taxonomy."=".$category->slug;
 		}else{
-			$link .= esc_attr( get_term_link($category) );
+			$href .= esc_attr( get_term_link($category) );
 		}
-		$link .= '" ';
+		$link .= $href.'" ';
 		
 		if ( $use_desc_for_title == 0 || empty($category->description) )
 			$link .= 'title="' . esc_attr( sprintf(__( 'View all posts filed under %s' ), $cat_name) ) . '"';
