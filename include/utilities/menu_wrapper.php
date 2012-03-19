@@ -37,7 +37,7 @@ function sfhiv_draw_taxonomy_filter($args){
 	$args['walker'] = new SFHIV_Category_Walker_Filter();
 	?>
 	<form class="filters" action="" method="get">
-		<ul class="filters">
+		<ul class="menu">
 			<?	wp_list_categories($args);	?>
 		</ul>
 		<input type="submit" value="Update Query" />
