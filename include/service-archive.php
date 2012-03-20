@@ -10,4 +10,14 @@ function sfhiv_service_archive_add_service_category(){
 	));
 }
 
+include_once('population-category-functions.php');
+add_action('get_sidebar','sfhiv_service_archive_add_report_category',21);
+function sfhiv_service_archive_add_report_category(){
+	$query = sfhiv_get_archive_query();
+	if(!$query): return; endif;
+	sfhiv_draw_population_category_sidebar($query,array(
+		'base_link' => get_post_type_archive_link( 'sfhiv_service' ),
+	));
+}
+
 ?>
