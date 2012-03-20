@@ -58,10 +58,10 @@ function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	if(count($categories) < $args['min_display']) return;
 	
 	if(!isset($args['base_link'])){
-		if(is_page())
+		if(is_page() && mini_archive_on_page(get_the_ID()))
 			$args['base_link'] = get_permalink();
 		else
-			get_post_type_archive_link( 'sfhiv_group' );
+			$args['base_link'] = get_post_type_archive_link( $query->query_vars['post_type'] );
 	}
 	
 	if(!isset($args['title_li'])){
