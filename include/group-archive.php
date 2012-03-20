@@ -5,7 +5,9 @@ add_action('get_sidebar','sfhiv_group_archive_filter_by_years',22);
 function sfhiv_group_archive_filter_by_years(){
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_group') return;
-	sfhiv_draw_years_category_sidebar($query);
+	sfhiv_draw_years_category_sidebar($query,array(
+		'base_link' => get_post_type_archive_link( 'sfhiv_group' ),
+	));
 }
 
 add_action('get_sidebar','sfhiv_groups_in_query_sidebar',25);

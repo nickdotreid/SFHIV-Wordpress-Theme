@@ -10,14 +10,24 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		$href = "";
 		if(!empty($base_link) && $base_link){
 			$href .= $base_link;
-			if(strpos($base_link,"?")===false)
-				$href .= "?";
-			else
-				$href .= "&";
-			$href .= $category->taxonomy."=".$category->slug;
 		}else{
 			$href .= esc_attr( get_term_link($category) );
 		}
+		foreach($_GET as $key=>$value){
+			if($key != $category->taxonomy){
+				if(strpos($href,"?")===false)
+					$href .= "?";
+				else
+					$href .= "&";
+				$href .= $key."=".$_GET[$key];
+			}
+		}
+		if(strpos($href,"?")===false)
+			$href .= "?";
+		else
+			$href .= "&";
+		$href .= $category->taxonomy."=".$category->slug;
+		
 		$link .= $href.'" ';
 		
 		if ( $use_desc_for_title == 0 || empty($category->description) )
