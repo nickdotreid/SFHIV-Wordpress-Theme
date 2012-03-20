@@ -57,6 +57,13 @@ function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	if(!isset($args['min_display'])) $args['min_display'] = 2;
 	if(count($categories) < $args['min_display']) return;
 	
+	if(!isset($args['base_link'])){
+		if(is_page())
+			$args['base_link'] = get_permalink();
+		else
+			get_post_type_archive_link( 'sfhiv_group' );
+	}
+	
 	if(!isset($args['title_li'])){
 		$taxonomies = get_taxonomies(array(
 			'name' => $tax_name,
