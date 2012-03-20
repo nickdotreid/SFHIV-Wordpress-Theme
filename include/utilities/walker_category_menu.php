@@ -3,39 +3,62 @@
 class SFHIV_Category_Walker_Menu extends Walker_Category {
 	function start_el(&$output, $category, $depth, $args) {
 		extract($args);
-
+		
 		$cat_name = esc_attr( $category->name );
 		$cat_name = apply_filters( 'list_cats', $cat_name, $category );
-		$link = '<a href="';
-		$href = "";
-		if(!empty($base_link) && $base_link){
-			$href .= $base_link;
-		}else{
-			$href .= esc_attr( get_term_link($category) );
-		}
-		foreach($_GET as $key=>$value){
-			if($key != $category->taxonomy){
-				if(strpos($href,"?")===false)
-					$href .= "?";
-				else
-					$href .= "&";
-				$href .= $key."=".$_GET[$key];
+		
+		$link = "";
+		if(isset($_GET[$category->taxonomy]) && $_GET[$category->taxonomy]==$category->slug){
+			$href = "";
+			if(!empty($base_link) && $base_link){
+				$href .= $base_link;
+			}else{
+				$href .= esc_attr( get_term_link($category) );
 			}
+			foreach($_GET as $key=>$value){
+				if($key != $category->taxonomy){
+					if(strpos($href,"?")===false)
+						$href .= "?";
+					else
+						$href .= "&";
+					$href .= $key."=".$_GET[$key];
+				}
+			}
+			$link .= '<a href="'.$href.'" >Close '.$cat_name.'</a>';
+		}else{
+			$link .= '<a href="';
+			$href = "";
+			if(!empty($base_link) && $base_link){
+				$href .= $base_link;
+			}else{
+				$href .= esc_attr( get_term_link($category) );
+			}
+			foreach($_GET as $key=>$value){
+				if($key != $category->taxonomy){
+					if(strpos($href,"?")===false)
+						$href .= "?";
+					else
+						$href .= "&";
+					$href .= $key."=".$_GET[$key];
+				}
+			}
+			if(strpos($href,"?")===false)
+				$href .= "?";
+			else
+				$href .= "&";
+			$href .= $category->taxonomy."=".$category->slug;
+
+			$link .= $href.'" ';
+
+			if ( $use_desc_for_title == 0 || empty($category->description) )
+				$link .= 'title="' . esc_attr( sprintf(__( 'View all posts filed under %s' ), $cat_name) ) . '"';
+			else
+				$link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
+			$link .= '>';
+			$link .= $cat_name . '</a>';
 		}
-		if(strpos($href,"?")===false)
-			$href .= "?";
-		else
-			$href .= "&";
-		$href .= $category->taxonomy."=".$category->slug;
-		
-		$link .= $href.'" ';
-		
-		if ( $use_desc_for_title == 0 || empty($category->description) )
-			$link .= 'title="' . esc_attr( sprintf(__( 'View all posts filed under %s' ), $cat_name) ) . '"';
-		else
-			$link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
-		$link .= '>';
-		$link .= $cat_name . '</a>';
+
+
 
 		if ( !empty($feed_image) || !empty($feed) ) {
 			$link .= ' ';
