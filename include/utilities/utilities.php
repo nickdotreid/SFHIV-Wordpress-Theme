@@ -43,6 +43,7 @@ function sfhiv_remove_keys_from_query($query,$keys = array()){
 			($new_args[$key] == $value || $value == -1)){
 			$replace = true;
 			unset($new_args[$key]);
+			
 		}
 		if($new_args['taxonomy']==$key && 
 			($new_args['term']==$value || $value == -1)){
@@ -53,10 +54,11 @@ function sfhiv_remove_keys_from_query($query,$keys = array()){
 	}
 	
 	foreach($new_args['tax_query'] as $index => $tax_query){
-		if( $index!='relation' && in_array($tax_query['taxonomy'],$keys) &&
-			($tax_query['terms'] == $keys[$tax_query['taxonomy']] || $keys[$tax_query['taxonomy']] == -1)){
-			$replace = true;
-			unset($new_args[$index]);
+		if( $index!='relation' && in_array($tax_query['taxonomy'],array_keys($keys))){
+			if($tax_query['terms'] == $keys[$tax_query['taxonomy']] || $keys[$tax_query['taxonomy']] == -1){
+				$replace = true;
+				unset($new_args['tax_query'][$index]);
+			}
 		}
 	}
 	
