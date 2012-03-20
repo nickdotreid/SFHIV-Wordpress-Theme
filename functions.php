@@ -18,6 +18,8 @@ include_once('include/group-functions.php');
 include_once('include/group-archive.php');
 include_once('include/group-page.php');
 
+include_once('include/service-archive.php');
+
 include_once('include/report-archive.php');
 
 include_once('include/years-archive.php');
