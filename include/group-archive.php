@@ -23,19 +23,25 @@ add_action('get_sidebar','sfhiv_add_query_group_cat_sidebar',21);
 function sfhiv_add_query_group_cat_sidebar(){
 	$query = sfhiv_get_archive_query();
 	if(!$query): return; endif;
+	sfhiv_draw_group_category_sidebar($query,array(
+		'base_link' => get_post_type_archive_link( 'sfhiv_group' ),
+	));
+}
+
+function sfhiv_draw_group_category_sidebar($query,$args = array()){
+	// make sure query post_type is related to sfhiv_year
 	$categories = sfhiv_get_taxonomy_in($query,'sfhiv_group_category','ids');
-	if(count($categories)>1):
-	$base_link = get_post_type_archive_link( 'sfhiv_group' );
-	if(is_page()){
-		$base_link = get_permalink();
-	}
-	sfhiv_draw_taxonomy_menu(array(
+	if(!isset($args['min_display'])) $args['min_display'] = 2;
+	if(count($categories) < $args['min_display']) return;
+	$args = array_merge(array(
 		'taxonomy' => 'sfhiv_group_category',
 		'include' => implode(",",$categories),
-		'title_li' => false,
-		'base_link' =>  $base_link,
-	));
-	endif;
+		'title_li' => 'Group Categories',
+	),$args);
+	if(!isset($args['base_link']) && is_page()){
+		$args['base_link'] = get_permalink();
+	}
+	sfhiv_draw_taxonomy_menu($args);
 }
 
 ?>
