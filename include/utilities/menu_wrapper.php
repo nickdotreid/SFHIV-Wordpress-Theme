@@ -47,5 +47,29 @@ function sfhiv_draw_taxonomy_filter($args){
 	<?
 }
 
+function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
+	if(!is_object_in_taxonomy($query->query_vars['post_type'],$tax_name)) return;
+	$categories = sfhiv_get_taxonomy_in($query,$tax_name,'ids');
+	
+	if(!isset($args['min_display'])) $args['min_display'] = 2;
+	if(count($categories) < $args['min_display']) return;
+	
+	if(!isset($args['title_li'])){
+		$taxonomies = get_taxonomies(array(
+			'name' => $tax_name,
+		),'objects');
+		foreach($taxonomies as $taxonomy){
+			$args['title_li'] = $taxonomy->label;
+		}
+	}
+	
+	$args = array_merge(array(
+		'taxonomy' => $tax_name,
+		'include' => implode(",",$categories),
+	),$args);
+	
+	sfhiv_draw_taxonomy_menu($args);
+}
+
 
 ?>
