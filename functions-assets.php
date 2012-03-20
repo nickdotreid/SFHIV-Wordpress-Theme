@@ -19,6 +19,7 @@ function sfhiv_add_scripts(){
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/page.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/events.js"></script>
+	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/years.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/Respond/respond.min.js"></script>
 	<?
 }
