@@ -4,7 +4,10 @@ add_action('get_sidebar','sfhiv_group_archive_filter_by_years',22);
 function sfhiv_group_archive_filter_by_years(){
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_group') return;
-	sfhiv_draw_taxonomy_query_menu('sfhiv_year',$query,array(
+	sfhiv_draw_taxonomy_query_menu(
+		'sfhiv_year',
+		sfhiv_remove_url_vars_from_query($query,array('sfhiv_year')),
+		array(
 		'base_link' => get_post_type_archive_link( 'sfhiv_group' ),
 	));
 }
@@ -22,7 +25,10 @@ add_action('get_sidebar','sfhiv_add_query_group_cat_sidebar',21);
 function sfhiv_add_query_group_cat_sidebar(){
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_group') return;
-	sfhiv_draw_taxonomy_query_menu('sfhiv_group_category',$query,array(
+	sfhiv_draw_taxonomy_query_menu(
+		'sfhiv_group_category',
+		sfhiv_remove_url_vars_from_query($query,array('sfhiv_group_category')),
+		array(
 		'base_link' => get_post_type_archive_link( 'sfhiv_group' ),
 	));
 }

@@ -24,31 +24,39 @@ function sfhiv_get_archive_query(){
 	return $query;
 }
 
-function sfhiv_remove_url_vars_from_query($query){
+function sfhiv_remove_url_vars_from_query($query,$include_only_keys=array()){
+	$url_keys = $_GET;
+	foreach($url_keys as $key => $value){
+		if(!in_array($key,$include_only_keys)){
+			unset($url_keys[$key]);
+		}
+	}
+	return sfhiv_remove_keys_from_query($query,$url_keys);
+}
+
+function sfhiv_remove_keys_from_query($query,$keys = array()){
 	$replace = false;
 	$new_args = $query->query_vars;
-	$new_args['tax_query'] = array(
-		'relation' => $query->query_vars['tax_query']['relation'],
-	);
-	$url_keys = array_keys($_GET);
-	foreach($url_keys as $key){
+	
+	foreach($keys as $key => $value){
 		if(isset($new_args[$key]) &&
-			$new_args[$key] == $_GET[$key]){
+			($new_args[$key] == $value || $value == -1)){
 			$replace = true;
 			unset($new_args[$key]);
 		}
-		if($new_args['taxonomy']==$key && $new_args['term']==$_GET[$key]){
+		if($new_args['taxonomy']==$key && 
+			($new_args['term']==$value || $value == -1)){
 			$replace = true;
 			unset($new_args['taxonomy']);
 			unset($new_args['term']);
 		}
 	}
-	foreach($query->query_vars['tax_query'] as $tax_query){
-		if(in_array($tax_query['taxonomy'],$url_keys) &&
-			($tax_query['terms'] == $_GET[$tax_query['taxonomy']])){
+	
+	foreach($new_args['tax_query'] as $index => $tax_query){
+		if( $index!='relation' && in_array($tax_query['taxonomy'],$keys) &&
+			($tax_query['terms'] == $keys[$tax_query['taxonomy']] || $keys[$tax_query['taxonomy']] == -1)){
 			$replace = true;
-		}else{
-			array_push($new_args['tax_query'],$tax_query);
+			unset($new_args[$index]);
 		}
 	}
 	
