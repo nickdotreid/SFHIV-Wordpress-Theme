@@ -7,6 +7,7 @@ include_once('query_mapper.php');
 include_once('walker_category_menu.php');
 include_once('walker_category_filter.php');
 
+
 function sfhiv_get_archive_query(){
 	global $wp_query;
 	$query = false;
@@ -20,7 +21,7 @@ function sfhiv_get_archive_query(){
 		$wp_query->rewind_posts();
 		$query = $wp_query;
 	}
-	return sfhiv_remove_url_vars_from_query($query);
+	return $query;
 }
 
 function sfhiv_remove_url_vars_from_query($query){
