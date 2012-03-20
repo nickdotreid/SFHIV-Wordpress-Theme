@@ -39,7 +39,7 @@
 .sidebar .menu .current_page_ancestor,
 .sidebar .menu .current_page_parent,
 .sidebar .menu .current_page_ancestor .children {
-  font-size: 10px;
+  font-size: 14px;
 }
 .sidebar .menu .current_page_ancestor a,
 .sidebar .menu .current_page_parent a,
