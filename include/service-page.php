@@ -1,5 +1,18 @@
 <?php
 
+add_action('get_sidebar','sfhiv_service_page_back_to_index',20);
+function sfhiv_service_page_back_to_index(){
+	if(is_singular('sfhiv_service')){
+		?>
+		<nav>
+			<ul class="menu">
+				<li><a href="<?=get_post_type_archive_link('sfhiv_service');?>"><?_e("All Services");?></a></li>
+			</ul>
+		</nav>
+		<?
+	}
+}
+
 add_action('get_sidebar','sfhiv_service_page_service_type',21);
 function sfhiv_service_page_service_type(){
 	if (!is_singular('sfhiv_service')) return;
