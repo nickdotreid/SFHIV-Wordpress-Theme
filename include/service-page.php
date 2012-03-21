@@ -41,4 +41,15 @@ function sfhiv_service_page_population_categories(){
 	));
 }
 
+function sfhiv_service_get_groups($ID=false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$groups = new WP_Query( array(
+		'connected_type' => 'group_services',
+		'connected_items' => get_the_ID(),
+	));
+	return $groups->posts;
+}
+
 ?>

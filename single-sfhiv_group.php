@@ -57,7 +57,7 @@
 				<h2>Services</h2>
 				<?
 				while($services->have_posts()): $services->the_post();
-					get_template_part('list','service');
+					get_template_part('list',get_post_type());
 				endwhile;
 				wp_reset_postdata();
 				?>
