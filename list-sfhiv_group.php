@@ -3,7 +3,7 @@
 		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
 	<div class="entry-content">
-		<?=the_content();?>
+		<?=the_excerpt();?>
 	</div>
 	<nav>
 		<a href="<?=the_permalink();?>"><?=__('View '.get_the_title(),'sfhiv_theme');?></a>
