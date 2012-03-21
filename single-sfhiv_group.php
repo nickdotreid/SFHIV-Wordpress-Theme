@@ -20,13 +20,21 @@
 			<?	$users = sfhiv_group_get_members();	?>
 			<section id="members" class="list">
 				<h2>Members</h2>
-				<?	foreach($users as $user):
-					if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
-				endforeach	?>
+				<?
+				$show_incomplete = false;
+				foreach($users as $user):
+					if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ))
+						include(locate_template('list-member.php'));
+					else
+						$show_incomplete = true;
+				endforeach;
+				if($show_incomplete):
+				?>
 				<h3>Members unable to complete term.</h3>
 				<?	foreach($users as $user):
 					if(p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
 				endforeach;
+				endif;
 				?>
 				<br class="clear" />
 			</section><!-- #members -->
@@ -42,6 +50,18 @@
 				wp_reset_postdata();
 				?>
 			</section><!-- #events -->
+			<?	endif;	?>
+			<?	if(sfhiv_group_has_services()):	?>
+			<?	$services = sfhiv_group_get_services();	?>
+			<section id="services" class="list">
+				<h2>Services</h2>
+				<?
+				while($services->have_posts()): $services->the_post();
+					get_template_part('list','service');
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</section><!-- #services -->
 			<?	endif;	?>
 		</div><!-- #primary -->
 <?php get_sidebar(); ?>
