@@ -23,6 +23,7 @@ function sfhiv_service_page_service_type(){
 		'taxonomy' => 'sfhiv_service_category',
 		'include' => implode(",",$service_categories),
 		'base_link' =>  get_post_type_archive_link( 'sfhiv_service' ),
+		'title_li' => 'Services',
 	));
 }
 
@@ -36,6 +37,7 @@ function sfhiv_service_page_population_categories(){
 		'taxonomy' => 'sfhiv_population_category',
 		'include' => implode(",",$categories),
 		'base_link' =>  get_post_type_archive_link( 'sfhiv_service' ),
+		'title_li' => 'Populations',
 	));
 }
 
