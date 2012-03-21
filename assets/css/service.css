@@ -1,0 +1,41 @@
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.list .sfhiv_service {
+  position: relative;
+}
+.list .sfhiv_service .relationships {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.list .sfhiv_service .relationships ul {
+  margin: 0px;
+  padding: 0px;
+}
+.list .sfhiv_service .relationships li {
+  list-style-type: none;
+}
+@media all and (min-width: 800px) {
+  .list .sfhiv_service {
+    padding-right: 137px;
+  }
+  .list .sfhiv_service .relationships {
+    position: absolute;
+    width: 130px;
+    top: 0px;
+    right: 0px;
+  }
+}

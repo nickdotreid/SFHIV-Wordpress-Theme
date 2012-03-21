@@ -10,6 +10,7 @@ function sfhiv_add_styles(){
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/menu.css" />
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/member.css" />
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/event.css" />
+	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/service.css" />
 	<?
 }
 
