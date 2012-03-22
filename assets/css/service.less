@@ -10,14 +10,19 @@
 	}	
 }
 @media all and (min-width: @size_medium) {
-	.list{
-		.sfhiv_service{
+	.list,#main #primary{
+		.sfhiv_service,.sfhiv_service.list-item{
 			padding-right:@block_width/2 + @space_size;
 			.relationships{
 				position:absolute;
-				width:@block_width/2;
+				width:@block_width/2 - @space_size;
 				top:0px;
 				right:0px;
+				li{
+					display:block;
+					border-bottom:@border_width @secondary_color solid;
+					padding:@space_size 0px;
+				}
 			}
 		}	
 	}

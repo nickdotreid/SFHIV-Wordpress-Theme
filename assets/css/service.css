@@ -29,13 +29,27 @@
   list-style-type: none;
 }
 @media all and (min-width: 800px) {
-  .list .sfhiv_service {
+  .list .sfhiv_service,
+  #main #primary .sfhiv_service,
+  .list .sfhiv_service.list-item,
+  #main #primary .sfhiv_service.list-item {
     padding-right: 137px;
   }
-  .list .sfhiv_service .relationships {
+  .list .sfhiv_service .relationships,
+  #main #primary .sfhiv_service .relationships,
+  .list .sfhiv_service.list-item .relationships,
+  #main #primary .sfhiv_service.list-item .relationships {
     position: absolute;
-    width: 130px;
+    width: 123px;
     top: 0px;
     right: 0px;
+  }
+  .list .sfhiv_service .relationships li,
+  #main #primary .sfhiv_service .relationships li,
+  .list .sfhiv_service.list-item .relationships li,
+  #main #primary .sfhiv_service.list-item .relationships li {
+    display: block;
+    border-bottom: 1px #bcbcbc solid;
+    padding: 7px 0px;
   }
 }
