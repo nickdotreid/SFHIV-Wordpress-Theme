@@ -284,6 +284,13 @@ footer {
   background-image: none;
   padding-top: 0px;
 }
+#main .contact.list {
+  background-image: none;
+  padding-top: 7px;
+  border-top: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
+  margin: 7px 0px;
+}
 #primary {
   margin: 0px;
   padding: 0px;
