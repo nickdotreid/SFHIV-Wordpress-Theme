@@ -1,7 +1,14 @@
 <?
 
+add_action('wp_head','sfhiv_custom_meta',10);
 add_action('wp_head','sfhiv_add_styles',15);
 add_action('wp_head','sfhiv_add_scripts',16);
+
+function sfhiv_custom_meta(){
+	?>
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+	<?
+}
 
 function sfhiv_add_styles(){
 	?>
