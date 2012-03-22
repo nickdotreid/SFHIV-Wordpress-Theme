@@ -41,6 +41,7 @@ h1,h2,h3,h4{
 		font-size:@font_size;
 		clear:both;
 		font-weight:bold;
+		color:darken(@highlight_color,10%);
 	}
 	h4{
 		clear:both;
@@ -50,8 +51,9 @@ h1,h2,h3,h4{
 	}
 }
 
-p{
+p,li{
 	margin:0px 0px @space_size;
+	line-height:1.25em;
 }
 
 .clear{
@@ -219,6 +221,9 @@ a,a:visited{
 		background:@text_color;
 		display:block;
 		padding:@space_size*4 @space_size @space_size;
+	}
+	.entry-content{
+		padding:@space_size 0px;
 	}
 	.table_of_contents{
 		.menu-item{

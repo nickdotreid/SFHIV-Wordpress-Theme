@@ -27,6 +27,7 @@
 }
 .sidebar .menu li {
   list-style-type: none;
+  line-height: 1em;
 }
 .sidebar .menu a,
 .sidebar .menu a:visited,

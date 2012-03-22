@@ -27,6 +27,7 @@
 }
 .list .sfhiv_service .relationships li {
   list-style-type: none;
+  line-height: 1em;
 }
 @media all and (min-width: 800px) {
   .list .sfhiv_service,
