@@ -28,6 +28,7 @@ include_once('include/years-archive.php');
 include_once('include/contact-user.php');
 
 include_once('include/document-page.php');
+include_once('include/document-archive.php');
 
 add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){
