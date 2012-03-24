@@ -47,7 +47,7 @@ function sfhiv_service_get_groups($ID=false){
 	}
 	$groups = new WP_Query( array(
 		'connected_type' => 'group_services',
-		'connected_items' => get_the_ID(),
+		'connected_items' => $ID,
 	));
 	return $groups->posts;
 }
