@@ -16,7 +16,7 @@ $time_format = get_option('time_format');
 		<h1 class="entry-title"><a href="<?=get_permalink($service_parent->ID);?>"><?=get_the_title($service_parent->ID);?></a></h1>
 	</header>
 	<div class="entry-content">
-		<?=get_the_excerpt($service_parent->ID);?>
+		<?=apply_filters('the_excerpt',$service_parent->post_excerpt);?>
 	</div>
 	<aside class="day_time">
 		<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
