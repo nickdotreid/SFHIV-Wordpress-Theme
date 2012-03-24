@@ -9,7 +9,7 @@ if($service_parents->post_count > 0)	$service_parent = $service_parents->posts[0
 $time_format = get_option('time_format');
 
 ?>
-<article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?>
+<article id="post-<?=the_ID();?>" <?php post_class("list-item sfhiv_service"); ?>
 	service-parent="<?=$service_parent->ID;?>"
 	>
 	<header>
@@ -65,7 +65,7 @@ $time_format = get_option('time_format');
 		<?	endif;	?>
 	</aside>
 	<nav>
-		<a href="<?=the_permalink($service_parent->ID);?>"><?=__('View '.get_the_title($service_parent->ID),'sfhiv_theme');?></a>
-		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<a href="<?=get_permalink($service_parent->ID);?>"><?=__('View '.get_the_title($service_parent->ID),'sfhiv_theme');?></a>
+		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>', $service_parent->ID ); ?>
 	</nav>
 </article>
