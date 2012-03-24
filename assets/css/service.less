@@ -27,3 +27,38 @@
 		}	
 	}
 }
+
+.sfhiv_service_hour{
+	.days{
+		.menu_mix();
+		color: #FFF;
+		background:@highlight_color;
+		padding:@space_size @space_size*2;
+	}
+	.time{
+		padding:@space_size @space_size*2;
+		span{
+			display:block;
+			font-weight:bold;
+			.label{
+				float:left;
+				padding:0px @space_size 0px 0px;
+				font-weight:normal;
+				font-size:@small_font_size;
+			}
+		}
+	}
+}
+@media all and (min-width: @size_medium) {
+	.list,#main .list{
+		.sfhiv_service_hour,.sfhiv_service_hour.list-item{
+			padding-left:@block_width/2 + @space_size;
+			.day_time{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:@block_width/2 - @space_size;
+			}
+		}
+	}
+}

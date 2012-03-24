@@ -18,7 +18,7 @@ $time_format = get_option('time_format');
 	<div class="entry-content">
 		<?=get_the_excerpt($service_parent->ID);?>
 	</div>
-	<aside class="event_date_time">
+	<aside class="day_time">
 		<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
 		<?	if(count($days)>0):	?>
 		<div class="days">

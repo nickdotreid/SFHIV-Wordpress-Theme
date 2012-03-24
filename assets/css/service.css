@@ -54,3 +54,49 @@
     padding: 7px 0px;
   }
 }
+.sfhiv_service_hour .days {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  color: #FFF;
+  background: #f09938;
+  padding: 7px 14px;
+}
+.sfhiv_service_hour .days ul {
+  margin: 0px;
+  padding: 0px;
+}
+.sfhiv_service_hour .days li {
+  list-style-type: none;
+  line-height: 1em;
+}
+.sfhiv_service_hour .time {
+  padding: 7px 14px;
+}
+.sfhiv_service_hour .time span {
+  display: block;
+  font-weight: bold;
+}
+.sfhiv_service_hour .time span .label {
+  float: left;
+  padding: 0px 7px 0px 0px;
+  font-weight: normal;
+  font-size: 10px;
+}
+@media all and (min-width: 800px) {
+  .list .sfhiv_service_hour,
+  #main .list .sfhiv_service_hour,
+  .list .sfhiv_service_hour.list-item,
+  #main .list .sfhiv_service_hour.list-item {
+    padding-left: 137px;
+  }
+  .list .sfhiv_service_hour .day_time,
+  #main .list .sfhiv_service_hour .day_time,
+  .list .sfhiv_service_hour.list-item .day_time,
+  #main .list .sfhiv_service_hour.list-item .day_time {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 123px;
+  }
+}
