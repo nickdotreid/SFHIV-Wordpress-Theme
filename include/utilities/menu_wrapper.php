@@ -1,38 +1,44 @@
 <?php
 
 
-function sfhiv_draw_page_navigation($ID){
-	?><nav><?
-	$children = get_pages(array(
-		"parent"=>$ID,
-		"hierarchical" => 0,
-		"post_type" => get_post_type($ID),
-		));
-	$children_IDs = array();
-	foreach($children as $child){
-		array_push($children_IDs,$child->ID);
+function sfhiv_draw_page_navigation($post_ids,$args=array()){
+	extract($args);
+	if(!is_array($post_ids)){
+		$post_ids = array($post_ids);
 	}
-	$children_IDs = implode(",",$children_IDs);
-	$parents = get_ancestors($ID,get_post_type($ID));
-	$parent_IDs = implode(",",$parents);
-	$page_IDs = $parent_IDs.",".$children_IDs.",".$ID;
-	if(count($parents)>0){
-		$parent_ID = $parents[0];
-		$sibling_IDs = array();
-		$siblings = get_pages(array(
-			"parent"=>$parent_ID,
+	$ids_to_show = array();
+	?><nav><?
+	foreach($post_ids as $ID){
+		array_push($ids_to_show,$ID);
+		$children = get_pages(array(
+			"parent"=>$ID,
 			"hierarchical" => 0,
 			"post_type" => get_post_type($ID),
-		));
-		foreach($siblings as $sibling){
-			array_push($sibling_IDs,$sibling->ID);
+			));
+		foreach($children as $child){
+			array_push($ids_to_show,$child->ID);
 		}
-		$page_IDs .= ",".implode(",",$sibling_IDs);
+		$parents = get_ancestors($ID,get_post_type($ID));
+		foreach($parents as $parent){
+			array_push($ids_to_show,$parent);
+		}
+		if(count($parents)>0){
+			$parent_ID = $parents[0];
+			$siblings = get_pages(array(
+				"parent"=>$parent_ID,
+				"hierarchical" => 0,
+				"post_type" => get_post_type($ID),
+			));
+			foreach($siblings as $sibling){
+				array_push($ids_to_show,$sibling->ID);
+			}
+		}
 	}
+	
 	wp_page_menu(array( 
 		'show_home' => false,
 		'sort_column' => 'menu_order',
-		'include' => $page_IDs,
+		'include' => implode(",",$ids_to_show),
 		'post_type' => get_post_type($ID),
 		));
 	?></nav><?
