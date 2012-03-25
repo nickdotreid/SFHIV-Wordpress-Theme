@@ -5,11 +5,15 @@ $(document).ready(function(){
 		// reset all heights to auto & restore all borders
 		$("#splash .preview").css({
 			"height":"auto",
-			"border-top-width":"1px"
+			"border-bottom-width":"1px"
 		});
 		var heights = [];
+		var lowest = 0;
 		$("#splash .preview").each(function(){
 			var position = $(this).position();
+			if(position.top>lowest){
+				lowest = position.top;
+			}
 			var found = false;
 			for(var i=0;i<heights.length;i++){
 				if(heights[i]['top']==position.top){
@@ -28,8 +32,8 @@ $(document).ready(function(){
 		});
 		$("#splash .preview").each(function(){
 			var position = $(this).position();
-			if(position.top<1){
-				$(this).css("border-top-width","0px");
+			if(position.top>=lowest){
+				$(this).css("border-bottom-width","0px");
 			}
 			for(var i=0;i<heights.length;i++){
 				if(heights[i]['top']==position.top){
