@@ -36,7 +36,7 @@ function sfhiv_register_custom_menu() {
 add_action('before','sfhiv_add_top_sidebar',40);
 function sfhiv_add_top_sidebar(){
 	?>
-	<section class="content top">
+	<section id="section-top" class="content top">
 		<?dynamic_sidebar("Top Sidebar");?>
 	</section>
 

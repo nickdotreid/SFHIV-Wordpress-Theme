@@ -100,6 +100,7 @@ a,a:visited{
 	margin:0px auto;
 	padding:0px @space_size;
 	background-color:#FFF;
+	position:relative;
 }
 @media all and (min-width: @size_tablet) {
 	#page{
@@ -126,6 +127,12 @@ a,a:visited{
 	.section;
 }
 
+#section-top{
+	margin:@space_size;
+	padding:0px 0px @space_size;
+	border-bottom:@border_width @secondary_color solid;
+}
+
 
 #branding{
 	.divider_mix();
@@ -148,22 +155,29 @@ a,a:visited{
 		}
 	}
 	#site-description{
-		color:@text_color;
-		font-size:@big_font_size;
-		font-weight:normal;
-		padding:@space_size*2 @space_size;
+		display:none;
 	}
 }
 @media all and (min-width: @size_medium) {
+	#section-top{
+		margin:0px;
+		padding:0px;
+		border-bottom:0px;
+		position:absolute;
+		right:@space_size*2;
+		top:0px;
+		text-align:right;
+	}
 	#branding{
 		#site-title{
 			width:382px;
 			float:left;
 		}
-		#site-description{
-			text-align:right;
-			padding-top:70px;
-		}
+	}
+}
+@media all and (min-width: @size_large) {
+	#section-top{
+		right:@space_size*4;
 	}
 }
 

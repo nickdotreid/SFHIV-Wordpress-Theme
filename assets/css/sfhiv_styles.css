@@ -142,6 +142,7 @@ ul.attachments .attachment {
   margin: 0px auto;
   padding: 0px 7px;
   background-color: #FFF;
+  position: relative;
 }
 @media all and (min-width: 530px) {
   #page {
@@ -170,6 +171,11 @@ footer {
   margin: 0px;
   padding: 0px;
   position: relative;
+}
+#section-top {
+  margin: 7px;
+  padding: 0px 0px 7px;
+  border-bottom: 1px #bcbcbc solid;
 }
 #branding {
   clear: both;
@@ -200,19 +206,26 @@ footer {
   left: 0px;
 }
 #branding #site-description {
-  color: #2e3c62;
-  font-size: 18px;
-  font-weight: normal;
-  padding: 14px 7px;
+  display: none;
 }
 @media all and (min-width: 800px) {
+  #section-top {
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 0px;
+    position: absolute;
+    right: 14px;
+    top: 0px;
+    text-align: right;
+  }
   #branding #site-title {
     width: 382px;
     float: left;
   }
-  #branding #site-description {
-    text-align: right;
-    padding-top: 70px;
+}
+@media all and (min-width: 1100px) {
+  #section-top {
+    right: 28px;
   }
 }
 #access {
