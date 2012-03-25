@@ -2,18 +2,11 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-	<nav class="table_of_contents">
-		<?	$items = sfhiv_group_menu_items();	?>
-		<ul class="menu">
-			<?	foreach($items as $item):	?>
-			<li class="menu-item"><a href="#<?=$item;?>"><?=$item;?></a></li>
-			<?	endforeach;	?>
-		</ul>
-	</nav>
+	<? do_action('before_content');	?>
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
+	<? do_action('after_content');	?>
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
