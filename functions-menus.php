@@ -17,6 +17,15 @@ function sfhiv_register_sidebars(){
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>',
 	));
+	register_sidebar(array(
+		'name' => 'Top Sidebar',
+		'id' => 'top-sidebar',
+		'description' => 'widgets here will be displayed at the top of the page',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	));
 }
 
 add_action('init', 'sfhiv_register_custom_menu');
@@ -24,6 +33,15 @@ function sfhiv_register_custom_menu() {
 	register_nav_menu('footer_menu', 'Footer Menu');
 }
 
+add_action('before','sfhiv_add_top_sidebar',40);
+function sfhiv_add_top_sidebar(){
+	?>
+	<section class="content top">
+		<?dynamic_sidebar("Top Sidebar");?>
+	</section>
+
+	<?
+}
 
 add_action('get_footer','sfhiv_add_bottom_sidebar',40);
 function sfhiv_add_bottom_sidebar(){
