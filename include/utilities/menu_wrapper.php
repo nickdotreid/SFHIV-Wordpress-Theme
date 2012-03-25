@@ -10,27 +10,33 @@ function sfhiv_draw_page_navigation($post_ids,$args=array()){
 	?><nav><?
 	foreach($post_ids as $ID){
 		array_push($ids_to_show,$ID);
-		$children = get_pages(array(
-			"parent"=>$ID,
-			"hierarchical" => 0,
-			"post_type" => get_post_type($ID),
-			));
-		foreach($children as $child){
-			array_push($ids_to_show,$child->ID);
-		}
-		$parents = get_ancestors($ID,get_post_type($ID));
-		foreach($parents as $parent){
-			array_push($ids_to_show,$parent);
-		}
-		if(count($parents)>0){
-			$parent_ID = $parents[0];
-			$siblings = get_pages(array(
-				"parent"=>$parent_ID,
+		if(!isset($show_children) || $show_children){
+			$children = get_pages(array(
+				"parent"=>$ID,
 				"hierarchical" => 0,
 				"post_type" => get_post_type($ID),
-			));
-			foreach($siblings as $sibling){
-				array_push($ids_to_show,$sibling->ID);
+				));
+			foreach($children as $child){
+				array_push($ids_to_show,$child->ID);
+			}
+		}
+		$parents = get_ancestors($ID,get_post_type($ID));
+		if(!isset($show_parents) || $show_parents){
+			foreach($parents as $parent){
+				array_push($ids_to_show,$parent);
+			}
+		}
+		if(!isset($show_siblings) || $show_siblings){
+			if(count($parents)>0){
+				$parent_ID = $parents[0];
+				$siblings = get_pages(array(
+					"parent"=>$parent_ID,
+					"hierarchical" => 0,
+					"post_type" => get_post_type($ID),
+				));
+				foreach($siblings as $sibling){
+					array_push($ids_to_show,$sibling->ID);
+				}
 			}
 		}
 	}
@@ -45,23 +51,15 @@ function sfhiv_draw_page_navigation($post_ids,$args=array()){
 }
 
 function sfhiv_draw_menu($posts=array()){
-	$menu_templates = array('menu.php');
-	$template = locate_template($menu_templates);
-	if($template){
-		include $template;
+	$ids = array();
+	foreach($posts as $post){
+		array_push($ids,$post->ID);
 	}
-}
-
-function sfhiv_draw_menu_item($post){
-	$menu_templates = array();
-	if($post && $post->post_type){
-		array_push($menu_templates,'menu-item'.$post->post_type.'.php');
-	}
-	array_push($menu_templates,'menu-item.php');
-	$template = locate_template($menu_templates);
-	if($template){
-		include $template;
-	}
+	sfhiv_draw_page_navigation($ids,array(
+		"show_children" => false,
+		"show_siblings" => false,
+		"show_parents" => false,
+	));
 }
 
 function sfhiv_draw_taxonomy_menu($args){
