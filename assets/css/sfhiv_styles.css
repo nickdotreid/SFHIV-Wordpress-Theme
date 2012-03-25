@@ -543,23 +543,3 @@ footer {
     margin: 0px;
   }
 }
-#mini_archive p {
-  margin: 0.5em 0px;
-}
-#mini_archive .filters .menu-item {
-  float: left;
-  display: block;
-  width: auto;
-}
-#mini_archive .filters .menu-item .filter {
-  padding: 0.5em;
-  display: block;
-}
-#mini_archive .filters .menu-item .filter.selected {
-  background: #2e3c62;
-  color: #FFF;
-}
-#mini_archive .group {
-  border-top: 1px #bcbcbc solid;
-  padding: 1em 0px;
-}
