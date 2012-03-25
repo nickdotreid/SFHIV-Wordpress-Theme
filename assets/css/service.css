@@ -29,6 +29,14 @@
   list-style-type: none;
   line-height: 1em;
 }
+.list .sfhiv_service .relationships ul {
+  margin-bottom: 7px;
+}
+.list .sfhiv_service .relationships li.group {
+  background: #bcbcbc;
+  padding: 7px;
+  text-align: center;
+}
 @media all and (min-width: 800px) {
   .list .sfhiv_service,
   #main .list .sfhiv_service,
@@ -51,7 +59,8 @@
   #main .list .sfhiv_service.list-item .relationships li {
     display: block;
     border-bottom: 1px #bcbcbc solid;
-    padding: 7px 0px;
+    padding: 3.5px 0px 3.5px;
+    margin-bottom: 0px;
   }
 }
 .sfhiv_service_hour .days {
@@ -69,6 +78,9 @@
 .sfhiv_service_hour .days li {
   list-style-type: none;
   line-height: 1em;
+}
+.sfhiv_service_hour .days li {
+  margin-bottom: 3.5px;
 }
 .sfhiv_service_hour .time {
   padding: 7px 14px;

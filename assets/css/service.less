@@ -6,6 +6,14 @@
 		position:relative;
 		.relationships{
 			.menu_mix();
+			ul{
+				margin-bottom:@space_size;
+			}
+			li.group{
+				background:@secondary_color;
+				padding:@space_size;
+				text-align:center;
+			}
 		}
 	}	
 }
@@ -21,7 +29,8 @@
 				li{
 					display:block;
 					border-bottom:@border_width @secondary_color solid;
-					padding:@space_size 0px;
+					padding:@space_size/2 0px @space_size/2;
+					margin-bottom:0px;
 				}
 			}
 		}	
@@ -34,6 +43,9 @@
 		color: #FFF;
 		background:@highlight_color;
 		padding:@space_size @space_size*2;
+		li{
+			margin-bottom:@space_size/2;
+		}
 	}
 	.time{
 		padding:@space_size @space_size*2;
