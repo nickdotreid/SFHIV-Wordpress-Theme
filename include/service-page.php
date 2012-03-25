@@ -41,6 +41,16 @@ function sfhiv_service_page_population_categories(){
 	));
 }
 
+add_action('get_sidebar','sfhiv_service_page_parent_groups',20);
+function sfhiv_service_page_parent_groups(){
+	if (!is_singular('sfhiv_service')) return;
+	$groups = sfhiv_service_get_groups(get_the_ID());
+	if(count($groups)<1) return;
+	foreach($groups as $group){
+		sfhiv_draw_page_navigation($group->ID);
+	}
+}
+
 function sfhiv_service_get_groups($ID=false){
 	if(!$ID){
 		$ID = get_the_ID();
