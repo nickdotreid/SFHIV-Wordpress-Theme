@@ -30,7 +30,7 @@ $children = get_pages(array(
 	"sort_column" => 'menu_order,post_title',
 	));
 ?>
-<nav id="splash">
+<nav id="splash" class="three-column">
 	<div class="divider"></div>
 	<div class="" style="display:block;clear:both;">
 <? foreach($children as $child):	?>
