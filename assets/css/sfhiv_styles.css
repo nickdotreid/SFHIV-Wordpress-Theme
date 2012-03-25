@@ -322,6 +322,22 @@ footer {
 #primary .entry-content {
   padding: 7px 0px;
 }
+#primary .entry-content img.aligncenter,
+#primary .entry-content .wp-caption.aligncenter {
+  display: block;
+  width: auto;
+  margin: 0px auto 7px;
+  padding: 7px 14px 3.5px;
+  border-top: 1px #2e3c62 solid;
+  border-bottom: 1px #2e3c62 solid;
+  text-align: center;
+}
+#primary .entry-content img.aligncenter img,
+#primary .entry-content .wp-caption.aligncenter img {
+  display: block;
+  border: 0px;
+  margin: 3.5px 0px;
+}
 #primary .table_of_contents {
   clear: both;
   height: 35px;

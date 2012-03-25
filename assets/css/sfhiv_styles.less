@@ -245,6 +245,22 @@ a,a:visited{
 	}
 	.entry-content{
 		padding:@space_size 0px;
+		img,.wp-caption{
+			&.aligncenter{
+				display:block;
+				width:auto;
+				margin:0px auto @space_size;
+				padding:@space_size @space_size*2 @space_size/2;
+				border-top:@border_width @text_color solid;
+				border-bottom:@border_width @text_color solid;
+				text-align:center;
+				img{
+					display:block;
+					border:0px;
+					margin:@space_size/2 0px;
+				}
+			}
+		}
 	}
 	.table_of_contents{
 		.menu-item{
