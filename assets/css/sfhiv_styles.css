@@ -191,6 +191,9 @@ footer {
   padding: 0px;
   position: relative;
 }
+#section-top {
+  background-color: #f09938;
+}
 #section-top .widget {
   display: block;
   padding: 14px 0px 0px;
@@ -198,6 +201,7 @@ footer {
 }
 @media all and (min-width: 800px) {
   .js #section-top {
+    background-color: transparent;
     display: none;
     position: absolute;
   }
@@ -217,7 +221,10 @@ footer {
 #branding #site-title {
   display: block;
   position: relative;
-  background: transparent url("../i/site-title.png") no-repeat top left;
+  background-color: #f09938;
+  background-image: url("../i/site-title.png");
+  background-repeat: no-repeat;
+  background-position: top left;
   width: auto;
   height: 162px;
   overflow: hidden;
@@ -244,6 +251,7 @@ footer {
     text-align: right;
   }
   #branding #site-title {
+    background-color: transparent;
     width: 382px;
     float: left;
   }

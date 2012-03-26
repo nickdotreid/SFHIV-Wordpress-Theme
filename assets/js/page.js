@@ -54,7 +54,7 @@ $(document).ready(function(){
 				'width':'auto',
 				'height':'auto',
 				'left':'0px',
-				'top':'0px',
+				'top':'0px'
 			});
 			return true;
 		}

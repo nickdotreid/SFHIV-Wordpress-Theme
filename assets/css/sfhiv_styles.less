@@ -142,6 +142,7 @@ a,a:visited{
 }
 
 #section-top{
+	background-color:@highlight_color;
 	.widget{
 		display:block;
 		padding:@space_size*2 0px 0px;
@@ -150,6 +151,7 @@ a,a:visited{
 }
 @media all and (min-width: @size_medium) {
 	.js #section-top{
+		background-color:transparent;
 		display:none;
 		position:absolute;
 	}
@@ -163,7 +165,10 @@ a,a:visited{
 	#site-title{
 		display:block;
 		position:relative;
-		background:transparent url("../i/site-title.png") no-repeat top left;
+		background-color:@highlight_color;
+		background-image:url("../i/site-title.png");
+		background-repeat:no-repeat;
+		background-position:top left;
 		width:auto;
 		height:162px;
 		overflow:hidden;
@@ -192,6 +197,7 @@ a,a:visited{
 	}
 	#branding{
 		#site-title{
+			background-color:transparent;
 			width:382px;
 			float:left;
 		}
