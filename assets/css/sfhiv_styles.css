@@ -98,6 +98,16 @@ li {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.divider {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+}
 .clear {
   clear: both;
   width: 100%;

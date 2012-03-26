@@ -54,6 +54,14 @@ function sfhiv_add_bottom_sidebar(){
 	<?
 }
 
+add_action('get_footer','sfhiv_add_footer_divider',38);
+function sfhiv_add_footer_divider(){
+	?>
+	<div class="footer">
+		<div class="divider"></div>
+	</div>
+	<?
+}
 add_action('get_footer','sfhiv_add_footer_menu',39);
 function sfhiv_add_footer_menu(){
 	wp_nav_menu(array(
