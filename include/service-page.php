@@ -46,9 +46,13 @@ function sfhiv_service_page_parent_groups(){
 	if (!is_singular('sfhiv_service')) return;
 	$groups = sfhiv_service_get_groups(get_the_ID());
 	if(count($groups)<1) return;
+	$group_ids = array();
 	foreach($groups as $group){
-		sfhiv_draw_page_navigation($group->ID);
+		$group_ids[] = $group->ID;
 	}
+	sfhiv_draw_page_navigation($group_ids,array(
+		'selected_items' => $group_ids,
+	));
 }
 
 function sfhiv_service_get_groups($ID=false){

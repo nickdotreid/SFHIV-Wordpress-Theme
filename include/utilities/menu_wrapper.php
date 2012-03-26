@@ -40,26 +40,26 @@ function sfhiv_draw_page_navigation($post_ids,$args=array()){
 			}
 		}
 	}
-	
-	wp_page_menu(array( 
+	wp_page_menu(array_merge($args,array( 
 		'show_home' => false,
 		'sort_column' => 'menu_order',
 		'include' => implode(",",$ids_to_show),
 		'post_type' => get_post_type($ID),
-		));
+		'walker' => new SFHIV_Post_Type_Walker_Menu(),
+		)));
 	?></nav><?
 }
 
-function sfhiv_draw_menu($posts=array()){
+function sfhiv_draw_menu($posts=array(),$args = array()){
 	$ids = array();
 	foreach($posts as $post){
 		array_push($ids,$post->ID);
 	}
-	sfhiv_draw_page_navigation($ids,array(
+	sfhiv_draw_page_navigation($ids,array_merge(array(
 		"show_children" => false,
 		"show_siblings" => false,
 		"show_parents" => false,
-	));
+	),$args));
 }
 
 function sfhiv_draw_taxonomy_menu($args){
