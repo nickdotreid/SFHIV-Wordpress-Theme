@@ -142,9 +142,17 @@ a,a:visited{
 }
 
 #section-top{
-	margin:@space_size;
-	padding:0px 0px @space_size;
-	border-bottom:@border_width @secondary_color solid;
+	.widget{
+		display:block;
+		padding:@space_size*2 0px 0px;
+		border:0px;
+	}
+}
+@media all and (min-width: @size_medium) {
+	.js #section-top{
+		display:none;
+		position:absolute;
+	}
 }
 
 

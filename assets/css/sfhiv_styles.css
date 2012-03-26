@@ -191,10 +191,16 @@ footer {
   padding: 0px;
   position: relative;
 }
-#section-top {
-  margin: 7px;
-  padding: 0px 0px 7px;
-  border-bottom: 1px #bcbcbc solid;
+#section-top .widget {
+  display: block;
+  padding: 14px 0px 0px;
+  border: 0px;
+}
+@media all and (min-width: 800px) {
+  .js #section-top {
+    display: none;
+    position: absolute;
+  }
 }
 #branding {
   clear: both;
