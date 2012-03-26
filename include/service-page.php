@@ -65,6 +65,7 @@ function sfhiv_service_page_service_hours(){
 	do_action('sfhiv_loop',$service_hours,array(
 		"id" => "service_times",
 		"title" => "Time & Location",
+		"list_element" => "list-item",
 	));
 }
 
