@@ -62,14 +62,10 @@ function sfhiv_service_page_service_hours(){
 		'connected_type' => 'service_time',
 		'connected_items' => get_the_ID(),
 	));
-	if($service_hours->post_count<1) return;
-	?><section id="service_times" class="list"><?
-		?><h2>Service Times</h2><?
-		while($service_hours->have_posts()){
-			$service_hours->the_post();
-			get_template_part('list',get_post_type());
-		}
-	?></section><?
+	do_action('sfhiv_loop',$service_hours,array(
+		"id" => "service_times",
+		"title" => "Time & Location",
+	));
 }
 
 function sfhiv_service_get_groups($ID=false){

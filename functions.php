@@ -68,4 +68,27 @@ function sfhiv_group_sidebar_end(){
 	echo '</div><!-- .sidebar -->';
 }
 
+add_action('sfhiv_loop','sfhiv_loop_items',10, 2);
+function sfhiv_loop_items($query=false,$args=array()){
+	if(!$query) return;
+	if($query->post_count<1) return;
+	$args = array_merge(array(
+		"id" => "archive",
+		"container" => "section",
+		"classes" => array("list"),
+		"list_element" => "list",
+	),$args);
+	do_action("sfhiv_pre_loop",$query,$args);
+	echo '<'.$args['container'].' id="'.$args['id'].'" class="'.implode(" ",$args['classes']).'">';
+	if(isset($args['title']) && $args['title']!=""){
+		echo '<h2 class="list-title">'.$args['title'].'</h2>';
+	}
+	while($query->have_posts()){
+		$query->the_post();
+		get_template_part( $args['list_element'], get_post_type() );
+	}
+	echo '</'.$args['container'].'><!-- #'.$args['id'].'-->';
+	do_action("sfhiv_post_loop",$query,$args);
+}
+
 ?>

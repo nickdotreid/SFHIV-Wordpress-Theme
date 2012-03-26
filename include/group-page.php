@@ -40,4 +40,53 @@ function sfhiv_group_page_group_by_years(){
 		'base_link' =>  get_post_type_archive_link( 'sfhiv_group' ),
 	));
 }
+
+add_action('get_footer','sfhiv_group_page_list_group_members',20);
+function sfhiv_group_page_list_group_members(){
+	if (!is_singular('sfhiv_group')) return;
+	if(sfhiv_group_has_members()):
+	$users = sfhiv_group_get_members();	?>
+	<section id="members" class="list">
+		<h2 class="list-title">Members</h2>
+		<?
+		$show_incomplete = false;
+		foreach($users as $user):
+			if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ))
+				include(locate_template('list-member.php'));
+			else
+				$show_incomplete = true;
+		endforeach;
+		if($show_incomplete):
+		?>
+		<h3>Members unable to complete term.</h3>
+		<?	foreach($users as $user):
+			if(p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
+		endforeach;
+		endif;
+		?>
+		<br class="clear" />
+	</section><!-- #members -->
+	<?	endif;
+}
+
+add_action('get_footer','sfhiv_group_page_list_group_events',21);
+function sfhiv_group_page_list_group_events(){
+	if (!is_singular('sfhiv_group')) return;
+	$events = sfhiv_group_get_events();
+	do_action('sfhiv_loop',$events,array(
+		"id" => "events",
+		"title" => "Events",
+	));
+}
+
+add_action('get_footer','sfhiv_group_page_list_group_services',22);
+function sfhiv_group_page_list_group_services(){
+	if (!is_singular('sfhiv_group')) return;
+	$services = sfhiv_group_get_services();
+	do_action('sfhiv_loop',$services,array(
+		"id" => "services",
+		"title" => "Services",
+	));
+}
+
 ?>
