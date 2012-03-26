@@ -1,15 +1,17 @@
 $(document).ready(function(){
 	$('#branding').append('<br class="clear" />');
 	
-	$(window).resize(function(){
+	$(".three-column").bind("redraw",function(event){
+		var column = $(this);
+		var item_selector = ".preview, .widget";
 		// reset all heights to auto & restore all borders
-		$("#splash .preview").css({
+		$(item_selector,column).css({
 			"height":"auto",
 			"border-bottom-width":"1px"
 		});
 		var heights = [];
 		var lowest = 0;
-		$("#splash .preview").each(function(){
+		$(item_selector,column).each(function(){
 			var position = $(this).position();
 			if(position.top>lowest){
 				lowest = position.top;
@@ -30,7 +32,7 @@ $(document).ready(function(){
 				});
 			}
 		});
-		$("#splash .preview").each(function(){
+		$(item_selector,column).each(function(){
 			var position = $(this).position();
 			if(position.top>=lowest){
 				$(this).css("border-bottom-width","0px");
@@ -41,5 +43,9 @@ $(document).ready(function(){
 				}
 			}
 		});
+	});
+	
+	$(window).resize(function(){
+		$(".three-column").trigger("redraw");
 	}).resize();
 });
