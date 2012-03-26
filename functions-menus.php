@@ -46,8 +46,9 @@ function sfhiv_add_top_sidebar(){
 add_action('get_footer','sfhiv_add_bottom_sidebar',40);
 function sfhiv_add_bottom_sidebar(){
 	?>
-	<section class="footer bottom">
+	<section class="footer bottom three-column">
 		<?dynamic_sidebar("Bottom Sidebar");?>
+		<br class="clear" />
 	</section>
 
 	<?
