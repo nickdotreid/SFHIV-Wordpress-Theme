@@ -55,6 +55,23 @@ function sfhiv_service_page_parent_groups(){
 	));
 }
 
+add_action('get_footer','sfhiv_service_page_service_hours',20);
+function sfhiv_service_page_service_hours(){
+	if (!is_singular('sfhiv_service')) return;
+	$service_hours = new WP_Query( array(
+		'connected_type' => 'service_time',
+		'connected_items' => get_the_ID(),
+	));
+	if($service_hours->post_count<1) return;
+	?><section id="service_times" class="list"><?
+		?><h2>Service Times</h2><?
+		while($service_hours->have_posts()){
+			$service_hours->the_post();
+			get_template_part('list',get_post_type());
+		}
+	?></section><?
+}
+
 function sfhiv_service_get_groups($ID=false){
 	if(!$ID){
 		$ID = get_the_ID();
