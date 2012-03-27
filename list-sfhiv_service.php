@@ -8,7 +8,7 @@
 	<div class="entry-content">
 		<?=the_excerpt();?>
 	</div>
-	<aside class="relationships">
+	<aside class="relationships column">
 		<? $service_groups = sfhiv_service_get_groups();	?>
 		<?	if( count($service_groups) > 0):	?>
 		<ul class="related_groups">

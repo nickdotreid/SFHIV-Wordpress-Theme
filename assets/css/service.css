@@ -40,14 +40,18 @@
 @media all and (min-width: 800px) {
   .list .sfhiv_service,
   #main .list .sfhiv_service,
+  #main #primary .list .sfhiv_service,
   .list .sfhiv_service.list-item,
-  #main .list .sfhiv_service.list-item {
+  #main .list .sfhiv_service.list-item,
+  #main #primary .list .sfhiv_service.list-item {
     padding-right: 137px;
   }
   .list .sfhiv_service .relationships,
   #main .list .sfhiv_service .relationships,
+  #main #primary .list .sfhiv_service .relationships,
   .list .sfhiv_service.list-item .relationships,
-  #main .list .sfhiv_service.list-item .relationships {
+  #main .list .sfhiv_service.list-item .relationships,
+  #main #primary .list .sfhiv_service.list-item .relationships {
     position: absolute;
     width: 123px;
     top: 0px;
@@ -55,8 +59,10 @@
   }
   .list .sfhiv_service .relationships li,
   #main .list .sfhiv_service .relationships li,
+  #main #primary .list .sfhiv_service .relationships li,
   .list .sfhiv_service.list-item .relationships li,
-  #main .list .sfhiv_service.list-item .relationships li {
+  #main .list .sfhiv_service.list-item .relationships li,
+  #main #primary .list .sfhiv_service.list-item .relationships li {
     display: block;
     border-bottom: 1px #bcbcbc solid;
     padding: 3.5px 0px 3.5px;
