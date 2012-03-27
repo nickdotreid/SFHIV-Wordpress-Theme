@@ -87,6 +87,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 		$query->the_post();
 		get_template_part( $args['list_element'], get_post_type() );
 	}
+	wp_reset_postdata();
 	echo '</'.$args['container'].'><!-- #'.$args['id'].'-->';
 	do_action("sfhiv_post_loop",$query,$args);
 }

@@ -23,6 +23,7 @@ function sfhiv_page_list_attachments(){
 		'post_type' => 'attachment',
 		'post_parent' => get_the_ID(),
 		'posts_per_page' => -1,
+		'orderby' => 'menu_order',
 		) );
 	do_action('sfhiv_loop',$attachments,array(
 		"id" => "attachments",
