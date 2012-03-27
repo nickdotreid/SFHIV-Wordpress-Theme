@@ -10,7 +10,7 @@
 					?>
 					</h1>
 				</header>
-				<? get_template_part("loop",$wp_query->query_vars['post_type']);	?>
+				<? do_action("sfhiv_loop",$wp_query);	?>
 		</article><!-- #archive -->
 	</div><!-- #content -->
 </div><!--	#primary -->
