@@ -12,7 +12,7 @@ $time_format = get_option('time_format');
 <article id="post-<?=the_ID();?>" <?php post_class("list-item sfhiv_service"); ?>
 	service-parent="<?=$service_parent->ID;?>"
 	>
-	<aside class="day_time">
+	<aside class="day_time column">
 		<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
 		<?	if(count($days)>0):	?>
 		<div class="days">
@@ -28,7 +28,7 @@ $time_format = get_option('time_format');
 			<span class="end"><span class="label">End:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_end",true));?></span>
 		</div>
 	</aside>
-	<aside class="relationships">
+	<aside class="relationships column">
 		<? $service_groups = sfhiv_service_get_groups($service_parent->ID);	?>
 		<?	if( count($service_groups) > 0):	?>
 		<ul class="related_groups">

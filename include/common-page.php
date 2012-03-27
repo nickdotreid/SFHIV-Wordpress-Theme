@@ -15,6 +15,21 @@ function sfhiv_add_parent_page_sidebar(){
 	}
 }
 
+add_action('after_content','sfhiv_page_list_attachments',5);
+function sfhiv_page_list_attachments(){
+	if(!is_singular()) return;
+	$attachments = new WP_Query(array(
+		'post_status' => 'any',
+		'post_type' => 'attachment',
+		'post_parent' => get_the_ID(),
+		'posts_per_page' => -1,
+		) );
+	do_action('sfhiv_loop',$attachments,array(
+		"id" => "attachments",
+		"list_element" => "list",
+	));
+}
+
 add_action('get_footer','sfhiv_page_meta',200);
 function sfhiv_page_meta(){
 	if(is_singular()){

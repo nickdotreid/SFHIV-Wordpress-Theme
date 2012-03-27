@@ -44,7 +44,6 @@ foreach($groups->posts as $group){
 		<a href="<?=the_permalink();?>"><?_e("View Event");?></a>
 	</nav>
 	<?	if ($attachments):	?>
-	<nav>
 	<ul class="attachments">
 	<?	foreach ( $attachments as $attachment ):	?>
 			<li class="attachment"><?	the_attachment_link( $attachment->ID , true );	?></li>
