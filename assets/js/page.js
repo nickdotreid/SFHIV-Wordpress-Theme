@@ -63,8 +63,30 @@ $(document).ready(function(){
 		section.css("top",($("#site-title").height()-section.height())+'px');
 	});
 	
+	$(".list-item").bind("redraw",function(){
+		var item = $(this);
+		if($(".column",item).length<1){
+			return true;
+		}
+		var height = item.height();
+		$(".column",item).each(function(){
+			var column = $(this);
+			if(column.height()>height){
+				height = column.height();
+			}
+		});
+		$(".column",item).each(function(){
+			var column = $(this);
+			if(column.height()<height){
+				column.height(height);
+			}
+		});
+		item.height(height);
+	});
+	
 	$(window).resize(function(){
 		$("#section-top").trigger("redraw");
 		$(".three-column").trigger("redraw");
+		$(".list-item").trigger("redraw");
 	}).resize();
 });
