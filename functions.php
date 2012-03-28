@@ -71,7 +71,7 @@ function sfhiv_group_sidebar_end(){
 add_action('sfhiv_loop','sfhiv_loop_items',10, 2);
 function sfhiv_loop_items($query=false,$args=array()){
 	if(!$query) return;
-	if($query->post_count<1) return;
+//	if($query->post_count<1) return;
 	$args = array_merge(array(
 		"id" => "archive",
 		"container" => "section",
