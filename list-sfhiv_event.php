@@ -18,5 +18,6 @@ $now = time();
 	</div>
 	<nav>
 		<a href="<?=the_permalink();?>"><?_e("View Event");?></a>
+		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 	</nav>
 </article>
