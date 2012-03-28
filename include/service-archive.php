@@ -71,6 +71,7 @@ add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_day',11,2);
 function sfhiv_service_hours_archive_select_day($query=false,$args){
 	global $sfhiv_service_hour_days;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	if(is_singular('sfhiv_service')) return;
 	sfhiv_draw_filters('sfhiv_service_hour_day',$sfhiv_service_hour_days);
 }
 
@@ -98,6 +99,7 @@ add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_time',10,2);
 function sfhiv_service_hours_archive_select_time($query=false,$args){
 	global $sfhiv_time_options;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	if(is_singular('sfhiv_service')) return;
 	sfhiv_draw_filters('sfhiv_service_hour_time',$sfhiv_time_options);
 }
 
