@@ -142,7 +142,10 @@ a,a:visited{
 }
 
 #section-top{
-	background-color:@highlight_color;
+	background-color:transparent;
+	background-image:url("../i/background-orange.png");
+	background-repeat:repeat;
+	background-position:top left;
 	.widget{
 		display:block;
 		padding:@space_size*2 0px 0px;
@@ -152,6 +155,7 @@ a,a:visited{
 @media all and (min-width: @size_medium) {
 	.js #section-top{
 		background-color:transparent;
+		background-image:none;
 		display:none;
 		position:absolute;
 	}
@@ -162,27 +166,32 @@ a,a:visited{
 	.divider_mix();
 	padding:0px 0px @space_size*4;
 	background-position:left bottom;
-	#site-title{
-		display:block;
-		position:relative;
-		background-color:@highlight_color;
-		background-image:url("../i/site-title.png");
-		background-repeat:no-repeat;
+	hgroup{
+		background-color:transparent;
+		background-image:url("../i/background-orange.png");
+		background-repeat:repeat;
 		background-position:top left;
-		width:auto;
-		height:162px;
-		overflow:hidden;
-		a{
-			width:100%;
-			height:100%;
-			text-indent:3000em;
-			position:absolute;
-			top:0px;
-			left:0px;
+		#site-title{
+			display:block;
+			position:relative;
+			background-color:transparent;
+			background-image:url("../i/site-title.png");
+			background-repeat:no-repeat;
+			background-position:bottom right;
+			height:162px;
+			overflow:hidden;
+			a{
+				width:100%;
+				height:100%;
+				text-indent:3000em;
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
 		}
-	}
-	#site-description{
-		display:none;
+		#site-description{
+			display:none;
+		}
 	}
 }
 @media all and (min-width: @size_medium) {
@@ -196,8 +205,7 @@ a,a:visited{
 		text-align:right;
 	}
 	#branding{
-		#site-title{
-			background-color:transparent;
+		hgroup{
 			width:382px;
 			float:left;
 		}
@@ -229,7 +237,10 @@ a,a:visited{
 				text-decoration:none;
 			}
 			&.current-menu-item,&.current-page-ancestor{
-				background-color:@highlight_color;
+				background-color:transparent;
+				background-image:url("../i/background-orange.png");
+				background-repeat:repeat;
+				background-position:top left;
 				color:#FFF;
 				a,a:visited,a:hover{
 					color:#FFF;
