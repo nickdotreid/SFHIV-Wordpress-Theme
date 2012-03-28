@@ -71,56 +71,41 @@ add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_day',11,2);
 function sfhiv_service_hours_archive_select_day($query=false,$args){
 	global $sfhiv_service_hour_days;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
-	?>
-	<form action="" method="get" class="filter">
-		<?	foreach($_GET as $key=>$value):	?>
-		<?	if($key != 'sfhiv_service_hour_day'):	?>
-		<input type="hidden" name="<?=$key;?>" value="<?=$value;?>" />
-		<?	endif;	?>
-		<?	endforeach;	?>
-<!--		<fieldset>
-			<legend>Time of day to view</legend>	-->
-			<?	foreach($sfhiv_service_hour_days as $option):	?>
-			<label class="radio">
-				<input type="radio" name="sfhiv_service_hour_day" <?	if($_GET['sfhiv_service_hour_day'] == $option['value']) echo 'checked="checked"';	?> value="<?=$option['value'];?>" />
-				<?=$option['name'];?>
-			</label>
-			<?	endforeach;	?>
-			<input type="submit" class="button submit" value="Filter" />
-	<!--	</fieldset>	-->
-	</form>
-<?
+	sfhiv_draw_filters('sfhiv_service_hour_day',$sfhiv_service_hour_days);
+}
+
+add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_day' );
+function sfhiv_service_hour_archive_alter_query_day( $query ) {
+    global $sfhiv_service_hour_days;
+	
+	if(is_admin() || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	if(isset($_GET['sfhiv_service_hour_day'])){
+		foreach($sfhiv_service_hour_days as $option){
+			if($_GET['sfhiv_service_hour_day'] == $option['value']){
+				if(!isset($query->query_vars['meta_query']) || !is_array($query->query_vars['meta_query'])){
+					$query->query_vars['meta_query'] = array();
+				}
+				array_push($query->query_vars['meta_query'],array(
+					'key' => 'sfhiv_service_days',
+					'value' => $option['value'],
+				));
+			}
+		}
+	}
 }
 
 add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_time',10,2);
 function sfhiv_service_hours_archive_select_time($query=false,$args){
 	global $sfhiv_time_options;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
-	?>
-	<form action="" method="get" class="filter">
-		<?	foreach($_GET as $key=>$value):	?>
-		<?	if($key != 'sfhiv_service_hour_time'):	?>
-		<input type="hidden" name="<?=$key;?>" value="<?=$value;?>" />
-		<?	endif;	?>
-		<?	endforeach;	?>
-<!--		<fieldset>
-			<legend>Time of day to view</legend>	-->
-			<?	foreach($sfhiv_time_options as $option):	?>
-			<label class="radio">
-				<input type="radio" name="sfhiv_service_hour_time" <?	if($_GET['sfhiv_service_hour_time'] == $option['value']) echo 'checked="checked"';	?> value="<?=$option['value'];?>" />
-				<?=$option['name'];?>
-			</label>
-			<?	endforeach;	?>
-			<input type="submit" class="button submit" value="Filter" />
-	<!--	</fieldset>	-->
-	</form>
-	<?
+	sfhiv_draw_filters('sfhiv_service_hour_time',$sfhiv_time_options);
 }
 
+add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_time' );
 function sfhiv_service_hour_archive_alter_query_time( $query ) {
     global $sfhiv_time_options;
 	
-	if($query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	if(is_admin() || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	if(isset($_GET['sfhiv_service_hour_time'])){
 		foreach($sfhiv_time_options as $option){
 			if($_GET['sfhiv_service_hour_time'] == $option['value']){
@@ -152,26 +137,8 @@ function sfhiv_service_hour_archive_alter_query_time( $query ) {
 		}
 	}
 }
-add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_time' );
 
-function sfhiv_service_hour_archive_alter_query_day( $query ) {
-    global $sfhiv_service_hour_days;
-	
-	if($query->query_vars['post_type'] != 'sfhiv_service_hour') return;
-	if(isset($_GET['sfhiv_service_hour_day'])){
-		foreach($sfhiv_service_hour_days as $option){
-			if($_GET['sfhiv_service_hour_day'] == $option['value']){
-				if(!isset($query->query_vars['meta_query']) || !is_array($query->query_vars['meta_query'])){
-					$query->query_vars['meta_query'] = array();
-				}
-				array_push($query->query_vars['meta_query'],array(
-					'key' => 'sfhiv_service_days',
-					'value' => $option['value'],
-				));
-			}
-		}
-	}
-}
-add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_day' );
+
+
 
 ?>
