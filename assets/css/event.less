@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-.event{
+.event,.sfhiv_event .event_date_time{
 	.date {
 		color: #FFF;
 		background:@highlight_color;
@@ -39,6 +39,12 @@
 		}
 		.attachments{
 			right:0px;
+		}
+	}
+	.sfhiv_event .event_date_time{
+		.date,.time{
+			float:left;
+			width:@block_width/2 - @space_size*2;
 		}
 	}
 }

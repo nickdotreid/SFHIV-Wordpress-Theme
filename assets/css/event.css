@@ -13,23 +13,28 @@
 .date_mix.date span span {
   display: inline;
 }
-.event .date {
+.event .date,
+.sfhiv_event .event_date_time .date {
   color: #FFF;
   background: #f09938;
   padding: 7px 14px;
 }
-.event .past .date {
+.event .past .date,
+.sfhiv_event .event_date_time .past .date {
   color: #2e3c62;
   background: #d6d6d6;
 }
-.event .time {
+.event .time,
+.sfhiv_event .event_date_time .time {
   padding: 7px 14px;
 }
-.event .time span {
+.event .time span,
+.sfhiv_event .event_date_time .time span {
   display: block;
   font-weight: bold;
 }
-.event .time span .label {
+.event .time span .label,
+.sfhiv_event .event_date_time .time span .label {
   float: left;
   padding: 0px 7px 0px 0px;
   font-weight: normal;
@@ -66,5 +71,10 @@
   #main .list .event.list-item .attachments,
   #main #primary .list .event.list-item .attachments {
     right: 0px;
+  }
+  .sfhiv_event .event_date_time .date,
+  .sfhiv_event .event_date_time .time {
+    float: left;
+    width: 116px;
   }
 }

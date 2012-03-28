@@ -284,6 +284,7 @@ a,a:visited{
 	}
 	.entry-content{
 		padding:@space_size 0px;
+		clear:both;
 		img,.wp-caption{
 			&.aligncenter{
 				display:block;
@@ -300,6 +301,12 @@ a,a:visited{
 				}
 			}
 		}
+	}
+	.entry-meta.top{
+		border-top:@border_width @secondary_color solid;
+		border-bottom:@border_width @secondary_color solid;
+		padding:@space_size/2 0px;
+		margin:@space_size 0px;
 	}
 	.table_of_contents{
 		.menu-item{
