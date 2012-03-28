@@ -18,6 +18,9 @@ include_once('include/group-functions.php');
 include_once('include/group-archive.php');
 include_once('include/group-page.php');
 
+include_once('include/event-page.php');
+include_once('include/event-archive.php');
+
 include_once('include/service-page.php');
 include_once('include/service-archive.php');
 
