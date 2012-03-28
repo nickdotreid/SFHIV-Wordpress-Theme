@@ -71,13 +71,13 @@ function sfhiv_group_sidebar_end(){
 add_action('sfhiv_loop','sfhiv_loop_items',10, 2);
 function sfhiv_loop_items($query=false,$args=array()){
 	if(!$query) return;
-//	if($query->post_count<1) return;
 	$args = array_merge(array(
 		"id" => "archive",
 		"container" => "section",
 		"classes" => array("list"),
 		"list_element" => "list",
 	),$args);
+	if($query->post_count<1 && !isset($args['show_empty'])) return;
 	do_action("sfhiv_pre_loop",$query,$args);
 	echo '<'.$args['container'].' id="'.$args['id'].'" class="'.implode(" ",$args['classes']).'">';
 	if(isset($args['title']) && $args['title']!=""){

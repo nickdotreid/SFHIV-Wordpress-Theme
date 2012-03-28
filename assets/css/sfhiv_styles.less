@@ -330,7 +330,7 @@ a,a:visited{
 		background-repeat:repeat-y;
 		background-position:top left;
 	}
-	#primary,.list{
+	#primary,.list,.filter{
 		width:@block_width*2;
 		float:right;
 		clear:none;
@@ -369,7 +369,7 @@ a,a:visited{
 	#primary{
 		width:@block_width*3;
 	}
-	.list{
+	.list,.filter{
 		width:@block_width*3 - @space_size*2;
 	}
 }
@@ -539,3 +539,8 @@ a,a:visited{
 	}
 }
 
+.filter{
+	display:block;
+	padding:@space_size 0px;
+	border-top:@border_width @secondary_color solid;
+}

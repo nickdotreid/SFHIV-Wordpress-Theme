@@ -72,7 +72,7 @@ function sfhiv_service_hours_archive_select_day($query=false,$args){
 	global $sfhiv_service_hour_days;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	?>
-	<form action="" method="get" class="filters">
+	<form action="" method="get" class="filter">
 		<?	foreach($_GET as $key=>$value):	?>
 		<?	if($key != 'sfhiv_service_hour_day'):	?>
 		<input type="hidden" name="<?=$key;?>" value="<?=$value;?>" />
@@ -97,7 +97,7 @@ function sfhiv_service_hours_archive_select_time($query=false,$args){
 	global $sfhiv_time_options;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	?>
-	<form action="" method="get" class="filters">
+	<form action="" method="get" class="filter">
 		<?	foreach($_GET as $key=>$value):	?>
 		<?	if($key != 'sfhiv_service_hour_time'):	?>
 		<input type="hidden" name="<?=$key;?>" value="<?=$value;?>" />

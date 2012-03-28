@@ -407,7 +407,8 @@ footer {
     background-position: top left;
   }
   #primary,
-  .list {
+  .list,
+  .filter {
     width: 520px;
     float: right;
     clear: none;
@@ -443,7 +444,8 @@ footer {
   #primary {
     width: 780px;
   }
-  .list {
+  .list,
+  .filter {
     width: 766px;
   }
 }
@@ -713,4 +715,9 @@ footer {
   #main .footer.three-column .widget {
     width: 332.6666666666667px;
   }
+}
+.filter {
+  display: block;
+  padding: 7px 0px;
+  border-top: 1px #bcbcbc solid;
 }
