@@ -18,6 +18,10 @@
   background: #f09938;
   padding: 7px 14px;
 }
+.event .past .date {
+  color: #2e3c62;
+  background: #d6d6d6;
+}
 .event .time {
   padding: 7px 14px;
 }
