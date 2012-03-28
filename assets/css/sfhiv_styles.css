@@ -472,6 +472,8 @@ footer {
 @media all and (min-width: 800px) {
   
 }
+#main .two-column,
+#main .footer.two-column,
 #main .three-column,
 #main .footer.three-column {
   clear: both;
@@ -481,6 +483,8 @@ footer {
   display: block;
   background-color: #FFF;
 }
+#main .two-column .divider,
+#main .footer.two-column .divider,
 #main .three-column .divider,
 #main .footer.three-column .divider {
   clear: both;
@@ -492,8 +496,12 @@ footer {
   background-repeat: repeat-x;
   background-position: 0px 0px;
 }
+#main .two-column article,
+#main .footer.two-column article,
 #main .three-column article,
 #main .footer.three-column article,
+#main .two-column .widget,
+#main .footer.two-column .widget,
 #main .three-column .widget,
 #main .footer.three-column .widget {
   width: 260px;
@@ -502,94 +510,170 @@ footer {
   padding: 14px 0px;
   border-bottom: 1px #bcbcbc solid;
 }
+#main .two-column article .entry-header,
+#main .footer.two-column article .entry-header,
 #main .three-column article .entry-header,
 #main .footer.three-column article .entry-header,
+#main .two-column .widget .entry-header,
+#main .footer.two-column .widget .entry-header,
 #main .three-column .widget .entry-header,
 #main .footer.three-column .widget .entry-header,
+#main .two-column article .entry-content,
+#main .footer.two-column article .entry-content,
 #main .three-column article .entry-content,
 #main .footer.three-column article .entry-content,
+#main .two-column .widget .entry-content,
+#main .footer.two-column .widget .entry-content,
 #main .three-column .widget .entry-content,
 #main .footer.three-column .widget .entry-content,
+#main .two-column article nav,
+#main .footer.two-column article nav,
 #main .three-column article nav,
 #main .footer.three-column article nav,
+#main .two-column .widget nav,
+#main .footer.two-column .widget nav,
 #main .three-column .widget nav,
 #main .footer.three-column .widget nav {
   margin: 0px 7px;
 }
+#main .two-column article .entry-header,
+#main .footer.two-column article .entry-header,
 #main .three-column article .entry-header,
 #main .footer.three-column article .entry-header,
+#main .two-column .widget .entry-header,
+#main .footer.two-column .widget .entry-header,
 #main .three-column .widget .entry-header,
 #main .footer.three-column .widget .entry-header,
+#main .two-column article .widgettitle,
+#main .footer.two-column article .widgettitle,
 #main .three-column article .widgettitle,
 #main .footer.three-column article .widgettitle,
+#main .two-column .widget .widgettitle,
+#main .footer.two-column .widget .widgettitle,
 #main .three-column .widget .widgettitle,
 #main .footer.three-column .widget .widgettitle {
   border-top: 1px #2e3c62 solid;
   border-bottom: 1px #2e3c62 solid;
 }
+#main .two-column article .entry-header h1,
+#main .footer.two-column article .entry-header h1,
 #main .three-column article .entry-header h1,
 #main .footer.three-column article .entry-header h1,
+#main .two-column .widget .entry-header h1,
+#main .footer.two-column .widget .entry-header h1,
 #main .three-column .widget .entry-header h1,
 #main .footer.three-column .widget .entry-header h1,
+#main .two-column article .widgettitle h1,
+#main .footer.two-column article .widgettitle h1,
 #main .three-column article .widgettitle h1,
 #main .footer.three-column article .widgettitle h1,
+#main .two-column .widget .widgettitle h1,
+#main .footer.two-column .widget .widgettitle h1,
 #main .three-column .widget .widgettitle h1,
 #main .footer.three-column .widget .widgettitle h1,
+#main .two-column article .entry-header h2,
+#main .footer.two-column article .entry-header h2,
 #main .three-column article .entry-header h2,
 #main .footer.three-column article .entry-header h2,
+#main .two-column .widget .entry-header h2,
+#main .footer.two-column .widget .entry-header h2,
 #main .three-column .widget .entry-header h2,
 #main .footer.three-column .widget .entry-header h2,
+#main .two-column article .widgettitle h2,
+#main .footer.two-column article .widgettitle h2,
 #main .three-column article .widgettitle h2,
 #main .footer.three-column article .widgettitle h2,
+#main .two-column .widget .widgettitle h2,
+#main .footer.two-column .widget .widgettitle h2,
 #main .three-column .widget .widgettitle h2,
 #main .footer.three-column .widget .widgettitle h2,
+#main .two-column article .entry-header h3,
+#main .footer.two-column article .entry-header h3,
 #main .three-column article .entry-header h3,
 #main .footer.three-column article .entry-header h3,
+#main .two-column .widget .entry-header h3,
+#main .footer.two-column .widget .entry-header h3,
 #main .three-column .widget .entry-header h3,
 #main .footer.three-column .widget .entry-header h3,
+#main .two-column article .widgettitle h3,
+#main .footer.two-column article .widgettitle h3,
 #main .three-column article .widgettitle h3,
 #main .footer.three-column article .widgettitle h3,
+#main .two-column .widget .widgettitle h3,
+#main .footer.two-column .widget .widgettitle h3,
 #main .three-column .widget .widgettitle h3,
 #main .footer.three-column .widget .widgettitle h3,
+#main .two-column article .entry-header h4,
+#main .footer.two-column article .entry-header h4,
 #main .three-column article .entry-header h4,
 #main .footer.three-column article .entry-header h4,
+#main .two-column .widget .entry-header h4,
+#main .footer.two-column .widget .entry-header h4,
 #main .three-column .widget .entry-header h4,
 #main .footer.three-column .widget .entry-header h4,
+#main .two-column article .widgettitle h4,
+#main .footer.two-column article .widgettitle h4,
 #main .three-column article .widgettitle h4,
 #main .footer.three-column article .widgettitle h4,
+#main .two-column .widget .widgettitle h4,
+#main .footer.two-column .widget .widgettitle h4,
 #main .three-column .widget .widgettitle h4,
 #main .footer.three-column .widget .widgettitle h4 {
   font-size: 18px;
   padding: 7px 0px;
 }
+#main .two-column article nav .menu a,
+#main .footer.two-column article nav .menu a,
 #main .three-column article nav .menu a,
 #main .footer.three-column article nav .menu a,
+#main .two-column .widget nav .menu a,
+#main .footer.two-column .widget nav .menu a,
 #main .three-column .widget nav .menu a,
 #main .footer.three-column .widget nav .menu a,
+#main .two-column article nav .menu a:visited,
+#main .footer.two-column article nav .menu a:visited,
 #main .three-column article nav .menu a:visited,
 #main .footer.three-column article nav .menu a:visited,
+#main .two-column .widget nav .menu a:visited,
+#main .footer.two-column .widget nav .menu a:visited,
 #main .three-column .widget nav .menu a:visited,
 #main .footer.three-column .widget nav .menu a:visited,
+#main .two-column article nav .menu a:hover,
+#main .footer.two-column article nav .menu a:hover,
 #main .three-column article nav .menu a:hover,
 #main .footer.three-column article nav .menu a:hover,
+#main .two-column .widget nav .menu a:hover,
+#main .footer.two-column .widget nav .menu a:hover,
 #main .three-column .widget nav .menu a:hover,
 #main .footer.three-column .widget nav .menu a:hover {
   text-decoration: none;
 }
+#main .two-column article nav .menu .children,
+#main .footer.two-column article nav .menu .children,
 #main .three-column article nav .menu .children,
 #main .footer.three-column article nav .menu .children,
+#main .two-column .widget nav .menu .children,
+#main .footer.two-column .widget nav .menu .children,
 #main .three-column .widget nav .menu .children,
 #main .footer.three-column .widget nav .menu .children {
   padding-left: 1em;
 }
+#main .two-column article nav .menu .menu-item,
+#main .footer.two-column article nav .menu .menu-item,
 #main .three-column article nav .menu .menu-item,
 #main .footer.three-column article nav .menu .menu-item,
+#main .two-column .widget nav .menu .menu-item,
+#main .footer.two-column .widget nav .menu .menu-item,
 #main .three-column .widget nav .menu .menu-item,
 #main .footer.three-column .widget nav .menu .menu-item {
   clear: both;
 }
+#main .two-column article nav .menu .menu-item .date.date,
+#main .footer.two-column article nav .menu .menu-item .date.date,
 #main .three-column article nav .menu .menu-item .date.date,
 #main .footer.three-column article nav .menu .menu-item .date.date,
+#main .two-column .widget nav .menu .menu-item .date.date,
+#main .footer.two-column .widget nav .menu .menu-item .date.date,
 #main .three-column .widget nav .menu .menu-item .date.date,
 #main .footer.three-column .widget nav .menu .menu-item .date.date {
   display: block;
@@ -600,19 +684,40 @@ footer {
   margin: 0px 0.5em 0.5em 0px;
   padding: 0.5em;
 }
+#main .two-column article nav .menu .menu-item .date.date span,
+#main .footer.two-column article nav .menu .menu-item .date.date span,
 #main .three-column article nav .menu .menu-item .date.date span,
 #main .footer.three-column article nav .menu .menu-item .date.date span,
+#main .two-column .widget nav .menu .menu-item .date.date span,
+#main .footer.two-column .widget nav .menu .menu-item .date.date span,
 #main .three-column .widget nav .menu .menu-item .date.date span,
 #main .footer.three-column .widget nav .menu .menu-item .date.date span {
   display: block;
 }
+#main .two-column article nav .menu .menu-item .date.date span span,
+#main .footer.two-column article nav .menu .menu-item .date.date span span,
 #main .three-column article nav .menu .menu-item .date.date span span,
 #main .footer.three-column article nav .menu .menu-item .date.date span span,
+#main .two-column .widget nav .menu .menu-item .date.date span span,
+#main .footer.two-column .widget nav .menu .menu-item .date.date span span,
 #main .three-column .widget nav .menu .menu-item .date.date span span,
 #main .footer.three-column .widget nav .menu .menu-item .date.date span span {
   display: inline;
 }
 @media all and (min-width: 800px) {
+  #main .two-column,
+  #main .footer.two-column {
+    background-image: url('../i/background-line.gif');
+    background-repeat: repeat-y;
+    background-position: 390px 0;
+  }
+  #main .two-column article,
+  #main .footer.two-column article,
+  #main .two-column .widget,
+  #main .footer.two-column .widget {
+    width: 390px;
+    float: left;
+  }
   #main .three-column,
   #main .footer.three-column {
     background-image: url('../i/splash-back-medium.gif');
@@ -628,6 +733,16 @@ footer {
   }
 }
 @media all and (min-width: 1100px) {
+  #main .two-column,
+  #main .footer.two-column {
+    background-position: 520px 0;
+  }
+  #main .two-column article,
+  #main .footer.two-column article,
+  #main .two-column .widget,
+  #main .footer.two-column .widget {
+    width: 520px;
+  }
   #main .three-column,
   #main .footer.three-column {
     background-image: url('../i/splash-back-large.gif');
@@ -690,6 +805,10 @@ footer {
     padding: 0px 7px;
     margin: 0px;
   }
+}
+#main .footer.three-column,
+#main .footer.two-column {
+  font-size: 0.9em;
 }
 #main .footer.three-column .widget {
   width: 246px;

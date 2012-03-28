@@ -400,8 +400,9 @@ a,a:visited{
 @media all and (min-width: @size_medium) {
 	
 }
+
 #main{
-	.three-column,.footer.three-column{
+	.two-column,.footer.two-column,.three-column,.footer.three-column{
 		.section();
 		display:block;
 		background-color:#FFF;
@@ -444,6 +445,15 @@ a,a:visited{
 		}
 	}
 	@media all and (min-width: @size_medium) {
+		.two-column,.footer.two-column{
+			background-image:url('../i/background-line.gif');
+			background-repeat:repeat-y;
+			background-position:@block_width*3/2 0;
+			article,.widget{
+				width:@block_width*3/2;
+				float:left;
+			}
+		}
 		.three-column,.footer.three-column{
 			background-image:url('../i/splash-back-medium.gif');
 			background-repeat:repeat-y;
@@ -455,6 +465,12 @@ a,a:visited{
 		}
 	}
 	@media all and (min-width: @size_large) {
+		.two-column,.footer.two-column{
+			background-position:@block_width*4/2 0;
+			article,.widget{
+				width:(@block_width*4)/2;
+			}
+		}
 		.three-column,.footer.three-column{
 			background-image:url('../i/splash-back-large.gif');
 			article,.widget{
@@ -506,6 +522,9 @@ a,a:visited{
 }
 
 #main{
+	.footer.three-column,.footer.two-column{
+		font-size:0.9em;
+	}
 	.footer.three-column{
 		.widget{
 			width:@block_width - @space_size*2;

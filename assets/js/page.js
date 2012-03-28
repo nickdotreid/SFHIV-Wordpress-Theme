@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#branding').append('<br class="clear" />');
 	
-	$(".three-column").bind("redraw",function(event){
+	$(".three-column,.two-column").bind("redraw",function(event){
 		var column = $(this);
 		var item_selector = ".preview, .widget";
 		// reset all heights to auto & restore all borders
@@ -86,7 +86,7 @@ $(document).ready(function(){
 	
 	$(window).resize(function(){
 		$("#section-top").trigger("redraw");
-		$(".three-column").trigger("redraw");
+		$(".three-column,.two-column").trigger("redraw");
 		$(".list-item").trigger("redraw");
 	}).resize();
 });
