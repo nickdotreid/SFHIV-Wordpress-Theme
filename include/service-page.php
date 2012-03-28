@@ -59,6 +59,7 @@ add_action('get_footer','sfhiv_service_page_service_hours',20);
 function sfhiv_service_page_service_hours(){
 	if (!is_singular('sfhiv_service')) return;
 	$service_hours = new WP_Query( array(
+		'post_type' => 'sfhiv_service_hour',
 		'connected_type' => 'service_time',
 		'connected_items' => get_the_ID(),
 	));
