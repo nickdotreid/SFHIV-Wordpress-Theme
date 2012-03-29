@@ -16,10 +16,10 @@ function sfhiv_document_page_document_categories(){
 add_action('get_sidebar','sfhiv_document_page_service_categories',22);
 function sfhiv_document_page_service_categories(){
 	if (!is_singular('sfhiv_document')) return;
-	$query = get_similar_to(get_post(get_the_ID()),array('service_category'));
-	$service_categories = sfhiv_get_taxonomy_in($query,'service_category','ids');
+	$query = get_similar_to(get_post(get_the_ID()),array('sfhiv_service_category'));
+	$service_categories = sfhiv_get_taxonomy_in($query,'sfhiv_service_category','ids');
 	sfhiv_draw_taxonomy_menu(array(
-		'taxonomy' => 'service_category',
+		'taxonomy' => 'sfhiv_service_category',
 		'title_li' => false,
 		'include' => implode(",",$service_categories),
 	));

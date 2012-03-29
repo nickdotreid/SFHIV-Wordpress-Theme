@@ -68,7 +68,7 @@ function sfhiv_draw_taxonomy_menu($args){
 	<?
 	if(is_singular()):
 		$current_categories =  wp_get_object_terms(get_the_ID(),$args['taxonomy'],array('fields'=>'ids'));
-		if(count($current_categories) > 0){
+		if(is_array($current_categories) && count($current_categories) > 0){
 			$args['current_category'] = $current_categories[0];
 		}
 	endif;
