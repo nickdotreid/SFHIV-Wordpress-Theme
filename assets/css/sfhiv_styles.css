@@ -89,6 +89,12 @@ li {
   margin: 0px 0px 7px;
   line-height: 1.25em;
 }
+.js-only {
+  display: none;
+}
+.js .js-only {
+  display: block;
+}
 .sfseal {
   display: block;
   width: 200px;
