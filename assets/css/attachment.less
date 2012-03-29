@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+
+@media all and (min-width: @size_medium) {
+	.attachment, #main #primary .list .list-item.attachment{
+		display:block;
+		padding-left:@space_size*10;
+		background-color:transparent;
+		background-repeat:no-repeat;
+		background-position:@space_size @space_size;
+	}
+	.attachment{
+		background-image:url('../i/document_icons/default.png');
+	}
+	.attachment.mime-applicationmsword{
+		background-image:url('../i/document_icons/document.png');
+	}
+}
