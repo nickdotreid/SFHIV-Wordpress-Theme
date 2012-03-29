@@ -95,14 +95,22 @@ li {
 .js .js-only {
   display: block;
 }
-.sfseal {
-  display: block;
-  width: 200px;
-  height: 200px;
+.sfseal,
+.footer.sfseal {
   background-color: #FFF;
   background-image: url('../i/sf_seal_bw_200.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 14px;
+  padding-top: 230px;
+}
+@media all and (min-width: 800px) {
+  .sfseal,
+  .footer.sfseal {
+    background-position: 14px 14px;
+    padding-top: 7px;
+    padding-left: 230px;
+    min-height: 230px;
+  }
 }
 .divider {
   clear: both;

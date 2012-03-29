@@ -63,14 +63,20 @@ p,li{
 	display:block;
 }
 
-.sfseal{
-	display:block;
-	width:200px;
-	height:200px;
+.sfseal,.footer.sfseal{
 	background-color:#FFF;
 	background-image:url('../i/sf_seal_bw_200.jpg');
 	background-repeat:no-repeat;
-	background-position:center center;
+	background-position:center @space_size*2;
+	padding-top:230px;
+}
+@media all and (min-width: @size_medium) {
+	.sfseal,.footer.sfseal{
+		background-position:@space_size*2 @space_size*2;
+		padding-top:@space_size;
+		padding-left:230px;
+		min-height:230px;
+	}
 }
 
 .divider{
