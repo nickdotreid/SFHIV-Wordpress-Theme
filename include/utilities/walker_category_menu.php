@@ -97,7 +97,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 			if ( 'list' == $args['style'] ) {
 				$output .= "\t<li";
 				$class = 'cat-item cat-item-' . $category->term_id;
-				if(!in_array($category->taxonomy,array_keys($_GET))){
+				if(!in_array($category->taxonomy,array_keys($_GET)) && (is_archive())){
 					$class .= " current-cat";
 				}
 				$output .=  ' class="' . $class . '"';
