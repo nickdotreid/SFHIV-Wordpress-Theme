@@ -101,6 +101,26 @@
   font-weight: normal;
   font-size: 10px;
 }
+.sfhiv_service_hour .service_categories,
+.sfhiv_service_hour .population_categories {
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+}
+.sfhiv_service_hour .service_categories li,
+.sfhiv_service_hour .population_categories li {
+  display: block;
+  float: left;
+  margin: 0px 7px 0px 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.sfhiv_service_hour nav {
+  clear: both;
+}
+.sfhiv_service_hour .address.line {
+  display: block;
+}
 @media all and (min-width: 800px) {
   .list .sfhiv_service_hour,
   #main .list .sfhiv_service_hour,
