@@ -25,6 +25,15 @@
   .attachment {
     background-image: url('../i/document_icons/default.png');
   }
+  .attachment .icon-link {
+    position: absolute;
+    top: 0px;
+    left: 7px;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -3000px;
+  }
   .attachment.mime-applicationmsword {
     background-image: url('../i/document_icons/document.png');
   }
