@@ -1,6 +1,6 @@
 <?php
 
-function sfhiv_make_menu_walker_category_link($category,$href=false){
+function sfhiv_make_menu_walker_category_link($category,$href=false,$add=true){
 	if(!$href){
 		$href = esc_attr( get_term_link($category) );
 	}
@@ -11,7 +11,7 @@ function sfhiv_make_menu_walker_category_link($category,$href=false){
 			if($append)	$href = sfhiv_append_url_argument($href,$key,$value);
 		}
 	}
-	if(!isset($_GET[$category->taxonomy]) || $_GET[$category->taxonomy]!=$category->slug){
+	if($add){
 		$href = sfhiv_append_url_argument($href,$category->taxonomy,$category->slug);
 	}
 	return $href;
@@ -27,6 +27,9 @@ function sfhiv_append_url_argument($url,$key,$value){
 }
 
 class SFHIV_Category_Walker_Menu extends Walker_Category {
+	
+	var $displayed_show_all = false;
+	
 	function start_el(&$output, $category, $depth, $args) {
 		extract($args);
 		
@@ -45,9 +48,6 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		else
 			$link .= 'title="' . esc_attr( strip_tags( apply_filters( 'category_description', $category->description, $category ) ) ) . '"';
 		$link .= '>';
-		if(isset($_GET[$category->taxonomy]) && $_GET[$category->taxonomy]==$category->slug){
-			$link .= 'Close ';
-		}
 		$link .= $cat_name . '</a>';
 
 
@@ -87,7 +87,32 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 
 		if ( !empty($show_date) )
 			$link .= ' ' . gmdate('Y-m-d', $category->last_update_timestamp);
-
+		
+		if(!$this->displayed_show_all){
+			$this->displayed_show_all = true;
+			$taxonomy = get_taxonomy($category->taxonomy);
+			
+			if(!empty($base_link) && $base_link) $href = sfhiv_make_menu_walker_category_link($category,$base_link,false);
+			else $href = sfhiv_make_menu_walker_category_link($category,false,false);
+			if ( 'list' == $args['style'] ) {
+				$output .= "\t<li";
+				$class = 'cat-item cat-item-' . $category->term_id;
+				if(!in_array($category->taxonomy,array_keys($_GET))){
+					$class .= " current-cat";
+				}
+				$output .=  ' class="' . $class . '"';
+				$output .= ">";
+			}
+			$output .= '<a href="'.$href.'">';
+			$output .= "All ".$taxonomy->label;
+			$output .= '</a>';
+			if ( 'list' == $args['style'] ) {
+				$output .= "</li>";
+			}else{
+				$output.="<br />";
+			}
+		}
+		
 		if ( 'list' == $args['style'] ) {
 			$output .= "\t<li";
 			$class = 'cat-item cat-item-' . $category->term_id;
