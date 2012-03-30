@@ -6,6 +6,8 @@ function sfhiv_get_contact_user(){
 	  'connected_type' => 'contact_user',
 	  'connected_items' => get_the_ID(),
 	));
+	$show_phone = true;
+	$show_email = true;
 	foreach($users as $user):
 		include(locate_template('contact-member.php'));
 	endforeach;
