@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	$(".list-item.sfhiv_faq").bind("open",function(event){
 		var faq = $(this);
-		$("a.open").hide();
-		$("a.close").show();
+		$("a.open",faq).hide();
+		$("a.close",faq).show();
 		$('.entry-content',faq).show();
 	}).bind("close",function(event){
 		var faq = $(this);
-		$("a.open").show();
-		$("a.close").hide();
+		$("a.open",faq).show();
+		$("a.close",faq).hide();
 		$('.entry-content',faq).hide();
 	}).trigger("close");
 	
