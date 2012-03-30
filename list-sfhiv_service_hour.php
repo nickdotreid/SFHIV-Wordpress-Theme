@@ -37,6 +37,7 @@ $time_format = get_option('time_format');
 	<aside class="relationships column right">
 		<? $service_groups = sfhiv_service_get_groups($service_parent->ID);	?>
 		<?	if( count($service_groups) > 0):	?>
+		<h3>Provided by</h3>
 		<ul class="related_groups">
 		<?	foreach($service_groups as $sgroup):	?>
 			<li class="group <?=implode(" ",wp_get_object_terms($sgroup->ID,'sfhiv_group_category',array("fields"=>"slugs")));?>">
@@ -45,31 +46,31 @@ $time_format = get_option('time_format');
 		<?	endforeach;	?>
 		</ul>
 		<?	endif;	?>
-		<!-- LIST SERVICES -->
-		<?	$service_types = wp_get_object_terms($service_parent->ID,'sfhiv_service_category');	?>
-		<?	if(count($service_types)>0):	?>
+	</aside>
+	<!-- LIST SERVICES -->
+	<?	$service_types = wp_get_object_terms($service_parent->ID,'sfhiv_service_category');	?>
+	<?	if(count($service_types)>0):	?>
+	<aside>
+		<h3>Services Offered</h3>
 		<ul class="service_categories">
 		<?	foreach($service_types as $category):	?>
 			<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
 		<?	endforeach;	?>
 		</ul>
-		<?	endif;	?>
-		<!-- LIST POPULATION -->
-		<?	$population_types = wp_get_object_terms($service_parent->ID,'sfhiv_population_category');	?>
-		<?	if(count($population_types)>0):	?>
-		<ul class="population_categories">
-		<?	foreach($population_types as $category):	?>
-			<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
-		<?	endforeach;	?>
-		</ul>
-		<?	endif;	?>
 	</aside>
-	<header>
-		<h1 class="entry-title"><a href="<?=get_permalink($service_parent->ID);?>"><?=get_the_title($service_parent->ID);?></a></h1>
-	</header>
-	<div class="entry-content">
-		<?=apply_filters('the_excerpt',$service_parent->post_excerpt);?>
-	</div>
+	<?	endif;	?>
+	<!-- LIST POPULATION -->
+	<?	$population_types = wp_get_object_terms($service_parent->ID,'sfhiv_population_category');	?>
+	<?	if(count($population_types)>0):	?>
+	<aside>
+		<h3>Population Specific</h3>
+	<ul class="population_categories">
+	<?	foreach($population_types as $category):	?>
+		<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
+	<?	endforeach;	?>
+	</ul>
+	</aside>
+	<?	endif;	?>
 	<nav>
 		<a href="<?=get_permalink($service_parent->ID);?>"><?=__('View '.get_the_title($service_parent->ID),'sfhiv_theme');?></a>
 		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>', $service_parent->ID ); ?>
