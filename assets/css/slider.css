@@ -14,26 +14,61 @@
   display: inline;
 }
 @media all and (min-width: 1100px) {
-  .js .slider {
+  .js #main .slider {
     display: block;
     position: relative;
     background-color: #FFF;
     border-bottom: 1px #bcbcbc solid;
   }
-  .js .slider li {
+  .js #main .slider li {
+    position: relative;
     display: block;
     float: left;
-    width: 360px;
-    height: 80px;
+    margin-left: 21px;
+    width: 410px;
+    height: 350px;
+    background-color: #CCC;
+    background-repeat: no-repeat;
+    background-position: top left;
   }
-  .js .slider .jcarousel-clip {
+  .js #main .slider li article {
+    width: 342px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 14px;
+    background-color: transparent;
+    background-image: url('../i/background-black-65.png');
+    background-repeat: repeat;
+    background-position: top left;
+    color: #FFF;
+  }
+  .js #main .slider li article .entry-title,
+  .js #main .slider li article h1,
+  .js #main .slider li article h2,
+  .js #main .slider li article h3 {
+    color: #FFF;
+    font-size: 18px;
+  }
+  .js #main .slider li article .entry-title a,
+  .js #main .slider li article h1 a,
+  .js #main .slider li article h2 a,
+  .js #main .slider li article h3 a {
+    color: #FFF;
+    text-decoration: underline;
+  }
+  .js #main .slider li article .entry-content {
+    color: #FFF;
+    font-size: 14px;
+  }
+  .js #main .slider .jcarousel-clip {
     overflow: hidden;
   }
-  .js .slider .arrow,
-  .js .slider .jcarousel-prev,
-  .js .slider .jcarousel-next {
+  .js #main .slider .arrow,
+  .js #main .slider .jcarousel-prev,
+  .js #main .slider .jcarousel-next {
     position: absolute;
-    top: 0px;
+    top: 190px;
     background-color: transparent;
     background-image: url('../i/btn-carousel-prev.png');
     background-repeat: no-repeat;
@@ -44,15 +79,23 @@
     text-indent: -3000px;
     overflow: hidden;
   }
-  .js .slider .arrow.jcarousel-prev,
-  .js .slider .jcarousel-prev.jcarousel-prev,
-  .js .slider .jcarousel-next.jcarousel-prev {
-    left: 0px;
+  .js #main .slider .arrow.jcarousel-prev,
+  .js #main .slider .jcarousel-prev.jcarousel-prev,
+  .js #main .slider .jcarousel-next.jcarousel-prev {
+    left: -25px;
   }
-  .js .slider .arrow.jcarousel-next,
-  .js .slider .jcarousel-prev.jcarousel-next,
-  .js .slider .jcarousel-next.jcarousel-next {
-    right: 0px;
+  .js #main .slider .arrow.jcarousel-next,
+  .js #main .slider .jcarousel-prev.jcarousel-next,
+  .js #main .slider .jcarousel-next.jcarousel-next {
+    right: -25px;
     background-image: url('../i/btn-carousel-next.png');
+  }
+  .js #main .slider .arrow:hover,
+  .js #main .slider .jcarousel-prev:hover,
+  .js #main .slider .jcarousel-next:hover,
+  .js #main .slider .arrow .hover,
+  .js #main .slider .jcarousel-prev .hover,
+  .js #main .slider .jcarousel-next .hover {
+    background-position: -50px 0px;
   }
 }
