@@ -11,6 +11,7 @@ include_once('include/page-page.php');
 include_once('include/page-preview.php');
 
 include_once('include/common-page.php');
+include_once('include/common-archive.php');
 
 include_once('include/event-functions.php');
 
