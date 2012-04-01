@@ -13,89 +13,109 @@
 .date_mix.date span span {
   display: inline;
 }
-@media all and (min-width: 1100px) {
-  .js #main .slider {
-    display: block;
-    position: relative;
-    background-color: #FFF;
-    border-bottom: 1px #bcbcbc solid;
-  }
+.slider {
+  display: none;
+}
+.js #main .slider {
+  display: block;
+  position: relative;
+  background-color: #FFF;
+  border-bottom: 1px #bcbcbc solid;
+  padding-top: 7px;
+}
+.js #main .slider li {
+  position: relative;
+  display: block;
+  float: left;
+  height: 200px;
+  width: 260px;
+  margin-left: 7px;
+  margin-right: 7px;
+  background-color: #CCC;
+  background-repeat: no-repeat;
+  background-position: top left;
+  overflow: hidden;
+}
+.js #main .slider li article {
+  width: auto;
+  margin: 100px 14px;
+  padding: 14px;
+  background-color: transparent;
+  background-image: url('../i/background-black-65.png');
+  background-repeat: repeat;
+  background-position: top left;
+  color: #FFF;
+}
+.js #main .slider li article .entry-title,
+.js #main .slider li article h1,
+.js #main .slider li article h2,
+.js #main .slider li article h3 {
+  color: #FFF;
+  font-size: 18px;
+}
+.js #main .slider li article .entry-title a,
+.js #main .slider li article h1 a,
+.js #main .slider li article h2 a,
+.js #main .slider li article h3 a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.js #main .slider li article .entry-content {
+  color: #FFF;
+  font-size: 14px;
+}
+.js #main .slider .jcarousel-clip {
+  overflow: hidden;
+}
+.js #main .slider .arrow,
+.js #main .slider .jcarousel-prev,
+.js #main .slider .jcarousel-next {
+  position: absolute;
+  top: 70px;
+  background-color: transparent;
+  background-image: url('../i/btn-carousel-prev.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-indent: -3000px;
+  overflow: hidden;
+}
+.js #main .slider .arrow.jcarousel-prev,
+.js #main .slider .jcarousel-prev.jcarousel-prev,
+.js #main .slider .jcarousel-next.jcarousel-prev {
+  left: -25px;
+}
+.js #main .slider .arrow.jcarousel-next,
+.js #main .slider .jcarousel-prev.jcarousel-next,
+.js #main .slider .jcarousel-next.jcarousel-next {
+  right: -25px;
+  background-image: url('../i/btn-carousel-next.png');
+}
+.js #main .slider .arrow:hover,
+.js #main .slider .jcarousel-prev:hover,
+.js #main .slider .jcarousel-next:hover,
+.js #main .slider .arrow .hover,
+.js #main .slider .jcarousel-prev .hover,
+.js #main .slider .jcarousel-next .hover {
+  background-position: -50px 0px;
+}
+@media all and (min-width: 800px) {
   .js #main .slider li {
-    position: relative;
-    display: block;
-    float: left;
     margin-left: 21px;
-    width: 410px;
+    width: 520px;
     height: 350px;
-    background-color: #CCC;
-    background-repeat: no-repeat;
-    background-position: top left;
   }
   .js #main .slider li article {
-    width: 342px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding: 14px;
-    background-color: transparent;
-    background-image: url('../i/background-black-65.png');
-    background-repeat: repeat;
-    background-position: top left;
-    color: #FFF;
-  }
-  .js #main .slider li article .entry-title,
-  .js #main .slider li article h1,
-  .js #main .slider li article h2,
-  .js #main .slider li article h3 {
-    color: #FFF;
-    font-size: 18px;
-  }
-  .js #main .slider li article .entry-title a,
-  .js #main .slider li article h1 a,
-  .js #main .slider li article h2 a,
-  .js #main .slider li article h3 a {
-    color: #FFF;
-    text-decoration: underline;
-  }
-  .js #main .slider li article .entry-content {
-    color: #FFF;
-    font-size: 14px;
-  }
-  .js #main .slider .jcarousel-clip {
-    overflow: hidden;
+    margin-top: 220px;
   }
   .js #main .slider .arrow,
   .js #main .slider .jcarousel-prev,
   .js #main .slider .jcarousel-next {
-    position: absolute;
     top: 190px;
-    background-color: transparent;
-    background-image: url('../i/btn-carousel-prev.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-indent: -3000px;
-    overflow: hidden;
   }
-  .js #main .slider .arrow.jcarousel-prev,
-  .js #main .slider .jcarousel-prev.jcarousel-prev,
-  .js #main .slider .jcarousel-next.jcarousel-prev {
-    left: -25px;
-  }
-  .js #main .slider .arrow.jcarousel-next,
-  .js #main .slider .jcarousel-prev.jcarousel-next,
-  .js #main .slider .jcarousel-next.jcarousel-next {
-    right: -25px;
-    background-image: url('../i/btn-carousel-next.png');
-  }
-  .js #main .slider .arrow:hover,
-  .js #main .slider .jcarousel-prev:hover,
-  .js #main .slider .jcarousel-next:hover,
-  .js #main .slider .arrow .hover,
-  .js #main .slider .jcarousel-prev .hover,
-  .js #main .slider .jcarousel-next .hover {
-    background-position: -50px 0px;
-  }
+}
+@media all and (min-width: 1100px) {
+  
 }
