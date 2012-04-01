@@ -7,11 +7,15 @@ $related = new WP_Query( array(
 ) );
 if($related->post_count > 0):
 ?>
-		<section id="featured" class="slider">
+		<section id="featured" class="slider jcarousel-skin-tango">
+			<ul>
 <?	while($related->have_posts()):	?>
 	<?	$related->the_post();	?>
-	<?	get_template_part('featured',get_post_type());	?>
+				<li>
+					<a href="<?the_permalink();?>"><?the_title();?></a>
+				</li>
 <?	endwhile;	?>
+			</ul>
 		</section>
 <?	wp_reset_postdata();
 	endif;	?>

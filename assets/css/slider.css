@@ -1,0 +1,58 @@
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+@media all and (min-width: 1100px) {
+  .js .slider {
+    display: block;
+    position: relative;
+    background-color: #FFF;
+    border-bottom: 1px #bcbcbc solid;
+  }
+  .js .slider li {
+    display: block;
+    float: left;
+    width: 360px;
+    height: 80px;
+  }
+  .js .slider .jcarousel-clip {
+    overflow: hidden;
+  }
+  .js .slider .arrow,
+  .js .slider .jcarousel-prev,
+  .js .slider .jcarousel-next {
+    position: absolute;
+    top: 0px;
+    background-color: transparent;
+    background-image: url('../i/btn-carousel-prev.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-indent: -3000px;
+    overflow: hidden;
+  }
+  .js .slider .arrow.jcarousel-prev,
+  .js .slider .jcarousel-prev.jcarousel-prev,
+  .js .slider .jcarousel-next.jcarousel-prev {
+    left: 0px;
+  }
+  .js .slider .arrow.jcarousel-next,
+  .js .slider .jcarousel-prev.jcarousel-next,
+  .js .slider .jcarousel-next.jcarousel-next {
+    right: 0px;
+    background-image: url('../i/btn-carousel-next.png');
+  }
+}
