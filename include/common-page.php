@@ -22,8 +22,9 @@ function sfhiv_page_list_attachments(){
 		'post_status' => 'any',
 		'post_type' => 'attachment',
 		'post_parent' => get_the_ID(),
-		'posts_per_page' => -1,
+		'nopaging' => true,
 		'orderby' => 'menu_order',
+		'post_mime_type' => 'application/pdf,application/msword'
 		) );
 	do_action('sfhiv_loop',$attachments,array(
 		"id" => "attachments",
