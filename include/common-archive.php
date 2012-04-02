@@ -4,10 +4,17 @@ add_action('sfhiv_post_loop','sfhiv_archive_show_pages',10,2);
 function sfhiv_archive_show_pages($query,$args){
 	global $wp_rewrite;
 	if($query->max_num_pages<2) return;
+	$current_page = 1;
+	if(isset($query->query_vars['paged'])){
+		$current_page = intval($query->query_vars['paged']);
+	}
+	if($current_page < 1){
+		$current_page = 1;
+	}
 	$args = array(
 		'base' => @add_query_arg('page','%#%'),
 		'total'        => $query->max_num_pages,
-		'current'      => intval(get_query_var('paged')),
+		'current'      => $current_page,
 	);
 	
 	if( $wp_rewrite->using_permalinks() )

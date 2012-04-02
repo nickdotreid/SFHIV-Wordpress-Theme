@@ -493,6 +493,11 @@ form.filter label.radio input.radio {
 form.filter fieldset {
   border: 0px;
 }
+.filters.pagnate {
+  padding: 3.5px 0px;
+  margin: 0px 7px;
+  text-align: right;
+}
 .meta {
   display: block;
   clear: both;
