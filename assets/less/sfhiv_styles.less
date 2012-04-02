@@ -241,6 +241,8 @@ a,a:visited{
 	.section();
 	.menu{
 		.menu_mix();
+		font-family:@title_font;
+		font-weight:300;
 		font-size:@big_font_size;
 		padding:@space_size*2 0px;
 		.menu-item{
@@ -296,7 +298,7 @@ a,a:visited{
 	}
 	.entry-title{
 		font-size:@biggest_font_size;
-		font-weight:normal;
+		font-weight:300;
 		color:#FFF;
 		background:@text_color;
 		display:block;
@@ -554,11 +556,16 @@ a,a:visited{
 	}
 }
 
+footer,footer.footer{
+	background:#FFF;
+	color:@secondary_color;
+	font-size:@small_font_size;
+}
 
 .footer{
 	background:#FFF;
 	color:@secondary_color;
-	font-size:@small_font_size;
+	font-size:@font_size;
 	.section;
 	border-top:1px @secondary_color solid;
 	padding:@space_size 0px;

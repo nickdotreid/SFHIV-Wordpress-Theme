@@ -38,7 +38,7 @@
   float: left;
   padding: 0px 7px 0px 0px;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
 }
 @media all and (min-width: 800px) {
   .list .event,

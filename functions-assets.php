@@ -12,6 +12,7 @@ function sfhiv_custom_meta(){
 
 function sfhiv_add_styles(){
 	?>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/normalize.css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/sfhiv_styles.css" />
 	<link rel="stylesheet" type="text/css" href="<?=get_bloginfo('stylesheet_directory');?>/assets/css/menu.css" />
