@@ -75,6 +75,5 @@
   .sfhiv_event .event_date_time .date,
   .sfhiv_event .event_date_time .time {
     float: left;
-    width: 116px;
   }
 }
