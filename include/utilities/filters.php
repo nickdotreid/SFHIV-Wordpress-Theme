@@ -13,19 +13,17 @@ function sfhiv_draw_filters($filter_key,$options=array(),$all_text="All",$legend
 				<legend><?_e($legend_text);?></legend>
 				<?	endif;	?>
 				<label class="radio">
-					<input type="radio"
-						name="<?=$filter_key;?>"
-						value=""
-						<?	if(!isset($_GET[$filter_key]) || $_GET[$filter_key]!="")	echo 'checked="checked"';?>
-						 />
+					<input type="radio" name="<?=$filter_key;?>" value="" <?	
+					if(!isset($_GET[$filter_key]) || $_GET[$filter_key]!="")	echo 'checked="checked"';
+					?> />
 					<?_e($all_text);?>
 				</label>
 				<?	foreach($options as $option):	?>
 				<label class="radio">
-					<input type="radio"
-						name="<?=$filter_key;?>" 
-						<?	if($_GET[$filter_key] == $option['value']) echo 'checked="checked"';	?>
-						value="<?=$option['value'];?>" />
+					<input type="radio"	name="<?=$filter_key;?>" <?	
+					if($_GET[$filter_key] == $option['value'] ||
+							($option['default'] && !isset($_GET['filter_key']))) echo 'checked="checked"';	
+							?>value="<?=$option['value'];?>" />
 					<?=$option['name'];?>
 				</label>
 				<?	endforeach;	?>
