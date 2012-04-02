@@ -264,9 +264,9 @@ footer {
   display: block;
   position: relative;
   background-color: transparent;
-  background-image: url("../i/site-title.png");
+  background-image: url("../i/site-title-small.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: 50px 100px;
   height: 162px;
   overflow: hidden;
 }
@@ -280,7 +280,7 @@ footer {
   background-color: transparent;
   background-image: url('../i/home_icon.png');
   background-repeat: no-repeat;
-  background-position: 28px 105px;
+  background-position: 5px 122px;
 }
 #branding hgroup #site-title a:hover {
   background-image: url('../i/home_icon_hover.png');
@@ -288,8 +288,25 @@ footer {
 #branding hgroup #site-description {
   display: none;
 }
+@media all and (min-width: 530px) {
+  #branding hgroup {
+    width: 382px;
+    float: left;
+  }
+  #branding hgroup #site-title {
+    background-image: url("../i/site-title.png");
+    background-position: 75px 20px;
+  }
+  #branding hgroup #site-title a {
+    background-position: 80px 124px;
+  }
+  #section-top {
+    width: 382px;
+  }
+}
 @media all and (min-width: 800px) {
   #section-top {
+    width: auto;
     margin: 0px;
     padding: 0px;
     border-bottom: 0px;
@@ -298,10 +315,6 @@ footer {
     top: 0px;
     z-index: 10;
     text-align: right;
-  }
-  #branding hgroup {
-    width: 382px;
-    float: left;
   }
 }
 @media all and (min-width: 1100px) {
