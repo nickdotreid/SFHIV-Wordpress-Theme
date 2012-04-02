@@ -33,7 +33,7 @@
   margin-right: 7px;
   background-color: #CCC;
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: center center;
   overflow: hidden;
 }
 .js #main .slider li article {
@@ -104,7 +104,7 @@
 @media all and (min-width: 800px) {
   .js #main .slider li {
     margin-left: 21px;
-    width: 520px;
+    width: 390px;
     height: 350px;
   }
   .js #main .slider li article {

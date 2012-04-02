@@ -13,7 +13,7 @@ if($related->post_count > 0):
 	$related->the_post();
 	$background_image = false;
 	if ( has_post_thumbnail() ) {
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id() );
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), "homepage-size" );
 		if($thumbnail){
 			$background_image = $thumbnail[0];
 		}

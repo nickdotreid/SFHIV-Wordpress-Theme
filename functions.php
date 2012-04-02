@@ -34,9 +34,7 @@ include_once('include/contact-user.php');
 include_once('include/document-page.php');
 include_once('include/document-archive.php');
 
-if ( function_exists( 'add_theme_support' ) ) { 
-  add_theme_support( 'post-thumbnails' ); 
-}
+include_once('functions-images.php');
 
 add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){

@@ -31,4 +31,16 @@ function sfhiv_page_list_attachments(){
 	));
 }
 
+
+add_action('before_content','sfhiv_page_add_featured_image',12);
+function sfhiv_page_add_featured_image(){
+	if ( has_post_thumbnail() ) {
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id() , 'featured-size' );
+		if($thumbnail){
+			$background_image = $thumbnail[0];
+			echo '<img src="'.$background_image.'" class="featured" />';
+		}
+	}
+}
+
 ?>
