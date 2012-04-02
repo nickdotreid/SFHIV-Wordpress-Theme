@@ -107,9 +107,10 @@ function sfhiv_add_group_members_list(){
 		return true;
 	endif;
 	$users = get_users( array(
-	  'connected_type' => 'group_members',
-	  'connected_items' => get_the_ID(),
+		'connected_type' => 'group_members',
+		'connected_items' => get_the_ID(),
 		'orderby' => 'display_name',
+		'nopaging' => true,
 	));
 	if(count($users)>0):
 		usort($users,function($a,$b){
@@ -154,6 +155,7 @@ function sfhiv_group_get_events($id=false){
 	$events = new WP_Query( array(
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
+		'nopaging' => true,
 	));
 	return $events;
 }
@@ -179,6 +181,7 @@ function sfhiv_group_get_services($id=false){
 	$services = new WP_Query( array(
 		'connected_type' => 'group_services',
 		'connected_items' => get_the_ID(),
+		'nopaging' => true,
 	));
 	return $services;
 }
