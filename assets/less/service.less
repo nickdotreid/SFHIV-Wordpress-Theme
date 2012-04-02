@@ -110,3 +110,24 @@
 		}
 	}
 }
+@media all and (min-width: @size_large) {
+	.list,#main .list{
+		.sfhiv_service_hour,.sfhiv_service_hour.list-item{
+			.day_time{
+				width:@block_width;
+				margin-right:@space_size;
+				.days{
+					float:left;
+					width:@block_width/2  - @space_size*5;
+					margin-right:@space_size;
+				}
+				.time{
+					float:left;
+					padding:@space_size 0px;
+					width:@block_width/2;
+					margin:0px;
+				}
+			}
+		}
+	}
+}

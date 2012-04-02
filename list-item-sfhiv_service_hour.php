@@ -29,6 +29,7 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 				<span class="start"><span class="label">Start:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_start",true));?></span>
 				<span class="end"><span class="label">End:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_end",true));?></span>
 			</div>
+			<br class="clear" />
 		</aside>
 		<?	if($location):	?>
 		<aside class="location">
