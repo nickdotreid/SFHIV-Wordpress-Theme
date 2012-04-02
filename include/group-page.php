@@ -17,6 +17,17 @@ function sfhiv_group_page_back_to_index(){
 	}
 }
 
+add_action('get_sidebar','sfhiv_group_page_add_featured_image',20);
+function sfhiv_group_page_add_featured_image(){
+	if ( has_post_thumbnail() ) {
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id() , 'sidbar' );
+		if($thumbnail){
+			$background_image = $thumbnail[0];
+			echo '<img src="'.$background_image.'" class="featured" />';
+		}
+	}
+}
+
 add_action('get_sidebar','sfhiv_group_page_groups_by_year',22);
 function sfhiv_group_page_groups_by_year(){
 	if (!is_singular('sfhiv_group')) return;
