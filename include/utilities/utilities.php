@@ -10,6 +10,15 @@ include_once('walker_category_menu.php');
 
 include_once('walker_page_menu.php');
 
+function sfhiv_append_url_argument($url,$key,$value){
+	if(strpos($url,"?")===false)
+		$url .= "?";
+	else
+		$url .= "&";
+	$url .= $key."=".$value;
+	return $url;
+}
+
 
 function sfhiv_get_archive_query(){
 	global $wp_query;

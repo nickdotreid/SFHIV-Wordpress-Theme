@@ -17,15 +17,6 @@ function sfhiv_make_menu_walker_category_link($category,$href=false,$add=true){
 	return $href;
 }
 
-function sfhiv_append_url_argument($url,$key,$value){
-	if(strpos($url,"?")===false)
-		$url .= "?";
-	else
-		$url .= "&";
-	$url .= $key."=".$value;
-	return $url;
-}
-
 class SFHIV_Category_Walker_Menu extends Walker_Category {
 	
 	var $displayed_show_all = false;
