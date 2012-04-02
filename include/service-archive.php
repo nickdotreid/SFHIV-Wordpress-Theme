@@ -30,6 +30,7 @@ function sfhiv_service_hour_archive_population_category_menu($query=false,$args=
 	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
 		'title_li' => 'Population',
 		'extra_classes' => 'filters',
+		'base_link' => get_permalink(),
 	));
 }
 
