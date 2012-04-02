@@ -163,6 +163,24 @@ a,a:visited{
 		display:block;
 		padding:@space_size*2 0px 0px;
 		border:0px;
+		font-family:@title_font;
+		font-size:@big_font_size;
+		font-weight:300;
+	}
+	.widget.widget_search{
+		font-family:@main_font;
+		font-size:@font_size;
+		#searchsubmit{
+			text-indent:-33000px;
+			overflow:hidden;
+			width:14px;
+			height:21px;
+			border:0px;
+			background-color:transparent;
+			background-image:url('../i/search_icon.jpg');
+			background-repeat:no-repeat;
+			background-position:top left;
+		}
 	}
 }
 @media all and (min-width: @size_medium) {
