@@ -15,8 +15,9 @@ function sfhiv_archive_show_pages($query,$args){
 
 	if( !empty($query->query_vars['s']) )
 		$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-	
+	echo '<section class="filters pagnate">';
 	echo paginate_links( $args );
+	echo '</section>';
 }
 
 add_action( 'pre_get_posts', 'sfhiv_archive_page_query' );
