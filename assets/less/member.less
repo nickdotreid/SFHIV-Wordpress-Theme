@@ -40,5 +40,20 @@
 			clear:none;
 			width:@block_width - @space_size*2;
 		}
+		.member.has_contact{
+			width:@block_width*2 - @block_width/2 - @space_size*2;
+			.profile{
+				float:left;
+			}
+			.contact{
+				float:left;
+				width:@block_width/2 - @space_size*2;
+				margin-left:@space_size*2;
+				overflow:hidden;
+				.info{
+					margin-left:0px;
+				}
+			}
+		}
 	}
 }
