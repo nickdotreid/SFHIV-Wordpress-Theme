@@ -566,6 +566,10 @@ form.filter fieldset {
   .filters {
     width: 766px;
   }
+  .filters.menu {
+    width: 766px;
+    padding: 7px 0px;
+  }
 }
 #main .list .list-heading,
 #main #primary .list .list-heading {
