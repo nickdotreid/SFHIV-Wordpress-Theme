@@ -251,7 +251,7 @@ footer {
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  padding: 0px 0px 28px;
+  padding: 0px 0px 7px;
   background-position: left bottom;
 }
 #branding hgroup {
@@ -335,7 +335,8 @@ footer {
   font-family: 'Oswald', verdana, sans-serif;
   font-weight: 300;
   font-size: 18px;
-  padding: 14px 0px;
+  padding: 7px 0px 0px;
+  height: 47px;
 }
 #access .menu ul {
   margin: 0px;
@@ -378,12 +379,6 @@ footer {
   color: #FFF;
 }
 @media all and (min-width: 800px) {
-  #access {
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-  }
   #access .menu {
     font-size: 24px;
   }

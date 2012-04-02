@@ -195,7 +195,7 @@ a,a:visited{
 
 #branding{
 	.divider_mix();
-	padding:0px 0px @space_size*4;
+	padding:0px 0px @space_size;
 	background-position:left bottom;
 	hgroup{
 		background-color:transparent;
@@ -276,7 +276,8 @@ a,a:visited{
 		font-family:@title_font;
 		font-weight:300;
 		font-size:@big_font_size;
-		padding:@space_size*2 0px;
+		padding:@space_size 0px 0px;
+		height:47px;
 		.menu-item{
 			display:block;
 			float:left;
@@ -305,7 +306,6 @@ a,a:visited{
 }
 @media all and (min-width: @size_medium) {
 	#access{
-		.section();
 		.menu{
 			font-size:@very_big_font_size;
 			.menu-item{
