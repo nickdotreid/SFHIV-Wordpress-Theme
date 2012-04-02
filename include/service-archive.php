@@ -15,6 +15,15 @@ function sfhiv_service_archive_add_population_category_menu(){
 	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query);
 }
 
+add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_filter_container',10,2);
+function sfhiv_service_hour_archive_filter_container($query=false,$args=array()){
+	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	echo '<div class="filters">';
+	do_action('sfhiv_service_hour_get_filters',$query,$args);
+	echo '</div>';
+}
+
+
 $sfhiv_time_options = array(
 	array(
 		"value" => 'morning',
@@ -67,12 +76,12 @@ $sfhiv_service_hour_days = array(
 	),
 );
 
-add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_day',11,2);
+add_action('sfhiv_service_hour_get_filters','sfhiv_service_hours_archive_select_day',11,2);
 function sfhiv_service_hours_archive_select_day($query=false,$args){
 	global $sfhiv_service_hour_days;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	if(is_singular('sfhiv_service')) return;
-	sfhiv_draw_filters('sfhiv_service_hour_day',$sfhiv_service_hour_days);
+	sfhiv_draw_filters('sfhiv_service_hour_day',$sfhiv_service_hour_days,'Any Day');
 }
 
 add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_day' );
@@ -95,12 +104,12 @@ function sfhiv_service_hour_archive_alter_query_day( $query ) {
 	}
 }
 
-add_action('sfhiv_pre_loop','sfhiv_service_hours_archive_select_time',10,2);
+add_action('sfhiv_service_hour_get_filters','sfhiv_service_hours_archive_select_time',10,2);
 function sfhiv_service_hours_archive_select_time($query=false,$args){
 	global $sfhiv_time_options;
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	if(is_singular('sfhiv_service')) return;
-	sfhiv_draw_filters('sfhiv_service_hour_time',$sfhiv_time_options);
+	sfhiv_draw_filters('sfhiv_service_hour_time',$sfhiv_time_options,'Any Time');
 }
 
 add_action( 'pre_get_posts', 'sfhiv_service_hour_archive_alter_query_time' );

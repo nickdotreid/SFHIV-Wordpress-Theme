@@ -421,6 +421,35 @@ footer {
   float: left;
   padding: 7px 7px 7px;
 }
+.filters {
+  position: relative;
+  border-top: 1px #bcbcbc solid;
+}
+.filter,
+form.filter {
+  display: block;
+}
+.filter label,
+form.filter label {
+  display: block;
+}
+.filter label.radio,
+form.filter label.radio {
+  position: relative;
+  padding: 3.5px 0px 3.5px 21px;
+}
+.filter label.radio input,
+form.filter label.radio input,
+.filter label.radio input.radio,
+form.filter label.radio input.radio {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+}
+.filter fieldset,
+form.filter fieldset {
+  border: 0px;
+}
 .meta {
   display: block;
   clear: both;
@@ -447,10 +476,16 @@ footer {
   }
   #primary,
   .list,
-  .filter {
+  .filters {
     width: 520px;
     float: right;
     clear: none;
+  }
+  .filters .filter {
+    float: left;
+    width: 116px;
+    padding: 7px;
+    border-right: #bcbcbc 1px solid;
   }
   #primary #content {
     margin-left: 14px;
@@ -484,7 +519,7 @@ footer {
     width: 780px;
   }
   .list,
-  .filter {
+  .filters {
     width: 766px;
   }
 }
@@ -879,9 +914,4 @@ footer {
   #main .footer.three-column .widget {
     width: 332.6666666666667px;
   }
-}
-.filter {
-  display: block;
-  padding: 7px 0px;
-  border-top: 1px #bcbcbc solid;
 }
