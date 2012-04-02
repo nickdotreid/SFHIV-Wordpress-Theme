@@ -15,6 +15,17 @@ function sfhiv_service_archive_add_population_category_menu(){
 	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query);
 }
 
+
+add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_population_category_menu',9,2);
+function sfhiv_service_hour_archive_population_category_menu($query=false,$args=array()){
+	$query = sfhiv_get_archive_query();
+	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
+		'title_li' => 'Population',
+		'extra_classes' => 'filters',
+	));
+}
+
 add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_filter_container',10,2);
 function sfhiv_service_hour_archive_filter_container($query=false,$args=array()){
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;

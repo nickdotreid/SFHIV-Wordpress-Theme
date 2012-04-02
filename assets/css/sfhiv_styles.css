@@ -487,6 +487,15 @@ form.filter fieldset {
     padding: 7px;
     border-right: #bcbcbc 1px solid;
   }
+  .filters.menu {
+    width: 492px;
+    padding: 7px 14px;
+  }
+  .filters.menu li {
+    display: block;
+    float: left;
+    margin-right: 14px;
+  }
   #primary #content {
     margin-left: 14px;
   }

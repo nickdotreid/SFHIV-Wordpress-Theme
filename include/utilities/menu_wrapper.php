@@ -64,7 +64,7 @@ function sfhiv_draw_menu($posts=array(),$args = array()){
 
 function sfhiv_draw_taxonomy_menu($args){
 	?>
-	<nav><ul class="menu menu-<?=$args['taxonomy'];?>">
+	<nav><ul class="menu menu-<?=$args['taxonomy'];?> <?=$args['extra_classes'];?>">
 	<?
 	if(is_singular()):
 		$current_categories =  wp_get_object_terms(get_the_ID(),$args['taxonomy'],array('fields'=>'ids'));
