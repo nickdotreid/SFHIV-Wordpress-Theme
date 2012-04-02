@@ -78,9 +78,20 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 		<h3>Provided by</h3>
 		<ul class="related_groups">
 		<?	foreach($service_groups as $sgroup):	?>
-			<li class="group <?=implode(" ",wp_get_object_terms($sgroup->ID,'sfhiv_group_category',array("fields"=>"slugs")));?>">
+		<li class="group <?=implode(" ",wp_get_object_terms($sgroup->ID,'sfhiv_group_category',array("fields"=>"slugs")));?>">
+			<a href="<?=get_permalink($sgroup->ID);?>">
+				<?
+				if ( has_post_thumbnail($sgroup->ID) ) {
+					$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($sgroup->ID) , 'thumbnail' );
+					if($thumbnail){
+						$background_image = $thumbnail[0];
+						echo '<img src="'.$background_image.'" />';
+					}
+				}
+				?>
 				<?=get_the_title($sgroup->ID);?>
-			</li>
+			</a>
+		</li>
 		<?	endforeach;	?>
 		</ul>
 		<?	endif;	?>

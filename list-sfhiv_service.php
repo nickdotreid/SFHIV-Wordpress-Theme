@@ -14,7 +14,18 @@
 		<ul class="related_groups">
 		<?	foreach($service_groups as $sgroup):	?>
 			<li class="group <?=implode(" ",wp_get_object_terms($sgroup->ID,'sfhiv_group_category',array("fields"=>"slugs")));?>">
-				<?=get_the_title($sgroup->ID);?>
+				<a href="<?=get_permalink($sgroup->ID);?>">
+					<?
+					if ( has_post_thumbnail($sgroup->ID) ) {
+						$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($sgroup->ID) , 'thumbnail' );
+						if($thumbnail){
+							$background_image = $thumbnail[0];
+							echo '<img src="'.$background_image.'" />';
+						}
+					}
+					?>
+					<?=get_the_title($sgroup->ID);?>
+				</a>
 			</li>
 		<?	endforeach;	?>
 		</ul>
