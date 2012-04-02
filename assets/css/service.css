@@ -33,9 +33,12 @@
   margin-bottom: 7px;
 }
 .list .sfhiv_service .relationships li.group {
-  background: #bcbcbc;
   padding: 7px;
   text-align: center;
+}
+.list .sfhiv_service .relationships li.group img {
+  display: block;
+  margin: 3.5px auto;
 }
 @media all and (min-width: 800px) {
   .list .sfhiv_service,
@@ -144,7 +147,8 @@
   .list .category-list h3,
   #main .list .category-list h3 {
     font-family: arial, sans-serif;
-    color: #2e3c62;
+    color: #f09938;
+    font-weight: normal;
     display: block;
     float: left;
     text-align: right;

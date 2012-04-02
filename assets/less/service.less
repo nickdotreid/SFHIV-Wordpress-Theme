@@ -10,9 +10,12 @@
 				margin-bottom:@space_size;
 			}
 			li.group{
-				background:@secondary_color;
 				padding:@space_size;
 				text-align:center;
+				img{
+					display:block;
+					margin:@space_size/2 auto;
+				}
 			}
 		}
 	}	
@@ -96,7 +99,8 @@
 			position:relative;
 			h3{
 				font-family:@main_font;
-				color:@text_color;
+				color:@highlight_color;
+				font-weight:normal;
 				display:block;
 				float:left;
 				text-align:right;
