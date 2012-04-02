@@ -93,6 +93,7 @@ function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	if(!is_object_in_taxonomy($query->query_vars['post_type'],$tax_name)) return;
 	
 	$query = sfhiv_remove_url_vars_from_query($query,array($tax_name));
+	$query = sfhiv_unpage_query($query);
 	
 	$categories = sfhiv_get_taxonomy_in($query,$tax_name,'ids');
 	

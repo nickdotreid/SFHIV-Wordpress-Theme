@@ -80,4 +80,11 @@ function sfhiv_remove_keys_from_query($query,$keys = array()){
 	return $query;
 }
 
+function sfhiv_unpage_query($query){
+	if($query->max_num_pages<2)	return $query;
+	$new_args = $query->query_vars;
+	$new_args['nopaging'] = true;
+	return new WP_Query($new_args);
+}
+
 ?>
