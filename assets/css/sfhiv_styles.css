@@ -278,6 +278,7 @@ footer {
     position: absolute;
     right: 14px;
     top: 0px;
+    z-index: 10;
     text-align: right;
   }
   #branding hgroup {
@@ -317,7 +318,7 @@ footer {
   display: block;
   float: left;
   width: auto;
-  padding: 7px;
+  padding: 7px 14px;
   color: #2e3c62;
 }
 #access .menu .menu-item .sub-menu {
@@ -344,6 +345,20 @@ footer {
 #access .menu .menu-item.current-menu-item a:hover,
 #access .menu .menu-item.current-page-ancestor a:hover {
   color: #FFF;
+}
+@media all and (min-width: 800px) {
+  #access {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+  #access .menu {
+    font-size: 24px;
+  }
+  #access .menu .menu-item {
+    padding: 7px 28px;
+  }
 }
 .list,
 #primary {

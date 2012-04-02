@@ -222,6 +222,7 @@ a,a:visited{
 		position:absolute;
 		right:@space_size*2;
 		top:0px;
+		z-index:10;
 		text-align:right;
 	}
 	#branding{
@@ -249,7 +250,7 @@ a,a:visited{
 			display:block;
 			float:left;
 			width:auto;
-			padding:@space_size;
+			padding:@space_size @space_size*2;
 			.sub-menu{
 				display:none;
 			}
@@ -267,6 +268,17 @@ a,a:visited{
 				a,a:visited,a:hover{
 					color:#FFF;
 				}
+			}
+		}
+	}
+}
+@media all and (min-width: @size_medium) {
+	#access{
+		.section();
+		.menu{
+			font-size:@very_big_font_size;
+			.menu-item{
+				padding:@space_size @space_size*4;
 			}
 		}
 	}

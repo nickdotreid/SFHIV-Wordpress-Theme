@@ -101,6 +101,6 @@ $(document).ready(function(){
 		$("#section-top").trigger("redraw");
 		$(".three-column,.two-column").trigger("redraw");
 		$(".list-item").trigger("redraw");
-		$("#access ul.menu").trigger("redraw");
+	//	$("#access ul.menu").trigger("redraw");
 	}).resize();
 });
