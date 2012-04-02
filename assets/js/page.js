@@ -84,9 +84,23 @@ $(document).ready(function(){
 		item.height(height);
 	});
 	
+	$("#access ul.menu").bind("redraw",function(){
+		var menu = $(this);
+		var free_space = menu.width();
+		var menu_items = $(".menu-item:not(.sub-menu .menu-item)",menu);
+		menu_items.each(function(){
+			var item = $(this);
+			free_space -= item.width();
+		});
+		free_space = free_space/menu_items.length;
+		menu_items.css("margin-right",free_space+'px');
+		$(".menu-item:not(.sub-menu .menu-item):last",menu).css("margin-right",'0px');
+	});
+	
 	$(window).resize(function(){
 		$("#section-top").trigger("redraw");
 		$(".three-column,.two-column").trigger("redraw");
 		$(".list-item").trigger("redraw");
+		$("#access ul.menu").trigger("redraw");
 	}).resize();
 });
