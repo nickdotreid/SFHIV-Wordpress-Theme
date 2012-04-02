@@ -3,20 +3,6 @@
 require_once('utilities/query_mapper.php');
 require_once('utilities/menu_wrapper.php');
 
-
-add_action('get_sidebar','sfhiv_group_page_back_to_index',20);
-function sfhiv_group_page_back_to_index(){
-	if(is_singular('sfhiv_group')){
-		?>
-		<nav>
-			<ul class="menu">
-				<li><a href="<?=get_post_type_archive_link('sfhiv_group');?>"><?_e("All Groups");?></a></li>
-			</ul>
-		</nav>
-		<?
-	}
-}
-
 add_action('get_sidebar','sfhiv_group_page_add_featured_image',20);
 function sfhiv_group_page_add_featured_image(){
 	if ( has_post_thumbnail() ) {
