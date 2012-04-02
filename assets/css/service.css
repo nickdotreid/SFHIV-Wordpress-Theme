@@ -121,20 +121,43 @@
 .sfhiv_service_hour .address.line {
   display: block;
 }
-@media all and (min-width: 800px) {
-  .list .sfhiv_service_hour,
-  #main .list .sfhiv_service_hour,
-  .list .sfhiv_service_hour.list-item,
-  #main .list .sfhiv_service_hour.list-item {
-    padding-left: 137px;
-  }
+@media all and (min-width: 530px) {
   .list .sfhiv_service_hour .day_time,
   #main .list .sfhiv_service_hour .day_time,
   .list .sfhiv_service_hour.list-item .day_time,
   #main .list .sfhiv_service_hour.list-item .day_time {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    float: left;
     width: 123px;
+    margin-right: 7px;
+  }
+  .list .sfhiv_service_hour .location,
+  #main .list .sfhiv_service_hour .location,
+  .list .sfhiv_service_hour.list-item .location,
+  #main .list .sfhiv_service_hour.list-item .location {
+    float: left;
+  }
+  .list .category-list,
+  #main .list .category-list {
+    clear: both;
+    position: relative;
+  }
+  .list .category-list h3,
+  #main .list .category-list h3 {
+    font-family: arial, sans-serif;
+    color: #2e3c62;
+    display: block;
+    float: left;
+    text-align: right;
+    margin-right: 7px;
+    padding: 0px;
+    width: 123px;
+  }
+  .list .category-list ul,
+  #main .list .category-list ul,
+  .list .category-list .service_categories,
+  #main .list .category-list .service_categories,
+  .list .category-list .population_categories,
+  #main .list .category-list .population_categories {
+    clear: none;
   }
 }

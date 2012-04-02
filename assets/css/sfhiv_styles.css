@@ -949,11 +949,6 @@ footer.footer {
     margin: 0px;
   }
 }
-#main .three-column,
-#main .footer.three-column,
-#main .footer.two-column {
-  font-size: 0.9em;
-}
 #main .three-column .widget,
 #main .footer.three-column .widget {
   width: 246px;

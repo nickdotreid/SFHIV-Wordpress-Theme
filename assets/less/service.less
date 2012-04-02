@@ -79,15 +79,33 @@
 		display:block;
 	}
 }
-@media all and (min-width: @size_medium) {
+@media all and (min-width: @size_tablet) {
 	.list,#main .list{
 		.sfhiv_service_hour,.sfhiv_service_hour.list-item{
-			padding-left:@block_width/2 + @space_size;
 			.day_time{
-				position:absolute;
-				left:0px;
-				top:0px;
+				float:left;
 				width:@block_width/2 - @space_size;
+				margin-right:@space_size;
+			}
+			.location{
+				float:left;
+			}
+		}
+		.category-list{
+			clear:both;
+			position:relative;
+			h3{
+				font-family:@main_font;
+				color:@text_color;
+				display:block;
+				float:left;
+				text-align:right;
+				margin-right:@space_size;
+				padding:0px;
+				width:@block_width/2 - @space_size;
+			}
+			ul,.service_categories,.population_categories{
+				clear:none;
 			}
 		}
 	}
