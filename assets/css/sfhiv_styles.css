@@ -453,7 +453,7 @@ form.filter fieldset {
 .meta {
   display: block;
   clear: both;
-  font-size: 10px;
+  font-size: 12px;
   color: #2e3c62;
   border-top: 1px #bcbcbc solid;
   background: #FFF;
@@ -839,6 +839,8 @@ form.filter fieldset {
 }
 .footer {
   background: #FFF;
+  color: #bcbcbc;
+  font-size: 12px;
   clear: both;
   margin: 0px;
   padding: 0px;
