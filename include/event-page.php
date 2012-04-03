@@ -7,19 +7,6 @@ function sfhiv_event_page_show_date(){
 	echo '</div>';
 }
 
-add_action('get_sidebar','sfhiv_event_page_back_to_index',20);
-function sfhiv_event_page_back_to_index(){
-	if(is_singular('sfhiv_event')){
-		?>
-		<nav>
-			<ul class="menu">
-				<li><a href="<?=get_post_type_archive_link('sfhiv_event');?>"><?_e("All Events");?></a></li>
-			</ul>
-		</nav>
-		<?
-	}
-}
-
 add_action('get_sidebar','sfhiv_event_page_event_categories',23);
 function sfhiv_event_page_event_categories(){
 	if (!is_singular('sfhiv_event')) return;
