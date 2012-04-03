@@ -5,6 +5,7 @@
 	<div class="entry-content">
 		<?=the_excerpt();?>
 	</div>
+	<?	sfhiv_get_contact_user();	?>
 	<nav>
 		<a href="<?=the_permalink();?>"><?=__('View '.get_the_title(),'sfhiv_theme');?></a>
 		<?	$items = sfhiv_group_menu_items();	?>
