@@ -7,17 +7,6 @@ function sfhiv_event_page_show_date(){
 	echo '</div>';
 }
 
-add_action('before_content','sfhiv_event_page_start_meta',10);
-function sfhiv_event_page_start_meta(){
-	echo '<div class="entry-meta top">';
-}
-
-add_action('before_content','sfhiv_event_page_end_meta',30);
-function sfhiv_event_page_end_meta(){
-	echo '<br class="clear" />';
-	echo '</div>';
-}
-
 add_action('get_sidebar','sfhiv_event_page_back_to_index',20);
 function sfhiv_event_page_back_to_index(){
 	if(is_singular('sfhiv_event')){
