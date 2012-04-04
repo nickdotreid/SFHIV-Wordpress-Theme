@@ -163,11 +163,20 @@ a,a:visited{
 	background-position:top left;
 	.widget{
 		display:block;
-		padding:@space_size*2 0px 0px;
+		padding:@space_size 0px 0px;
 		border:0px;
 		font-family:@title_font;
 		font-size:@big_font_size;
 		font-weight:300;
+		clear:both;
+	}
+	.widget.widget_nav_menu{
+		font-family:@main_font;
+		font-size:@font_size;
+		.menu-item{
+			float:right;
+			margin-left:@space_size;
+		}
 	}
 	.widget.widget_search{
 		font-family:@main_font;
