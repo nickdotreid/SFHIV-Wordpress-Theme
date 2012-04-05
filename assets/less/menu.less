@@ -1,47 +1,72 @@
 @import "variables";
 @import "mixins";
 
+.menu{
+	.menu_mix();
+	padding-bottom:@space_size;
+	font-size:@font_size;
+	a,a:visited,a:hover,label{
+		display:block;
+		padding:@space_size/2 0px;
+		color:@link_color;
+	}
+	.current_page_ancestor,.current_page_parent, .current_page_ancestor .children{
+		font-size:@font_size;
+		a,label{
+			color:@link_color;
+			text-decoration:none;
+		}
+	}
+	.children, .current_page_parent .children{
+		font-size:@font_size;
+		a,label{
+			background-color:transparent;
+			color:@link_color;
+			padding-left:@space_size*2;
+			text-decoration:underline;
+		}
+	}
+	.current_page_item, .children .current_page_item, .current_page_ancestor .children .current_page_item, .current-cat,.current_item{
+		a,a:visited,a:hover,label{
+			background:transparent;
+			color:@highlight_color;
+			text-decoration:none;
+		}
+		.children{
+			a,a:visited,a:hover,label{
+				color:@link_color;
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
 .sidebar{
 	.menu{
 		display:block;
-		.menu_mix();
 		padding-bottom:@space_size*3;
-		font-size:@font_size;
 		a,a:visited,a:hover,label{
-			display:block;
 			border-bottom:1px solid @secondary_color;
 			padding:@space_size 0px;
 		}
-
 		.current_page_ancestor,.current_page_parent, .current_page_ancestor .children{
-			font-size:@font_size;
 			a,label{
 				padding:@space_size/2 0px @space_size/2 @space_size*2;
-				color:@link_color;
-				text-decoration:none;
 			}
 		}
 		.children, .current_page_parent .children{
 			font-size:@font_size;
 			a,label{
-				background-color:transparent;
 				padding:@space_size*2 0px @space_size;
-				color:@link_color;
-				text-decoration:underline;
 			}
 		}
 		.current_page_item, .children .current_page_item, .current_page_ancestor .children .current_page_item, .current-cat,.current_item{
 			a,a:visited,a:hover,label{
-				background:transparent;
-				color:@highlight_color;
-				text-decoration:none;
 				padding-top:@space_size*2;
 			}
 			.children{
 				a,a:visited,a:hover,label{
-					color:@link_color;
 					padding-left:@space_size*3;
-					text-decoration:underline;
 				}
 			}
 		}
