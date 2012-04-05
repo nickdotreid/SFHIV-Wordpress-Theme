@@ -1,23 +1,16 @@
 @import "variables";
 @import "mixins";
 
-.list,.contact{
+.list{
 	.member{
-		min-height:80px;
 		position:relative;
 		display:block;
 		width:auto;
 		clear:both;
-		margin:@space_size 0px;
-		.avatar{
-			display:block;
-			position:absolute;
-			top:0px;
-			left:0px;
-		}
+		margin:@space_size @space_size @space_size 0px;
 		.info{
-			margin-left:80px + @space_size;
 			display:block;
+			margin-bottom:@space_size/2;
 			.label{
 				font-size:@small_font_size;
 				display:block;
@@ -31,29 +24,49 @@
 		.title{
 			font-weight:bold;
 		}
+		.profile{
+			.avatar{
+				display:block;
+				float:left;
+				margin:0px;
+				margin-right:@space_size/2;
+				margin-bottom:@space_size/2;
+			}
+			.info{
+				margin-bottom:0px;
+			}
+		}
+		.contact{
+			clear:both;
+		}
 	}
 }
-@media all and (min-width: @size_medium) {
+.contact.list{
+	.member{
+		margin-right:0px;
+	}
+}
+@media all and (min-width: @size_tablet) {
 	.list{
 		.member{
 			float:left;
 			clear:none;
-			width:@block_width - @space_size*2;
+			width:@block_width - @space_size;
 		}
-		.member.has_contact{
-			width:@block_width*2 - @block_width/2 - @space_size*2;
-			.profile{
+	}
+	.contact.list{
+		.member{
+			float:none;
+			width:auto;
+			.profile,.contact{
+				width:@block_width - @space_size;
+				display:block;
 				float:left;
-			}
-			.contact{
-				float:left;
-				width:@block_width/2 - @space_size*2;
-				margin-left:@space_size*2;
-				overflow:hidden;
-				.info{
-					margin-left:0px;
-				}
+				clear:none;
 			}
 		}
 	}
+}
+@media all and (min-width: @size_medium) {
+
 }

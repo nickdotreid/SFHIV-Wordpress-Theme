@@ -13,61 +13,63 @@
 .date_mix.date span span {
   display: inline;
 }
-.list .member,
-.contact .member {
-  min-height: 80px;
+.list .member {
   position: relative;
   display: block;
   width: auto;
   clear: both;
-  margin: 7px 0px;
+  margin: 7px 7px 7px 0px;
 }
-.list .member .avatar,
-.contact .member .avatar {
+.list .member .info {
   display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  margin-bottom: 3.5px;
 }
-.list .member .info,
-.contact .member .info {
-  margin-left: 87px;
-  display: block;
-}
-.list .member .info .label,
-.contact .member .info .label {
+.list .member .info .label {
   font-size: 12px;
   display: block;
 }
-.list .member .name,
-.contact .member .name {
+.list .member .name {
   color: #f09938;
   font-weight: bold;
   font-size: 18px;
 }
-.list .member .title,
-.contact .member .title {
+.list .member .title {
   font-weight: bold;
 }
-@media all and (min-width: 800px) {
+.list .member .profile .avatar {
+  display: block;
+  float: left;
+  margin: 0px;
+  margin-right: 3.5px;
+  margin-bottom: 3.5px;
+}
+.list .member .profile .info {
+  margin-bottom: 0px;
+}
+.list .member .contact {
+  clear: both;
+}
+.contact.list .member {
+  margin-right: 0px;
+}
+@media all and (min-width: 530px) {
   .list .member {
     float: left;
     clear: none;
-    width: 246px;
+    width: 253px;
   }
-  .list .member.has_contact {
-    width: 376px;
+  .contact.list .member {
+    float: none;
+    width: auto;
   }
-  .list .member.has_contact .profile {
+  .contact.list .member .profile,
+  .contact.list .member .contact {
+    width: 253px;
+    display: block;
     float: left;
+    clear: none;
   }
-  .list .member.has_contact .contact {
-    float: left;
-    width: 116px;
-    margin-left: 14px;
-    overflow: hidden;
-  }
-  .list .member.has_contact .contact .info {
-    margin-left: 0px;
-  }
+}
+@media all and (min-width: 800px) {
+  
 }
