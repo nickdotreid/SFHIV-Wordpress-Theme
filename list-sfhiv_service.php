@@ -5,10 +5,10 @@
 	<header>
 		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
-	<div class="entry-content">
+	<div class="entry-content column left">
 		<?=the_excerpt();?>
 	</div>
-	<aside class="relationships column">
+	<aside class="relationships column right">
 		<? $service_groups = sfhiv_service_get_groups();	?>
 		<?	if( count($service_groups) > 0):	?>
 		<ul class="related_groups">

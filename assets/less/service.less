@@ -1,135 +1,111 @@
 @import "variables";
 @import "mixins";
 
-.list{
-	.sfhiv_service{
-		position:relative;
-		.relationships{
-			.menu_mix();
-			ul{
-				margin-bottom:@space_size;
-			}
-			li.group{
-				padding:@space_size;
-				text-align:center;
-				img{
-					display:block;
-					margin:@space_size/2 auto;
-				}
-			}
-		}
-	}	
-}
-@media all and (min-width: @size_medium) {
-	.list,#main .list,#main #primary .list{
-		.sfhiv_service,.sfhiv_service.list-item{
-			padding-right:@block_width/2 + @space_size;
-			.relationships{
-				position:absolute;
-				width:@block_width/2 - @space_size;
-				top:0px;
-				right:0px;
-				li{
-					display:block;
-					border-bottom:@border_width @secondary_color solid;
-					padding:@space_size/2 0px @space_size/2;
-					margin-bottom:0px;
-				}
-			}
-		}	
-	}
+.address.line{
+	display:block;
 }
 
-.sfhiv_service_hour{
-	.days{
-		.menu_mix();
-		color: #FFF;
-		background:@highlight_color;
-		padding:@space_size @space_size*2;
-		li{
-			margin-bottom:@space_size/2;
+.list{
+	.sfhiv_service,.sfhiv_service_hours{
+		.related-groups,.days,.category-list{
+			.menu_mix();
 		}
-	}
-	.time{
-		padding:@space_size @space_size*2;
-		span{
-			display:block;
-			font-weight:bold;
-			.label{
-				float:left;
-				padding:0px @space_size 0px 0px;
-				font-weight:normal;
-				font-size:@small_font_size;
-			}
-		}
-	}
-	.service_categories,.population_categories{
-		margin:0px;
-		padding:0px;
-		clear:both;
-		li{
-			display:block;
+		.days{
+			.menu_mix();
+			color: #FFF;
+			background:@highlight_color;
+			width:@block_width/2;
+			margin:@space_size/2 0px;
 			float:left;
-			margin:0px @space_size 0px 0px;
-			padding:0px;
-			list-style-type:none;
-		}
-	}
-	nav{
-		clear:both;
-	}
-	.address.line{
-		display:block;
-	}
-}
-@media all and (min-width: @size_tablet) {
-	.list,#main .list{
-		.sfhiv_service_hour,.sfhiv_service_hour.list-item{
-			.day_time{
-				float:left;
-				width:@block_width/2 - @space_size;
-				margin-right:@space_size;
+			li{
+				margin:@space_size/2 @space_size;
 			}
-			.location{
-				float:left;
+		}
+		.time{
+			width:@block_width/2;
+			float:left;
+			span{
+				display:block;
+				font-weight:bold;
+				margin:@space_size/2 @space_size;
+				.label{
+					display:inline;
+					padding:0px;
+					font-weight:normal;
+					font-size:@small_font_size;
+				}
 			}
 		}
 		.category-list{
+			margin:@space_size/2 0px;
+			padding:0px;
 			clear:both;
-			position:relative;
 			h3{
-				font-family:@main_font;
-				color:@highlight_color;
-				font-weight:normal;
+				font-weight:300;
+			}
+			li{
 				display:block;
 				float:left;
-				text-align:right;
-				margin-right:@space_size;
+				margin:0px @space_size 0px 0px;
 				padding:0px;
-				width:@block_width/2 - @space_size;
+				list-style-type:none;
 			}
-			ul,.service_categories,.population_categories{
-				clear:none;
+		}
+		.related-groups{
+			h3{
+				font-weight:300;
+				text-align:right;
+			}
+		}
+		.group{
+			text-align:center;
+			img,img.logo{
+				display:block;
+				margin:@space_size/2 auto;
+			}
+		}
+		nav{
+			clear:both;
+		}
+
+	}	
+}
+@media all and (min-width: @size_tablet) {
+	.list{
+		.sfhiv_service,.sfhiv_service_hour{
+			.column.left{
+				width:@block_width;
+			}
+			.column.right{
+				width:@block_width/2;
+			}
+			.location{
+				clear:left;
 			}
 		}
 	}
 }
 @media all and (min-width: @size_large) {
-	.list,#main .list{
-		.sfhiv_service_hour,.sfhiv_service_hour.list-item{
-			.day_time{
+	.list{
+		.sfhiv_service_hour,.sfhiv_service_hour{
+			.column.left{
+				width:@block_width*2.5 - @space_size*2;
+			}
+			.location{
+				float:left;
+				clear:none;
 				width:@block_width;
-				margin-right:@space_size;
-				.days{
-					float:left;
-					width:@block_width/2  - @space_size*5;
-					margin-right:@space_size;
-				}
-				.time{
-					float:left;
-					padding:@space_size 0px;
-					width:@block_width/2;
-					margin:0px;
+			}
+			.category-list{
+				padding-left:@block_width/2;
+				clear:both;
+				position:relative;
+				h3{
+					position:absolute;
+					top:0px;
+					left:0px;
+					width:@block_width/2 - @space_size;
+					text-align:right;
 				}
 			}
 		}

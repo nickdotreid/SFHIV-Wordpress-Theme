@@ -13,181 +13,155 @@
 .date_mix.date span span {
   display: inline;
 }
-.list .sfhiv_service {
-  position: relative;
+.address.line {
+  display: block;
 }
-.list .sfhiv_service .relationships {
+.list .sfhiv_service .related-groups,
+.list .sfhiv_service_hours .related-groups,
+.list .sfhiv_service .days,
+.list .sfhiv_service_hours .days,
+.list .sfhiv_service .category-list,
+.list .sfhiv_service_hours .category-list {
   display: block;
   margin: 0px;
   padding: 0px;
 }
-.list .sfhiv_service .relationships ul {
+.list .sfhiv_service .related-groups ul,
+.list .sfhiv_service_hours .related-groups ul,
+.list .sfhiv_service .days ul,
+.list .sfhiv_service_hours .days ul,
+.list .sfhiv_service .category-list ul,
+.list .sfhiv_service_hours .category-list ul {
   margin: 0px;
   padding: 0px;
 }
-.list .sfhiv_service .relationships li {
+.list .sfhiv_service .related-groups li,
+.list .sfhiv_service_hours .related-groups li,
+.list .sfhiv_service .days li,
+.list .sfhiv_service_hours .days li,
+.list .sfhiv_service .category-list li,
+.list .sfhiv_service_hours .category-list li {
   list-style-type: none;
   line-height: 1em;
 }
-.list .sfhiv_service .relationships ul {
-  margin-bottom: 7px;
-}
-.list .sfhiv_service .relationships li.group {
-  padding: 7px;
-  text-align: center;
-}
-.list .sfhiv_service .relationships li.group img {
-  display: block;
-  margin: 3.5px auto;
-}
-@media all and (min-width: 800px) {
-  .list .sfhiv_service,
-  #main .list .sfhiv_service,
-  #main #primary .list .sfhiv_service,
-  .list .sfhiv_service.list-item,
-  #main .list .sfhiv_service.list-item,
-  #main #primary .list .sfhiv_service.list-item {
-    padding-right: 137px;
-  }
-  .list .sfhiv_service .relationships,
-  #main .list .sfhiv_service .relationships,
-  #main #primary .list .sfhiv_service .relationships,
-  .list .sfhiv_service.list-item .relationships,
-  #main .list .sfhiv_service.list-item .relationships,
-  #main #primary .list .sfhiv_service.list-item .relationships {
-    position: absolute;
-    width: 123px;
-    top: 0px;
-    right: 0px;
-  }
-  .list .sfhiv_service .relationships li,
-  #main .list .sfhiv_service .relationships li,
-  #main #primary .list .sfhiv_service .relationships li,
-  .list .sfhiv_service.list-item .relationships li,
-  #main .list .sfhiv_service.list-item .relationships li,
-  #main #primary .list .sfhiv_service.list-item .relationships li {
-    display: block;
-    border-bottom: 1px #bcbcbc solid;
-    padding: 3.5px 0px 3.5px;
-    margin-bottom: 0px;
-  }
-}
-.sfhiv_service_hour .days {
+.list .sfhiv_service .days,
+.list .sfhiv_service_hours .days {
   display: block;
   margin: 0px;
   padding: 0px;
   color: #FFF;
   background: #f09938;
-  padding: 7px 14px;
+  width: 130px;
+  margin: 3.5px 0px;
+  float: left;
 }
-.sfhiv_service_hour .days ul {
+.list .sfhiv_service .days ul,
+.list .sfhiv_service_hours .days ul {
   margin: 0px;
   padding: 0px;
 }
-.sfhiv_service_hour .days li {
+.list .sfhiv_service .days li,
+.list .sfhiv_service_hours .days li {
   list-style-type: none;
   line-height: 1em;
 }
-.sfhiv_service_hour .days li {
-  margin-bottom: 3.5px;
+.list .sfhiv_service .days li,
+.list .sfhiv_service_hours .days li {
+  margin: 3.5px 7px;
 }
-.sfhiv_service_hour .time {
-  padding: 7px 14px;
+.list .sfhiv_service .time,
+.list .sfhiv_service_hours .time {
+  width: 130px;
+  float: left;
 }
-.sfhiv_service_hour .time span {
+.list .sfhiv_service .time span,
+.list .sfhiv_service_hours .time span {
   display: block;
   font-weight: bold;
+  margin: 3.5px 7px;
 }
-.sfhiv_service_hour .time span .label {
-  float: left;
-  padding: 0px 7px 0px 0px;
+.list .sfhiv_service .time span .label,
+.list .sfhiv_service_hours .time span .label {
+  display: inline;
+  padding: 0px;
   font-weight: normal;
   font-size: 12px;
 }
-.sfhiv_service_hour .service_categories,
-.sfhiv_service_hour .population_categories {
-  margin: 0px;
+.list .sfhiv_service .category-list,
+.list .sfhiv_service_hours .category-list {
+  margin: 3.5px 0px;
   padding: 0px;
   clear: both;
 }
-.sfhiv_service_hour .service_categories li,
-.sfhiv_service_hour .population_categories li {
+.list .sfhiv_service .category-list h3,
+.list .sfhiv_service_hours .category-list h3 {
+  font-weight: 300;
+}
+.list .sfhiv_service .category-list li,
+.list .sfhiv_service_hours .category-list li {
   display: block;
   float: left;
   margin: 0px 7px 0px 0px;
   padding: 0px;
   list-style-type: none;
 }
-.sfhiv_service_hour nav {
+.list .sfhiv_service .related-groups h3,
+.list .sfhiv_service_hours .related-groups h3 {
+  font-weight: 300;
+  text-align: right;
+}
+.list .sfhiv_service .group,
+.list .sfhiv_service_hours .group {
+  text-align: center;
+}
+.list .sfhiv_service .group img,
+.list .sfhiv_service_hours .group img,
+.list .sfhiv_service .group img.logo,
+.list .sfhiv_service_hours .group img.logo {
+  display: block;
+  margin: 3.5px auto;
+}
+.list .sfhiv_service nav,
+.list .sfhiv_service_hours nav {
   clear: both;
 }
-.sfhiv_service_hour .address.line {
-  display: block;
-}
 @media all and (min-width: 530px) {
-  .list .sfhiv_service_hour .day_time,
-  #main .list .sfhiv_service_hour .day_time,
-  .list .sfhiv_service_hour.list-item .day_time,
-  #main .list .sfhiv_service_hour.list-item .day_time {
-    float: left;
-    width: 123px;
-    margin-right: 7px;
+  .list .sfhiv_service .column.left,
+  .list .sfhiv_service_hour .column.left {
+    width: 260px;
   }
-  .list .sfhiv_service_hour .location,
-  #main .list .sfhiv_service_hour .location,
-  .list .sfhiv_service_hour.list-item .location,
-  #main .list .sfhiv_service_hour.list-item .location {
-    float: left;
+  .list .sfhiv_service .column.right,
+  .list .sfhiv_service_hour .column.right {
+    width: 130px;
   }
-  .list .category-list,
-  #main .list .category-list {
-    clear: both;
-    position: relative;
-  }
-  .list .category-list h3,
-  #main .list .category-list h3 {
-    font-family: arial, sans-serif;
-    color: #f09938;
-    font-weight: normal;
-    display: block;
-    float: left;
-    text-align: right;
-    margin-right: 7px;
-    padding: 0px;
-    width: 123px;
-  }
-  .list .category-list ul,
-  #main .list .category-list ul,
-  .list .category-list .service_categories,
-  #main .list .category-list .service_categories,
-  .list .category-list .population_categories,
-  #main .list .category-list .population_categories {
-    clear: none;
+  .list .sfhiv_service .location,
+  .list .sfhiv_service_hour .location {
+    clear: left;
   }
 }
 @media all and (min-width: 1100px) {
-  .list .sfhiv_service_hour .day_time,
-  #main .list .sfhiv_service_hour .day_time,
-  .list .sfhiv_service_hour.list-item .day_time,
-  #main .list .sfhiv_service_hour.list-item .day_time {
+  .list .sfhiv_service_hour .column.left,
+  .list .sfhiv_service_hour .column.left {
+    width: 636px;
+  }
+  .list .sfhiv_service_hour .location,
+  .list .sfhiv_service_hour .location {
+    float: left;
+    clear: none;
     width: 260px;
-    margin-right: 7px;
   }
-  .list .sfhiv_service_hour .day_time .days,
-  #main .list .sfhiv_service_hour .day_time .days,
-  .list .sfhiv_service_hour.list-item .day_time .days,
-  #main .list .sfhiv_service_hour.list-item .day_time .days {
-    float: left;
-    width: 95px;
-    margin-right: 7px;
+  .list .sfhiv_service_hour .category-list,
+  .list .sfhiv_service_hour .category-list {
+    padding-left: 130px;
+    clear: both;
+    position: relative;
   }
-  .list .sfhiv_service_hour .day_time .time,
-  #main .list .sfhiv_service_hour .day_time .time,
-  .list .sfhiv_service_hour.list-item .day_time .time,
-  #main .list .sfhiv_service_hour.list-item .day_time .time {
-    float: left;
-    padding: 7px 0px;
-    width: 130px;
-    margin: 0px;
+  .list .sfhiv_service_hour .category-list h3,
+  .list .sfhiv_service_hour .category-list h3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 123px;
+    text-align: right;
   }
 }

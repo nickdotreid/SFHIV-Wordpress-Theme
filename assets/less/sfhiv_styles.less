@@ -25,7 +25,7 @@ h1,h2,h3,h4{
 		}
 	}
 }
-#main{
+#primary{
 	h1{
 		padding:@space_size*3 0px @space_size*2;
 		font-size:@very_big_font_size;
@@ -538,6 +538,29 @@ a,a:visited{
 }
 @media all and (min-width: @size_medium) {
 	
+}
+
+.list{
+	.list-item{
+		nav{
+			display:block;
+			clear:both;
+		}
+	}
+}
+@media all and (min-width: @size_tablet) {
+	.list{
+		.list-item{
+			.column{
+				display:block;
+				float:left;
+				width:@block_width;
+				&.right{
+					float:right;
+				}
+			}
+		}
+	}
 }
 
 #main{

@@ -61,24 +61,24 @@ h3 a:hover:hover,
 h4 a:hover:hover {
   text-decoration: underline;
 }
-#main h1 {
+#primary h1 {
   padding: 21px 0px 14px;
   font-size: 24px;
   clear: both;
 }
-#main h2 {
+#primary h2 {
   padding: 14px 0px 7px;
   font-size: 18px;
   clear: both;
 }
-#main h3 {
+#primary h3 {
   padding: 7px 0px 3.5px;
   font-size: 14px;
   clear: both;
   font-weight: bold;
   color: #e48011;
 }
-#main h4 {
+#primary h4 {
   clear: both;
   font-size: 14px;
   font-weight: bold;
@@ -617,6 +617,20 @@ form.filter fieldset {
 }
 @media all and (min-width: 800px) {
   
+}
+.list .list-item nav {
+  display: block;
+  clear: both;
+}
+@media all and (min-width: 530px) {
+  .list .list-item .column {
+    display: block;
+    float: left;
+    width: 260px;
+  }
+  .list .list-item .column.right {
+    float: right;
+  }
 }
 #main .two-column,
 #main .footer.two-column,
