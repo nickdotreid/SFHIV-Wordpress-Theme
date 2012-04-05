@@ -235,7 +235,8 @@ footer {
   font-size: 14px;
 }
 #section-top .widget.widget_search #searchsubmit {
-  text-indent: -33000px;
+  text-indent: -9999px;
+  text-transform: capitalize;
   overflow: hidden;
   width: 14px;
   height: 21px;
