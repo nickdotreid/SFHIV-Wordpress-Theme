@@ -7,15 +7,10 @@ $(document).ready(function(){
 		// reset all heights to auto & restore all borders
 		$(item_selector,column).css({
 			"height":"auto",
-			"border-bottom-width":"1px"
 		});
 		var heights = [];
-		var lowest = 0;
 		$(item_selector,column).each(function(){
 			var position = $(this).position();
-			if(position.top>lowest){
-				lowest = position.top;
-			}
 			var found = false;
 			for(var i=0;i<heights.length;i++){
 				if(heights[i]['top']==position.top){
@@ -34,9 +29,6 @@ $(document).ready(function(){
 		});
 		$(item_selector,column).each(function(){
 			var position = $(this).position();
-			if(position.top>=lowest){
-				$(this).css("border-bottom-width","0px");
-			}
 			for(var i=0;i<heights.length;i++){
 				if(heights[i]['top']==position.top){
 					$(this).height(heights[i]['height']);
