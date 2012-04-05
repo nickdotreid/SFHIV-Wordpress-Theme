@@ -194,7 +194,7 @@ a,a:visited{
 		}
 	}
 }
-@media all and (min-width: @size_medium) {
+@media all and (min-width: @size_tablet) {
 	.js #section-top{
 		background-color:transparent;
 		background-image:none;
@@ -244,6 +244,17 @@ a,a:visited{
 	}
 }
 @media all and (min-width: @size_tablet) {
+	#branding{
+		hgroup{
+			width:@block_width - @space_size;
+			float:left;
+		}
+	}
+	#section-top{
+		width:382px;
+	}
+}
+@media all and (min-width: @size_medium) {
 	#branding{
 		hgroup{
 			width:382px;

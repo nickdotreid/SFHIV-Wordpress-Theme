@@ -245,7 +245,7 @@ footer {
   background-repeat: no-repeat;
   background-position: top left;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 530px) {
   .js #section-top {
     background-color: transparent;
     background-image: none;
@@ -300,6 +300,15 @@ footer {
   display: none;
 }
 @media all and (min-width: 530px) {
+  #branding hgroup {
+    width: 253px;
+    float: left;
+  }
+  #section-top {
+    width: 382px;
+  }
+}
+@media all and (min-width: 800px) {
   #branding hgroup {
     width: 382px;
     float: left;
