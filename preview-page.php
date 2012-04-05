@@ -11,22 +11,10 @@
 	<div class="entry-content">
 		<? the_excerpt(); ?>
 	</div><!-- .entry-content -->
-	<nav>
-	<?
-	$page_IDs = get_the_ID().",";
-	$subpages = get_pages(array(
-		"parent"=>get_the_ID(),
-		"hierarchical" => 0,
-		));
-	foreach($subpages as $sp){
-		$page_IDs .= ",".$sp->ID;
-	}
-	wp_page_menu(array( 
-		'show_home' => false,
-		'sort_column' => 'menu_order',
-		'include' => $page_IDs,
-		));
-		do_action("sfhiv-preview-menu");
-	?>
-	</nav>
+	<?	sfhiv_draw_menu(array(
+		get_post(get_the_ID())
+		),array(
+		'show_children' => true,
+	));	?>
+	<?	do_action("sfhiv-preview-menu");	?>
 </article><!-- #post-<?php the_ID(); ?> -->
