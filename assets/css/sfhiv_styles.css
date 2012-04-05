@@ -696,6 +696,9 @@ form.filter fieldset {
 .three-column .widget .widgettitle {
   border-top: 1px #2e3c62 solid;
   border-bottom: 1px #2e3c62 solid;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 7px 0px;
 }
 .two-column article .entry-header h1,
 .three-column article .entry-header h1,
@@ -729,9 +732,10 @@ form.filter fieldset {
 .three-column article .widgettitle h4,
 .two-column .widget .widgettitle h4,
 .three-column .widget .widgettitle h4 {
+  padding: 0px;
+  margin: 0px;
   font-weight: 300;
   font-size: 18px;
-  padding: 7px 0px;
 }
 .two-column article nav .menu,
 .three-column article nav .menu,

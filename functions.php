@@ -36,6 +36,11 @@ include_once('include/document-archive.php');
 
 include_once('functions-images.php');
 
+
+include_once('widget-preview-page.php');
+
+
+
 add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){
 	add_post_type_support( 'page', 'excerpt' );
