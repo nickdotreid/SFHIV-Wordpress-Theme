@@ -37,7 +37,7 @@ function sfhiv_service_page_parent_groups(){
 	foreach($groups as $group){
 		$group_ids[] = $group->ID;
 	}
-	sfhiv_draw_page_navigation($group_ids,array(
+	sfhiv_draw_menu($groups,array(
 		'selected_items' => $group_ids,
 	));
 }
