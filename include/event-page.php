@@ -2,9 +2,22 @@
 
 add_action('before_content','sfhiv_event_page_show_date',12);
 function sfhiv_event_page_show_date(){
-	echo '<div class="event_date_time">';
+	if(!is_singular('sfhiv_event')) return;
 	get_template_part('date','event');
-	echo '</div>';
+}
+
+add_action('before_content','sfhiv_event_page_show_location',13);
+function sfhiv_event_page_show_location(){
+	if(!is_singular('sfhiv_event')) return;
+	$locations = new WP_Query( array(
+		'connected_type' => 'related_location',
+		'connected_items' => get_the_ID(),
+	));
+	while($locations->have_posts()){
+		$locations->the_post();
+		get_template_part('location','event');
+	}
+	wp_reset_postdata();
 }
 
 add_action('get_sidebar','sfhiv_event_page_event_categories',23);
@@ -33,7 +46,7 @@ function sfhiv_event_page_parent_groups(){
 	foreach($groups->posts as $group){
 		$group_ids[] = $group->ID;
 	}
-	sfhiv_draw_page_navigation($group_ids,array(
+	sfhiv_draw_menu($groups->posts,array(
 		'selected_items' => $group_ids,
 	));
 }
