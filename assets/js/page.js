@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var item_selector = ".preview, .widget";
 		// reset all heights to auto & restore all borders
 		$(item_selector,column).css({
-			"height":"auto",
+			"height":"auto"
 		});
 		var heights = [];
 		$(item_selector,column).each(function(){
