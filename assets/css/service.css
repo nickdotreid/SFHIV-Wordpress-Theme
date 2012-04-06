@@ -87,6 +87,10 @@
   font-weight: normal;
   font-size: 12px;
 }
+.list .sfhiv_service .location,
+.list .sfhiv_service_hours .location {
+  clear: both;
+}
 .list .sfhiv_service .category-list,
 .list .sfhiv_service_hours .category-list {
   margin: 3.5px 0px;
@@ -137,6 +141,16 @@
   .list .sfhiv_service .location,
   .list .sfhiv_service_hour .location {
     clear: left;
+  }
+  .list .sfhiv_service_hour.list-item .column.left {
+    width: 260px;
+  }
+  .list .sfhiv_service_hour.list-item .column.right {
+    width: 246px;
+    float: left;
+  }
+  .list .sfhiv_service_hour.list-item .location {
+    clear: none;
   }
 }
 @media all and (min-width: 1100px) {

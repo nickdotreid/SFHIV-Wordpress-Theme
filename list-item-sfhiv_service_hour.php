@@ -13,8 +13,9 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 <article id="post-<?=the_ID();?>" <?php post_class("list-item sfhiv_service"); ?>
 	service-parent="<?=$service_parent->ID;?>"
 	>
-		<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
-		<?	if(count($days)>0):	?>
+	<div class="column left">
+	<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
+	<?	if(count($days)>0):	?>
 		<div class="days">
 			<ul>
 			<?	foreach($days as $day):	?>
@@ -22,12 +23,14 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 			<?	endforeach;	?>
 			</ul>
 		</div>
-		<?	endif;	?>
+	<?	endif;	?>
 		<div class="time">
 			<span class="start"><span class="label">Start:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_start",true));?></span>
 			<span class="end"><span class="label">End:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_end",true));?></span>
 		</div>
-		<?	if($location):	?>
+	</div>
+	<div class="column right">
+	<?	if($location):	?>
 		<aside class="location">
 			<h3><?=apply_filters("the_title",$location->post_title);?></h3>
 			<span class="address line"><?=get_post_meta($location->ID,'sfhiv_room',true);?></span>
@@ -39,30 +42,7 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 			<!-- View on Google Maps Link here -->
 			<span class="address line hint"><?apply_filters('the_content',get_post_meta($location->ID,'sfhiv_location_hint',true));?></span>
 		</aside>
-		<?	endif;	?>
-		<?	$service_types = wp_get_object_terms($service_parent->ID,'sfhiv_service_category');	?>
-		<?	if(count($service_types)>0):	?>
-		<aside class="category-list">
-			<h3>Services Offered</h3>
-			<ul class="service_categories">
-			<?	foreach($service_types as $category):	?>
-				<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
-			<?	endforeach;	?>
-			</ul>
-			<br class="clear" />
-		</aside>
-		<?	endif;	?>
-
-		<?	$population_types = wp_get_object_terms($service_parent->ID,'sfhiv_population_category');	?>
-		<?	if(count($population_types)>0):	?>
-		<aside class="category-list">
-			<h3><?_e('Only Serves');?></h3>
-		<ul class="population_categories">
-		<?	foreach($population_types as $category):	?>
-			<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
-		<?	endforeach;	?>
-		</ul>
-		<br class="clear" />
-		</aside>
-		<?	endif;	?>
+	<?	endif;	?>
+	</div>
+	<br class="clear" />
 </article>
