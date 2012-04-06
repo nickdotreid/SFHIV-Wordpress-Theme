@@ -1,5 +1,24 @@
 <?php
 
+add_action('get_sidebar','sfhiv_page_show_website_link',12);
+function sfhiv_page_show_website_link(){
+	if(!is_singular()) return;
+	$link = sfhiv_website_link_get_link();
+	if(!$link) return;
+	?>
+	<nav>
+		<ul class="menu">
+			<li class="menu-item">
+				<a class="external" href="<?=$link->link;?>"><?
+				if($link->name) echo $link->name;
+				else echo $link->link;
+				?></a>
+			</li>
+		</ul>
+	</nav>
+	<?
+}
+
 add_action('get_sidebar','sfhiv_page_show_linked_page',11);
 function sfhiv_page_show_linked_page(){
 	if(!is_singular()) return;
