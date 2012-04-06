@@ -14,31 +14,58 @@
   display: inline;
 }
 .event .date,
-.sfhiv_event .event_date_time .date {
+.sfhiv_event .date {
   color: #FFF;
   background: #f09938;
-  padding: 7px 14px;
+  margin: 7px 0px;
+}
+.event .date span,
+.sfhiv_event .date span {
+  display: block;
+  margin: 3.5px 14px;
 }
 .event .past .date,
-.sfhiv_event .event_date_time .past .date {
+.sfhiv_event .past .date {
   color: #2e3c62;
   background: #d6d6d6;
 }
 .event .time,
-.sfhiv_event .event_date_time .time {
-  padding: 7px 14px;
+.sfhiv_event .time {
+  margin: 7px 0px;
 }
 .event .time span,
-.sfhiv_event .event_date_time .time span {
+.sfhiv_event .time span {
   display: block;
   font-weight: bold;
+  margin: 3.5px 7px;
 }
 .event .time span .label,
-.sfhiv_event .event_date_time .time span .label {
+.sfhiv_event .time span .label {
   float: left;
   padding: 0px 7px 0px 0px;
+  margin: 0px;
   font-weight: normal;
   font-size: 12px;
+}
+.event .date,
+.sfhiv_event .date,
+.event .time,
+.sfhiv_event .time {
+  display: block;
+  float: left;
+  width: 130px;
+}
+.event .location,
+.sfhiv_event .location {
+  display: block;
+  clear: both;
+}
+@media all and (min-width: 530px) {
+  .sfhiv_event .location {
+    display: block;
+    clear: none;
+    float: left;
+  }
 }
 @media all and (min-width: 800px) {
   .list .event,
