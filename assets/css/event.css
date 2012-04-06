@@ -13,6 +13,10 @@
 .date_mix.date span span {
   display: inline;
 }
+.event .date_time_block,
+.sfhiv_event .date_time_block {
+  display: block;
+}
 .event .date,
 .sfhiv_event .date {
   color: #FFF;
@@ -60,45 +64,36 @@
   display: block;
   clear: both;
 }
+.event .entry-title,
+.sfhiv_event .entry-title,
+.event h1.entry-title,
+.sfhiv_event h1.entry-title,
+.event h2.entry-title,
+.sfhiv_event h2.entry-title {
+  font-weight: 300;
+  padding-bottom: 0px;
+}
+.event .entry-content,
+.sfhiv_event .entry-content {
+  clear: left;
+}
 @media all and (min-width: 530px) {
+  .sfhiv_event .date_time_block {
+    float: left;
+    width: 130px;
+  }
+  .sfhiv_event .date_time_block .date,
+  .sfhiv_event .date_time_block .time {
+    margin: 3.5px 0px;
+  }
   .sfhiv_event .location {
     display: block;
     clear: none;
     float: left;
+    margin-left: 7px;
   }
 }
 @media all and (min-width: 800px) {
-  .list .event,
-  #main .event.list-item,
-  #main .list .event.list-item,
-  #main #primary .list .event.list-item {
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-  .list .event .event_date_time,
-  #main .event.list-item .event_date_time,
-  #main .list .event.list-item .event_date_time,
-  #main #primary .list .event.list-item .event_date_time,
-  .list .event .attachments,
-  #main .event.list-item .attachments,
-  #main .list .event.list-item .attachments,
-  #main #primary .list .event.list-item .attachments {
-    width: 123px;
-    position: absolute;
-    top: 7px;
-  }
-  .list .event .event_date_time,
-  #main .event.list-item .event_date_time,
-  #main .list .event.list-item .event_date_time,
-  #main #primary .list .event.list-item .event_date_time {
-    left: 0px;
-  }
-  .list .event .attachments,
-  #main .event.list-item .attachments,
-  #main .list .event.list-item .attachments,
-  #main #primary .list .event.list-item .attachments {
-    right: 0px;
-  }
   .sfhiv_event .event_date_time .date,
   .sfhiv_event .event_date_time .time {
     float: left;

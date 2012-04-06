@@ -2,6 +2,9 @@
 @import "mixins";
 
 .event,.sfhiv_event{
+	.date_time_block{
+		display:block;
+	}
 	.date {
 		color: #FFF;
 		background:@highlight_color;
@@ -39,33 +42,33 @@
 		display:block;
 		clear:both;
 	}
+	.entry-title,h1.entry-title,h2.entry-title{
+		font-weight:300;	
+		padding-bottom:0px;
+	}
+	.entry-content{
+		clear:left;
+	}
 }
 @media all and (min-width: @size_tablet) {
 	.sfhiv_event{
+		.date_time_block{
+			float:left;
+			width:@block_width/2;
+			.date,.time{
+				margin:@space_size/2 0px;
+			}
+		}
 		.location{
 			display:block;
 			clear:none;
 			float:left;
+			margin-left:@space_size;
 		}
 	}
 }
 
 @media all and (min-width: @size_medium) {
-	.list .event,#main .event.list-item, #main .list .event.list-item, #main #primary .list .event.list-item{
-		padding-left:@block_width/2;
-		padding-right:@block_width/2;
-		.event_date_time,.attachments{
-			width:@block_width/2-@space_size;
-			position:absolute;
-			top:@space_size;
-		}
-		.event_date_time{
-			left:0px;
-		}
-		.attachments{
-			right:0px;
-		}
-	}
 	.sfhiv_event .event_date_time{
 		.date,.time{
 			float:left;
