@@ -83,6 +83,7 @@ function sfhiv_group_page_list_group_services(){
 	do_action('sfhiv_loop',$services,array(
 		"id" => "services",
 		"title" => "Services",
+		"list_element" => "list-item",
 	));
 }
 
