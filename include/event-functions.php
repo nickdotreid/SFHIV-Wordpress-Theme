@@ -6,9 +6,12 @@ function sfhiv_event_link_date(){
 	$date_format = get_option('date_format');
 	$time_format = get_option('time_format');
 	$start_time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
+	$end_time = get_post_meta(get_the_ID(),'sfhiv_event_end',true);
 	$now = time();
-	
-	echo '<div class="date">';
+
+	echo '<div class="date';
+	if($now>$end_time) echo " past";
+	echo '">';
 	if(date($date_format,$now)==date($date_format,$start_time)){
 		_e("Today");
 	}else{
