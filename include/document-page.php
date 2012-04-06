@@ -8,7 +8,8 @@ function sfhiv_document_page_document_categories(){
 	sfhiv_draw_taxonomy_menu(array(
 		'taxonomy' => 'sfhiv_document_category',
 		'title_li' => false,
-		'current_category' => $current_categories[0]
+		'current_category' => $current_categories[0],
+		'base_link' =>  get_post_type_archive_link( 'sfhiv_document' ),
 	));
 }
 
@@ -22,6 +23,7 @@ function sfhiv_document_page_service_categories(){
 		'taxonomy' => 'sfhiv_service_category',
 		'title_li' => false,
 		'include' => implode(",",$service_categories),
+		'base_link' =>  get_post_type_archive_link( 'sfhiv_document' ),
 	));
 }
 
