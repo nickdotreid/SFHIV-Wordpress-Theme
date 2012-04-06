@@ -1,5 +1,22 @@
 <?
 
+add_action("sfhiv_pre_link",'sfhiv_event_link_date');
+function sfhiv_event_link_date(){
+	if(get_post_type()!='sfhiv_event') return;
+	$date_format = get_option('date_format');
+	$time_format = get_option('time_format');
+	$start_time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
+	$now = time();
+	
+	echo '<div class="date">';
+	if(date($date_format,$now)==date($date_format,$start_time)){
+		_e("Today");
+	}else{
+		$date_format = str_replace(array('y','Y',','),"",$date_format);
+		echo date($date_format,$start_time);
+	}
+	echo '</div>';
+}
 
 function sfhiv_em_custom_formats( $array ){
 	$my_formats = array('dbem_single_event_format'); //the format you want to override, corresponding to file above.

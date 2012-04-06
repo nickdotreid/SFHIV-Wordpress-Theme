@@ -36,9 +36,15 @@ function sfhiv_add_mini_archive_menu(){
 			?><nav><ul class="menu"><?
 			while($query && $query->have_posts()){
 				$query->the_post();
-				get_template_part( 'menu-item', $archive_type );
+				echo '<li class="menu-item">';
+				echo '<a href="'.get_permalink().'">';
+				do_action("sfhiv_pre_link");
+				the_title();
+				echo '</a>';
+				echo '</li>';
 			}
 			?></ul></nav><?
+			wp_reset_postdata();
 		endif;
 	endif;
 }

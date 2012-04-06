@@ -10,20 +10,9 @@ $now = time();
 	<header>
 		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 	</header>
-	<div class="date_time_block">
-	<?=get_template_part('date','event');?>
+	<div class="event_date_time column <? if(get_post_meta(get_the_ID(),'sfhiv_event_start',true) && get_post_meta(get_the_ID(),'sfhiv_event_start',true)<$now) echo "past";	?>">
+		<?=get_template_part('date','event');?>
 	</div>
-	<?php
-	$locations = new WP_Query( array(
-		'connected_type' => 'related_location',
-		'connected_items' => get_the_ID(),
-	));
-	while($locations->have_posts()){
-		$locations->the_post();
-		get_template_part('location','event');
-	}
-	wp_reset_postdata();
-	?>
 	<div class="entry-content">
 		<?=the_excerpt();?>
 	</div>
