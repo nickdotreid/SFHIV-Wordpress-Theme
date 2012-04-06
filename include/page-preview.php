@@ -25,6 +25,8 @@ function sfhiv_add_mini_archive_menu(){
 						'taxonomy' => $filter['type'],
 						'title_li' => false,
 						'include' => implode(',',$taxes),
+						'show_all_link' => false,
+						'base_link' => get_permalink(get_the_ID()),
 					));
 				}
 			}

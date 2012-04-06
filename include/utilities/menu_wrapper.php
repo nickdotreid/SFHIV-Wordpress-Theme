@@ -119,6 +119,7 @@ function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	$args = array_merge(array(
 		'taxonomy' => $tax_name,
 		'include' => implode(",",$categories),
+		'show_all_link' => true,
 	),$args);
 	
 	sfhiv_draw_taxonomy_menu($args);

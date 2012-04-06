@@ -4,16 +4,9 @@ function sfhiv_make_menu_walker_category_link($category,$href=false,$add=true){
 	if(!$href){
 		$href = esc_attr( get_term_link($category) );
 	}
-	foreach($_GET as $key=>$value){
-		if($key != $category->taxonomy){
-			$append = true;
-			if(is_singular() && get_post_type()==$key) $append=false;
-			if($append)	$href = sfhiv_append_url_argument($href,$key,$value);
-		}
-	}
-	if($add){
-		$href = sfhiv_append_url_argument($href,$category->taxonomy,$category->slug);
-	}
+	if($add)	$href = add_query_arg($category->taxonomy,$category->slug,$href);
+	else $href = remove_query_arg($category->taxonomy,$href);
+	
 	return $href;
 }
 
@@ -28,10 +21,9 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		$cat_name = apply_filters( 'list_cats', $cat_name, $category );
 		
 		$link = "";
-		
 		if(!empty($base_link) && $base_link) $href = sfhiv_make_menu_walker_category_link($category,$base_link);
 		else $href = sfhiv_make_menu_walker_category_link($category);
-		
+	//	console($href);
 		$link .= '<a href="';
 		$link .= $href.'" ';
 		if ( $use_desc_for_title == 0 || empty($category->description) )
@@ -79,7 +71,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		if ( !empty($show_date) )
 			$link .= ' ' . gmdate('Y-m-d', $category->last_update_timestamp);
 		
-		if(!$this->displayed_show_all){
+		if($show_all_link && !$this->displayed_show_all){
 			$this->displayed_show_all = true;
 			$taxonomy = get_taxonomy($category->taxonomy);
 			
