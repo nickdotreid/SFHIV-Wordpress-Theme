@@ -296,9 +296,6 @@ a,a:visited{
 	.section();
 	.menu{
 		.menu_mix();
-		font-family:@title_font;
-		font-weight:300;
-		font-size:@big_font_size;
 		padding:@space_size 0px 0px;
 		height:47px;
 		.menu-item{
@@ -306,6 +303,9 @@ a,a:visited{
 			float:left;
 			width:auto;
 			padding:@space_size @space_size*2;
+			font-family:@title_font;
+			font-weight:300;
+			font-size:@big_font_size;
 			.sub-menu{
 				display:none;
 			}
@@ -330,8 +330,8 @@ a,a:visited{
 @media all and (min-width: @size_medium) {
 	#access{
 		.menu{
-			font-size:@very_big_font_size;
 			.menu-item{
+				font-size:@very_big_font_size;
 				padding:@space_size @space_size*4;
 			}
 		}
