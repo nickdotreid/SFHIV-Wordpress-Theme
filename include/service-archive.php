@@ -45,6 +45,17 @@ function sfhiv_service_hour_archive_neighborhood_category_menu($query=false,$arg
 	));
 }
 
+add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_time_of_day_category_menu',9,2);
+function sfhiv_service_hour_archive_time_of_day_category_menu($query=false,$args=array()){
+	$query = sfhiv_get_archive_query();
+	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	sfhiv_draw_taxonomy_query_menu('sfhiv_time_of_day_taxonomy',$query,array(
+		'title_li' => 'Time of Day',
+		'extra_classes' => 'filters',
+		'base_link' => get_permalink(),
+	));
+}
+
 add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_filter_container',10,2);
 function sfhiv_service_hour_archive_filter_container($query=false,$args=array()){
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
