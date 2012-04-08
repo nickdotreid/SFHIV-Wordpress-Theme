@@ -44,6 +44,17 @@ function sfhiv_service_hour_archive_neighborhood_category_menu($query=false,$arg
 	));
 }
 
+add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_day_of_week_category_menu',9,2);
+function sfhiv_service_hour_archive_day_of_week_category_menu($query=false,$args=array()){
+	$query = sfhiv_get_archive_query();
+	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
+	sfhiv_draw_taxonomy_query_menu('sfhiv_day_of_week_taxonomy',$query,array(
+		'title_li' => 'Day of Week',
+		'extra_classes' => 'filters',
+		'base_link' => get_permalink(),
+	));
+}
+
 add_action('sfhiv_pre_loop','sfhiv_service_hour_archive_time_of_day_category_menu',9,2);
 function sfhiv_service_hour_archive_time_of_day_category_menu($query=false,$args=array()){
 	$query = sfhiv_get_archive_query();
