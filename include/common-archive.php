@@ -1,8 +1,12 @@
 <?php
 
 add_action('sfhiv_post_loop','sfhiv_archive_show_pages',10,2);
-function sfhiv_archive_show_pages($query,$args){
-	global $wp_rewrite;
+function sfhiv_archive_show_pages($query=false,$args=array()){
+	global $wp_rewrite, $wp_query;
+	
+	if(!$query){
+		$query = $wp_query;
+	}
 	if($query->max_num_pages<2) return;
 	$current_page = 1;
 	if(isset($query->query_vars['paged'])){
