@@ -14,12 +14,12 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 	service-parent="<?=$service_parent->ID;?>"
 	>
 	<div class="column left">
-	<? $days = get_post_meta(get_the_ID(),"sfhiv_service_days");?>
+	<? $days = wp_get_object_terms(get_the_ID(),"sfhiv_day_of_week_taxonomy");?>
 	<?	if(count($days)>0):	?>
 		<div class="days">
 			<ul>
 			<?	foreach($days as $day):	?>
-			<li class="day"><?=$day;?></li>
+			<li class="day"><?=$day->name;?></li>
 			<?	endforeach;	?>
 			</ul>
 		</div>
