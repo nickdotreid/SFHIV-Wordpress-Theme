@@ -60,6 +60,10 @@
   display: block;
   clear: both;
 }
+.event .entry-content,
+.sfhiv_event .entry-content {
+  clear: both;
+}
 @media all and (min-width: 530px) {
   .sfhiv_event .location {
     display: block;
@@ -68,37 +72,6 @@
   }
 }
 @media all and (min-width: 800px) {
-  .list .event,
-  #main .event.list-item,
-  #main .list .event.list-item,
-  #main #primary .list .event.list-item {
-    padding-left: 130px;
-    padding-right: 130px;
-  }
-  .list .event .event_date_time,
-  #main .event.list-item .event_date_time,
-  #main .list .event.list-item .event_date_time,
-  #main #primary .list .event.list-item .event_date_time,
-  .list .event .attachments,
-  #main .event.list-item .attachments,
-  #main .list .event.list-item .attachments,
-  #main #primary .list .event.list-item .attachments {
-    width: 123px;
-    position: absolute;
-    top: 7px;
-  }
-  .list .event .event_date_time,
-  #main .event.list-item .event_date_time,
-  #main .list .event.list-item .event_date_time,
-  #main #primary .list .event.list-item .event_date_time {
-    left: 0px;
-  }
-  .list .event .attachments,
-  #main .event.list-item .attachments,
-  #main .list .event.list-item .attachments,
-  #main #primary .list .event.list-item .attachments {
-    right: 0px;
-  }
   .sfhiv_event .event_date_time .date,
   .sfhiv_event .event_date_time .time {
     float: left;
