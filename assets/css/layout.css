@@ -136,12 +136,20 @@ footer {
   width: 246px;
   display: block;
   margin: 0px;
-  padding: 14px 0px;
+  padding: 0px 0px;
 }
 .two-column article .entry-header,
 .three-column article .entry-header,
 .two-column .widget .entry-header,
-.three-column .widget .entry-header,
+.three-column .widget .entry-header {
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+.two-column article .entry-title,
+.three-column article .entry-title,
+.two-column .widget .entry-title,
+.three-column .widget .entry-title,
 .two-column article .entry-content,
 .three-column article .entry-content,
 .two-column .widget .entry-content,
@@ -152,10 +160,10 @@ footer {
 .three-column .widget nav {
   margin: 0px 7px 7px;
 }
-.two-column article .entry-header,
-.three-column article .entry-header,
-.two-column .widget .entry-header,
-.three-column .widget .entry-header,
+.two-column article .entry-title,
+.three-column article .entry-title,
+.two-column .widget .entry-title,
+.three-column .widget .entry-title,
 .two-column article .widgettitle,
 .three-column article .widgettitle,
 .two-column .widget .widgettitle,
@@ -165,41 +173,8 @@ footer {
   font-weight: 300;
   font-size: 18px;
   padding: 7px 0px;
-}
-.two-column article .entry-header h1,
-.three-column article .entry-header h1,
-.two-column .widget .entry-header h1,
-.three-column .widget .entry-header h1,
-.two-column article .widgettitle h1,
-.three-column article .widgettitle h1,
-.two-column .widget .widgettitle h1,
-.three-column .widget .widgettitle h1,
-.two-column article .entry-header h2,
-.three-column article .entry-header h2,
-.two-column .widget .entry-header h2,
-.three-column .widget .entry-header h2,
-.two-column article .widgettitle h2,
-.three-column article .widgettitle h2,
-.two-column .widget .widgettitle h2,
-.three-column .widget .widgettitle h2,
-.two-column article .entry-header h3,
-.three-column article .entry-header h3,
-.two-column .widget .entry-header h3,
-.three-column .widget .entry-header h3,
-.two-column article .widgettitle h3,
-.three-column article .widgettitle h3,
-.two-column .widget .widgettitle h3,
-.three-column .widget .widgettitle h3,
-.two-column article .entry-header h4,
-.three-column article .entry-header h4,
-.two-column .widget .entry-header h4,
-.three-column .widget .entry-header h4,
-.two-column article .widgettitle h4,
-.three-column article .widgettitle h4,
-.two-column .widget .widgettitle h4,
-.three-column .widget .widgettitle h4 {
-  padding: 0px;
-  margin: 0px;
+  padding: 7px 14px;
+  margin: 7px;
   font-weight: 300;
   font-size: 18px;
 }
@@ -329,8 +304,7 @@ footer {
 .three-column .widget,
 .footer.three-column .widget {
   width: 246px;
-  padding-right: 7px;
-  padding-left: 7px;
+  padding: 0px;
 }
 .three-column .widget_nav_menu .menu,
 .footer.three-column .widget_nav_menu .menu {

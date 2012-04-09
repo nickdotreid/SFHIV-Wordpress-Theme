@@ -106,22 +106,25 @@
 		width:@block_width - @space_size*2;
 		display:block;
 		margin:0px;
-		padding:@space_size*2 0px;
-		.entry-header,.entry-content,nav{
+		padding:0px 0px;
+		.entry-header{
+			margin:0px;
+			padding:0px;
+			width:auto;
+		}
+		.entry-title,.entry-content,nav{
 			margin:0px @space_size @space_size;
 		}
-		.entry-header,.widgettitle{
+		.entry-title,.widgettitle{
 			border-top:@border_width @text_color solid;
 			border-bottom:@border_width @text_color solid;
 			font-weight:300;
 			font-size:@big_font_size;
 			padding:@space_size 0px;
-			h1,h2,h3,h4{
-				padding:0px;
-				margin:0px;
-				font-weight:300;
-				font-size:@big_font_size;
-			}
+			padding:@space_size @space_size*2;
+			margin:@space_size;
+			font-weight:300;
+			font-size:@big_font_size;
 		}
 		nav{
 			.menu{
@@ -188,8 +191,7 @@
 .three-column,.footer.three-column{
 	.widget{
 		width:@block_width - @space_size*2;
-		padding-right:@space_size;
-		padding-left:@space_size;
+		padding:0px;
 	}
 	.widget_nav_menu{
 		.menu{
