@@ -13,28 +13,24 @@
 .date_mix.date span span {
   display: inline;
 }
-#main .list .list-heading,
-#main #primary .list .list-heading {
+.list .list-heading {
   padding: 7px 14px 7px;
   font-size: 24px;
   color: #2e3c62;
   border-top: #bcbcbc 3px solid;
 }
-#main .list .list-item,
-#main #primary .list .list-item {
+.list .list-item {
   position: relative;
   border-top: 1px #bcbcbc solid;
   padding: 0px 0px 7px;
 }
-#main .list .list-item .entry-title,
-#main #primary .list .list-item .entry-title {
+.list .list-item .entry-title {
   font-size: 18px;
   padding: 7px 0px;
   background-color: transparent;
-  width: auto;
 }
-@media all and (min-width: 800px) {
-  
+.list .list-item .entry-content {
+  display: block;
 }
 .list .list-item nav {
   display: block;

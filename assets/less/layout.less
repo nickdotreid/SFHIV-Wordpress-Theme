@@ -2,7 +2,7 @@
 @import "mixins";
 
 
-#main .list,#main #primary .list{
+.list{
 	.list-title{
 	
 	}
@@ -20,16 +20,10 @@
 			font-size:@big_font_size;
 			padding:@space_size 0px;
 			background-color:transparent;
-			width:auto;
 		}
-	}
-}
-@media all and (min-width: @size_medium) {
-	
-}
-
-.list{
-	.list-item{
+		.entry-content{
+			display:block;
+		}
 		nav{
 			display:block;
 			clear:both;

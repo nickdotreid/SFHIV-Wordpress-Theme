@@ -13,28 +13,39 @@
 .date_mix.date span span {
   display: inline;
 }
-@media all and (min-width: 800px) {
-  .attachment,
-  #main #primary .list .list-item.attachment {
-    display: block;
-    padding-left: 70px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: 7px 7px;
-  }
-  .attachment {
-    background-image: url('../i/document_icons/default.png');
-  }
-  .attachment .icon-link {
-    position: absolute;
-    top: 0px;
-    left: 7px;
-    width: 56px;
-    height: 100%;
-    overflow: hidden;
-    text-indent: -3000px;
-  }
-  .attachment.mime-applicationmsword {
-    background-image: url('../i/document_icons/document.png');
-  }
+.attachment {
+  display: block;
+  padding-left: 35px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-image: url('../i/document_icons/default.png');
+}
+.attachment .description {
+  display: block;
+  clear: both;
+  color: #bcbcbc;
+  font-size: 12px;
+  font-style: italic;
+}
+.attachment.mime-applicationmsword {
+  background-image: url('../i/document_icons/document.png');
+}
+.list-item .attachments {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+.list-item .attachments ul {
+  margin: 0px;
+  padding: 0px;
+}
+.list-item .attachments li {
+  list-style-type: none;
+  line-height: 1em;
+}
+.list-item .attachments li {
+  padding-left: 35px;
+  border-top: 0px;
 }

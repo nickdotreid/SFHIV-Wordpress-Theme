@@ -156,19 +156,6 @@ a:visited {
   list-style-type: none;
   line-height: 1em;
 }
-.attachments,
-ul.attachments {
-  padding: 0px;
-  margin: 7px 0px;
-}
-.attachments li,
-ul.attachments li {
-  list-style: none;
-}
-.attachments .attachment,
-ul.attachments .attachment {
-  padding-left: 14px;
-}
 #page {
   display: block;
   width: 260px;

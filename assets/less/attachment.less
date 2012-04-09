@@ -1,28 +1,32 @@
 @import "variables";
 @import "mixins";
 
-
-@media all and (min-width: @size_medium) {
-	.attachment, #main #primary .list .list-item.attachment{
+.attachment{
+	display:block;
+	padding-left:@space_size*5;
+	background-color:transparent;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image:url('../i/document_icons/default.png');
+	.description{
 		display:block;
-		padding-left:@space_size*10;
-		background-color:transparent;
-		background-repeat:no-repeat;
-		background-position:@space_size @space_size;
+		clear:both;
+		color:@secondary_color;
+		font-size:@small_font_size;
+		font-style:italic;
 	}
-	.attachment{
-		background-image:url('../i/document_icons/default.png');
-		.icon-link{
-			position:absolute;
-			top:0px;
-			left:@space_size;
-			width:@space_size*8;
-			height:100%;
-			overflow:hidden;
-			text-indent:-3000px;
-		}
-	}
-	.attachment.mime-applicationmsword{
+	&.mime-applicationmsword{
 		background-image:url('../i/document_icons/document.png');
+	}
+}
+
+.list-item{
+	.attachments{
+		.menu_mix();
+		display:block;
+		li{
+			padding-left:@space_size*5;
+			border-top:0px;
+		}
 	}
 }

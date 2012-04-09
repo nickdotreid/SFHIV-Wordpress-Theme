@@ -10,6 +10,7 @@ include_once('functions-assets.php');
 include_once('include/page-page.php');
 include_once('include/page-preview.php');
 
+include_once('include/common-list.php');
 include_once('include/common-page.php');
 include_once('include/common-archive.php');
 
