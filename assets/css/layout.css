@@ -133,7 +133,7 @@ footer {
 .three-column article,
 .two-column .widget,
 .three-column .widget {
-  width: 260px;
+  width: 246px;
   display: block;
   margin: 0px;
   padding: 14px 0px;
@@ -266,13 +266,12 @@ footer {
   .three-column {
     background-image: url('../i/background-line.gif');
     background-repeat: repeat-y;
-    background-position: 260px 0;
+    background-position: center center;
   }
   .two-column article,
   .three-column article,
   .two-column .widget,
   .three-column .widget {
-    width: 260px;
     float: left;
   }
 }
@@ -294,36 +293,37 @@ footer {
   .footer.three-column {
     background-image: url('../i/splash-back-medium.gif');
     background-repeat: repeat-y;
-    background-position: top left;
+    background-position: center center;
   }
   .three-column article,
   .footer.three-column article,
   .three-column .widget,
   .footer.three-column .widget {
-    width: 260px;
+    width: 250.66666666666666px;
     float: left;
   }
 }
 @media all and (min-width: 1100px) {
   .two-column,
   .footer.two-column {
-    background-position: 520px 0;
+    background-position: center center;
   }
   .two-column article,
   .footer.two-column article,
   .two-column .widget,
   .footer.two-column .widget {
-    width: 520px;
+    width: 499px;
   }
   .three-column,
   .footer.three-column {
     background-image: url('../i/splash-back-large.gif');
+    background-position: center center;
   }
   .three-column article,
   .footer.three-column article,
   .three-column .widget,
   .footer.three-column .widget {
-    width: 346.6666666666667px;
+    width: 332.6666666666667px;
   }
 }
 .three-column .widget,
