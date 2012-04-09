@@ -483,30 +483,21 @@ form.filter fieldset {
   .list,
   .filters {
     width: 478px;
+    margin-left: 14px;
     float: right;
     clear: none;
   }
   .filters .filter {
     float: left;
-    width: 116px;
-    padding: 7px;
-    border-right: #bcbcbc 1px solid;
+    padding: 7px 0px;
   }
   .filters.menu {
-    width: 492px;
-    padding: 7px 14px;
+    padding: 7px 0px;
   }
   .filters.menu li {
     display: block;
     float: left;
     margin-right: 14px;
-  }
-  #content {
-    margin-left: 14px;
-  }
-  .list {
-    width: 506px;
-    margin-left: 14px;
   }
   .sidebar {
     display: block;
@@ -533,10 +524,6 @@ form.filter fieldset {
   .list,
   .filters {
     width: 724px;
-  }
-  .filters.menu {
-    width: 766px;
-    padding: 7px 0px;
   }
 }
 footer,

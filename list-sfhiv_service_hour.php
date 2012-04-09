@@ -15,19 +15,18 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 	service-parent="<?=$service_parent->ID;?>"
 	>
 	<header>
-		<h3><a href="<?=the_permalink();?>"><?the_title();?></a></h3>
+		<h3><a href="<?=get_permalink($service_parent->ID);?>"><?=apply_filters('the_title',$service_parent->post_title);?></a></h3>
 	</header>
-	<div class="column left">
-		<? $days = wp_get_object_terms(get_the_ID(),"sfhiv_day_of_week_taxonomy");?>
-		<?	if(count($days)>0):	?>
-			<div class="days">
-				<ul>
-				<?	foreach($days as $day):	?>
-				<li class="day"><?=$day->name;?></li>
-				<?	endforeach;	?>
-				</ul>
-			</div>
-		<?	endif;	?>
+	<? $days = wp_get_object_terms(get_the_ID(),"sfhiv_day_of_week_taxonomy");?>
+	<?	if(count($days)>0):	?>
+		<div class="days">
+			<ul>
+			<?	foreach($days as $day):	?>
+			<li class="day"><?=$day->name;?></li>
+			<?	endforeach;	?>
+			</ul>
+		</div>
+	<?	endif;	?>
 		<div class="time">
 			<span class="start"><span class="label">Start:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_start",true));?></span>
 			<span class="end"><span class="label">End:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_end",true));?></span>
@@ -54,48 +53,33 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 				<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
 			<?	endforeach;	?>
 			</ul>
-			<br class="clear" />
 		</aside>
 		<?	endif;	?>
 
 		<?	$population_types = wp_get_object_terms($service_parent->ID,'sfhiv_population_category');	?>
 		<?	if(count($population_types)>0):	?>
 		<aside class="category-list">
-			<h3>Population Specific</h3>
+			<h4>Only for</h4>
 		<ul class="population_categories">
 		<?	foreach($population_types as $category):	?>
 			<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
 		<?	endforeach;	?>
 		</ul>
-		<br class="clear" />
 		</aside>
 		<?	endif;	?>
-	</div>
-	<div class="column right">
 		<? $service_groups = sfhiv_service_get_groups($service_parent->ID);	?>
 		<?	if( count($service_groups) > 0):	?>
 		<aside class="related-groups">
+			<h4>Provided by</h4>
 			<ul>
 			<?	foreach($service_groups as $sgroup):	?>
 			<li class="group <?=implode(" ",wp_get_object_terms($sgroup->ID,'sfhiv_group_category',array("fields"=>"slugs")));?>">
-				<a href="<?=get_permalink($sgroup->ID);?>">
-					<?
-					if ( has_post_thumbnail($sgroup->ID) ) {
-						$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($sgroup->ID) , 'thumbnail' );
-						if($thumbnail){
-							$background_image = $thumbnail[0];
-							echo '<img class="logo" src="'.$background_image.'" />';
-						}
-					}
-					?>
-					<?=get_the_title($sgroup->ID);?>
-				</a>
+				<a href="<?=get_permalink($sgroup->ID);?>"><?=get_the_title($sgroup->ID);?></a>
 			</li>
 			<?	endforeach;	?>
 			</ul>
 		</aside>
 		<?	endif;	?>
-	</div>
 	<nav>
 		<a href="<?=get_permalink($service_parent->ID);?>"><?=__('View '.get_the_title($service_parent->ID),'sfhiv_theme');?></a>
 		<?php edit_post_link( __( 'Edit', 'sfhiv_theme' ), '<span class="sep"> | </span><span class="edit-link">', '</span>', $service_parent->ID ); ?>

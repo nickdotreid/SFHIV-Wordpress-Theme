@@ -44,6 +44,11 @@
   list-style-type: none;
   line-height: 1em;
 }
+.list .sfhiv_service h4,
+.list .sfhiv_service_hours h4 {
+  font-weight: 300;
+  margin: 3.5px 0px;
+}
 .list .sfhiv_service .days,
 .list .sfhiv_service_hours .days {
   display: block;
@@ -92,90 +97,32 @@
   clear: both;
 }
 .list .sfhiv_service .category-list,
-.list .sfhiv_service_hours .category-list {
+.list .sfhiv_service_hours .category-list,
+.list .sfhiv_service .related-groups,
+.list .sfhiv_service_hours .related-groups {
   margin: 3.5px 0px;
   padding: 0px;
   clear: both;
 }
-.list .sfhiv_service .category-list h3,
-.list .sfhiv_service_hours .category-list h3 {
-  font-weight: 300;
-}
 .list .sfhiv_service .category-list li,
-.list .sfhiv_service_hours .category-list li {
+.list .sfhiv_service_hours .category-list li,
+.list .sfhiv_service .related-groups li,
+.list .sfhiv_service_hours .related-groups li {
   display: block;
   float: left;
   margin: 0px 7px 0px 0px;
   padding: 0px;
   list-style-type: none;
 }
-.list .sfhiv_service .related-groups h3,
-.list .sfhiv_service_hours .related-groups h3 {
-  font-weight: 300;
-  text-align: right;
-}
-.list .sfhiv_service .group,
-.list .sfhiv_service_hours .group {
-  text-align: center;
-}
-.list .sfhiv_service .group img,
-.list .sfhiv_service_hours .group img,
-.list .sfhiv_service .group img.logo,
-.list .sfhiv_service_hours .group img.logo {
-  display: block;
-  margin: 3.5px auto;
-}
 .list .sfhiv_service nav,
 .list .sfhiv_service_hours nav {
   clear: both;
 }
 @media all and (min-width: 530px) {
-  .list .sfhiv_service .column.left,
-  .list .sfhiv_service_hour .column.left {
-    width: 376px;
-  }
-  .list .sfhiv_service .column.right,
-  .list .sfhiv_service_hour .column.right {
-    width: 130px;
-  }
   .list .sfhiv_service .location,
   .list .sfhiv_service_hour .location {
-    clear: left;
-  }
-  .list .sfhiv_service_hour.list-item .column.left {
-    width: 260px;
-  }
-  .list .sfhiv_service_hour.list-item .column.right {
-    width: 246px;
-    float: left;
-  }
-  .list .sfhiv_service_hour.list-item .location {
-    clear: none;
-  }
-}
-@media all and (min-width: 1100px) {
-  .list .sfhiv_service_hour .column.left,
-  .list .sfhiv_service_hour .column.left {
-    width: 636px;
-  }
-  .list .sfhiv_service_hour .location,
-  .list .sfhiv_service_hour .location {
     float: left;
     clear: none;
-    width: 260px;
-  }
-  .list .sfhiv_service_hour .category-list,
-  .list .sfhiv_service_hour .category-list {
-    padding-left: 130px;
-    clear: both;
-    position: relative;
-  }
-  .list .sfhiv_service_hour .category-list h3,
-  .list .sfhiv_service_hour .category-list h3 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 123px;
-    text-align: right;
+    width: 211px;
   }
 }

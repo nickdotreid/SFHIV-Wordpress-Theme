@@ -10,6 +10,10 @@
 		.related-groups,.days,.category-list{
 			.menu_mix();
 		}
+		h4{
+			font-weight:300;
+			margin:@space_size/2 0px;
+		}
 		.days{
 			.menu_mix();
 			color: #FFF;
@@ -39,32 +43,16 @@
 		.location{
 			clear:both;
 		}
-		.category-list{
+		.category-list,.related-groups{
 			margin:@space_size/2 0px;
 			padding:0px;
 			clear:both;
-			h3{
-				font-weight:300;
-			}
 			li{
 				display:block;
 				float:left;
 				margin:0px @space_size 0px 0px;
 				padding:0px;
 				list-style-type:none;
-			}
-		}
-		.related-groups{
-			h3{
-				font-weight:300;
-				text-align:right;
-			}
-		}
-		.group{
-			text-align:center;
-			img,img.logo{
-				display:block;
-				margin:@space_size/2 auto;
 			}
 		}
 		nav{
@@ -76,52 +64,10 @@
 @media all and (min-width: @size_tablet) {
 	.list{
 		.sfhiv_service,.sfhiv_service_hour{
-			.column.left{
-				width:@block_width*1.5 - @space_size*2;
-			}
-			.column.right{
-				width:@block_width/2;
-			}
-			.location{
-				clear:left;
-			}
-		}
-		.sfhiv_service_hour.list-item{
-			.column.left{
-				width:@block_width;
-			}
-			.column.right{
-				width:@block_width - @space_size*2;
-				float:left;
-			}
-			.location{
-				clear:none;
-			}
-		}
-	}
-}
-@media all and (min-width: @size_large) {
-	.list{
-		.sfhiv_service_hour,.sfhiv_service_hour{
-			.column.left{
-				width:@block_width*2.5 - @space_size*2;
-			}
 			.location{
 				float:left;
 				clear:none;
-				width:@block_width;
-			}
-			.category-list{
-				padding-left:@block_width/2;
-				clear:both;
-				position:relative;
-				h3{
-					position:absolute;
-					top:0px;
-					left:0px;
-					width:@block_width/2 - @space_size;
-					text-align:right;
-				}
+				width:@block_width - @space_size*7;
 			}
 		}
 	}
