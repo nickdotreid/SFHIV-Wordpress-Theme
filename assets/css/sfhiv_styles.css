@@ -222,29 +222,15 @@ footer {
   font-weight: 300;
   clear: both;
 }
-#section-top .widget.widget_nav_menu {
+#section-top .widget_nav_menu,
+#section-top .widget_search {
   font-family: arial, sans-serif;
   font-size: 14px;
 }
-#section-top .widget.widget_nav_menu .menu-item {
+#section-top .widget_nav_menu .menu-item,
+#section-top .widget_search .menu-item {
   float: right;
   margin-left: 7px;
-}
-#section-top .widget.widget_search {
-  font-family: arial, sans-serif;
-  font-size: 14px;
-}
-#section-top .widget.widget_search #searchsubmit {
-  text-indent: -9999px;
-  text-transform: capitalize;
-  overflow: hidden;
-  width: 14px;
-  height: 21px;
-  border: 0px;
-  background-color: transparent;
-  background-image: url('../i/search_icon.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
 }
 @media all and (min-width: 530px) {
   .js #section-top {

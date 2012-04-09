@@ -24,6 +24,7 @@ function sfhiv_add_styles(){
 	<?
 	$base_dir = get_bloginfo('stylesheet_directory')."/assets/css/";
 	wp_enqueue_style( 'sfhiv_layout', $base_dir.'layout.css');
+	wp_enqueue_style( 'sfhiv_module_search', $base_dir.'search.css');
 }
 
 function sfhiv_add_scripts(){

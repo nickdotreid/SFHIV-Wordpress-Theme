@@ -156,6 +156,8 @@ a,a:visited{
 	.section;
 }
 
+
+
 #section-top{
 	background-color:transparent;
 	background-image:url("../i/background-orange.png");
@@ -170,28 +172,13 @@ a,a:visited{
 		font-weight:300;
 		clear:both;
 	}
-	.widget.widget_nav_menu{
+	.widget_nav_menu,
+	.widget_search{
 		font-family:@main_font;
 		font-size:@font_size;
 		.menu-item{
 			float:right;
 			margin-left:@space_size;
-		}
-	}
-	.widget.widget_search{
-		font-family:@main_font;
-		font-size:@font_size;
-		#searchsubmit{
-			text-indent:-9999px;
-			text-transform: capitalize;
-			overflow:hidden;
-			width:14px;
-			height:21px;
-			border:0px;
-			background-color:transparent;
-			background-image:url('../i/search_icon.jpg');
-			background-repeat:no-repeat;
-			background-position:top left;
 		}
 	}
 }
