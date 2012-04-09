@@ -6,6 +6,7 @@
 	</header>
 	<div class="entry-content">
 		<?=the_content();?>
+		<?	sfhiv_get_contact_user();	?>
 	</div>
 	<nav>
 		<a href="#" class="js-only open">View</a>

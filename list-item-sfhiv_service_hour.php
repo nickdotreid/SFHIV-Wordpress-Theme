@@ -13,7 +13,6 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 <article id="post-<?=the_ID();?>" <?php post_class("list-item sfhiv_service"); ?>
 	service-parent="<?=$service_parent->ID;?>"
 	>
-	<div class="column left">
 	<? $days = wp_get_object_terms(get_the_ID(),"sfhiv_day_of_week_taxonomy");?>
 	<?	if(count($days)>0):	?>
 		<div class="days">
@@ -28,11 +27,9 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 			<span class="start"><span class="label">Start:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_start",true));?></span>
 			<span class="end"><span class="label">End:</span><?=date($time_format,get_post_meta(get_the_ID(),"sfhiv_service_end",true));?></span>
 		</div>
-	</div>
-	<div class="column right">
 	<?	if($location):	?>
 		<aside class="location">
-			<h3><?=apply_filters("the_title",$location->post_title);?></h3>
+			<h4><?=apply_filters("the_title",$location->post_title);?></h4>
 			<span class="address line"><?=get_post_meta($location->ID,'sfhiv_room',true);?></span>
 			<span class="address line"><?=get_post_meta($location->ID,'sfhiv_address',true);?></span>
 			<?	$city = get_post_meta($location->ID,'sfhiv_city',true);?>
@@ -43,6 +40,5 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 			<span class="address line hint"><?apply_filters('the_content',get_post_meta($location->ID,'sfhiv_location_hint',true));?></span>
 		</aside>
 	<?	endif;	?>
-	</div>
-	<br class="clear" />
+	<nav></nav>
 </article>

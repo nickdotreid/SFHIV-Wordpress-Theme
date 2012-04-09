@@ -5,6 +5,7 @@ require_once('utilities/menu_wrapper.php');
 
 add_action('get_sidebar','sfhiv_group_page_add_featured_image',20);
 function sfhiv_group_page_add_featured_image(){
+	if (!is_singular('sfhiv_group')) return;
 	if ( has_post_thumbnail() ) {
 		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id() , 'sidbar' );
 		if($thumbnail){
