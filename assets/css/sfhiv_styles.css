@@ -61,24 +61,24 @@ h3 a:hover:hover,
 h4 a:hover:hover {
   text-decoration: underline;
 }
-#primary h1 {
+.entry-content h1 {
   padding: 21px 0px 14px;
   font-size: 24px;
   clear: both;
 }
-#primary h2 {
+.entry-content h2 {
   padding: 14px 0px 7px;
   font-size: 18px;
   clear: both;
 }
-#primary h3 {
+.entry-content h3 {
   padding: 7px 0px 3.5px;
   font-size: 14px;
   clear: both;
   font-weight: bold;
   color: #e48011;
 }
-#primary h4 {
+.entry-content h4 {
   clear: both;
   font-size: 14px;
   font-weight: bold;
@@ -390,14 +390,14 @@ footer {
   border-bottom: 1px #bcbcbc solid;
   margin: 7px 0px;
 }
-#primary {
+#content {
   margin: 0px;
   padding: 0px;
 }
-#primary header {
+#content header {
   padding-top: 0px;
 }
-#primary .entry-title {
+#content h1.entry-title {
   font-size: 28px;
   font-weight: 300;
   color: #FFF;
@@ -405,12 +405,12 @@ footer {
   display: block;
   padding: 28px 7px 7px;
 }
-#primary .entry-content {
+#content .entry-content {
   padding: 7px 0px;
   clear: both;
 }
-#primary .entry-content img.aligncenter,
-#primary .entry-content .wp-caption.aligncenter {
+#content .entry-content img.aligncenter,
+#content .entry-content .wp-caption.aligncenter {
   display: block;
   width: auto;
   margin: 0px auto 7px;
@@ -419,24 +419,24 @@ footer {
   border-bottom: 1px #2e3c62 solid;
   text-align: center;
 }
-#primary .entry-content img.aligncenter img,
-#primary .entry-content .wp-caption.aligncenter img {
+#content .entry-content img.aligncenter img,
+#content .entry-content .wp-caption.aligncenter img {
   display: block;
   border: 0px;
   margin: 3.5px 0px;
 }
-#primary .entry-meta.top {
+#content .entry-meta.top {
   border-top: 1px #bcbcbc solid;
   border-bottom: 1px #bcbcbc solid;
   padding: 3.5px 0px;
   margin: 7px 0px;
 }
-#primary .table_of_contents {
+#content .table_of_contents {
   clear: both;
   height: 35px;
   border-bottom: 1px #bcbcbc solid;
 }
-#primary .table_of_contents .menu-item {
+#content .table_of_contents .menu-item {
   font-size: 14px;
   display: block;
   float: left;
@@ -486,12 +486,18 @@ form.filter fieldset {
   padding: 7px 21px;
 }
 @media all and (min-width: 530px) {
-  #primary,
+  #content,
   .list {
     width: 520px;
   }
-  #primary .entry-title {
+  #content h1.entry-title {
     width: 260px;
+  }
+  #content .list {
+    width: auto;
+    float: none;
+    clear: both;
+    margin-left: 0px;
   }
 }
 @media all and (min-width: 800px) {
@@ -500,10 +506,10 @@ form.filter fieldset {
     background-repeat: repeat-y;
     background-position: top left;
   }
-  #primary,
+  #content,
   .list,
   .filters {
-    width: 520px;
+    width: 506px;
     float: right;
     clear: none;
   }
@@ -522,7 +528,7 @@ form.filter fieldset {
     float: left;
     margin-right: 14px;
   }
-  #primary #content {
+  #content {
     margin-left: 14px;
   }
   .list {
@@ -550,9 +556,7 @@ form.filter fieldset {
   }
 }
 @media all and (min-width: 1100px) {
-  #primary {
-    width: 780px;
-  }
+  #content,
   .list,
   .filters {
     width: 766px;

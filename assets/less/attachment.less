@@ -20,6 +20,24 @@
 	}
 }
 
+.list.attachments{
+	.attachment{
+		padding-left:@space_size*5;
+	}
+}
+@media all and (min-width: @size_tablet) {
+	.list.attachments{
+		.attachment{
+			padding-left:@space_size*8;
+			background-position:0px @space_size;
+			background-image:url('../i/document_icons/default_large.png');
+			&.mime-applicationmsword{
+				background-image:url('../i/document_icons/document_large.png');
+			}
+		}
+	}
+}
+
 .list-item{
 	.attachments{
 		.menu_mix();

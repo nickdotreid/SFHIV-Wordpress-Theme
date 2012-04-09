@@ -2,7 +2,7 @@
 	services="<?=implode(",",wp_get_object_terms(get_the_ID(),'sfhiv_service_categories',array("fields"=>"slugs")));?>"
 	>
 	<header>
-		<h1 class="entry-title"><a href="<?the_permalink();?>"><?=the_title();?></a></h1>
+		<h3 class="entry-title"><a href="<?the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
 	<div class="entry-content">
 		<?=the_content();?>

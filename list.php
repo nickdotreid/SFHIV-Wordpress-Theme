@@ -3,7 +3,7 @@
 	do_action("list_attributes");
 	?>>
 	<header>
-		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
+		<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
 	<?	do_action("list_before_content");	?>
 	<div class="entry-content">

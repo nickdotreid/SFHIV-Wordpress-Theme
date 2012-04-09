@@ -31,6 +31,19 @@
 .attachment.mime-applicationmsword {
   background-image: url('../i/document_icons/document.png');
 }
+.list.attachments .attachment {
+  padding-left: 35px;
+}
+@media all and (min-width: 530px) {
+  .list.attachments .attachment {
+    padding-left: 56px;
+    background-position: 0px 7px;
+    background-image: url('../i/document_icons/default_large.png');
+  }
+  .list.attachments .attachment.mime-applicationmsword {
+    background-image: url('../i/document_icons/document_large.png');
+  }
+}
 .list-item .attachments {
   display: block;
   margin: 0px;

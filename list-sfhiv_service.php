@@ -4,7 +4,7 @@
 	>
 	<div class="column left">
 		<header>
-			<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
+			<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 		</header>
 		<div class="entry-content">
 			<?=the_excerpt();?>

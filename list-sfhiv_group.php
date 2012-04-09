@@ -1,6 +1,6 @@
 <article id="post-<?=the_ID();?>" <?php post_class("list-item"); ?> years="<?=implode(",",wp_get_object_terms(get_the_ID(),'year',array("fields"=>"slugs")));?>">
 	<header>
-		<h1 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
+		<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
 	<div class="entry-content">
 		<?=the_excerpt();?>

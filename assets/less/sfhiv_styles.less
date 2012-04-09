@@ -25,7 +25,7 @@ h1,h2,h3,h4{
 		}
 	}
 }
-#primary{
+.entry-content{
 	h1{
 		padding:@space_size*3 0px @space_size*2;
 		font-size:@very_big_font_size;
@@ -326,13 +326,13 @@ a,a:visited{
 	margin:@space_size 0px;
 }
 
-#primary{
+#content{
 	margin:0px;
 	padding:0px;
 	header{
 		padding-top:0px;
 	}
-	.entry-title{
+	h1.entry-title{
 		font-size:@biggest_font_size;
 		font-weight:300;
 		color:#FFF;
@@ -416,12 +416,18 @@ a,a:visited{
 	padding:@space_size @space_size*3;
 }
 @media all and (min-width: @size_tablet) {
-	#primary,.list{
+	#content,.list{
 		width:@block_width*2;
 	}
-	#primary{
-		.entry-title{
+	#content{
+		h1.entry-title{
 			width:@block_width;
+		}
+		.list{
+			width:auto;
+			float:none;
+			clear:both;
+			margin-left:0px;
 		}
 	}
 }
@@ -432,8 +438,8 @@ a,a:visited{
 		background-repeat:repeat-y;
 		background-position:top left;
 	}
-	#primary,.list,.filters{
-		width:@block_width*2;
+	#content,.list,.filters{
+		width:@block_width*2 - @space_size*2;
 		float:right;
 		clear:none;
 	}
@@ -452,11 +458,10 @@ a,a:visited{
 			margin-right:@space_size*2;
 		}
 	}
-	#primary{
-		#content{
-			margin-left:@space_size*2;
-		}
+	#content{
+		margin-left:@space_size*2;
 	}
+
 	.list{
 		width:@block_width*2 - @space_size*2;
 		margin-left:@space_size*2;
@@ -483,10 +488,7 @@ a,a:visited{
 }
 
 @media all and (min-width: @size_large) {
-	#primary{
-		width:@block_width*3;
-	}
-	.list,.filters{
+	#content,.list,.filters{
 		width:@block_width*3 - @space_size*2;
 	}
 	.filters.menu{

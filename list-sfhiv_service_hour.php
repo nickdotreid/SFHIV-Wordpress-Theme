@@ -14,6 +14,9 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 <article id="post-<?=the_ID();?>" <?php post_class("list-item sfhiv_service"); ?>
 	service-parent="<?=$service_parent->ID;?>"
 	>
+	<header>
+		<h3><a href="<?=the_permalink();?>"><?the_title();?></a></h3>
+	</header>
 	<div class="column left">
 		<? $days = wp_get_object_terms(get_the_ID(),"sfhiv_day_of_week_taxonomy");?>
 		<?	if(count($days)>0):	?>
@@ -31,7 +34,7 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 		</div>
 		<?	if($location):	?>
 		<aside class="location">
-			<h3><?=apply_filters("the_title",$location->post_title);?></h3>
+			<h4><?=apply_filters("the_title",$location->post_title);?></h4>
 			<span class="address line"><?=get_post_meta($location->ID,'sfhiv_room',true);?></span>
 			<span class="address line"><?=get_post_meta($location->ID,'sfhiv_address',true);?></span>
 			<?	$city = get_post_meta($location->ID,'sfhiv_city',true);?>
@@ -45,7 +48,7 @@ $location = sfhiv_location_get_related_location(get_the_ID());
 		<?	$service_types = wp_get_object_terms($service_parent->ID,'sfhiv_service_category');	?>
 		<?	if(count($service_types)>0):	?>
 		<aside class="category-list">
-			<h3>Services Offered</h3>
+			<h4>Services Offered</h4>
 			<ul class="service_categories">
 			<?	foreach($service_types as $category):	?>
 				<li class="category <?=$category->taxonomy;?> <?=$category->slug;?>"><?=$category->name;?></li>
