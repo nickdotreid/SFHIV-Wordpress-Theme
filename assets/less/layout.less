@@ -2,6 +2,56 @@
 @import "mixins";
 
 
+#page{
+	display:block;
+	width:@block_width;
+	margin:0px auto;
+	padding:0px 0px;
+	background-color:#FFF;
+	background-image:url('../i/sf_seal_bg_large.jpg');
+	background-repeat:no-repeat;
+	background-position:center 0px;
+	position:relative;
+}
+@media all and (min-width: @size_tablet) {
+	#page{
+		width:@block_width*2;
+	}	
+}
+@media all and (min-width: @size_medium) {
+	#page{
+		width:@block_width*3;
+		background-position:115px 0px;
+	}
+}
+@media all and (min-width: @size_large) {
+	#page{
+		width:@block_width*4;
+		background-position:185px 0px;
+	}
+}
+
+#branding,#main,footer{
+	.section();
+	margin-left:@space_size;
+	margin-right:@space_size;
+}
+@media all and (min-width: @size_medium) {
+	#branding,#main,footer{
+		.section();
+		margin-left:@space_size*2;
+		margin-right:@space_size*2;
+	}
+}
+@media all and (min-width: @size_large) {
+	#branding,#main,footer{
+		.section();
+		margin-left:@space_size*3;
+		margin-right:@space_size*3;
+		width:998px;
+	}
+}
+
 .list{
 	.list-title{
 	

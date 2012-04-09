@@ -1,6 +1,4 @@
 $(document).ready(function(){
-	$('#branding').append('<br class="clear" />');
-	
 	$(".three-column,.two-column").bind("redraw",function(event){
 		var column = $(this);
 		var item_selector = ".preview, .widget";
@@ -72,6 +70,5 @@ $(document).ready(function(){
 		$("#section-top").trigger("redraw");
 		$(".three-column,.two-column").trigger("redraw");
 		$(".list-item").trigger("redraw");
-	//	$("#access ul.menu").trigger("redraw");
 	}).resize();
 });

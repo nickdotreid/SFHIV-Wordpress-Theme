@@ -156,44 +156,6 @@ a:visited {
   list-style-type: none;
   line-height: 1em;
 }
-#page {
-  display: block;
-  width: 260px;
-  margin: 0px auto;
-  padding: 0px 7px;
-  background-color: #FFF;
-  background-image: url('../i/sf_seal_bg_large.jpg');
-  background-repeat: no-repeat;
-  background-position: center 0px;
-  position: relative;
-}
-@media all and (min-width: 530px) {
-  #page {
-    width: 520px;
-  }
-}
-@media all and (min-width: 800px) {
-  #page {
-    width: 780px;
-    padding: 0px 14px;
-    background-position: 115px 0px;
-  }
-}
-@media all and (min-width: 1100px) {
-  #page {
-    width: 1040px;
-    padding: 0px 28px;
-    background-position: 185px 0px;
-  }
-}
-#branding,
-#main,
-footer {
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-}
 #section-top {
   background-color: transparent;
   background-image: url("../i/background-orange.png");
@@ -326,8 +288,8 @@ footer {
   display: block;
   margin: 0px;
   padding: 0px;
-  padding: 7px 0px 0px;
-  height: 47px;
+  padding: 7px 0px;
+  clear: both;
 }
 #access .menu ul {
   margin: 0px;
@@ -341,10 +303,11 @@ footer {
   display: block;
   float: left;
   width: auto;
-  padding: 7px 14px;
+  padding: 0px;
   font-family: 'Oswald', verdana, sans-serif;
   font-weight: 300;
   font-size: 18px;
+  margin: 0px;
   color: #2e3c62;
 }
 #access .menu .menu-item .sub-menu {
@@ -355,6 +318,8 @@ footer {
 #access .menu .menu-item a:hover {
   color: #2e3c62;
   text-decoration: none;
+  display: block;
+  margin: 7px 14px;
 }
 #access .menu .menu-item.current-menu-item,
 #access .menu .menu-item.current-page-ancestor {
@@ -373,9 +338,16 @@ footer {
   color: #FFF;
 }
 @media all and (min-width: 800px) {
+  #access {
+    height: 54px;
+  }
   #access .menu .menu-item {
     font-size: 24px;
-    padding: 7px 28px;
+  }
+  #access .menu .menu-item a,
+  #access .menu .menu-item a:visited,
+  #access .menu .menu-item a:hover {
+    margin: 7px 28px;
   }
 }
 .list,
@@ -510,7 +482,7 @@ form.filter fieldset {
   #content,
   .list,
   .filters {
-    width: 506px;
+    width: 478px;
     float: right;
     clear: none;
   }
@@ -560,7 +532,7 @@ form.filter fieldset {
   #content,
   .list,
   .filters {
-    width: 766px;
+    width: 724px;
   }
   .filters.menu {
     width: 766px;
