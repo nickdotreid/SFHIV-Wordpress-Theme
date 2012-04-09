@@ -1,5 +1,5 @@
 	</div><!-- #main -->
-	<footer class="footer">
+	<footer id="bottom" class="footer">
 		<section class="left">
 			<?_e("Last updated on");?>
 			<?the_modified_date();?>

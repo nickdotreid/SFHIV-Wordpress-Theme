@@ -526,8 +526,7 @@ form.filter fieldset {
     width: 724px;
   }
 }
-footer,
-footer.footer {
+#bottom {
   background: #FFF;
   color: #bcbcbc;
   font-size: 12px;
