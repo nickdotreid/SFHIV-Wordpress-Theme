@@ -403,6 +403,7 @@ footer {
   color: #FFF;
   background: #2e3c62;
   display: block;
+  margin: 0px;
   padding: 28px 7px 7px;
 }
 #content .entry-content {
