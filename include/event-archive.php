@@ -10,7 +10,6 @@ function sfhiv_event_archive_loop_arguments($args,$post_type){
 add_action('sfhiv_pre_loop','sfhiv_event_filter',10,2);
 function sfhiv_event_filter($query=false,$args){
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_event') return;
-	echo '<section class="filters">';
 	sfhiv_draw_filters('sfhiv_event_time',array(
 		array(
 			"value" => "upcoming",
@@ -22,7 +21,6 @@ function sfhiv_event_filter($query=false,$args){
 			"name" => "Past"
 		)
 	));
-	echo '</section>';
 }
 
 add_action('get_sidebar','sfhiv_event_archive_event_categories',22);
