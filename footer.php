@@ -7,7 +7,13 @@
 			<?the_modified_author();?>
 		</section>
 		<section class="right">
-			
+			<nav>
+			<? if ( is_user_logged_in() ): ?>
+			<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
+			<?	else:	?>
+			<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a>
+			<?	endif;	?>
+			</nav>
 		</section>
 	</footer>
 </div><!-- #page -->
