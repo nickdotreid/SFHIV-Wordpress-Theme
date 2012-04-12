@@ -32,7 +32,9 @@ function sfhiv_add_mini_archive_menu(){
 			}
 		}
 		if(!$output_archive):
-			$query = mini_archive_get_query(get_the_ID(),3);
+			$query = mini_archive_get_query(get_the_ID(),array(
+				'posts_per_page' => 3,
+			));
 			?><nav><ul class="menu"><?
 			while($query && $query->have_posts()){
 				$query->the_post();
