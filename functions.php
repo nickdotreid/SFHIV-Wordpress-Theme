@@ -29,6 +29,8 @@ include_once('include/service-archive.php');
 include_once('include/report-page.php');
 include_once('include/report-archive.php');
 
+include_once('include/study-page.php');
+
 include_once('include/years-archive.php');
 include_once('include/contact-user.php');
 
