@@ -1,3 +1,5 @@
+@import "../../bootstrap/less/variables.less";
+
 @text_color:#2E3C62;
 @link_color:#918BB3;
 @highlight_color:#f09938;
@@ -22,3 +24,25 @@
 
 @main_font:arial,sans-serif;
 @title_font:'Oswald',verdana,sans-serif;
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+
+
+// Links
+// -------------------------
+@linkColor:             @link_color;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Typography
+// -------------------------
+@baseFontSize:          @font_size;
+@baseFontFamily:        @main_font;
+@baseLineHeight:        18px;
+@altFontFamily:         @title_font;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor

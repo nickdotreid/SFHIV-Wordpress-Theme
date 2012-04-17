@@ -138,18 +138,18 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #918bb3;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #676092;
   text-decoration: underline;
 }
 .row {
@@ -328,12 +328,12 @@ a:hover {
 }
 p {
   margin: 0 0 9px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
   line-height: 18px;
 }
 p small {
-  font-size: 11px;
+  font-size: 12px;
   color: #999999;
 }
 .lead {
@@ -534,7 +534,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 12px;
+  font-size: 13px;
   color: #333333;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -550,7 +550,7 @@ pre {
   display: block;
   padding: 8.5px;
   margin: 0 0 9px;
-  font-size: 12.025px;
+  font-size: 12.950000000000001px;
   line-height: 18px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
@@ -589,7 +589,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 27px;
-  font-size: 19.5px;
+  font-size: 21px;
   line-height: 36px;
   color: #333333;
   border: 0;
@@ -604,7 +604,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 18px;
 }
@@ -612,7 +612,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: arial, sans-serif;
 }
 label {
   display: block;
@@ -628,7 +628,7 @@ select,
   height: 18px;
   padding: 4px;
   margin-bottom: 9px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   color: #555555;
   border: 1px solid #cccccc;
