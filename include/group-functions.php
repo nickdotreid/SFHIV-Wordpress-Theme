@@ -186,4 +186,30 @@ function sfhiv_group_get_services($id=false){
 	return $services;
 }
 
+function sfhiv_group_has_studies($ID=false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$services = new WP_Query( array(
+		'connected_type' => 'sfhiv_group_study',
+		'connected_items' => get_the_ID(),
+	));
+	if($services->have_posts()){
+		return true;
+	}
+	return false;
+}
+
+function sfhiv_group_get_studies($id=false){
+	if(!$ID){
+		$ID = get_the_ID();
+	}
+	$services = new WP_Query( array(
+		'connected_type' => 'sfhiv_group_study',
+		'connected_items' => get_the_ID(),
+		'nopaging' => true,
+	));
+	return $services;
+}
+
 ?>
