@@ -35,24 +35,6 @@ $(document).ready(function(){
 		});
 	});
 	
-	$("#section-top").bind("redraw",function(){
-		var section = $(this);
-		section.show();
-		var new_width = $("#branding").width()-$("#site-title").width();
-		if(new_width<150){
-			section.css({
-				'width':'auto',
-				'height':'auto',
-				'left':'0px',
-				'top':'0px'
-			});
-			return true;
-		}
-		section.width(new_width);
-		section.css("left",$("#site-title").width()+'px');
-		section.css("top",($("#site-title").height()-section.height())+'px');
-	});
-	
 	$("#access ul.menu").bind("redraw",function(){
 		var menu = $(this);
 		var free_space = menu.width();
@@ -67,7 +49,6 @@ $(document).ready(function(){
 	});
 	
 	$(window).resize(function(){
-		$("#section-top").trigger("redraw");
 		$(".three-column,.two-column").trigger("redraw");
 		$(".list-item").trigger("redraw");
 	}).resize();

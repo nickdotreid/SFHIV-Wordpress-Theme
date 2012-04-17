@@ -188,3 +188,37 @@
     margin-right: 14px;
   }
 }
+.filters {
+  position: relative;
+  border-top: 1px #bcbcbc solid;
+}
+.filter,
+form.filter {
+  display: block;
+}
+.filter label,
+form.filter label {
+  display: block;
+}
+.filter label.radio,
+form.filter label.radio {
+  position: relative;
+  padding: 3.5px 0px 3.5px 21px;
+}
+.filter label.radio input,
+form.filter label.radio input,
+.filter label.radio input.radio,
+form.filter label.radio input.radio {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+}
+.filter fieldset,
+form.filter fieldset {
+  border: 0px;
+}
+.filters.pagnate {
+  padding: 3.5px 0px;
+  margin: 0px 7px;
+  text-align: right;
+}

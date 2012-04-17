@@ -56,7 +56,7 @@ function sfhiv_add_home_page_widgets(){
 	<?
 }
 
-add_action('before','sfhiv_add_top_sidebar',40);
+add_action('before_access','sfhiv_add_top_sidebar',40);
 function sfhiv_add_top_sidebar(){
 	?>
 	<section id="section-top" class="content top">
@@ -80,7 +80,7 @@ function sfhiv_add_bottom_sidebar(){
 add_action('get_footer','sfhiv_add_footer_divider',38);
 function sfhiv_add_footer_divider(){
 	?>
-	<div class="footer">
+	<div class="footer" style="height:9px;">
 		<div class="divider"></div>
 	</div>
 	<?
