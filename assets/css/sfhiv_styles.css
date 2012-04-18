@@ -1412,6 +1412,7 @@ table .span24 {
 body {
   font-family: arial, sans-serif;
   font-size: 14px;
+  line-height: 1.4em;
   color: #2e3c62;
   background: #eeeeee url("../i/main_bg.gif") top left;
   margin: 0px;
@@ -1540,6 +1541,14 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   margin-left: 7px;
   margin-right: 7px;
 }
@@ -1547,6 +1556,14 @@ h4 a:hover:hover {
   #branding,
   #main,
   #bottom {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
     clear: both;
     margin: 0px;
     padding: 0px;
@@ -1575,6 +1592,14 @@ h4 a:hover:hover {
   #branding,
   #main,
   #bottom {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
     clear: both;
     margin: 0px;
     padding: 0px;
@@ -1666,6 +1691,7 @@ h4 a:hover:hover {
     clear: none;
     float: right;
     font-size: 14px;
+    line-height: 1.2em;
     font-family: 'Dosis', verdana, sans-serif;
     font-weight: 300;
   }
@@ -1679,6 +1705,7 @@ h4 a:hover:hover {
     width: 520px;
     text-align: right;
     font-size: 24px;
+    line-height: 1.2em;
   }
   #section-top .widget {
     margin-left: 14px;
@@ -1690,6 +1717,14 @@ h4 a:hover:hover {
   }
 }
 #access {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -1728,8 +1763,30 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   padding: 7px 0px;
   clear: both;
+}
+#access .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+#access .menu li {
+  list-style-type: none;
+  line-height: 1em;
+}
+#access .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+#access .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 #access .menu ul {
   margin: 0px;
@@ -1983,22 +2040,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2031,6 +2072,46 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
@@ -2055,10 +2136,90 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2106,6 +2267,14 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   display: block;
   background-color: #FFF;
 }
@@ -2131,22 +2300,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2179,6 +2332,46 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
@@ -2203,10 +2396,90 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2300,6 +2573,40 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.two-column article nav .menu ul,
+.three-column article nav .menu ul,
+.two-column .widget nav .menu ul,
+.three-column .widget nav .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.two-column article nav .menu li,
+.three-column article nav .menu li,
+.two-column .widget nav .menu li,
+.three-column .widget nav .menu li {
+  list-style-type: none;
+  line-height: 1em;
+}
+.two-column article nav .menu ul,
+.three-column article nav .menu ul,
+.two-column .widget nav .menu ul,
+.three-column .widget nav .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.two-column article nav .menu li,
+.three-column article nav .menu li,
+.two-column .widget nav .menu li,
+.three-column .widget nav .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .two-column article nav .menu ul,
 .three-column article nav .menu ul,
@@ -2382,6 +2689,54 @@ h4 a:hover:hover {
 .two-column .widget nav .menu .menu-item,
 .three-column .widget nav .menu .menu-item {
   clear: both;
+}
+.two-column article nav .menu .menu-item .date.date,
+.three-column article nav .menu .menu-item .date.date,
+.two-column .widget nav .menu .menu-item .date.date,
+.three-column .widget nav .menu .menu-item .date.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.two-column article nav .menu .menu-item .date.date span,
+.three-column article nav .menu .menu-item .date.date span,
+.two-column .widget nav .menu .menu-item .date.date span,
+.three-column .widget nav .menu .menu-item .date.date span {
+  display: block;
+}
+.two-column article nav .menu .menu-item .date.date span span,
+.three-column article nav .menu .menu-item .date.date span span,
+.two-column .widget nav .menu .menu-item .date.date span span,
+.three-column .widget nav .menu .menu-item .date.date span span {
+  display: inline;
+}
+.two-column article nav .menu .menu-item .date.date,
+.three-column article nav .menu .menu-item .date.date,
+.two-column .widget nav .menu .menu-item .date.date,
+.three-column .widget nav .menu .menu-item .date.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.two-column article nav .menu .menu-item .date.date span,
+.three-column article nav .menu .menu-item .date.date span,
+.two-column .widget nav .menu .menu-item .date.date span,
+.three-column .widget nav .menu .menu-item .date.date span {
+  display: block;
+}
+.two-column article nav .menu .menu-item .date.date span span,
+.three-column article nav .menu .menu-item .date.date span span,
+.two-column .widget nav .menu .menu-item .date.date span span,
+.three-column .widget nav .menu .menu-item .date.date span span {
+  display: inline;
 }
 .two-column article nav .menu .menu-item .date.date,
 .three-column article nav .menu .menu-item .date.date,
@@ -2607,6 +2962,14 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   border-top: 1px #bcbcbc solid;
   padding: 7px 0px;
 }
@@ -2626,7 +2989,29 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   text-align: center;
+}
+.footer .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer .menu li {
+  list-style-type: none;
+  line-height: 1em;
+}
+.footer .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .footer .menu ul {
   margin: 0px;
@@ -2712,91 +3097,13 @@ h4 a:hover:hover {
 .date_mix.date span span {
   display: inline;
 }
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6 {
-  font-family: arial, sans-serif;
-}
-.entry-content h1 {
-  font-size: 24px;
-}
-.entry-content h2 {
-  font-size: 18px;
-}
-.entry-content h3 {
-  font-size: 14px;
-  font-weight: bold;
-}
-.entry-content h4 {
-  font-size: 14px;
-  font-weight: bold;
-  color: #2e3c62;
-}
-.entry-content {
-  padding: 7px 0px;
-  clear: both;
-}
-.entry-content img.aligncenter,
-.entry-content .wp-caption.aligncenter {
-  display: block;
-  width: auto;
-  margin: 0px auto 7px;
-  padding: 7px 14px 3.5px;
-  border-top: 1px #2e3c62 solid;
-  border-bottom: 1px #2e3c62 solid;
-  text-align: center;
-}
-.entry-content img.aligncenter img,
-.entry-content .wp-caption.aligncenter img {
-  display: block;
-  border: 0px;
-  margin: 3.5px 0px;
-}
-.meta {
-  display: block;
-  clear: both;
-  font-size: 12px;
-  color: #2e3c62;
-  border-top: 1px #bcbcbc solid;
-  background: #FFF;
-  padding: 7px 21px;
-}
-.entry-meta {
-  border-top: 1px #bcbcbc solid;
-  border-bottom: 1px #bcbcbc solid;
-  padding: 3.5px 0px;
-  margin: 7px 0px;
-}
-.table_of_contents {
-  clear: both;
-  height: 35px;
-  border-bottom: 1px #bcbcbc solid;
-}
-.table_of_contents .menu-item {
-  font-size: 14px;
-  display: block;
-  float: left;
-  padding: 7px 7px 7px;
-}
-.date_mix.date {
-  display: block;
-  float: left;
-  background-color: #f09938;
-  color: #FFF;
-  font-weight: normal;
-  margin: 0px 0.5em 0.5em 0px;
-  padding: 0.5em;
-}
-.date_mix.date span {
-  display: block;
-}
-.date_mix.date span span {
-  display: inline;
-}
 .menu {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   display: block;
   margin: 0px;
   padding: 0px;
@@ -2814,6 +3121,22 @@ h4 a:hover:hover {
   padding: 0px;
   padding-bottom: 7px;
   font-size: 14px;
+}
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  list-style-type: none;
+  line-height: 1em;
+}
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .menu ul {
   margin: 0px;
@@ -3048,4 +3371,291 @@ form.filter fieldset {
   padding: 3.5px 0px;
   margin: 0px 7px;
   text-align: right;
+}
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  font-family: arial, sans-serif;
+}
+.entry-content h1 {
+  font-size: 24px;
+}
+.entry-content h2 {
+  font-size: 18px;
+}
+.entry-content h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.entry-content h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2e3c62;
+}
+.entry-content {
+  padding: 7px 0px;
+  clear: both;
+}
+.entry-content img.aligncenter,
+.entry-content .wp-caption.aligncenter {
+  display: block;
+  width: auto;
+  margin: 0px auto 7px;
+  padding: 7px 14px 3.5px;
+  border-top: 1px #2e3c62 solid;
+  border-bottom: 1px #2e3c62 solid;
+  text-align: center;
+}
+.entry-content img.aligncenter img,
+.entry-content .wp-caption.aligncenter img {
+  display: block;
+  border: 0px;
+  margin: 3.5px 0px;
+}
+.meta {
+  display: block;
+  clear: both;
+  font-size: 12px;
+  color: #2e3c62;
+  border-top: 1px #bcbcbc solid;
+  background: #FFF;
+  padding: 7px 21px;
+}
+.entry-meta {
+  border-top: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
+  padding: 3.5px 0px;
+  margin: 7px 0px;
+}
+.table_of_contents {
+  clear: both;
+  height: 35px;
+  border-bottom: 1px #bcbcbc solid;
+}
+.table_of_contents .menu-item {
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 7px 7px 7px;
+}
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.slider {
+  display: none;
+}
+.js #main .slider {
+  display: block;
+  position: relative;
+  background-color: #FFF;
+  border-bottom: 1px #bcbcbc solid;
+  padding-top: 7px;
+}
+.js #main .slider li {
+  position: relative;
+  display: block;
+  float: left;
+  height: 200px;
+  width: 260px;
+  margin-left: 7px;
+  margin-right: 7px;
+  background-color: #CCC;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+.js #main .slider li article {
+  width: auto;
+  margin: 100px 14px;
+  padding: 14px;
+  background-color: transparent;
+  background-image: url('../i/background-black-65.png');
+  background-repeat: repeat;
+  background-position: top left;
+  color: #FFF;
+}
+.js #main .slider li article .entry-title,
+.js #main .slider li article h1,
+.js #main .slider li article h2,
+.js #main .slider li article h3 {
+  color: #FFF;
+  font-size: 18px;
+}
+.js #main .slider li article .entry-title a,
+.js #main .slider li article h1 a,
+.js #main .slider li article h2 a,
+.js #main .slider li article h3 a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.js #main .slider li article .entry-content {
+  color: #FFF;
+  font-size: 14px;
+}
+.js #main .slider .jcarousel-clip {
+  overflow: hidden;
+}
+.js #main .slider .arrow,
+.js #main .slider .jcarousel-prev,
+.js #main .slider .jcarousel-next {
+  position: absolute;
+  top: 70px;
+  background-color: transparent;
+  background-image: url('../i/btn-carousel-prev.png');
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-indent: -3000px;
+  overflow: hidden;
+}
+.js #main .slider .arrow.jcarousel-prev,
+.js #main .slider .jcarousel-prev.jcarousel-prev,
+.js #main .slider .jcarousel-next.jcarousel-prev {
+  left: -25px;
+}
+.js #main .slider .arrow.jcarousel-next,
+.js #main .slider .jcarousel-prev.jcarousel-next,
+.js #main .slider .jcarousel-next.jcarousel-next {
+  right: -25px;
+  background-image: url('../i/btn-carousel-next.png');
+}
+.js #main .slider .arrow:hover,
+.js #main .slider .jcarousel-prev:hover,
+.js #main .slider .jcarousel-next:hover,
+.js #main .slider .arrow .hover,
+.js #main .slider .jcarousel-prev .hover,
+.js #main .slider .jcarousel-next .hover {
+  background-position: -50px 0px;
+}
+@media all and (min-width: 800px) {
+  .js #main .slider li {
+    margin-left: 21px;
+    width: 390px;
+    height: 350px;
+  }
+  .js #main .slider li article {
+    margin-top: 220px;
+  }
+  .js #main .slider .arrow,
+  .js #main .slider .jcarousel-prev,
+  .js #main .slider .jcarousel-next {
+    top: 190px;
+  }
+}
+@media all and (min-width: 1100px) {
+  
+}
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.list .member {
+  position: relative;
+  display: block;
+  width: auto;
+  clear: both;
+  margin: 7px 7px 7px 0px;
+}
+.list .member .info {
+  display: block;
+  margin-bottom: 3.5px;
+}
+.list .member .info .label {
+  font-size: 12px;
+  display: block;
+}
+.list .member .name {
+  color: #f09938;
+  font-weight: bold;
+  font-size: 18px;
+}
+.list .member .title {
+  font-weight: bold;
+}
+.list .member .profile .avatar {
+  display: block;
+  float: left;
+  margin: 0px;
+  margin-right: 3.5px;
+  margin-bottom: 3.5px;
+}
+.list .member .profile .info {
+  margin-bottom: 0px;
+}
+.list .member .contact {
+  clear: both;
+}
+.contact.list .member {
+  margin-right: 0px;
+}
+@media all and (min-width: 530px) {
+  .list .member {
+    float: left;
+    clear: none;
+    width: 246px;
+  }
+  .contact.list .member {
+    float: none;
+    width: auto;
+  }
+  .contact.list .member .profile,
+  .contact.list .member .contact {
+    width: 253px;
+    display: block;
+    float: left;
+    clear: none;
+  }
+}
+@media all and (min-width: 800px) {
+  
+}
+.contact.list {
+  background-image: none;
+  padding-top: 7px;
+  border-top: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
+  margin: 7px 0px;
 }

@@ -148,6 +148,7 @@
     clear: none;
     float: right;
     font-size: 14px;
+    line-height: 1.2em;
     font-family: 'Dosis', verdana, sans-serif;
     font-weight: 300;
   }
@@ -161,6 +162,7 @@
     width: 520px;
     text-align: right;
     font-size: 24px;
+    line-height: 1.2em;
   }
   #section-top .widget {
     margin-left: 14px;
