@@ -49,7 +49,7 @@ function sfhiv_page_list_attachments(){
 
 add_action('get_footer','sfhiv_page_list_related',10);
 function sfhiv_page_list_related(){
-	if(!is_singular()) return;
+	if(!is_singular() || is_front_page()) return;
 	$related = sfhiv_get_related_pages();
 	do_action('sfhiv_loop',$related,array(
 		"id" => "related",
