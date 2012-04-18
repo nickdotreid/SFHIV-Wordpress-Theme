@@ -1418,6 +1418,9 @@ body {
   margin: 0px;
   padding: 0px;
 }
+a {
+  text-decoration: underline;
+}
 h1,
 h2,
 h3,
