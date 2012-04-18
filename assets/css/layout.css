@@ -418,7 +418,7 @@
 .three-column article,
 .two-column .widget,
 .three-column .widget {
-  width: 246px;
+  width: 260px;
   display: block;
   margin: 0px;
   padding: 0px 0px;
@@ -539,7 +539,6 @@
   .two-column,
   .footer.two-column {
     background-image: url('../i/background-line.gif');
-    background-repeat: repeat-y;
     background-position: 390px 0;
   }
   .two-column article,
@@ -552,67 +551,32 @@
   .three-column,
   .footer.three-column {
     background-image: url('../i/splash-back-medium.gif');
-    background-repeat: repeat-y;
-    background-position: center center;
+    background-position: 0px 0px;
   }
   .three-column article,
   .footer.three-column article,
   .three-column .widget,
   .footer.three-column .widget {
-    width: 250.66666666666666px;
+    width: 260px;
     float: left;
   }
 }
 @media all and (min-width: 1100px) {
-  .two-column,
-  .footer.two-column {
-    background-position: center center;
-  }
   .two-column article,
   .footer.two-column article,
   .two-column .widget,
   .footer.two-column .widget {
-    width: 499px;
+    width: 520px;
   }
   .three-column,
   .footer.three-column {
     background-image: url('../i/splash-back-large.gif');
-    background-position: center center;
   }
   .three-column article,
   .footer.three-column article,
   .three-column .widget,
   .footer.three-column .widget {
-    width: 332.6666666666667px;
-  }
-}
-.three-column .widget,
-.footer.three-column .widget {
-  width: 246px;
-  padding: 0px;
-}
-.three-column .widget_nav_menu .menu,
-.footer.three-column .widget_nav_menu .menu {
-  height: auto;
-}
-.three-column .widget_nav_menu .menu-item,
-.footer.three-column .widget_nav_menu .menu-item {
-  float: none;
-  display: block;
-  padding: 0px 7px;
-}
-.three-column .widget_nav_menu .menu-item a,
-.footer.three-column .widget_nav_menu .menu-item a {
-  border-bottom: 1px #bcbcbc solid;
-  color: #918bb3;
-  display: block;
-  width: auto;
-  padding: 7px 0px 3.5px;
-}
-@media all and (min-width: 1100px) {
-  .three-column .widget,
-  .footer.three-column .widget {
-    width: 332.6666666666667px;
+    width: 346.6666666666667px;
   }
 }
 .sfseal,
