@@ -1423,8 +1423,8 @@ h3,
 h4 {
   font-size: 1em;
   color: #f09938;
-  font-family: 'Oswald', verdana, sans-serif;
-  font-weight: 300;
+  font-family: 'Dosis', verdana, sans-serif;
+  font-weight: normal;
   margin: 0px;
   padding: 0px;
 }
@@ -1666,7 +1666,7 @@ h4 a:hover:hover {
     clear: none;
     float: right;
     font-size: 14px;
-    font-family: 'Oswald', verdana, sans-serif;
+    font-family: 'Dosis', verdana, sans-serif;
     font-weight: 300;
   }
   #section-top .widget {
@@ -1776,7 +1776,7 @@ h4 a:hover:hover {
   float: left;
   width: auto;
   padding: 0px;
-  font-family: 'Oswald', verdana, sans-serif;
+  font-family: 'Dosis', verdana, sans-serif;
   font-weight: 300;
   font-size: 18px;
   margin: 0px;

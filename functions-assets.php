@@ -18,7 +18,7 @@ function sfhiv_enriqueue_styles() {
 
 function sfhiv_add_styles(){
 	?>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 	<?
 }
 
