@@ -58,17 +58,21 @@ function sfhiv_connection_types() {
 		'name' => 'contact_user',
 		'from' => array(
 			'sfhiv_group',
-			'event',
+			'sfhiv_event',
 			'page',
 			'post',
 			'sfhiv_training',
 			'sfhiv_document',
-			'sfhiv_report',
 		),
 		'to' => 'user',
 		'fields' => array(
 				'subject' => 'Subject',
 				),
+		'title' => 'User to Contact',
+		'admin_box' => array(
+			'show' => 'from',
+			'context' => 'advanced',
+		),
 	) );
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
