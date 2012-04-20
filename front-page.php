@@ -1,10 +1,6 @@
 <?php get_header(); ?>
 <?
-$related = new WP_Query( array(
-  'connected_type' => 'related_pages',
-  'connected_items' => get_the_ID(),
-  'nopaging' => true,
-) );
+$related = sfhiv_get_related_pages();
 if($related->post_count > 0):
 ?>
 		<section id="featured" class="slider jcarousel-skin-tango">
