@@ -93,7 +93,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 		"id" => "archive",
 		"container" => "section",
 		"classes" => array("list"),
-		"list_element" => "list",
+		"list_element" => "short",
 	),$args);
 	$args = apply_filters('sfhiv_loop_arguments',$args,$query->query_vars['post_type']);
 	if($query->post_count<1 && !isset($args['show_empty'])) return;

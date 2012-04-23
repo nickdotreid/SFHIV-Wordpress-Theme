@@ -43,7 +43,7 @@ function sfhiv_page_list_attachments(){
 	do_action('sfhiv_loop',$attachments,array(
 		"id" => "attachments",
 		"classes" => array("list","attachments"),
-		"list_element" => "list",
+		"list_element" => "short",
 	));
 }
 
@@ -55,7 +55,7 @@ function sfhiv_page_list_related(){
 		"id" => "related",
 		"title" => 'Related',
 		"classes" => array("list","related"),
-		"list_element" => "list",
+		"list_element" => "short",
 	));
 }
 
