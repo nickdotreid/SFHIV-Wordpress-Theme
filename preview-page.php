@@ -11,10 +11,15 @@
 	<div class="entry-content">
 		<? the_excerpt(); ?>
 	</div><!-- .entry-content -->
-	<?	sfhiv_draw_menu(array(
-		get_post(get_the_ID())
-		),array(
-		'show_children' => true,
-	));	?>
-	<?	do_action("sfhiv-preview-menu");	?>
+	<?
+	$preview_post_id = get_the_ID();
+	sfhiv_draw_menu(get_children(array(
+		'post_parent' => $preview_post_id,
+		)));
+	do_action("sfhiv-preview-menu");	// Loose document scope after this line?
+	sfhiv_draw_menu(array(
+			get_post($preview_post_id),
+		),array('selected_items' => array($preview_post_id)));
+	?>
+	
 </article><!-- #post-<?php the_ID(); ?> -->
