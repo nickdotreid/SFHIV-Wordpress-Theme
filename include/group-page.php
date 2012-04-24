@@ -91,11 +91,10 @@ function sfhiv_group_page_list_group_services(){
 add_action('get_footer','sfhiv_group_page_list_group_studies',23);
 function sfhiv_group_page_list_group_studies(){
 	if (!is_singular('sfhiv_group')) return;
-	$services = sfhiv_group_get_studies();
-	do_action('sfhiv_loop',$services,array(
+	$studies = sfhiv_group_get_studies();
+	do_action('sfhiv_loop',$studies,array(
 		"id" => "studies",
 		"title" => "Studies",
-		"list_element" => "list",
 	));
 }
 
