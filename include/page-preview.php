@@ -1,6 +1,25 @@
 <?php
 
-add_action('sfhiv-preview-menu','sfhiv_add_mini_archive_menu');
+add_action('sfhiv-preview-menu','sfhiv_preview_add_bottom_link',15);
+function sfhiv_preview_add_bottom_link(){
+	sfhiv_draw_menu(array(
+			get_post(get_the_ID()),
+		),array(
+			'selected_items' => array(get_the_ID()),
+		));
+}
+
+add_action('sfhiv-preview-menu','sfhiv_page_preview_add_child_pages',2);
+function sfhiv_page_preview_add_child_pages(){
+	$children = get_children(array(
+		'post_parent' => get_the_ID(),
+		'post_type' => get_post_type(get_the_ID()),
+		));
+	if(count($children)<1) return;
+	sfhiv_draw_menu($children);
+}
+
+add_action('sfhiv-preview-menu','sfhiv_add_mini_archive_menu',3);
 function sfhiv_add_mini_archive_menu(){
 	$archive_type = mini_archive_on_page(get_the_ID());
 	if($archive_type):
@@ -36,17 +55,16 @@ function sfhiv_add_mini_archive_menu(){
 				'posts_per_page' => 3,
 			));
 			?><nav><ul class="menu"><?
-			while($query && $query->have_posts()){
-				$query->the_post();
+			foreach($query->posts as $post){
+				//$query->the_post();
 				echo '<li class="menu-item">';
-				echo '<a href="'.get_permalink().'">';
+				echo '<a href="'.get_permalink($post->ID).'">';
 				do_action("sfhiv_pre_link");
-				the_title();
+				echo apply_filters('the_title',$post->post_title);
 				echo '</a>';
 				echo '</li>';
 			}
 			?></ul></nav><?
-			wp_reset_postdata();
 		endif;
 	endif;
 }

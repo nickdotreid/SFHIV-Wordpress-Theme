@@ -11,5 +11,5 @@
 	<div class="entry-content">
 		<? the_excerpt(); ?>
 	</div><!-- .entry-content -->
-	<!-- IF SUB PAGES SHOW HERE -->
+	<?	do_action("sfhiv-preview-menu");	?>
 </article><!-- #post-<?php the_ID(); ?> -->
