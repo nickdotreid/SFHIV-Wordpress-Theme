@@ -205,6 +205,7 @@ function sfhiv_group_get_studies($id=false){
 		$ID = get_the_ID();
 	}
 	$services = new WP_Query( array(
+		'post_type' => 'sfhiv_study',
 		'connected_type' => 'sfhiv_group_study',
 		'connected_items' => get_the_ID(),
 		'nopaging' => true,

@@ -17,6 +17,19 @@ function sfhiv_study_add_groups(){
 	));
 }
 
+add_action('get_footer','sfhiv_study_list_children',20);
+function sfhiv_study_list_children(){
+	if (!is_singular('sfhiv_study')) return;
+	$children = new WP_Query( array(
+		'post_type' => 'sfhiv_study',
+		'post_parent' => get_the_ID(),
+	));
+	do_action('sfhiv_loop',$children,array(
+		"id" => "children",
+		"title" => "Related Studies",
+	));
+}
+
 add_action('get_footer','sfhiv_study_add_reports',22);
 function sfhiv_study_add_reports(){
 	if (!is_singular('sfhiv_study')) return;
