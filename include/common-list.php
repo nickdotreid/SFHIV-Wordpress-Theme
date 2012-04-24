@@ -8,7 +8,7 @@ function sfhiv_list_list_attachments(){
 		'post_parent' => get_the_ID(),
 		'nopaging' => true,
 		'orderby' => 'menu_order',
-		'post_mime_type' => 'application/pdf,application/msword'
+		'post_mime_type' => 'application'
 		) );
 	if($attachments->post_count < 1) return;
 	echo '<ul class="attachments">';

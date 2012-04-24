@@ -38,7 +38,7 @@ function sfhiv_page_list_attachments(){
 		'post_parent' => get_the_ID(),
 		'nopaging' => true,
 		'orderby' => 'menu_order',
-		'post_mime_type' => 'application/pdf,application/msword'
+		'post_mime_type' => 'application'
 		) );
 	do_action('sfhiv_loop',$attachments,array(
 		"id" => "attachments",
