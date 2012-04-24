@@ -1,6 +1,6 @@
 <?php
 
-add_action('list_after_content','sfhiv_list_list_attachments',5);
+add_action('short_after_content','sfhiv_list_list_attachments',5);
 function sfhiv_list_list_attachments(){
 	$attachments = new WP_Query(array(
 		'post_status' => 'any',

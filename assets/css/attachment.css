@@ -44,21 +44,21 @@
     background-image: url('../i/document_icons/document_large.png');
   }
 }
-.list-item .attachments {
+.short .attachments {
   display: block;
   margin: 0px;
   padding: 0px;
   display: block;
 }
-.list-item .attachments ul {
+.short .attachments ul {
   margin: 0px;
   padding: 0px;
 }
-.list-item .attachments li {
+.short .attachments li {
   list-style-type: none;
   line-height: 1em;
 }
-.list-item .attachments li {
+.short .attachments li {
   padding-left: 35px;
   border-top: 0px;
 }
