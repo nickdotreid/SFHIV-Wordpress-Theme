@@ -47,7 +47,7 @@ function sfhiv_page_list_attachments(){
 	));
 }
 
-add_action('get_footer','sfhiv_page_list_related',10);
+add_action('after_content','sfhiv_page_list_related',10);
 function sfhiv_page_list_related(){
 	if(!is_singular() || is_front_page()) return;
 	$related = sfhiv_get_related_pages();

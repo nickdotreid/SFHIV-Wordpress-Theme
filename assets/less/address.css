@@ -14,10 +14,20 @@
   display: inline;
 }
 .address {
-  line-height: 1.2em;
+  width: 260px;
+  display: block;
+  clear: both;
+  line-height: 1.1em;
 }
+.address .name,
 .address .address,
 .address .room,
 .address .hint {
   display: block;
+}
+@media all and (min-width: 530px) {
+  .address {
+    float: left;
+    clear: none;
+  }
 }

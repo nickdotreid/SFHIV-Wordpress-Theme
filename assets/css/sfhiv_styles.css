@@ -4328,12 +4328,22 @@ form.filter fieldset {
   display: inline;
 }
 .address {
-  line-height: 1.2em;
+  width: 260px;
+  display: block;
+  clear: both;
+  line-height: 1.1em;
 }
+.address .name,
 .address .address,
 .address .room,
 .address .hint {
   display: block;
+}
+@media all and (min-width: 530px) {
+  .address {
+    float: left;
+    clear: none;
+  }
 }
 .date_mix.date {
   display: block;
@@ -4517,18 +4527,18 @@ form.filter fieldset {
   line-height: 1em;
   color: #FFF;
   background: #f09938;
-  margin: 7px 3.5px;
+  text-align: center;
+  padding: 3.5px 0px;
 }
 .date span {
   display: block;
-  margin: 3.5px 14px;
+  margin: 3.5px 7px;
 }
 .past .date {
   color: #2e3c62;
   background: #d6d6d6;
 }
 .time {
-  margin: 7px 3.5px;
   line-height: 1em;
 }
 .time .start,
@@ -4542,7 +4552,8 @@ form.filter fieldset {
 .time {
   display: block;
   float: left;
-  width: 130px;
+  width: 126.5px;
+  margin: 7px 3.5px 7px 0px;
 }
 .date_mix.date {
   display: block;

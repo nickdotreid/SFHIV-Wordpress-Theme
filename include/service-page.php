@@ -24,7 +24,7 @@ function sfhiv_service_hour_display_time(){
 	echo '<div class="time">';
 	echo '<span class="start">'.date($time_format,$start).'</span>';
 	if($start != $end){
-		echo '<span class="">until</span>';
+		echo '<span class="">until </span>';
 		echo '<span class="end">'.date($time_format,$end).'</span>';		
 	}
 	echo '</div>';

@@ -2,8 +2,19 @@
 @import "mixins";
 
 .address{
-	line-height:1.2em;
-	.address,.room,.hint{
+	width:@block_width;
+	display:block;
+	clear:both;
+	line-height:1.1em;
+	.name,.address,.room,.hint{
 		display:block;
 	}
 }
+
+@media all and (min-width: @size_tablet) {
+	.address{
+		float:left;
+		clear:none;
+	}
+}
+

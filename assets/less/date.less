@@ -5,10 +5,11 @@
 	line-height:1em;
 	color: #FFF;
 	background:@highlight_color;
-	margin:@space_size @space_size/2;
+	text-align:center;
+	padding:@space_size/2 0px;
 	span{
 		display:block;
-		margin:@space_size/2 @space_size*2;
+		margin:@space_size/2 @space_size;
 	}
 }
 .past .date{
@@ -16,7 +17,6 @@
 	background:lighten(@secondary_color,10%);
 }
 .time{
-	margin:@space_size @space_size/2;
 	line-height:1em;
 	.start,.end{
 		font-weight:bold;
@@ -28,5 +28,6 @@
 .date,.time{
 	display:block;
 	float:left;
-	width:@block_width/2;
+	width:@block_width/2 - @space_size/2;
+	margin:@space_size @space_size/2 @space_size 0px;
 }
