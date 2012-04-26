@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+
+.date {
+	line-height:1em;
+	color: #FFF;
+	background:@highlight_color;
+	margin:@space_size @space_size/2;
+	span{
+		display:block;
+		margin:@space_size/2 @space_size*2;
+	}
+}
+.past .date{
+	color:@text_color;
+	background:lighten(@secondary_color,10%);
+}
+.time{
+	margin:@space_size @space_size/2;
+	line-height:1em;
+	.start,.end{
+		font-weight:bold;
+	}
+	.start{
+		display:block;
+	}
+}
+.date,.time{
+	display:block;
+	float:left;
+	width:@block_width/2;
+}

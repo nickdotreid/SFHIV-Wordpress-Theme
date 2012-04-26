@@ -1,0 +1,46 @@
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.date {
+  line-height: 1em;
+  color: #FFF;
+  background: #f09938;
+  margin: 7px 3.5px;
+}
+.date span {
+  display: block;
+  margin: 3.5px 14px;
+}
+.past .date {
+  color: #2e3c62;
+  background: #d6d6d6;
+}
+.time {
+  margin: 7px 3.5px;
+  line-height: 1em;
+}
+.time .start,
+.time .end {
+  font-weight: bold;
+}
+.time .start {
+  display: block;
+}
+.date,
+.time {
+  display: block;
+  float: left;
+  width: 130px;
+}

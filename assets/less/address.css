@@ -13,6 +13,11 @@
 .date_mix.date span span {
   display: inline;
 }
-.address span {
+.address {
+  line-height: 1.2em;
+}
+.address .address,
+.address .room,
+.address .hint {
   display: block;
 }

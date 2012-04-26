@@ -1559,6 +1559,10 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   margin-left: 7px;
   margin-right: 7px;
 }
@@ -1566,6 +1570,10 @@ h4 a:hover:hover {
   #branding,
   #main,
   #bottom {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
     clear: both;
     margin: 0px;
     padding: 0px;
@@ -1610,6 +1618,10 @@ h4 a:hover:hover {
   #branding,
   #main,
   #bottom {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
     clear: both;
     margin: 0px;
     padding: 0px;
@@ -1779,6 +1791,10 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   display: none;
 }
 #access .menu {
@@ -1809,8 +1825,19 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   padding: 7px 0px;
   clear: both;
+}
+#access .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+#access .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 #access .menu ul {
   margin: 0px;
@@ -2048,20 +2075,24 @@ h4 a:hover:hover {
   color: #2e3c62;
   border-top: #bcbcbc 3px solid;
 }
-.list .list-item {
+.list .list-item,
+.list .short {
   position: relative;
   border-top: 1px #bcbcbc solid;
-  padding: 0px 0px 7px;
+  margin: 0px 0px 7px;
 }
-.list .list-item .entry-title {
+.list .list-item .entry-title,
+.list .short .entry-title {
   font-size: 18px;
-  padding: 7px 0px;
+  padding: 3.5px 0px 0px;
   background-color: transparent;
 }
-.list .list-item .entry-content {
+.list .list-item .entry-content,
+.list .short .entry-content {
   display: block;
 }
-.list .list-item nav {
+.list .list-item nav,
+.list .short nav {
   display: block;
   clear: both;
 }
@@ -2112,42 +2143,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2160,42 +2155,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2272,42 +2231,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2352,6 +2275,54 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
@@ -2392,10 +2363,150 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2475,6 +2586,10 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   display: block;
   background-color: #FFF;
 }
@@ -2516,42 +2631,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2564,42 +2643,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2676,42 +2719,6 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  padding-top: 9px;
-  background-image: url("../i/divider.jpg");
-  background-repeat: repeat-x;
-  background-position: 0px 0px;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2756,6 +2763,54 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
@@ -2796,10 +2851,150 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   padding-top: 9px;
   background-image: url("../i/divider.jpg");
   background-repeat: repeat-x;
   background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-top: 9px;
+  background-image: url("../i/divider.jpg");
+  background-repeat: repeat-x;
+  background-position: 0px 0px;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -2921,6 +3116,23 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.two-column article nav .menu ul,
+.three-column article nav .menu ul,
+.two-column .widget nav .menu ul,
+.three-column .widget nav .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.two-column article nav .menu li,
+.three-column article nav .menu li,
+.two-column .widget nav .menu li,
+.three-column .widget nav .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .two-column article nav .menu ul,
 .three-column article nav .menu ul,
@@ -3276,6 +3488,30 @@ h4 a:hover:hover {
 .three-column .widget nav .menu .menu-item .date.date span span {
   display: inline;
 }
+.two-column article nav .menu .menu-item .date.date,
+.three-column article nav .menu .menu-item .date.date,
+.two-column .widget nav .menu .menu-item .date.date,
+.three-column .widget nav .menu .menu-item .date.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.two-column article nav .menu .menu-item .date.date span,
+.three-column article nav .menu .menu-item .date.date span,
+.two-column .widget nav .menu .menu-item .date.date span,
+.three-column .widget nav .menu .menu-item .date.date span {
+  display: block;
+}
+.two-column article nav .menu .menu-item .date.date span span,
+.three-column article nav .menu .menu-item .date.date span span,
+.two-column .widget nav .menu .menu-item .date.date span span,
+.three-column .widget nav .menu .menu-item .date.date span span {
+  display: inline;
+}
 @media all and (min-width: 530px) {
   .two-column,
   .three-column {
@@ -3396,6 +3632,10 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
   border-top: 1px #bcbcbc solid;
   padding: 7px 0px;
 }
@@ -3427,7 +3667,18 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   text-align: center;
+}
+.footer .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer .menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .footer .menu ul {
   margin: 0px;
@@ -3573,8 +3824,19 @@ h4 a:hover:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
   padding-bottom: 7px;
   font-size: 14px;
+}
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+.menu li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .menu ul {
   margin: 0px;
@@ -4062,7 +4324,12 @@ form.filter fieldset {
 .date_mix.date span span {
   display: inline;
 }
-.address span {
+.address {
+  line-height: 1.2em;
+}
+.address .address,
+.address .room,
+.address .hint {
   display: block;
 }
 .date_mix.date {
@@ -4140,6 +4407,17 @@ form.filter fieldset {
   margin: 0px;
   padding: 0px;
   display: block;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+.short .attachments ul {
+  margin: 0px;
+  padding: 0px;
+}
+.short .attachments li {
+  list-style-type: none;
+  line-height: 1em;
 }
 .short .attachments ul {
   margin: 0px;
@@ -4216,6 +4494,52 @@ form.filter fieldset {
 .short .attachments li {
   padding-left: 35px;
   border-top: 0px;
+}
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.date {
+  line-height: 1em;
+  color: #FFF;
+  background: #f09938;
+  margin: 7px 3.5px;
+}
+.date span {
+  display: block;
+  margin: 3.5px 14px;
+}
+.past .date {
+  color: #2e3c62;
+  background: #d6d6d6;
+}
+.time {
+  margin: 7px 3.5px;
+  line-height: 1em;
+}
+.time .start,
+.time .end {
+  font-weight: bold;
+}
+.time .start {
+  display: block;
+}
+.date,
+.time {
+  display: block;
+  float: left;
+  width: 130px;
 }
 .date_mix.date {
   display: block;
