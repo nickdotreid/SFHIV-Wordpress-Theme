@@ -21,6 +21,8 @@ function sfhiv_location_format($post){
 }
 function sfhiv_location_format_line($key,$data){
 	if(!$data[$key]) return;
+	$dont_display = array("san francisco","united states","california");
+	if(in_array(strtolower($data[$key]),$dont_display)) return;
 	echo '<span class="'.$key.'">'.$data[$key].'</span>';
 }
 
