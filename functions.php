@@ -14,6 +14,8 @@ include_once('include/common-list.php');
 include_once('include/common-page.php');
 include_once('include/common-archive.php');
 
+include_once('include/location-functions.php');
+
 include_once('include/event-functions.php');
 
 include_once('include/group-functions.php');
