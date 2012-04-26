@@ -4,7 +4,7 @@
  *
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("preview"); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<? the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
