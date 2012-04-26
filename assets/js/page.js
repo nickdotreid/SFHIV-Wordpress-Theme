@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$(".three-column,.two-column").bind("redraw",function(event){
 		var column = $(this);
-		var item_selector = ".preview, .widget";
+		var item_selector = ".preview, .widget, article";
 		// reset all heights to auto & restore all borders
 		$(item_selector,column).css({
 			"height":"auto"

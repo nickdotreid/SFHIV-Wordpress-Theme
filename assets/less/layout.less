@@ -360,6 +360,7 @@
 
 .two-column,.three-column{
 	.section();
+	border-top:@border_width @secondary_color solid;
 	display:block;
 	background-color:#FFF;
 	.divider{
@@ -367,6 +368,8 @@
 	}
 	article,.widget{
 		width:@block_width;
+		height:@space_size*10;
+		overflow:hidden;
 		display:block;
 		margin:0px;
 		padding:0px 0px;

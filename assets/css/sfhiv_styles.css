@@ -2590,6 +2590,7 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+  border-top: 1px #bcbcbc solid;
   display: block;
   background-color: #FFF;
 }
@@ -3041,6 +3042,8 @@ h4 a:hover:hover {
 .two-column .widget,
 .three-column .widget {
   width: 260px;
+  height: 70px;
+  overflow: hidden;
   display: block;
   margin: 0px;
   padding: 0px 0px;
