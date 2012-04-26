@@ -1,5 +1,37 @@
 <?php
 
+add_action('short_before_content','sfhiv_service_hour_display_day',7);
+function sfhiv_service_hour_display_day(){
+	if (get_post_type()!='sfhiv_service_hour') return;
+	$days = sfhiv_service_get_service_days(get_post(get_the_ID()));
+	echo '<div class="date">';
+	foreach($days as $day){
+		$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
+		echo '<span class="day">'.$term->name.'</span>';
+	}
+	echo '</div>';
+}
+
+add_action('short_before_content','sfhiv_service_hour_display_time',8);
+function sfhiv_service_hour_display_time(){
+	if (get_post_type()!='sfhiv_service_hour') return;
+	$post = get_post(get_the_ID());
+	$start = sfhiv_service_get_start_time($post);
+	$end = sfhiv_service_get_end_time($post);
+	
+	$time_format = get_option('time_format');
+	
+	echo '<div class="time">';
+	echo '<span class="start">'.date($time_format,$start).'</span>';
+	if($start != $end){
+		echo '<span class="">until</span>';
+		echo '<span class="end">'.date($time_format,$end).'</span>';		
+	}
+	echo '</div>';
+}
+
+add_action('short_before_content','sfhiv_display_location',10);
+
 add_action('get_sidebar','sfhiv_service_page_service_type',21);
 function sfhiv_service_page_service_type(){
 	if (!is_singular('sfhiv_service')) return;
