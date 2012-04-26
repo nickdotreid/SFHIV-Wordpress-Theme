@@ -66,6 +66,30 @@ function sfhiv_service_hour_archive_time_of_day_category_menu($query=false,$args
 	));
 }
 
-
+add_filter('sfhiv_loop_filter_query','sfhiv_service_hour_archive_sort',20);
+function sfhiv_service_hour_archive_sort($query){
+	usort($query->posts,function($a,$b){
+		$day_terms = get_terms( "sfhiv_day_of_week_taxonomy", array(
+			"hide_empty" => false,
+			));
+		foreach($day_terms as $term){
+			if(has_term($term,'sfhiv_day_of_week_taxonomy',$a) && has_term($term,'sfhiv_day_of_week_taxonomy',$b)){
+				if(sfhiv_service_get_start_time($a) > sfhiv_service_get_start_time($b)){
+					return 1;
+				}else{
+					return -1;
+				}
+			}
+			if(has_term($term,'sfhiv_day_of_week_taxonomy',$a)){
+				return -1;
+			}
+			if(has_term($term,'sfhiv_day_of_week_taxonomy',$b)){
+				return 1;
+			}
+		}
+		return 0;
+	});
+	return $query;
+}
 
 ?>
