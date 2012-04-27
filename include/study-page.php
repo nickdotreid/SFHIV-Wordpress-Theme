@@ -17,6 +17,16 @@ function sfhiv_study_add_groups(){
 	));
 }
 
+add_action('get_sidebar','sfhiv_study_navigation',22);
+function sfhiv_study_navigation(){
+	if (!is_singular('sfhiv_study')) return;
+	sfhiv_draw_menu(array(get_post(get_the_ID())),array(
+		'show_children' => true,
+		'show_siblings' => true,
+		'show_parents' => true,
+	));
+}
+
 add_action('get_footer','sfhiv_study_list_children',20);
 function sfhiv_study_list_children(){
 	if (!is_singular('sfhiv_study')) return;
