@@ -4590,6 +4590,12 @@ form.filter fieldset {
   font-weight: bold;
   font-size: 18px;
 }
+.list .member .suffix {
+  font-size: 14px;
+  color: #bcbcbc;
+  font-weight: normal;
+  font-style: italic;
+}
 .list .member .title {
   font-weight: bold;
 }
