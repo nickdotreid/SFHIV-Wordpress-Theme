@@ -59,4 +59,20 @@ function sfhiv_page_list_related(){
 	));
 }
 
+add_action('before_content','sfhiv_content_add_navigation');
+function sfhiv_content_add_navigation(){
+	echo '<nav class="entry-navigation">';
+	do_action('navigation');
+	echo '<br class="clear" />';
+	echo '</nav>';
+}
+
+
+add_action('navigation','sfhiv_navigation_edit_link',1);
+add_action('short_navigation','sfhiv_navigation_edit_link',1);
+function sfhiv_navigation_edit_link(){
+	if(get_post_type() == 'sfhiv_service_hour') return;
+	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' );
+}
+
 ?>

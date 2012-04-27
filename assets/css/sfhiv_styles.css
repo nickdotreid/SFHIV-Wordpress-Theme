@@ -4082,6 +4082,18 @@ form.filter fieldset {
 .date_mix.date span span {
   display: inline;
 }
+.entry-navigation {
+  border-bottom: 1px #bcbcbc solid;
+  clear: both;
+}
+.entry-navigation a {
+  padding: 7px;
+  display: block;
+  float: left;
+}
+.entry-navigation .post-edit-link {
+  float: right;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -4135,8 +4147,6 @@ form.filter fieldset {
   padding: 7px 21px;
 }
 .entry-meta {
-  border-top: 1px #bcbcbc solid;
-  border-bottom: 1px #bcbcbc solid;
   padding: 3.5px 0px;
   margin: 7px 0px;
 }

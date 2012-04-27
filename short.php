@@ -12,7 +12,5 @@
 	<?	do_action("short_after_content");	?>
 	<nav>
 		<?	do_action("short_navigation");	?>
-		<a href="<?=the_permalink();?>">Read More</a>
-		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' ); ?>
 	</nav>
 </article>

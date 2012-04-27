@@ -1,6 +1,19 @@
 @import "variables";
 @import "mixins";
 
+.entry-navigation{
+	border-bottom:@border_width @secondary_color solid;
+	clear:both;
+	a{
+		padding:@space_size;
+		display:block;
+		float:left;
+	}
+	.post-edit-link{
+		float:right;
+	}
+}
+
 .entry-content{
 	h1,h2,h3,h4,h5,h6{
 		font-family:@main_font;
@@ -53,8 +66,6 @@
 }
 
 .entry-meta{
-	border-top:@border_width @secondary_color solid;
-	border-bottom:@border_width @secondary_color solid;
 	padding:@space_size/2 0px;
 	margin:@space_size 0px;
 }
