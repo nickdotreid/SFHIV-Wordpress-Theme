@@ -39,6 +39,14 @@ function sfhiv_group_page_group_by_years(){
 	));
 }
 
+add_action('navigation','sfhiv_group_navigation_members_link',1);
+add_action('short_navigation','sfhiv_group_navigation_members_link',1);
+function sfhiv_group_navigation_members_link(){
+	if (get_post_type() != 'sfhiv_group') return;
+	if(!sfhiv_group_has_members()) return;
+	echo '<a href="'.get_permalink().'#members">Members</a>';
+}
+
 add_action('get_footer','sfhiv_group_page_list_group_members',20);
 function sfhiv_group_page_list_group_members(){
 	if (!is_singular('sfhiv_group')) return;
@@ -69,6 +77,15 @@ function sfhiv_group_page_list_group_members(){
 	<?	endif;
 }
 
+add_action('navigation','sfhiv_group_navigation_event_link',1);
+add_action('short_navigation','sfhiv_group_navigation_event_link',1);
+function sfhiv_group_navigation_event_link(){
+	if (get_post_type() != 'sfhiv_group') return;
+	$events = sfhiv_group_get_events();
+	if($events->post_count < 1) return;
+	echo '<a href="'.get_permalink().'#events">Events</a>';
+}
+
 add_action('get_footer','sfhiv_group_page_list_group_events',21);
 function sfhiv_group_page_list_group_events(){
 	if (!is_singular('sfhiv_group')) return;
@@ -79,6 +96,15 @@ function sfhiv_group_page_list_group_events(){
 	));
 }
 
+add_action('navigation','sfhiv_group_navigation_services_link',1);
+add_action('short_navigation','sfhiv_group_navigation_services_link',1);
+function sfhiv_group_navigation_services_link(){
+	if (get_post_type() != 'sfhiv_group') return;
+	$services = sfhiv_group_get_services();
+	if($services->post_count < 1) return;
+	echo '<a href="'.get_permalink().'#services">Services</a>';
+}
+
 add_action('get_footer','sfhiv_group_page_list_group_services',22);
 function sfhiv_group_page_list_group_services(){
 	if (!is_singular('sfhiv_group')) return;
@@ -86,8 +112,17 @@ function sfhiv_group_page_list_group_services(){
 	do_action('sfhiv_loop',$services,array(
 		"id" => "services",
 		"title" => "Services",
-		"list_element" => "list-item",
+		"list_element" => "short",
 	));
+}
+
+add_action('navigation','sfhiv_group_navigation_studies_link',1);
+add_action('short_navigation','sfhiv_group_navigation_studies_link',1);
+function sfhiv_group_navigation_studies_link(){
+	if (get_post_type() != 'sfhiv_group') return;
+	$studies = sfhiv_group_get_studies();
+	if($studies->post_count < 1) return;
+	echo '<a href="'.get_permalink().'#studies">Studies</a>';
 }
 
 add_action('get_footer','sfhiv_group_page_list_group_studies',23);
