@@ -58,6 +58,13 @@ function sfhiv_page_list_related(){
 		"list_element" => "short",
 	));
 }
+add_action('navigation','sfhiv_navigation_related_link',1);
+function sfhiv_navigation_related_link(){
+	if(!is_singular() || is_front_page()) return;
+	$related = sfhiv_get_related_pages();
+	if($related->post_count < 1) return;
+	echo '<a href="#related">Related</a>';
+}
 
 add_action('before_content','sfhiv_content_add_navigation');
 function sfhiv_content_add_navigation(){
