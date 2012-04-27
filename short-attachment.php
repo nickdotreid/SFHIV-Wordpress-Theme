@@ -5,7 +5,8 @@
 	<div class="entry-content">
 		<?=the_excerpt();?>
 	</div>
-	<nav>
+	<nav class="entry-navigation">
 		<a href="<?=wp_get_attachment_url();?>">Download <?=the_title();?></a>
+		<br class="clear" />
 	</nav>
 </article>

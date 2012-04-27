@@ -4094,6 +4094,9 @@ form.filter fieldset {
 .entry-navigation .post-edit-link {
   float: right;
 }
+.short .entry-navigation {
+  border: 0px;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,

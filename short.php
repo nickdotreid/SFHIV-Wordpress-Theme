@@ -10,7 +10,8 @@
 		<?=the_excerpt();?>
 	</div>
 	<?	do_action("short_after_content");	?>
-	<nav>
+	<nav class="entry-navigation">
 		<?	do_action("short_navigation");	?>
+		<br class="clear" />
 	</nav>
 </article>
