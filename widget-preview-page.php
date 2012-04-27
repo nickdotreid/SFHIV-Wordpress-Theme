@@ -47,11 +47,6 @@ class SFHIV_Page_Widget extends WP_Widget {
 		<div class="entry-content">
 			<? the_excerpt(); ?>
 		</div><!-- .entry-content -->
-		<?	sfhiv_draw_menu(array(
-			get_post(get_the_ID())
-			),array(
-			'show_children' => true,
-		));	?>
 		<?	do_action("sfhiv-preview-menu");	?>
 		<?
 			echo $after_widget;
