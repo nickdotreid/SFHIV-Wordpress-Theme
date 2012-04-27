@@ -22,7 +22,7 @@ function sfhiv_service_hour_archive_add_service_category_menu(){
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query);
 }
 
-add_action('get_sidebar','sfhiv_service_hour_archive_population_category_menu',22,2);
+//add_action('get_sidebar','sfhiv_service_hour_archive_population_category_menu',22,2);
 function sfhiv_service_hour_archive_population_category_menu($query=false,$args=array()){
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
