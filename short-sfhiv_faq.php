@@ -14,7 +14,6 @@
 		<a href="#" class="open" style="display:none;"><?_e("View")?></a>
 		<a href="#" class="close" style="display:none;"><?_e("Close")?></a>
 		<?	do_action("short_navigation");	?>
-		<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>' ); ?>
 		<br class="clear" />
 	</nav>
 </article>
