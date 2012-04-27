@@ -42,7 +42,6 @@
 .list .sfhiv_service .category-list li,
 .list .sfhiv_service_hours .category-list li {
   list-style-type: none;
-  line-height: 1em;
 }
 .list .sfhiv_service h4,
 .list .sfhiv_service_hours h4 {
@@ -68,7 +67,6 @@
 .list .sfhiv_service .days li,
 .list .sfhiv_service_hours .days li {
   list-style-type: none;
-  line-height: 1em;
 }
 .list .sfhiv_service .days li,
 .list .sfhiv_service_hours .days li {

@@ -193,7 +193,6 @@
 }
 #access .menu li {
   list-style-type: none;
-  line-height: 1em;
 }
 #access .menu .menu-item {
   display: block;
@@ -492,7 +491,6 @@
 .two-column .widget nav .menu li,
 .three-column .widget nav .menu li {
   list-style-type: none;
-  line-height: 1em;
 }
 .two-column article nav .menu .children,
 .three-column article nav .menu .children,
@@ -633,7 +631,6 @@
 }
 .footer .menu li {
   list-style-type: none;
-  line-height: 1em;
 }
 .footer .menu .menu-item {
   display: block;
