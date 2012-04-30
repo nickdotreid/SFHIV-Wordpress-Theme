@@ -1993,6 +1993,11 @@ h4 a:hover:hover {
     margin-left: 0px;
   }
 }
+@media all and (min-width: 1100px) {
+  #content h1.entry-title {
+    width: 382px;
+  }
+}
 @media all and (min-width: 800px) {
   #main {
     background-image: url('../i/background-line.gif');
