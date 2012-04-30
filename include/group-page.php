@@ -24,21 +24,6 @@ function sfhiv_group_page_groups_by_year(){
 	}
 }
 
-add_action('get_sidebar','sfhiv_group_page_group_by_years',24);
-function sfhiv_group_page_group_by_years(){
-	if (!is_singular('sfhiv_group')) return;
-	$query = get_similar_to(get_post(get_the_ID()),array('sfhiv_year'));
-	$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
-	if(count($years)<1) return;
-	sfhiv_draw_taxonomy_menu(array(
-		'taxonomy' => 'sfhiv_year',
-		'title_li' => false,
-		'include' => implode(",",$years),
-		'current_category' => $current_categories[0],
-		'base_link' =>  get_post_type_archive_link( 'sfhiv_group' ),
-	));
-}
-
 add_action('navigation','sfhiv_group_navigation_members_link',1);
 add_action('short_navigation','sfhiv_group_navigation_members_link',1);
 function sfhiv_group_navigation_members_link(){
