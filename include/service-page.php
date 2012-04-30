@@ -8,17 +8,6 @@ function sfhiv_service_hour_show_edit_link(){
 	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', $service->ID );
 }
 
-add_action('short_navigation','sfhiv_service_hour_navigation_view_link',2);
-function sfhiv_service_hour_navigation_view_link(){
-	if(get_post_type() != 'sfhiv_service_hour') return;
-	$service = sfhiv_service_hour_get_parent(get_post());
-	if(!$service) return;
-	echo '<a href="'.get_permalink($service->ID).'">';
-	_e("View ");
-	echo apply_filters('the_title',$service->post_title);
-	echo '</a>';
-}
-
 add_action('short_before_content','sfhiv_service_hour_display_day',7);
 function sfhiv_service_hour_display_day(){
 	if (get_post_type()!='sfhiv_service_hour') return;
