@@ -8,12 +8,17 @@
 
 $term =	get_queried_object();
 $post_types = array();
-foreach(get_post_types() as $post_type){
-	foreach(get_object_taxonomies( $post_type ) as $tax){
-		if($tax == $term->taxonomy && $post_type != 'sfhiv_service_hour'){
-			$post_types[$post_type] = get_post_type_object($post_type);;
+if(isset($wp_query->query_vars['post_type'])){
+	$post_type = $wp_query->query_vars['post_type'];
+	$post_types[$post_type] = get_post_type_object($post_type);
+}else{
+	foreach(get_post_types() as $post_type){
+		foreach(get_object_taxonomies( $post_type ) as $tax){
+			if($tax == $term->taxonomy && $post_type != 'sfhiv_service_hour'){
+				$post_types[$post_type] = get_post_type_object($post_type);;
+			}
 		}
-	}
+	}	
 }
 
 get_header(); ?>
