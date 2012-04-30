@@ -134,29 +134,29 @@ function sfhiv_add_group_members_list(){
 	endif;
 }
 
-function sfhiv_group_has_events($ID=false){
+function sfhiv_group_has_events($ID=false,$args=array()){
 	if(!$ID){
 		$ID = get_the_ID();
 	}
-	$events = new WP_Query( array(
+	$events = new WP_Query( array_merge(array(
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
-	));
+	),$args));
 	if($events->have_posts()){
 		return true;
 	}
 	return false;
 }
 
-function sfhiv_group_get_events($id=false){
+function sfhiv_group_get_events($id=false,$args=array()){
 	if(!$ID){
 		$ID = get_the_ID();
 	}
-	$events = new WP_Query( array(
+	$events = new WP_Query( array_merge(array(
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
 		'nopaging' => true,
-	));
+	),$args));
 	return $events;
 }
 
