@@ -8,7 +8,7 @@
 
 $term =	get_queried_object();
 $post_types = array();
-if(isset($wp_query->query_vars['post_type'])){
+if(isset($wp_query->query_vars['post_type']) && $wp_query->query_vars['post_type']){
 	$post_type = $wp_query->query_vars['post_type'];
 	$post_types[$post_type] = get_post_type_object($post_type);
 }else{
