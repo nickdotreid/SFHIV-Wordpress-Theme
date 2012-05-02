@@ -41,20 +41,26 @@ function sfhiv_group_page_list_group_members(){
 	<section id="members" class="list">
 		<h2 class="list-title">Members</h2>
 		<?
-		$show_incomplete = false;
+		$groupings = array();
 		foreach($users as $user):
-			if(!p2p_get_meta( $user->p2p_id, 'incomplete', true ))
+			if(p2p_get_meta( $user->p2p_id, 'group', true )){
+				$name = p2p_get_meta( $user->p2p_id, 'group', true );
+				if(!isset($groupings[$name])){
+					$groupings[$name] = array();
+				}
+				array_push($groupings[$name],$user);
+			}else{
 				include(locate_template('list-member.php'));
-			else
-				$show_incomplete = true;
+			}
 		endforeach;
-		if($show_incomplete):
-		?>
-		<h3>Members unable to complete term.</h3>
-		<?	foreach($users as $user):
-			if(p2p_get_meta( $user->p2p_id, 'incomplete', true ))	include(locate_template('list-member.php'));
+		foreach($groupings as $title => $users):
+			echo '<h3>';
+			_e($title,'sfhiv_theme');
+			echo '</h3>';
+			foreach($users as $user):
+				include(locate_template('list-member.php'));
+			endforeach;
 		endforeach;
-		endif;
 		?>
 		<br class="clear" />
 	</section><!-- #members -->
