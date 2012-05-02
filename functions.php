@@ -105,11 +105,13 @@ function sfhiv_loop_items($query=false,$args=array()){
 	if(isset($args['title']) && $args['title']!=""){
 		echo '<h2 class="list-title">'.$args['title'].'</h2>';
 	}
+	echo $args['wrap_before'];
 	while($query->have_posts()){
 		$query->the_post();
 		get_template_part( $args['list_element'], get_post_type() );
 	}
 	wp_reset_postdata();
+	echo $args['wrap_after'];
 	echo '</'.$args['container'].'><!-- #'.$args['id'].'-->';
 	do_action("sfhiv_post_loop",$query,$args);
 }
