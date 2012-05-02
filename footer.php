@@ -1,4 +1,3 @@
-		<br class="clear" />
 	</div><!-- #main -->
 	<footer id="bottom" class="footer">
 		<?
