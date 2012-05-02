@@ -52,6 +52,8 @@ function sfhiv_study_add_reports(){
 		"id" => "reports",
 		"title" => "Reports",
 		"list_element" => 'list-item',
+		"wrap_before" => '<ul>',
+		"wrap_after" => '</ul>',
 	));
 }
 ?>
