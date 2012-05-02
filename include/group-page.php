@@ -37,7 +37,6 @@ function sfhiv_group_page_list_group_members(){
 	if (!is_singular('sfhiv_group')) return;
 	if(sfhiv_group_has_members()):
 	$users = sfhiv_group_get_members();
-	sfhiv_users_sort_by_name($users);
 	?>
 	<section id="members" class="list">
 		<h2 class="list-title">Members</h2>
