@@ -66,33 +66,4 @@ function sfhiv_add_top_sidebar(){
 	<?
 }
 
-add_action('get_footer','sfhiv_add_bottom_sidebar',40);
-function sfhiv_add_bottom_sidebar(){
-	?>
-	<section class="footer bottom sfseal">
-		<?dynamic_sidebar("Bottom Sidebar");?>
-		<br class="clear" />
-	</section>
-
-	<?
-}
-
-add_action('get_footer','sfhiv_add_footer_divider',38);
-function sfhiv_add_footer_divider(){
-	?>
-	<div class="footer" style="height:9px;">
-		<div class="divider"></div>
-	</div>
-	<?
-}
-add_action('get_footer','sfhiv_add_footer_menu',39);
-function sfhiv_add_footer_menu(){
-	wp_nav_menu(array(
-		'theme_location' => 'footer_menu',
-		'container' => 'nav',
-		'container_class' => 'footer',
-		'depth'=>1,
-		));	
-}
-
 ?>
