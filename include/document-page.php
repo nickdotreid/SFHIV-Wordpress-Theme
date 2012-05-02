@@ -17,4 +17,15 @@ function sfhiv_document_studies_sidebar(){
 	));
 }
 
+add_action('before_content','sfhiv_document_show_date');
+add_action('short_before_content','sfhiv_document_show_date');
+add_action('before_list-item','sfhiv_document_show_date');
+function sfhiv_document_show_date(){
+	if(get_post_type() != 'sfhiv_document') return;
+	echo '<span class="date">';
+	echo '<span class="month">'.get_the_date("F").'</span>';
+	echo '<span class="year">'.get_the_date("Y").'</span>';
+	echo '</span>';
+}
+
 ?>
