@@ -1,3 +1,4 @@
+		<div class="clear"></div>
 	</div><!-- #main -->
 	<footer id="bottom" class="footer">
 		<?
