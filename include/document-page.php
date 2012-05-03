@@ -30,4 +30,9 @@ function sfhiv_document_show_date(){
 	echo '</span>';
 }
 
+add_action('after_list-item','sfhiv_document_clear_date');
+function sfhiv_document_clear_date(){
+	if(get_post_type() != 'sfhiv_document') return;
+	echo '<br class="clear" />';
+}
 ?>

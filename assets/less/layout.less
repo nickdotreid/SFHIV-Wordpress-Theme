@@ -322,6 +322,7 @@
 
 
 .list{
+	.menu_mix();
 	.list-title{
 	
 	}
@@ -333,7 +334,7 @@
 	}
 	.list-item,.short{
 		position:relative;
-		border-top:@border_width @secondary_color solid;
+		clear:both;
 		margin:0px 0px @space_size;
 		.entry-title{
 			font-size:@big_font_size;
@@ -348,18 +349,13 @@
 			clear:both;
 		}
 	}
-}
-@media all and (min-width: @size_tablet) {
-	.list{
-		.list-item{
-			.column{
-				display:block;
-				float:left;
-				width:@block_width;
-				&.right{
-					float:right;
-				}
-			}
+	.list-item{
+		a .date{
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+		a{
+			clear:both;
 		}
 	}
 }
