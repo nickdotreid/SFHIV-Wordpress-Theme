@@ -75,6 +75,7 @@ function sfhiv_connection_types() {
 			'show' => 'from',
 			'context' => 'advanced',
 		),
+		'sortable' => true,
 	) );
 }
 add_action( 'wp_loaded', 'sfhiv_connection_types' );
