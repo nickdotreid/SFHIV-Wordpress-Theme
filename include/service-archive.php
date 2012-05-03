@@ -37,7 +37,8 @@ function sfhiv_service_hour_archive_neighborhood_category_menu($query=false,$arg
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	sfhiv_draw_taxonomy_query_menu('sfhiv_neighborhood_category',$query,array(
-		'title_li' => 'Neighborhood',
+		'title_li' => false,
+		'all_taxonomy_name' => 'Any Neighborhood',
 		'extra_classes' => 'filters',
 		'base_link' => get_permalink(),
 	));
@@ -48,7 +49,8 @@ function sfhiv_service_hour_archive_day_of_week_category_menu($query=false,$args
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	sfhiv_draw_taxonomy_query_menu('sfhiv_day_of_week_taxonomy',$query,array(
-		'title_li' => 'Day of Week',
+		'title_li' => false,
+		'all_taxonomy_name' => 'Any Day',
 		'extra_classes' => 'filters',
 		'base_link' => get_permalink(),
 	));
@@ -59,7 +61,8 @@ function sfhiv_service_hour_archive_time_of_day_category_menu($query=false,$args
 	$query = sfhiv_get_archive_query();
 	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service_hour') return;
 	sfhiv_draw_taxonomy_query_menu('sfhiv_time_of_day_taxonomy',$query,array(
-		'title_li' => 'Time of Day',
+		'title_li' => false,
+		'all_taxonomy_name' => 'Any Time',
 		'extra_classes' => 'filters',
 		'base_link' => get_permalink(),
 	));
