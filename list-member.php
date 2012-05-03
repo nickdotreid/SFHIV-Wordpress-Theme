@@ -24,4 +24,10 @@
 	</section>
 	<?	endif;	?>
 	<br class="clear" />
+	<?	if(is_user_logged_in() && 
+			(current_user_can( 'edit_users' ) || get_current_user_id()==$user->ID)):	?>
+	<nav class="protected">
+		<a href="/wp-admin/user-edit.php?user_id=<?=$user->ID;?>"><?_e("Edit Profile",'sfhiv_theme');?></a>
+	</nav>
+	<?	endif;	?>
 </article>
