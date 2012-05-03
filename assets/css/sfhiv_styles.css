@@ -12950,8 +12950,8 @@ form.filter fieldset {
   display: block;
   position: relative;
   background-color: #FFF;
-  border-bottom: 1px #bcbcbc solid;
   padding-top: 7px;
+  margin-bottom: 7px;
 }
 .js #main .slider li {
   position: relative;
@@ -12968,7 +12968,7 @@ form.filter fieldset {
 }
 .js #main .slider li article {
   width: auto;
-  margin: 100px 14px;
+  margin: 0px 14px;
   padding: 14px;
   background-color: transparent;
   background-image: url('../i/background-black-65.png');
@@ -13033,12 +13033,8 @@ form.filter fieldset {
 }
 @media all and (min-width: 800px) {
   .js #main .slider li {
-    margin-left: 21px;
-    width: 390px;
+    width: 330px;
     height: 350px;
-  }
-  .js #main .slider li article {
-    margin-top: 220px;
   }
   .js #main .slider .arrow,
   .js #main .slider .jcarousel-prev,
