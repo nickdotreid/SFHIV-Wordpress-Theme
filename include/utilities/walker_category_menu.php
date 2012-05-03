@@ -87,7 +87,10 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 				$output .= ">";
 			}
 			$output .= '<a href="'.$href.'">';
-			$output .= "All ".$taxonomy->label;
+			if(isset($all_taxonomy_name))
+				$output .= $all_taxonomy_name;
+			else
+				$output .= "All ".$taxonomy->label;
 			$output .= '</a>';
 			if ( 'list' == $args['style'] ) {
 				$output .= "</li>";
