@@ -2,11 +2,18 @@
 @import "mixins";
 
 .address{
-	width:@block_width;
+	width:@block_width - @space_size*3;
+	padding-left:@space_size*3;
+	position:relative;
 	display:block;
 	clear:both;
 	line-height:1.1em;
-	.name,.address,.room,.hint{
+	i{
+		position:absolute;
+		top:@space_size/2;
+		left:@space_size/2;
+	}
+	.name,.street,.room,.hint{
 		display:block;
 	}
 }

@@ -10,6 +10,7 @@ function sfhiv_display_location(){
 function sfhiv_location_format($post){
 	$location = sfhiv_location_get_address($post);
 	echo '<div class="address">';
+	echo '<i class="icon-map-marker"></i>';
 	sfhiv_location_format_line('room',$location);
 	sfhiv_location_format_line('address',$location);
 	sfhiv_location_format_line('zip_code',$location);
@@ -23,7 +24,9 @@ function sfhiv_location_format_line($key,$data){
 	if(!$data[$key]) return;
 	$dont_display = array("san francisco","united states","california");
 	if(in_array(strtolower($data[$key]),$dont_display)) return;
-	echo '<span class="'.$key.'">'.$data[$key].'</span>';
+	$value = $data[$key];
+	if($key == 'address') $key = 'street';
+	echo '<span class="'.$key.'">'.$value.'</span>';
 }
 
 
