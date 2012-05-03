@@ -1,6 +1,13 @@
 @import "variables";
 @import "mixins";
 
+.date,.time{
+	display:block;
+	float:left;
+	width:@block_width/2 - @space_size/2;
+	margin:@space_size @space_size/2 @space_size 0px;
+}
+
 .date {
 	line-height:1em;
 	color: #FFF;
@@ -18,16 +25,12 @@
 }
 .time{
 	line-height:1em;
+	width:@block_width - @space_size*3;
+	padding:@space_size;
 	.start,.end{
 		font-weight:bold;
 	}
 	.start{
 		display:block;
 	}
-}
-.date,.time{
-	display:block;
-	float:left;
-	width:@block_width/2 - @space_size/2;
-	margin:@space_size @space_size/2 @space_size 0px;
 }

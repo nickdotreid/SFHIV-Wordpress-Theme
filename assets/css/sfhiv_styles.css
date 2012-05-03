@@ -4959,6 +4959,13 @@ form.filter fieldset {
 .date_mix.date span span {
   display: inline;
 }
+.date,
+.time {
+  display: block;
+  float: left;
+  width: 126.5px;
+  margin: 7px 3.5px 7px 0px;
+}
 .date {
   line-height: 1em;
   color: #FFF;
@@ -4976,6 +4983,8 @@ form.filter fieldset {
 }
 .time {
   line-height: 1em;
+  width: 239px;
+  padding: 7px;
 }
 .time .start,
 .time .end {
@@ -4983,13 +4992,6 @@ form.filter fieldset {
 }
 .time .start {
   display: block;
-}
-.date,
-.time {
-  display: block;
-  float: left;
-  width: 126.5px;
-  margin: 7px 3.5px 7px 0px;
 }
 .date_mix.date {
   display: block;
