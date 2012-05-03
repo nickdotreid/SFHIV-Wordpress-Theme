@@ -22,7 +22,7 @@ function sfhiv_carousel_hide(options,item,index,state){
 
 function sfhiv_carousel_visible(options,item,index,state){
 	item = $(item);
-	val = $(item).height() - $("article",item).height();
+	val = $(item).height() - $("article",item).outerHeight();
 	$("article",item).css('margin-top',item.height()+'px');
 	$("article",item).animate({
 		'margin-top':val+'px'
