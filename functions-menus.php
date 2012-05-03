@@ -36,6 +36,16 @@ function sfhiv_register_sidebars(){
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>',
 	));
+	
+	register_sidebar(array(
+		'name' => 'Blog Sidebar',
+		'id' => 'blog-widgets',
+		'description' => 'widgets here will be shown next to the blog',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+	));
 }
 
 add_action('init', 'sfhiv_register_custom_menu');

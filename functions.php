@@ -7,6 +7,8 @@ include_once('functions-menus.php');
 
 include_once('functions-assets.php');
 
+include_once('include/post-page.php');
+
 include_once('include/page-page.php');
 include_once('include/page-preview.php');
 
