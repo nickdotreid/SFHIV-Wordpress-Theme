@@ -13754,8 +13754,11 @@ h4 a:hover:hover {
   background-color: #FFF;
   color: #bcbcbc;
   font-size: 12px;
-  padding-top: 23px;
   background-position: 0px 7px;
+  border-top: 1px #bcbcbc solid;
+}
+#bottom .footer.first {
+  margin-top: 23px;
 }
 .footer {
   background: #FFF;
@@ -13949,7 +13952,6 @@ h4 a:hover:hover {
 @media all and (min-width: 800px) {
   .footer .menu {
     text-align: left;
-    height: 14px;
   }
   .footer .menu .menu-item {
     float: left;

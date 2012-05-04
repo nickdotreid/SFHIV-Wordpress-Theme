@@ -460,8 +460,12 @@
 	background-color:#FFF;
 	color:@secondary_color;
 	font-size:@small_font_size;
-	padding-top:@space_size*2 + 9;
 	background-position:0px @space_size;
+	border-top:1px @secondary_color solid;
+}
+
+#bottom .footer.first{
+	margin-top:@space_size*2 + 9;
 }
 
 .footer{
@@ -503,7 +507,6 @@
 	.footer{
 		.menu{
 			text-align:left;
-			height:@space_size*2;
 			.menu-item{
 				float:left;
 				padding:0px @space_size;

@@ -1,11 +1,11 @@
 		<div class="clear"></div>
 	</div><!-- #main -->
-	<footer id="bottom" class="footer">
+	<footer id="bottom">
 		<?
 		wp_nav_menu(array(
 			'theme_location' => 'footer_menu',
 			'container' => 'nav',
-			'container_class' => 'footer',
+			'container_class' => 'footer first',
 			'depth'=>1,
 			));
 		?>
