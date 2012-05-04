@@ -71,7 +71,7 @@
 			<br class="clear" />
 		</nav><!-- #access -->
 		<?php do_action('after_access');	?>
-		<div class="divider" style="margin-top:7px;"></div>
+		<div class="divider" style="padding-top:16px;background-position:bottom center;"></div>
 	</header><!-- #branding -->
 	<?php do_action('after_header');	?>
 	<div id="main">

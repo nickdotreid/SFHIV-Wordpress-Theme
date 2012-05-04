@@ -11404,111 +11404,28 @@ h4 a:hover:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin: 0px auto;
+  width: 260px;
+}
+@media all and (min-width: 530px) {
+  #branding,
+  #main,
+  #bottom {
+    width: 520px;
+  }
 }
 @media all and (min-width: 800px) {
   #branding,
   #main,
   #bottom {
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    margin-left: 14px;
-    margin-right: 14px;
+    width: 780px;
   }
 }
 @media all and (min-width: 1100px) {
   #branding,
   #main,
   #bottom {
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    clear: both;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    margin-left: 28px;
-    margin-right: 28px;
+    width: 1040px;
   }
 }
 #branding {
@@ -12049,7 +11966,7 @@ h4 a:hover:hover {
 .list .short {
   position: relative;
   clear: both;
-  margin: 0px 0px 7px;
+  margin: 0px 0px 28px;
 }
 .list .list-item .entry-title,
 .list .short .entry-title {
@@ -14353,7 +14270,7 @@ h4 a:hover:hover {
 }
 .filters {
   position: relative;
-  border-top: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
 }
 .filter,
 form.filter {
@@ -14382,8 +14299,9 @@ form.filter fieldset {
 }
 .filters.pagnate {
   padding: 3.5px 0px;
-  margin: 0px 7px;
   text-align: right;
+  border-top: 1px #bcbcbc solid;
+  border-bottom: 0;
 }
 .clearfix {
   *zoom: 1;

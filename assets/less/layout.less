@@ -43,21 +43,22 @@
 }
 #branding,#main,#bottom{
 	.section();
-	margin-left:@space_size;
-	margin-right:@space_size;
+	margin:0px auto;
+	width:@block_width;
+}
+@media all and (min-width: @size_tablet) {
+	#branding,#main,#bottom{
+		width:@block_width*2;
+	}	
 }
 @media all and (min-width: @size_medium) {
 	#branding,#main,#bottom{
-		.section();
-		margin-left:@space_size*2;
-		margin-right:@space_size*2;
+		width:@block_width*3;
 	}
 }
 @media all and (min-width: @size_large) {
 	#branding,#main,#bottom{
-		.section();
-		margin-left:@space_size*4;
-		margin-right:@space_size*4;
+		width:@block_width*4;
 	}
 }
 
@@ -335,7 +336,7 @@
 	.list-item,.short{
 		position:relative;
 		clear:both;
-		margin:0px 0px @space_size;
+		margin:0px 0px @space_size*4;
 		.entry-title{
 			font-size:@big_font_size;
 			padding:@space_size/2 0px 0px;
