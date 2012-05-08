@@ -53,7 +53,7 @@ function sfhiv_page_list_related(){
 	$related = sfhiv_get_related_pages();
 	do_action('sfhiv_loop',$related,array(
 		"id" => "related",
-		"title" => 'Related',
+		"title" => sfhiv_get_related_title(),
 		"classes" => array("list","related"),
 		"list_element" => "short",
 	));
