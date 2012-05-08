@@ -63,7 +63,9 @@ function sfhiv_navigation_related_link(){
 	if(!is_singular() || is_front_page()) return;
 	$related = sfhiv_get_related_pages();
 	if($related->post_count < 1) return;
-	echo '<a href="#related">Related</a>';
+	$related_title = sfhiv_get_related_title();
+	if(!$related_title) return;
+	echo '<a href="#related">'.$related_title.'</a>';
 }
 
 add_action('before_content','sfhiv_content_add_navigation');
