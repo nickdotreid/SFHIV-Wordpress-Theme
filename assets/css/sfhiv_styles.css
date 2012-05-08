@@ -15428,7 +15428,6 @@ form.filter fieldset {
 }
 .list .member .profile .avatar {
   display: block;
-  float: left;
   margin: 0px;
   margin-right: 3.5px;
   margin-bottom: 3.5px;
@@ -15447,6 +15446,17 @@ form.filter fieldset {
     float: left;
     clear: none;
     width: 246px;
+  }
+  .list .member .info {
+    float: right;
+    width: 162.5px;
+  }
+  .list .member .profile .avatar {
+    display: block;
+    float: left;
+    margin: 0px;
+    margin-right: 3.5px;
+    margin-bottom: 3.5px;
   }
   .contact.list .member {
     float: none;
