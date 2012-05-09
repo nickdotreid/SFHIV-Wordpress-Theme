@@ -24,6 +24,7 @@ $(document).ready(function(){
 			_in_row.push(member);
 			member.height(_height);
 		});
+		$(this).height(member.outerHeight()+member.position().top);
 	});
 	
 	$("#access ul.menu").bind("redraw",function(){
