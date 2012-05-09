@@ -14937,6 +14937,9 @@ form.filter fieldset {
 .attachment.mime-applicationmsword {
   background-image: url('../i/document_icons/document.png');
 }
+.attachment .entry-navigation {
+  border: 0;
+}
 .list.attachments .attachment {
   padding-left: 35px;
 }
@@ -15065,6 +15068,7 @@ form.filter fieldset {
 }
 .short .attachments li {
   padding-left: 35px;
+  margin-bottom: 7px;
   border-top: 0px;
 }
 .clearfix {
