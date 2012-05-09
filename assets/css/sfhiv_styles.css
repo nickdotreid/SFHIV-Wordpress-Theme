@@ -13866,6 +13866,9 @@ h4 a:hover:hover {
   width: auto;
   padding-top: 7px;
 }
+.footer section.thin {
+  font-size: 12px;
+}
 @media all and (min-width: 800px) {
   .footer .menu {
     text-align: left;
