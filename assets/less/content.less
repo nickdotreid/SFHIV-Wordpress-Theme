@@ -2,9 +2,7 @@
 @import "mixins";
 
 .entry-navigation{
-	border-bottom:@border_width @secondary_color solid;
 	clear:both;
-	margin-bottom:@space_size/2;
 	a{
 		padding:0px @space_size 0px 0px;
 		display:block;
@@ -14,8 +12,14 @@
 		float:right;
 	}
 }
-.short .entry-navigation{
-	border:0px;
+
+#content .entry-navigation{
+	a{
+		font-size:@big_font_size;
+		padding:@space_size/2;
+		margin:@space_size/2 0px;
+		margin-right:@space_size;
+	}
 }
 
 .entry-content{

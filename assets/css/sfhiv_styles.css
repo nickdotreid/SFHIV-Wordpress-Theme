@@ -14679,9 +14679,7 @@ form.filter fieldset {
   display: inline;
 }
 .entry-navigation {
-  border-bottom: 1px #bcbcbc solid;
   clear: both;
-  margin-bottom: 3.5px;
 }
 .entry-navigation a {
   padding: 0px 7px 0px 0px;
@@ -14691,8 +14689,11 @@ form.filter fieldset {
 .entry-navigation .post-edit-link {
   float: right;
 }
-.short .entry-navigation {
-  border: 0px;
+#content .entry-navigation a {
+  font-size: 18px;
+  padding: 3.5px;
+  margin: 3.5px 0px;
+  margin-right: 7px;
 }
 .entry-content h1,
 .entry-content h2,
