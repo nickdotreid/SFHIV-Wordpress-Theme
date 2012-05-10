@@ -8,35 +8,22 @@
 	a,a:visited,a:hover,label{
 		display:block;
 		padding:@space_size/2 0px;
-		color:@link_color;
-	}
-	.current_page_ancestor,.current_page_parent, .current_page_ancestor .children{
-		font-size:@font_size;
-		a,label{
-			color:@link_color;
-			text-decoration:none;
-		}
 	}
 	.children, .current_page_parent .children{
 		font-size:@font_size;
-		a,label{
-			background-color:transparent;
-			color:@link_color;
+		a{
 			padding-left:@space_size*2;
-			text-decoration:underline;
+			.link_mix(@link_color);
 		}
 	}
 	.current_page_item, .children .current_page_item, .current_page_ancestor .children .current_page_item, .current-cat,.current_item{
-		a,a:visited,a:hover,label{
+		a,a:visited,a:hover{
 			background:transparent;
 			color:@highlight_color;
 			text-decoration:none;
 		}
-		.children{
-			a,a:visited,a:hover,label{
-				color:@link_color;
-				text-decoration:underline;
-			}
+		.children a{
+			.link_mix(@link_color);
 		}
 	}
 }

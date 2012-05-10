@@ -19,6 +19,16 @@
 	}
 }
 
+.link_mix(@color){
+	color:@color;
+	&:visited{
+		color:@color;
+	}
+	&:hover{
+		color:darken(@color,20%);
+	}
+}
+
 .section(){
 	clear:both;
 	margin:0px;

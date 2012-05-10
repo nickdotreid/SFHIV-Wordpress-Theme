@@ -10659,6 +10659,85 @@ body {
 a {
   text-decoration: underline;
 }
+a {
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
+a:visited {
+  color: #918bb3;
+}
+a:hover {
+  color: #5c5683;
+}
 h1,
 h2,
 h3,
@@ -14102,34 +14181,113 @@ h4 a:hover {
 .menu label {
   display: block;
   padding: 3.5px 0px;
-  color: #918bb3;
-}
-.menu .current_page_ancestor,
-.menu .current_page_parent,
-.menu .current_page_ancestor .children {
-  font-size: 14px;
-}
-.menu .current_page_ancestor a,
-.menu .current_page_parent a,
-.menu .current_page_ancestor .children a,
-.menu .current_page_ancestor label,
-.menu .current_page_parent label,
-.menu .current_page_ancestor .children label {
-  color: #918bb3;
-  text-decoration: none;
 }
 .menu .children,
 .menu .current_page_parent .children {
   font-size: 14px;
 }
 .menu .children a,
-.menu .current_page_parent .children a,
-.menu .children label,
-.menu .current_page_parent .children label {
-  background-color: transparent;
-  color: #918bb3;
+.menu .current_page_parent .children a {
   padding-left: 14px;
-  text-decoration: underline;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
+}
+.menu .children a:visited,
+.menu .current_page_parent .children a:visited {
+  color: #918bb3;
+}
+.menu .children a:hover,
+.menu .current_page_parent .children a:hover {
+  color: #5c5683;
 }
 .menu .current_page_item a,
 .menu .children .current_page_item a,
@@ -14145,12 +14303,7 @@ h4 a:hover {
 .menu .children .current_page_item a:hover,
 .menu .current_page_ancestor .children .current_page_item a:hover,
 .menu .current-cat a:hover,
-.menu .current_item a:hover,
-.menu .current_page_item label,
-.menu .children .current_page_item label,
-.menu .current_page_ancestor .children .current_page_item label,
-.menu .current-cat label,
-.menu .current_item label {
+.menu .current_item a:hover {
   background: transparent;
   color: #f09938;
   text-decoration: none;
@@ -14159,24 +14312,172 @@ h4 a:hover {
 .menu .children .current_page_item .children a,
 .menu .current_page_ancestor .children .current_page_item .children a,
 .menu .current-cat .children a,
-.menu .current_item .children a,
+.menu .current_item .children a {
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+}
 .menu .current_page_item .children a:visited,
 .menu .children .current_page_item .children a:visited,
 .menu .current_page_ancestor .children .current_page_item .children a:visited,
 .menu .current-cat .children a:visited,
-.menu .current_item .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
 .menu .current_page_item .children a:hover,
 .menu .children .current_page_item .children a:hover,
 .menu .current_page_ancestor .children .current_page_item .children a:hover,
 .menu .current-cat .children a:hover,
-.menu .current_item .children a:hover,
-.menu .current_page_item .children label,
-.menu .children .current_page_item .children label,
-.menu .current_page_ancestor .children .current_page_item .children label,
-.menu .current-cat .children label,
-.menu .current_item .children label {
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
   color: #918bb3;
-  text-decoration: underline;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
+}
+.menu .current_page_item .children a:visited,
+.menu .children .current_page_item .children a:visited,
+.menu .current_page_ancestor .children .current_page_item .children a:visited,
+.menu .current-cat .children a:visited,
+.menu .current_item .children a:visited {
+  color: #918bb3;
+}
+.menu .current_page_item .children a:hover,
+.menu .children .current_page_item .children a:hover,
+.menu .current_page_ancestor .children .current_page_item .children a:hover,
+.menu .current-cat .children a:hover,
+.menu .current_item .children a:hover {
+  color: #5c5683;
 }
 .sidebar .menu {
   display: block;
