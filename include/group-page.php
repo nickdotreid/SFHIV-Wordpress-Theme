@@ -94,6 +94,7 @@ function sfhiv_group_page_list_group_events(){
 		"id" => "events",
 		"title" => "Events",
 		'show_empty' => false,
+		'show_filters' => false,
 	));
 }
 
@@ -122,6 +123,7 @@ function sfhiv_group_page_list_group_meetings(){
 		"id" => "meetings",
 		"title" => "Meetings",
 		'show_empty' => false,
+		'show_filters' => false,
 	));
 }
 

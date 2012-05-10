@@ -40,6 +40,7 @@ function sfhiv_group_has_events($ID=false,$args=array()){
 	$events = new WP_Query( array_merge(array(
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
+		'post_type' => 'sfhiv_event',
 	),$args));
 	if($events->have_posts()){
 		return true;
@@ -55,6 +56,7 @@ function sfhiv_group_get_events($id=false,$args=array()){
 		'connected_type' => 'group_events',
 		'connected_items' => get_the_ID(),
 		'nopaging' => true,
+		'post_type' => 'sfhiv_event',
 	),$args));
 	return $events;
 }
