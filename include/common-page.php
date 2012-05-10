@@ -38,6 +38,7 @@ function sfhiv_page_list_attachments(){
 		'post_parent' => get_the_ID(),
 		'nopaging' => true,
 		'orderby' => 'menu_order',
+		'order' => 'ASC',
 		'post_mime_type' => 'application'
 		) );
 	do_action('sfhiv_loop',$attachments,array(
