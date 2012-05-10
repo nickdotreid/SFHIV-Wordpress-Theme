@@ -10682,21 +10682,6 @@ h2 a:hover,
 h3 a:hover,
 h4 a:hover {
   color: #f09938;
-  text-decoration: none;
-}
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h1 a:visited:hover,
-h2 a:visited:hover,
-h3 a:visited:hover,
-h4 a:visited:hover,
-h1 a:hover:hover,
-h2 a:hover:hover,
-h3 a:hover:hover,
-h4 a:hover:hover {
-  text-decoration: underline;
 }
 .assistive-text,
 .screen-reader-text {
