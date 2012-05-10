@@ -5,4 +5,5 @@
 		include(locate_template('list-member.php'));
 	endforeach;
 	?>
+	<br class="clear" />
 </section>
