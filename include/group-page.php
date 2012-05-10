@@ -93,6 +93,7 @@ function sfhiv_group_page_list_group_events(){
 	do_action('sfhiv_loop',$events,array(
 		"id" => "events",
 		"title" => "Events",
+		'show_empty' => false,
 	));
 }
 
@@ -120,6 +121,7 @@ function sfhiv_group_page_list_group_meetings(){
 	do_action('sfhiv_loop',$events,array(
 		"id" => "meetings",
 		"title" => "Meetings",
+		'show_empty' => false,
 	));
 }
 

@@ -3,6 +3,7 @@
 add_action('sfhiv_loop_arguments','sfhiv_event_archive_loop_arguments',10,2);
 function sfhiv_event_archive_loop_arguments($args,$post_type){
 	if($post_type != 'sfhiv_event') return $args;
+	if(isset($args['show_empty'])) return;
 	$args['show_empty'] = true;
 	return $args;
 }
