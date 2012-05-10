@@ -14751,17 +14751,6 @@ form.filter fieldset {
   padding: 3.5px 0px;
   margin: 7px 0px;
 }
-.table_of_contents {
-  clear: both;
-  height: 35px;
-  border-bottom: 1px #bcbcbc solid;
-}
-.table_of_contents .menu-item {
-  font-size: 14px;
-  display: block;
-  float: left;
-  padding: 7px 7px 7px;
-}
 .clearfix {
   *zoom: 1;
 }
