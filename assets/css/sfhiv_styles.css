@@ -11572,7 +11572,7 @@ h4 a:hover {
   #section-top {
     width: 520px;
     text-align: right;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.2em;
   }
   #section-top .widget {
@@ -11798,7 +11798,7 @@ h4 a:hover {
 }
 @media all and (min-width: 1100px) {
   #access .menu .menu-item {
-    font-size: 24px;
+    font-size: 18px;
   }
   #access .menu .menu-item a,
   #access .menu .menu-item a:visited,
@@ -11814,6 +11814,7 @@ h4 a:hover {
   padding-top: 0px;
 }
 #content h1.entry-title {
+  font-family: 'Dosis', verdana, sans-serif;
   font-size: 28px;
   font-weight: 300;
   color: #FFF;
@@ -12022,7 +12023,7 @@ h4 a:hover {
 }
 .list .list-heading {
   padding: 7px 14px 7px;
-  font-size: 24px;
+  font-size: 18px;
   color: #2e3c62;
   border-top: #bcbcbc 3px solid;
 }
@@ -14701,7 +14702,7 @@ form.filter fieldset {
   font-family: arial, sans-serif;
 }
 .entry-content h1 {
-  font-size: 24px;
+  font-size: 28px;
 }
 .entry-content h2 {
   font-size: 18px;
