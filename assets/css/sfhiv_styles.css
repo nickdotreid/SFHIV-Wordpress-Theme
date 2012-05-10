@@ -10858,6 +10858,7 @@ h4 a:hover {
   display: inline;
 }
 .clear {
+  display: block;
   clear: both;
   width: 100%;
   line-height: 0px;
