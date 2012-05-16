@@ -1,5 +1,15 @@
 <?php
 
+add_filter('the_permalink','sfhiv_service_hour_change_permalink',1);
+function sfhiv_service_hour_change_permalink($link){
+	if(get_post_type() != 'sfhiv_service_hour') return $link;
+	$parent = sfhiv_service_hour_get_parent(get_post(get_the_ID()));
+	if($parent){
+		return get_permalink($parent->ID);
+	}
+	return $link;
+}
+
 add_action('short_navigation','sfhiv_service_hour_show_edit_link',1);
 function sfhiv_service_hour_show_edit_link(){
 	if(get_post_type() != 'sfhiv_service_hour') return;

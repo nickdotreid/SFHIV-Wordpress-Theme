@@ -80,7 +80,9 @@ function sfhiv_content_add_navigation(){
 add_action('short_navigation','sfhiv_navigation_view_link',1);
 function sfhiv_navigation_view_link(){
 	if(get_post_type() == 'sfhiv_faq') return;
-	echo '<a href="'.get_permalink().'">';
+	echo '<a href="';
+	the_permalink();
+	echo '">';
 	_e("View ");
 	the_title();
 	echo '</a>';
