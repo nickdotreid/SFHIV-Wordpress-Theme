@@ -40,7 +40,7 @@ function sfhiv_service_hour_archive_neighborhood_category_menu($query=false,$arg
 		'title_li' => false,
 		'all_taxonomy_name' => 'Any Neighborhood',
 		'extra_classes' => 'filters',
-		'base_link' => get_permalink(),
+		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
 
@@ -52,7 +52,7 @@ function sfhiv_service_hour_archive_day_of_week_category_menu($query=false,$args
 		'title_li' => false,
 		'all_taxonomy_name' => 'Any Day',
 		'extra_classes' => 'filters',
-		'base_link' => get_permalink(),
+		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
 
@@ -64,7 +64,7 @@ function sfhiv_service_hour_archive_time_of_day_category_menu($query=false,$args
 		'title_li' => false,
 		'all_taxonomy_name' => 'Any Time',
 		'extra_classes' => 'filters',
-		'base_link' => get_permalink(),
+		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
 
