@@ -1,7 +1,13 @@
+<?
+$show_bio = get_the_author_meta('sfhiv_show_bio',$user->ID);
+?>
 <article id="user-<?=$user->ID;?>" class="member <?if($show_phone || $show_email) echo "has_contact";?>">
 	<section class="profile">
 		<span class="avatar">
-		<?	if(userphoto_exists($user))	userphoto_thumbnail($user);	?>
+		<?	if(userphoto_exists($user)):
+				userphoto_thumbnail($user);
+			endif;
+		?>
 		</span>
 		<span class="info name"><?=get_the_author_meta('user_firstname',$user->ID);?> <?=get_the_author_meta('user_lastname',$user->ID);?> <span class="suffix"><?=get_the_author_meta('sfhiv_suffix',$user->ID);?></span></span>
 		<?	if(p2p_get_meta( $user->p2p_id, 'title', true )):	?>
@@ -23,11 +29,14 @@
 		<?	endif;	?>
 	</section>
 	<?	endif;	?>
-	<br class="clear" />
-	<?	if(is_user_logged_in() && 
-			(current_user_can( 'edit_users' ) || get_current_user_id()==$user->ID)):	?>
-	<nav class="protected">
-		<a href="/wp-admin/user-edit.php?user_id=<?=$user->ID;?>"><?_e("Edit Profile",'sfhiv_theme');?></a>
+	<nav class="nav-author">
+		<?	if($show_bio):	?>
+		<a href="<?=get_author_posts_url($user->ID);?>"><?_e("View Profile");?></a>
+		<?	endif;	?>
+		<?	if(is_user_logged_in() && 
+				(current_user_can( 'edit_users' ) || get_current_user_id()==$user->ID)):	?>
+			<a href="/wp-admin/user-edit.php?user_id=<?=$user->ID;?>"><?_e("Edit Profile",'sfhiv_theme');?></a>
+		<?	endif;	?>
 	</nav>
-	<?	endif;	?>
+	<br class="clear" />
 </article>
