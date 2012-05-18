@@ -89,7 +89,6 @@ function sfhiv_navigation_view_link(){
 }
 
 
-add_action('navigation','sfhiv_navigation_edit_link',1);
 add_action('short_navigation','sfhiv_navigation_edit_link',1);
 function sfhiv_navigation_edit_link(){
 	if(get_post_type() == 'sfhiv_service_hour') return;
