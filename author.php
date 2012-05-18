@@ -19,7 +19,7 @@ if(!$show_bio){
 					<h1 class="entry-title"><?=get_the_author_meta('user_firstname',$author);?> <?=get_the_author_meta('user_lastname',$author);?></h1>
 				</header>
 				<div class="entry-content">
-					<?=$user->description;?>
+					<?=apply_filters('the_content',$user->description);?>
 				</div>
 		</article><!-- #archive -->
 	</div><!-- #content -->
