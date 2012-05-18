@@ -10762,6 +10762,12 @@ h3 a:hover,
 h4 a:hover {
   color: #f09938;
 }
+#main h1,
+#main h2,
+#main h3,
+#main h4 {
+  font-family: arial, sans-serif;
+}
 .assistive-text,
 .screen-reader-text {
   display: block;
