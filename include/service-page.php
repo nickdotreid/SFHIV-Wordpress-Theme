@@ -97,7 +97,7 @@ function sfhiv_service_page_parent_groups(){
 
 add_action('get_footer','sfhiv_service_page_service_hours',20);
 function sfhiv_service_page_service_hours(){
-	if (!is_singular('sfhiv_service')) return;
+	if( get_post_type() != 'sfhiv_service' ) return;
 	$service_hours = new WP_Query( array(
 		'post_type' => 'sfhiv_service_hour',
 		'connected_type' => 'service_time',
@@ -105,7 +105,7 @@ function sfhiv_service_page_service_hours(){
 	));
 	do_action('sfhiv_loop',$service_hours,array(
 		"id" => "service_times",
-		"title" => "Time & Location",
+		"title" => "When and Where",
 		"list_element" => "list-item",
 	));
 }
