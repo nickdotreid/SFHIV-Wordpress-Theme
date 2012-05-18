@@ -24,6 +24,7 @@ if(!$show_bio){
 		</article><!-- #archive -->
 	</div><!-- #content -->
 </div><!--	#primary -->
+<?	if(get_the_author_meta('sfhiv_show_contact_info',$user->ID)):	?>
 <section class="sidebar contact">
 	<?	if(get_the_author_meta('sfhiv_telephone',$user->ID)):	?>
 	<span class="info phone"><span class="label">Phone:</span> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
@@ -32,4 +33,5 @@ if(!$show_bio){
 	<span class="info email"><span class="label">Email:</span> <a href="mailto:<?=get_the_author_meta('email',$user->ID);?>"><?=get_the_author_meta('email',$user->ID);?></a></span>
 	<?	endif;	?>
 </section>
+<?	endif;	?>
 <?php get_footer(); ?>
