@@ -245,14 +245,14 @@
 }
 
 @media all and (min-width: @size_tablet) {
-	#content,.list{
+	#content,.list,.main-column{
 		width:@block_width*2;
 	}
 	#content{
 		h1.entry-title{
 			width:@block_width;
 		}
-		.list{
+		.list,.main-column{
 			width:auto;
 			float:none;
 			clear:both;
@@ -274,7 +274,7 @@
 		background-repeat:repeat-y;
 		background-position:@block_width - @space_size 0px;
 	}
-	#content,.list,.filters{
+	#content,.list,.filters,.main-column{
 		width:@block_width*2;
 		float:right;
 		clear:none;
@@ -315,9 +315,9 @@
 }
 
 @media all and (min-width: @size_large) {
-	#content,.list,.filters{
+	#content,.list,.filters,.main-column{
 		width:@block_width*3;
-		.list,.filters{
+		.list,.filters,.main-column{
 			width:auto;
 		}
 	}

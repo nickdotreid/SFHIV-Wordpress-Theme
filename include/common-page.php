@@ -95,4 +95,19 @@ function sfhiv_navigation_edit_link(){
 	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', get_the_ID() );
 }
 
+if(function_exists('cf7mb_remove_display_action')){
+	cf7mb_remove_display_action();
+}
+
+add_action('get_footer','sfhiv_footer_add_contact_form_7',20);
+function sfhiv_footer_add_contact_form_7(){
+	if(!is_singular()) return;
+	$form = cf7mb_get_post_contact_form();
+	if(!$form) return;
+	echo '<div class="main-column contact-form">';
+	echo $form;
+	echo '</div>';
+}
+
+
 ?>
