@@ -23,6 +23,7 @@ class SFHIV_Post_Type_Walker_Menu extends Walker_Page{
 		} elseif ( $page->ID == get_option('page_for_posts') ) {
 			$css_class[] = 'current_parent';
 		}
+		$css_class[] = $page->post_status;
 		if($page->ID == get_the_ID()) $css_class[] = 'current_item';
 		if(isset($selected_items) && is_array($selected_items) && in_array($page->ID,$selected_items)) $css_class[] = 'current_item';
 

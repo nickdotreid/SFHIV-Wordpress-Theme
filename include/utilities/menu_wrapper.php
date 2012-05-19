@@ -11,11 +11,11 @@ function sfhiv_draw_page_navigation($post_ids,$args=array()){
 	foreach($post_ids as $ID){
 		array_push($ids_to_show,$ID);
 		if(!isset($show_children) || $show_children){
-			$children = get_pages(array(
+			$children = get_pages(apply_filters('sfhiv_filter_args',array(
 				"parent"=>$ID,
 				"hierarchical" => 0,
 				"post_type" => get_post_type($ID),
-				));
+				)));
 			foreach($children as $child){
 				array_push($ids_to_show,$child->ID);
 			}
@@ -29,11 +29,11 @@ function sfhiv_draw_page_navigation($post_ids,$args=array()){
 		if(!isset($show_siblings) || $show_siblings){
 			if(count($parents)>0){
 				$parent_ID = $parents[0];
-				$siblings = get_pages(array(
+				$siblings = get_pages(apply_filters('sfhiv_filter_args',array(
 					"parent"=>$parent_ID,
 					"hierarchical" => 0,
 					"post_type" => get_post_type($ID),
-				));
+				)));
 				foreach($siblings as $sibling){
 					array_push($ids_to_show,$sibling->ID);
 				}
