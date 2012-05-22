@@ -14499,6 +14499,9 @@ h4 a:hover {
 .menu .current_item .children a:hover {
   color: #5c5683;
 }
+.menu .draft {
+  background-color: #EEE;
+}
 .sidebar .menu {
   display: block;
   padding-bottom: 21px;
