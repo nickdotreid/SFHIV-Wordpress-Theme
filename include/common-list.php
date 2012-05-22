@@ -13,7 +13,7 @@ function sfhiv_list_list_attachments(){
 		'post_mime_type' => 'application'
 		) );
 	if($attachments->post_count < 1) return;
-	$original_post = get_post();
+	$original_post = $post;
 	echo '<ul class="attachments">';
 	while($attachments->have_posts()){
 		$attachments->the_post();
