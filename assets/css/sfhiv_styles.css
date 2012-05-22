@@ -11962,6 +11962,7 @@ h4 a:hover {
   display: block;
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 .list ul {
   margin: 0px;
@@ -12649,6 +12650,7 @@ h4 a:hover {
   clear: both;
   margin: 0px;
   padding: 0px;
+  position: relative;
   position: relative;
   border-top: 1px #bcbcbc solid;
   display: block;
