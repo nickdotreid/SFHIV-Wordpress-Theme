@@ -2,22 +2,22 @@
 
 add_action('sfhiv_pre_loop','sfhiv_service_archive_add_service_category_menu',21,2);
 function sfhiv_service_archive_add_service_category_menu($query=false,$args=array()){
-	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service') return;
+	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => false,
-		'extra_classes' => 'filters',
+		'extra_classes' => 'sidebar filter',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
 
 add_action('sfhiv_pre_loop','sfhiv_service_archive_add_population_category_menu',21,2);
 function sfhiv_service_archive_add_population_category_menu($query=false,$args=array()){
-	if(!$query || $query->query_vars['post_type'] != 'sfhiv_service') return;
+	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
 	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
 		'title_li' => false,
-		'all_taxonomy_name' => 'Any Population',
-		'extra_classes' => 'filters',
+		'all_taxonomy_name' => false,
+		'extra_classes' => 'sidebar filter',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
