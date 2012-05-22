@@ -15739,12 +15739,6 @@ form.filter fieldset {
 .list .member .title {
   font-weight: bold;
 }
-.list .member .profile .avatar {
-  display: block;
-  margin: 0px;
-  margin-right: 3.5px;
-  margin-bottom: 3.5px;
-}
 .list .member .profile .info {
   margin-bottom: 0px;
 }
@@ -15759,20 +15753,6 @@ form.filter fieldset {
     float: left;
     clear: none;
     width: 246px;
-  }
-  .list .member .info {
-    float: right;
-    width: 182.5px;
-  }
-  .list .member .profile .avatar {
-    display: block;
-    float: left;
-    margin: 0px;
-    width: 60px;
-    height: 80px;
-    overflow: hidden;
-    margin-right: 3.5px;
-    margin-bottom: 3.5px;
   }
   .contact.list .member {
     float: none;
