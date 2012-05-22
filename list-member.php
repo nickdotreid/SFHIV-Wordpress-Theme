@@ -13,12 +13,12 @@ $show_bio = get_the_author_meta('sfhiv_show_bio',$user->ID);
 		<span class="info department"><?=get_the_author_meta('sfhiv_department',$user->ID);?></span>
 		<?	endif;	?>
 	</section>
-	<?	if($show_phone || $show_email):	?>
+	<?	if(get_the_author_meta( 'sfhiv_show_contact_info', $user->ID )):	?>
 	<section class="contact">
-		<?	if($show_phone && get_the_author_meta('sfhiv_telephone',$user->ID)):	?>
+		<?	if(get_the_author_meta('sfhiv_telephone',$user->ID)):	?>
 		<span class="info phone"><span class="label">Phone:</span> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
 		<?	endif;	?>
-		<?	if($show_email && get_the_author_meta('email',$user->ID)):	?>
+		<?	if(get_the_author_meta('email',$user->ID)):	?>
 		<span class="info email"><span class="label">Email:</span> <a href="mailto:<?=get_the_author_meta('email',$user->ID);?>"><?=get_the_author_meta('email',$user->ID);?></a></span>
 		<?	endif;	?>
 	</section>
