@@ -15730,6 +15730,9 @@ form.filter fieldset {
   font-weight: bold;
   font-size: 18px;
 }
+.list .member .name a {
+  color: #f09938;
+}
 .list .member .suffix {
   font-size: 14px;
   color: #bcbcbc;

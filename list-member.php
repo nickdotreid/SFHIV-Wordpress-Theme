@@ -1,9 +1,13 @@
 <?
-$show_bio = get_the_author_meta('sfhiv_show_bio',$user->ID);
+$profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 ?>
 <article id="user-<?=$user->ID;?>" class="member <?if($show_phone || $show_email) echo "has_contact";?>">
 	<section class="profile">
-		<span class="info name"><?=get_the_author_meta('user_firstname',$user->ID);?> <?=get_the_author_meta('user_lastname',$user->ID);?> <span class="suffix"><?=get_the_author_meta('sfhiv_suffix',$user->ID);?></span></span>
+		<span class="info name">
+			<? if($profile_url) echo '<a href="'.$profile_url.'">';	?>
+			<?=get_the_author_meta('user_firstname',$user->ID);?> <?=get_the_author_meta('user_lastname',$user->ID);?> <span class="suffix"><?=get_the_author_meta('sfhiv_suffix',$user->ID);?></span>
+			<? if($profile_url) echo '</a>';	?>
+		</span>
 		<?	if(p2p_get_meta( $user->p2p_id, 'title', true )):	?>
 		<span class="info title"><?=p2p_get_meta( $user->p2p_id, 'title', true );?></span>
 		<?	elseif(get_the_author_meta('sfhiv_title',$user->ID)): ?>
@@ -24,8 +28,8 @@ $show_bio = get_the_author_meta('sfhiv_show_bio',$user->ID);
 	</section>
 	<?	endif;	?>
 	<nav class="nav-author">
-		<?	if($show_bio):	?>
-		<a href="<?=get_author_posts_url($user->ID);?>"><?_e("View Profile");?></a>
+		<?	if($profile_url):	?>
+		<a href="<?=$profile_url;?>"><?_e("View Profile");?></a>
 		<?	endif;	?>
 		<?	if(is_user_logged_in() && 
 				(current_user_can( 'edit_users' ) || get_current_user_id()==$user->ID)):	?>
