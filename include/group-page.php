@@ -71,54 +71,15 @@ add_action('navigation','sfhiv_group_navigation_event_link',1);
 add_action('short_navigation','sfhiv_group_navigation_event_link',1);
 function sfhiv_group_navigation_event_link(){
 	if (get_post_type() != 'sfhiv_group') return;
-	$events = sfhiv_group_get_events(false,array("tax_query" => array(array(
-		'taxonomy' => 'sfhiv_event_category',
-		'field' => 'slug',
-		'terms' => 'meeting',
-		'operator' => 'NOT IN',
-	))));
+	$events = sfhiv_group_get_events();
 	if($events->post_count < 1) return;
-	echo '<a href="'.get_permalink().'#events">Events</a>';
+	echo '<a href="'.get_permalink().'#meetings">Meetings</a>';
 }
 
 add_action('get_footer','sfhiv_group_page_list_group_events',21);
 function sfhiv_group_page_list_group_events(){
 	if (!is_singular('sfhiv_group')) return;
-	$events = sfhiv_group_get_events(false,array("tax_query" => array(array(
-		'taxonomy' => 'sfhiv_event_category',
-		'field' => 'slug',
-		'terms' => 'meeting',
-		'operator' => 'NOT IN',
-	))));
-	do_action('sfhiv_loop',$events,array(
-		"id" => "events",
-		"title" => "Events",
-		'show_empty' => false,
-		'show_filters' => false,
-	));
-}
-
-add_action('navigation','sfhiv_group_navigation_meeting_link',2);
-add_action('short_navigation','sfhiv_group_navigation_meeting_link',2);
-function sfhiv_group_navigation_meeting_link(){
-	if (get_post_type() != 'sfhiv_group') return;
-	$events = sfhiv_group_get_events(false,array("tax_query" => array(array(
-		'taxonomy' => 'sfhiv_event_category',
-		'field' => 'slug',
-		'terms' => 'meeting',
-	))));
-	if($events->post_count < 1) return;
-	echo '<a href="'.get_permalink().'#meetings">Meetings</a>';
-}
-
-add_action('get_footer','sfhiv_group_page_list_group_meetings',22);
-function sfhiv_group_page_list_group_meetings(){
-	if (!is_singular('sfhiv_group')) return;
-	$events = sfhiv_group_get_events(false,array("tax_query" => array(array(
-		'taxonomy' => 'sfhiv_event_category',
-		'field' => 'slug',
-		'terms' => 'meeting',
-	))));
+	$events = sfhiv_group_get_events();
 	do_action('sfhiv_loop',$events,array(
 		"id" => "meetings",
 		"title" => "Meetings",
