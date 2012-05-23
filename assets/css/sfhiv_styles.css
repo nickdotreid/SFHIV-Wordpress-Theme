@@ -15206,11 +15206,12 @@ form.filter fieldset {
   position: relative;
   display: block;
   clear: both;
+  margin: 7px 0px;
   line-height: 1.1em;
 }
 .address i {
   position: absolute;
-  top: 3.5px;
+  top: 0px;
   left: 3.5px;
 }
 .address .name,

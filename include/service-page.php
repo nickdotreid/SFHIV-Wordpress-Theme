@@ -50,9 +50,6 @@ function sfhiv_service_hour_display_time(){
 	echo '</div>';
 }
 
-add_action('short_before_content','sfhiv_display_location',10);
-add_action('after_list-item','sfhiv_display_location',10);
-
 add_action('get_sidebar','sfhiv_service_page_parent_groups',20);
 function sfhiv_service_page_parent_groups(){
 	if (!is_singular('sfhiv_service')) return;
