@@ -15745,6 +15745,48 @@ form.filter fieldset {
 .list .member .contact {
   clear: both;
 }
+.list .member .phone {
+  position: relative;
+  padding-left: 28px;
+  position: relative;
+  padding-left: 28px;
+}
+.list .member .phone .label {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 28px;
+  height: 18px;
+  overflow: hidden;
+  text-indent: 3000px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.list .member .phone .label {
+  background-image: url('../i/sfhiv_icon_set.png');
+  background-position: -35px -42px;
+}
+.list .member .email {
+  position: relative;
+  padding-left: 28px;
+}
+.list .member .email .label {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 28px;
+  height: 18px;
+  overflow: hidden;
+  text-indent: 3000px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.list .member .email .label {
+  background-image: url('../i/sfhiv_icon_set.png');
+  background-position: -6px -42px;
+}
 .contact.list .member {
   margin-right: 0px;
 }

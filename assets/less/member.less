@@ -1,5 +1,22 @@
 @import "variables";
 
+.sfhiv_icon_mix(){
+	position:relative;
+	padding-left:28px;
+	.label{
+		display:block;
+		position:absolute;
+		top:2px;
+		left:0px;
+		width:28px;
+		height:18px;
+		overflow:hidden;
+		text-indent:3000px;
+		background-color:transparent;
+		background-repeat:no-repeat;
+	}
+}
+
 .list{
 	.member{
 		position:relative;
@@ -36,6 +53,22 @@
 		}
 		.contact{
 			clear:both;
+		}
+		.phone{
+			position:relative;
+			padding-left:@space_size*4;
+			.sfhiv_icon_mix();
+			.label{
+				background-image:url('../i/sfhiv_icon_set.png');
+				background-position:-35px -42px;
+			}
+		}
+		.email{
+			.sfhiv_icon_mix();
+			.label{
+				background-image:url('../i/sfhiv_icon_set.png');
+				background-position:-6px -42px;
+			}
 		}
 	}
 }
