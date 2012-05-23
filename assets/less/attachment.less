@@ -3,11 +3,19 @@
 
 .attachment{
 	display:block;
-	padding-left:@space_size*5;
-	background-color:transparent;
-	background-repeat:no-repeat;
-	background-position:top left;
-	background-image:url('../i/document_icons/default.png');
+	padding-left:28px;
+	i{
+		display:block;
+		position:absolute;
+		top:5px;
+		left:0px;
+		width:28px;
+		height:18px;
+		background-color:transparent;
+		background-repeat:no-repeat;
+		background-position:-60px -42px;
+		background-image:url('../i/sfhiv_icon_set.png');
+	}
 	.description{
 		display:block;
 		clear:both;
@@ -16,7 +24,7 @@
 		font-style:italic;
 	}
 	&.mime-applicationmsword{
-		background-image:url('../i/document_icons/document.png');
+		
 	}
 	.entry-navigation{
 		border:0;
@@ -25,7 +33,7 @@
 
 .list.attachments{
 	.attachment{
-		padding-left:@space_size*5;
+		padding-left:28px;
 	}
 }
 @media all and (min-width: @size_tablet) {
@@ -33,10 +41,6 @@
 		.attachment{
 			padding-left:@space_size*8;
 			background-position:0px @space_size;
-			background-image:url('../i/document_icons/default_large.png');
-			&.mime-applicationmsword{
-				background-image:url('../i/document_icons/document_large.png');
-			}
 		}
 	}
 }
@@ -46,7 +50,6 @@
 		.menu_mix();
 		display:block;
 		li{
-			padding-left:@space_size*5;
 			margin-bottom:@space_size;
 			border-top:0px;
 		}
