@@ -3,18 +3,21 @@
 
 .attachment{
 	display:block;
-	padding-left:28px;
 	i{
 		display:block;
-		position:absolute;
-		top:5px;
-		left:0px;
-		width:28px;
+		float:left;
+		width:20px;
 		height:18px;
+		margin-right:@space_size;
 		background-color:transparent;
 		background-repeat:no-repeat;
-		background-position:-60px -42px;
+		background-position:-60px 0px;
 		background-image:url('../i/sfhiv_icon_set.png');
+	}
+	&:hover,&.hover{
+		i{
+			background-position:-60px -40px;
+		}
 	}
 	.description{
 		display:block;

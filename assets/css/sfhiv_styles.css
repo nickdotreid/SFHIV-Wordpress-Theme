@@ -15316,19 +15316,21 @@ form.filter fieldset {
 }
 .attachment {
   display: block;
-  padding-left: 28px;
 }
 .attachment i {
   display: block;
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  width: 28px;
+  float: left;
+  width: 20px;
   height: 18px;
+  margin-right: 7px;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: -60px -42px;
+  background-position: -60px 0px;
   background-image: url('../i/sfhiv_icon_set.png');
+}
+.attachment:hover i,
+.attachment.hover i {
+  background-position: -60px -40px;
 }
 .attachment .description {
   display: block;
