@@ -1,4 +1,19 @@
 $(document).ready(function(){
+	
+	$(".filters.collapsable").bind("open",function(){
+		var menu = $(this);
+		$(this).addClass("collapse-open");
+		$(".item,.cat-item",menu).slideDown();
+	}).bind("close",function(){
+		var menu = $(this);
+		$(this).removeClass("collapse-open");
+		$(".item,.cat-item:not(.current-cat)",menu).slideUp();
+	}).mouseenter(function(){
+		$(".collapsable",$(this).parents(".list:first")).trigger("open");
+	}).mouseleave(function(){
+		$(".collapsable",$(this).parents(".list:first")).trigger("close");
+	}).trigger("close");
+	
 	$("#members,.three-column,.two-column").bind("redraw",function(){
 		var item_selector = ".preview, .widget, .member";
 

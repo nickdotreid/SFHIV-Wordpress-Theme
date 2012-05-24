@@ -6,7 +6,7 @@ function sfhiv_service_archive_add_service_category_menu($query=false,$args=arra
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => false,
-		'extra_classes' => 'filters',
+		'extra_classes' => 'filters collapsable',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
@@ -17,7 +17,7 @@ function sfhiv_service_archive_add_population_category_menu($query=false,$args=a
 	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => "All Populations",
-		'extra_classes' => 'filters',
+		'extra_classes' => 'filters collapsable',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
@@ -41,7 +41,7 @@ function sfhiv_service_hour_archive_day_of_week_category_menu($query=false,$args
 	sfhiv_draw_taxonomy_query_menu('sfhiv_day_of_week_taxonomy',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => 'Any Day',
-		'extra_classes' => 'filters',
+		'extra_classes' => 'filters collapsable',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 }
