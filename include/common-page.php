@@ -57,6 +57,8 @@ function sfhiv_page_list_related(){
 		"title" => sfhiv_get_related_title(),
 		"classes" => array("list","related"),
 		"list_element" => "short",
+		'show_empty' => false,
+		'show_filters' => false,
 	));
 }
 add_action('navigation','sfhiv_navigation_related_link',1);

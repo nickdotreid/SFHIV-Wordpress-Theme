@@ -8,7 +8,6 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 	if(!$query){
 		$query = $wp_query;
 	}
-	if($query->max_num_pages<2) return;
 	$current_page = 1;
 	if(isset($query->query_vars['paged'])){
 		$current_page = intval($query->query_vars['paged']);
@@ -28,7 +27,8 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 	if( !empty($query->query_vars['s']) )
 		$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
 	echo '<nav class="filters pagnate">';
-	echo paginate_links( $args );
+	_e("Showing ".$query->post_count." of ".$query->found_posts.' results');
+	if($query->max_num_pages>1) paginate_links( $args );
 	echo '</nav>';
 }
 
