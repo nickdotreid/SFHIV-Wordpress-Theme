@@ -27,16 +27,20 @@ $(document).ready(function(){
 		$(this).height(member.outerHeight()+member.position().top);
 	});
 	
-	$("#access").bind("redraw",function(){
+	$(".menu-justified").bind("redraw",function(){
 		var menu = $(this);
 		var free_space = menu.width();
 		var menu_items = $(".menu-item:not(.sub-menu .menu-item)",menu);
+		if(!menu_items.css("float") || menu_items.css("float") == "" || menu_items.css("float") == "none"){
+			menu_items.css("margin-right","0px");
+			return;
+		}
 		menu_items.each(function(){
 			free_space = free_space - $(this).width();
 		});
-		var num_items = menu_items.length-1;
+		var num_items = menu_items.length;
 		if(num_items<1){
-			num_items = 1;
+			return;
 		}
 		free_space = free_space/num_items;
 		menu_items.css("margin-right",free_space+'px');
@@ -46,7 +50,7 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		$(".three-column,.two-column,#members").trigger("redraw");
 		$(".list-item").trigger("redraw");
-		$("#access").trigger("redraw");
+		$(".menu-justified").trigger("redraw");
 	}).resize();
 	setTimeout('$(window).resize()',500);
 });
