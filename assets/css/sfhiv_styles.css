@@ -15647,16 +15647,15 @@ h4 a:hover {
   background-image: url('../i/sf_seal_bw_200.jpg');
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 200px;
-  padding: 0px;
+  padding-top: 214px;
   min-height: 200px;
 }
 @media all and (min-width: 800px) {
   .sfseal,
   .footer .sfseal {
     background-position: 7px 7px;
-    padding-top: 0px;
-    padding-left: 200px;
+    padding-top: 14px;
+    padding-left: 260px;
   }
 }
 .clearfix {
@@ -16792,10 +16791,45 @@ h4 a:hover {
   border-top: #bcbcbc 1px solid;
   padding-top: 7px;
 }
+.contact-form .error,
+.contact-form .wpcf7-not-valid-tip {
+  display: block;
+  width: 232px;
+  position: static;
+}
 .contact-form .column {
   width: 260px;
   display: block;
   float: left;
+}
+.contact-form .column input,
+.contact-form .column textarea,
+.contact-form .column select {
+  width: 232px;
+  clear: both;
+}
+.contact-form .column-wide {
+  width: 520px;
+}
+.contact-form .column-wide input,
+.contact-form .column-wide textarea,
+.contact-form .column-wide select {
+  width: 492px;
+  clear: both;
+}
+.contact-form .form-row {
+  display: block;
+  clear: both;
+  width: auto;
+}
+.contact-form .submit-button,
+.contact-form .wpcf7-submit {
+  width: 260px;
+  border-color: #bcbcbc;
+  background-color: #f09938;
+  color: #FFF;
+  display: block;
+  float: right;
 }
 .clearfix {
   *zoom: 1;

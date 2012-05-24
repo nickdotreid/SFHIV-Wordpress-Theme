@@ -542,14 +542,13 @@
 	background-image:url('../i/sf_seal_bw_200.jpg');
 	background-repeat:no-repeat;
 	background-position:top center;
-	padding-top:200px;
-	padding:0px;
+	padding-top:200px + @space_size*2;
 	min-height:200px;
 }
 @media all and (min-width: @size_medium) {
 	.sfseal,.footer .sfseal{
 		background-position:@space_size @space_size;
-		padding-top:0px;
-		padding-left:200px;
+		padding-top:@space_size*2;
+		padding-left:@block_width;
 	}
 }
