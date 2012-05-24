@@ -15759,7 +15759,8 @@ form.filter fieldset {
   position: relative;
   padding-left: 28px;
 }
-.list .member .phone .label {
+.list .member .phone .label,
+.list .member .phone i {
   display: block;
   position: absolute;
   top: 2px;
@@ -15773,13 +15774,14 @@ form.filter fieldset {
 }
 .list .member .phone .label {
   background-image: url('../i/sfhiv_icon_set.png');
-  background-position: -35px -42px;
+  background-position: -35px 0px;
 }
 .list .member .email {
   position: relative;
   padding-left: 28px;
 }
-.list .member .email .label {
+.list .member .email .label,
+.list .member .email i {
   display: block;
   position: absolute;
   top: 2px;
@@ -15791,9 +15793,16 @@ form.filter fieldset {
   background-color: transparent;
   background-repeat: no-repeat;
 }
-.list .member .email .label {
+.list .member .email .label,
+.list .member .email i {
   background-image: url('../i/sfhiv_icon_set.png');
-  background-position: -6px -42px;
+  background-position: -6px 0px;
+}
+.list .member .email:hover .label,
+.list .member .email .hover .label,
+.list .member .email:hover i,
+.list .member .email .hover i {
+  background-position: -6px -40px;
 }
 .contact.list .member {
   margin-right: 0px;

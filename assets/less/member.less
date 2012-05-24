@@ -3,7 +3,7 @@
 .sfhiv_icon_mix(){
 	position:relative;
 	padding-left:28px;
-	.label{
+	.label,i{
 		display:block;
 		position:absolute;
 		top:2px;
@@ -63,14 +63,19 @@
 			.sfhiv_icon_mix();
 			.label{
 				background-image:url('../i/sfhiv_icon_set.png');
-				background-position:-35px -42px;
+				background-position:-35px 0px;
 			}
 		}
 		.email{
 			.sfhiv_icon_mix();
-			.label{
+			.label,i{
 				background-image:url('../i/sfhiv_icon_set.png');
-				background-position:-6px -42px;
+				background-position:-6px 0px;
+			}
+			&:hover,.hover{
+				.label,i{
+					background-position:-6px -40px;
+				}
 			}
 		}
 	}

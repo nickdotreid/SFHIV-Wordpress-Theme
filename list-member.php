@@ -20,10 +20,10 @@ $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 	<?	if(get_the_author_meta( 'sfhiv_show_contact_info', $user->ID )):	?>
 	<section class="contact">
 		<?	if(get_the_author_meta('sfhiv_telephone',$user->ID)):	?>
-		<span class="info phone"><span class="label">Phone:</span> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
+		<span class="info phone"><i></i> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
 		<?	endif;	?>
 		<?	if(get_the_author_meta('email',$user->ID)):	?>
-		<span class="info email"><span class="label">Email:</span> <a href="mailto:<?=get_the_author_meta('email',$user->ID);?>"><?=get_the_author_meta('email',$user->ID);?></a></span>
+		<a href="mailto:<?=get_the_author_meta('email',$user->ID);?>" class="info email"><i></i> <?=get_the_author_meta('email',$user->ID);?></span>
 		<?	endif;	?>
 	</section>
 	<?	endif;	?>
