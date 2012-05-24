@@ -413,11 +413,8 @@
 				.children{
 					padding-left:1em;
 				}
-				.menu-item{
+				.menu-item,li{
 					clear:both;
-					.date{
-						.date_mix();
-					}
 				}
 			}
 		}
@@ -426,8 +423,8 @@
 			clear:both;
 			width:auto;
 			text-align:right;
-			padding:@space_size @space_size*2;
-			margin-bottom:@space_size;
+			padding:@space_size*2;
+			margin-bottom:0px @space_size*2 @space_size;
 		}
 	}
 }
@@ -452,7 +449,7 @@
 	}
 	.three-column,.footer.three-column{
 		background-image:url('../i/splash-back-medium.gif');
-		background-position:0px 0px;
+		background-position:-1px 0px;
 		article,.widget{
 			width:@block_width*3/3;
 			float:left;
