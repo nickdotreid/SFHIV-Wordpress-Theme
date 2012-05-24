@@ -1,5 +1,6 @@
 <?php
 
+add_action('sfhiv_pre_loop','sfhiv_archive_show_pages',30,2);
 add_action('sfhiv_post_loop','sfhiv_archive_show_pages',10,2);
 function sfhiv_archive_show_pages($query=false,$args=array()){
 	global $wp_rewrite, $wp_query;
@@ -26,9 +27,9 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 
 	if( !empty($query->query_vars['s']) )
 		$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-	echo '<section class="filters pagnate">';
+	echo '<nav class="filters pagnate">';
 	echo paginate_links( $args );
-	echo '</section>';
+	echo '</nav>';
 }
 
 add_action( 'pre_get_posts', 'sfhiv_archive_page_query' );
