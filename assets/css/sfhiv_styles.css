@@ -16926,13 +16926,26 @@ h4 a:hover {
   float: left;
   width: 130px;
 }
-.list .pagnate {
+.list .filters li {
+  display: block;
+  float: none;
+}
+.list .info-query {
   background-color: #e2e2e2;
   clear: both;
   display: block;
   width: inherit;
-  text-align: right;
-  padding: 3.5px 7px;
+  padding: 3.5px 0px;
+}
+.list .info-query .results {
+  display: block;
+  float: left;
+  margin: 0px 7px;
+}
+.list .info-query nav {
+  margin: 0px 7px;
+  float: right;
+  width: auto;
 }
 .clearfix {
   *zoom: 1;

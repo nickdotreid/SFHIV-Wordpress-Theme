@@ -5,13 +5,26 @@
 	display:block;
 	float:left;
 	width:@block_width/2;
+	li{
+		display:block;
+		float:none;
+	}
 }
 
-.list .pagnate{
+.list .info-query{
 	background-color:lighten(@secondary_color,15);
 	clear:both;
 	display:block;
 	width:inherit;
-	text-align:right;
-	padding:@space_size/2 @space_size;
+	padding:@space_size/2 0px;
+	.results{
+		display:block;
+		float:left;
+		margin:0px @space_size;
+	}
+	nav{
+		margin:0px @space_size;
+		float:right;
+		width:auto;
+	}
 }
