@@ -6,7 +6,7 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	echo '<section class="filters collapsable">';
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
-		'all_taxonomy_name' => false,
+		'show_all_link' => false,
 		'extra_classes' => 'filter',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
