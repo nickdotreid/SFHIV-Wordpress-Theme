@@ -55,7 +55,10 @@ function sfhiv_add_mini_archive_menu(){
 				}
 			}
 		}
-		if(!$output_archive):
+		if(!$output_archive && !in_array($archive_type,array(
+			'sfhiv_service',
+			'sfhiv_service_hour',
+		))):
 			$query = mini_archive_get_query(get_the_ID(),array(
 				'posts_per_page' => 3,
 			));
