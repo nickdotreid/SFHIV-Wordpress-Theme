@@ -25,25 +25,20 @@ function sfhiv_add_mini_archive_menu(){
 	if($archive_type):
 		$output_archive = false;
 		$query = mini_archive_get_query(get_the_ID());
-		if(in_array($archive_type,array(
+		if(!in_array($archive_type,array(
 			'sfhiv_event',
 		))){
-			$groups = sfhiv_get_related_in($query,'group_events');
-			if(count($groups) > 0){
+			$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
+			if(count($years)>1){
 				$output_archive = true;
-				sfhiv_draw_menu($groups);
+				sfhiv_draw_taxonomy_menu(array(
+					'taxonomy' => 'sfhiv_year',
+					'title_li' => false,
+					'include' => implode(',',$years),
+					'show_all_link' => false,
+					'base_link' => get_permalink(get_the_ID()),
+				));
 			}
-		}
-		$years = sfhiv_get_taxonomy_in($query,'sfhiv_year','ids');
-		if(count($years)>1){
-			$output_archive = true;
-			sfhiv_draw_taxonomy_menu(array(
-				'taxonomy' => 'sfhiv_year',
-				'title_li' => false,
-				'include' => implode(',',$years),
-				'show_all_link' => false,
-				'base_link' => get_permalink(get_the_ID()),
-			));
 		}
 		$archive_filters = mini_archive_get_filters();
 		foreach($archive_filters as $filter){
