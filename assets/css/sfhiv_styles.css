@@ -15757,9 +15757,7 @@ form.filter fieldset {
 }
 .list .member .phone {
   position: relative;
-  padding-left: 28px;
-  position: relative;
-  padding-left: 28px;
+  padding-left: 24px;
 }
 .list .member .phone .label,
 .list .member .phone i {
@@ -15774,13 +15772,14 @@ form.filter fieldset {
   background-color: transparent;
   background-repeat: no-repeat;
 }
-.list .member .phone .label {
+.list .member .phone .label,
+.list .member .phone i {
   background-image: url('../i/sfhiv_icon_set.png');
   background-position: -35px 0px;
 }
 .list .member .email {
   position: relative;
-  padding-left: 28px;
+  padding-left: 24px;
 }
 .list .member .email .label,
 .list .member .email i {
