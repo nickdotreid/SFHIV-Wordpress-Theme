@@ -23,7 +23,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		$link = "";
 		if(!empty($base_link) && $base_link) $href = sfhiv_make_menu_walker_category_link($category,$base_link);
 		else $href = sfhiv_make_menu_walker_category_link($category);
-	//	console($href);
+		$href = remove_query_arg( "page", $href );
 		$link .= '<a href="';
 		$link .= $href.'" ';
 		if ( $use_desc_for_title == 0 || empty($category->description) )
