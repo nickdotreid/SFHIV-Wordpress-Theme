@@ -16923,12 +16923,32 @@ h4 a:hover {
 }
 .list .filters {
   display: block;
+  float: none;
+  width: auto;
+  border-bottom: 1px #bcbcbc solid;
+}
+.list .filters .filter {
   float: left;
   width: 130px;
+  padding: 0px;
 }
 .list .filters li {
   display: block;
   float: none;
+}
+.list .filters.collapsable i {
+  display: block;
+  margin: 3.5px auto;
+  clear: both;
+  width: 12px;
+  height: 10px;
+  overflow: hidden;
+  background: transparent no-repeat;
+  background-image: url('../i/sfhiv_icon_set.png');
+  background-position: -187px 0px;
+}
+.list .filters.collapsable.collapse-open i {
+  background-position: -170px 0px;
 }
 .list .info-query {
   background-color: #e2e2e2;

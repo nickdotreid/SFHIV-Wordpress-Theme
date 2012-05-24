@@ -3,11 +3,33 @@
 
 .list .filters{
 	display:block;
-	float:left;
-	width:@block_width/2;
+	float:none;
+	width:auto;
+	border-bottom:1px @secondary_color solid;
+	.filter{
+		float:left;
+		width:@block_width/2;
+		padding:0px;
+	}
 	li{
 		display:block;
 		float:none;
+	}
+	&.collapsable{
+		i{
+			display:block;
+			margin:@space_size/2 auto;
+			clear:both;
+			width:12px;
+			height:10px;
+			overflow:hidden;
+			background:transparent no-repeat;
+			background-image:url('../i/sfhiv_icon_set.png');
+			background-position:-187px 0px;
+		}
+		&.collapse-open i{
+			background-position:-170px 0px;
+		}
 	}
 }
 

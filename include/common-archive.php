@@ -1,6 +1,6 @@
 <?php
 
-add_action('sfhiv_pre_loop','sfhiv_archive_show_pages',30,2);
+add_action('sfhiv_pre_loop','sfhiv_archive_show_pages',2,2);
 add_action('sfhiv_post_loop','sfhiv_archive_show_pages',10,2);
 function sfhiv_archive_show_pages($query=false,$args=array()){
 	global $wp_rewrite, $wp_query;
