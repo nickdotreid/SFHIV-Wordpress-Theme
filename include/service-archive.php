@@ -23,7 +23,6 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 	echo '<i></i>';
-	echo '<br class="clear" />';
 	echo '</section>';
 }
 
