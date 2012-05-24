@@ -18,13 +18,6 @@
 			clear:both;
 		}
 	}
-	.column-wide{
-		width:@block_width*2;
-		input,textarea,select{
-			width:@block_width*2 - @space_size*4;
-			clear:both;
-		}
-	}
 	.form-row{
 		display:block;
 		clear:both;
@@ -37,5 +30,17 @@
 		color:#FFF;
 		display:block;
 		float:right;
+	}
+}
+
+@media all and (min-width: @size_medium) {
+	.contact-form{
+		.column-wide{
+			width:@block_width*2;
+			input,textarea,select{
+				width:@block_width*2 - @space_size*4;
+				clear:both;
+			}
+		}
 	}
 }

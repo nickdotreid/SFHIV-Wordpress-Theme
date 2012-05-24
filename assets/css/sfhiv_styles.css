@@ -16808,15 +16808,6 @@ h4 a:hover {
   width: 232px;
   clear: both;
 }
-.contact-form .column-wide {
-  width: 520px;
-}
-.contact-form .column-wide input,
-.contact-form .column-wide textarea,
-.contact-form .column-wide select {
-  width: 492px;
-  clear: both;
-}
 .contact-form .form-row {
   display: block;
   clear: both;
@@ -16830,6 +16821,17 @@ h4 a:hover {
   color: #FFF;
   display: block;
   float: right;
+}
+@media all and (min-width: 800px) {
+  .contact-form .column-wide {
+    width: 520px;
+  }
+  .contact-form .column-wide input,
+  .contact-form .column-wide textarea,
+  .contact-form .column-wide select {
+    width: 492px;
+    clear: both;
+  }
 }
 .clearfix {
   *zoom: 1;
