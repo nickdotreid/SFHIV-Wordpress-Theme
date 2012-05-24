@@ -2,7 +2,7 @@
 
 add_action('before_content','sfhiv_display_location',7);
 add_action('short_before_content','sfhiv_display_location',10);
-add_action('after_list-item','sfhiv_display_location',10);
+//add_action('after_list-item','sfhiv_display_location',10);
 
 function sfhiv_display_location(){
 	$location = sfhiv_location_get_related_location(get_the_ID());

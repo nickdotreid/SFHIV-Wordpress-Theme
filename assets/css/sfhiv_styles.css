@@ -15349,6 +15349,17 @@ h4 a:hover {
 .three-column .widget nav .menu .menu-item .date.date span span {
   display: inline;
 }
+.two-column article .preview-bottom,
+.three-column article .preview-bottom,
+.two-column .widget .preview-bottom,
+.three-column .widget .preview-bottom {
+  display: block;
+  clear: both;
+  width: auto;
+  text-align: right;
+  padding: 7px 14px;
+  margin-bottom: 7px;
+}
 @media all and (min-width: 530px) {
   .two-column,
   .three-column {
