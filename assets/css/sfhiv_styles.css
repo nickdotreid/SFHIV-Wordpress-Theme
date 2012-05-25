@@ -16687,9 +16687,16 @@ h4 a:hover {
   width: 130px;
   padding: 0px;
 }
+.list .filters .filter.population {
+  width: 260px;
+}
 .list .filters li {
   display: block;
   float: none;
+}
+.list .filters i {
+  display: block;
+  clear: both;
 }
 .list .filters.collapsable i {
   display: block;

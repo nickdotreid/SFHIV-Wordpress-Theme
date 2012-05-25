@@ -3,16 +3,10 @@
 add_action('sfhiv_pre_loop','sfhiv_service_archive_draw_menu',5,2);
 function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
-	echo '<section class="filters collapsable">';
+	echo '<section class="filters">';
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
 		'show_all_link' => false,
-		'extra_classes' => 'filter',
-		'base_link' => $_SERVER['REQUEST_URI'],
-	));
-	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
-		'title_li' => false,
-		'all_taxonomy_name' => "All Populations",
 		'extra_classes' => 'filter',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
@@ -20,6 +14,12 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 		'title_li' => false,
 		'all_taxonomy_name' => 'Any Day',
 		'extra_classes' => 'filter',
+		'base_link' => $_SERVER['REQUEST_URI'],
+	));
+	sfhiv_draw_taxonomy_query_menu('sfhiv_population_category',$query,array(
+		'title_li' => false,
+		'all_taxonomy_name' => "All Populations",
+		'extra_classes' => 'filter population',
 		'base_link' => $_SERVER['REQUEST_URI'],
 	));
 	echo '<i></i>';
