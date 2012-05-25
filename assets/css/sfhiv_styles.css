@@ -13508,8 +13508,15 @@ h4 a:hover {
 .categories li {
   display: block;
   float: left;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+  color: #bcbcbc;
   margin-right: 3.5px;
   padding: 3.5px;
+}
+.categories.populations li {
+  border: 0px;
+  color: #2e3c62;
   background-color: #e2e2e2;
 }
 .divider {

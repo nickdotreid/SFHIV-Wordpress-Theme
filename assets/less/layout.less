@@ -382,9 +382,18 @@
 	li{
 		display:block;
 		float:left;
+		border:1px solid @secondary_color;
+		border-radius:5px;
+		color:@secondary_color;
 		margin-right:@space_size/2;
 		padding:@space_size/2;
-		background-color:lighten(@secondary_color,15);
+	}
+	&.populations{
+		li{
+			border:0px;
+			color:@text_color;
+			background-color:lighten(@secondary_color,15);
+		}
 	}
 }
 
