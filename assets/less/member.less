@@ -1,0 +1,116 @@
+@import "variables";
+
+.sfhiv_icon_mix(){
+	position:relative;
+	padding-left:24px;
+	.label,i{
+		display:block;
+		position:absolute;
+		top:2px;
+		left:0px;
+		width:28px;
+		height:18px;
+		overflow:hidden;
+		text-indent:3000px;
+		background-color:transparent;
+		background-repeat:no-repeat;
+	}
+}
+
+.list{
+	.member{
+		position:relative;
+		display:block;
+		width:auto;
+		clear:both;
+		margin:@space_size @space_size @space_size 0px;
+		.info{
+			display:block;
+			margin-bottom:@space_size/2;
+			.label{
+				font-size:@small_font_size;
+				display:block;
+			}
+		}
+		.name{
+			color:@highlight_color;
+			font-weight:bold;
+			font-size:@big_font_size;
+			a{
+				color:@highlight_color;
+			}
+		}
+		.suffix{
+			font-size:@font_size;
+			color:@secondary_color;
+			font-weight:normal;
+			font-style:italic;
+		}
+		.title{
+			font-weight:bold;
+		}
+		.profile{
+			.info{
+				margin-bottom:0px;
+			}
+		}
+		.contact{
+			clear:both;
+		}
+		.phone{
+			.sfhiv_icon_mix();
+			.label,i{
+				background-image:url('../i/sfhiv_icon_set.png');
+				background-position:-35px 0px;
+			}
+		}
+		.email{
+			.sfhiv_icon_mix();
+			.label,i{
+				background-image:url('../i/sfhiv_icon_set.png');
+				background-position:-6px 0px;
+			}
+			&:hover,.hover{
+				.label,i{
+					background-position:-6px -40px;
+				}
+			}
+		}
+	}
+}
+.contact.list{
+	.member{
+		margin-right:0px;
+	}
+}
+@media all and (min-width: @size_tablet) {
+	.list{
+		.member{
+			float:left;
+			clear:none;
+			width:@block_width - @space_size*2;
+		}
+	}
+	.contact.list{
+		.member{
+			float:none;
+			width:auto;
+			.profile,.contact{
+				width:@block_width - @space_size;
+				display:block;
+				float:left;
+				clear:none;
+			}
+		}
+	}
+}
+@media all and (min-width: @size_medium) {
+
+}
+
+.contact.list{
+	background-image:none;
+	padding-top:@space_size;
+	border-top:@border_width @secondary_color solid;
+	margin:@space_size 0px;
+}

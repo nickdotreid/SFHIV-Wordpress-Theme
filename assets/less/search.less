@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+#searchform{
+	font-family:@main_font;
+	font-size:@font_size;
+	margin:@space_size/2 0px;
+	display:block;
+	position:relative;
+	width:@block_width - @space_size*2;
+	clear:both;
+	input[type=text]{
+		display:block;
+		width:@block_width - @space_size*2 - 27px;
+	}
+	#searchsubmit{
+		text-indent:-9999px;
+		text-transform: capitalize;
+		overflow:hidden;
+		width:21px;
+		height:100%;
+		border:0px;
+		margin:0px;
+		padding:0px;
+		background-color:@text_color;
+		background-image:url('../i/search_icon.jpg');
+		background-repeat:no-repeat;
+		background-position:center center;
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+}
+
+#section-top{
+	#searchform{
+		float:right;
+		width:@block_width/2 - @space_size*2;
+		input[type=text]{
+			width:@block_width/2 - @space_size*2 - 27px;
+		}
+	}
+}

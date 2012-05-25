@@ -1,0 +1,59 @@
+@import "variables";
+@import "mixins";
+
+.list .filters{
+	display:block;
+	float:none;
+	width:auto;
+	border-bottom:1px @secondary_color solid;
+	.filter{
+		float:left;
+		width:@block_width/2;
+		padding:0px;
+	}
+	.filter.population{
+		width:@block_width;
+	}
+	li{
+		display:block;
+		float:none;
+	}
+	i{
+		display:block;
+		clear:both;
+	}
+	&.collapsable{
+		i{
+			display:block;
+			margin:@space_size/2 auto;
+			clear:both;
+			width:12px;
+			height:10px;
+			overflow:hidden;
+			background:transparent no-repeat;
+			background-image:url('../i/sfhiv_icon_set.png');
+			background-position:-187px 0px;
+		}
+		&.collapse-open i{
+			background-position:-170px 0px;
+		}
+	}
+}
+
+.list .info-query{
+	background-color:lighten(@secondary_color,15);
+	clear:both;
+	display:block;
+	width:inherit;
+	padding:@space_size/2 0px;
+	.results{
+		display:block;
+		float:left;
+		margin:0px @space_size;
+	}
+	nav{
+		margin:0px @space_size;
+		float:right;
+		width:auto;
+	}
+}

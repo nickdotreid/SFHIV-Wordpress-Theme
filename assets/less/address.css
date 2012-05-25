@@ -1,0 +1,33 @@
+.date_mix.date {
+  display: block;
+  float: left;
+  background-color: #f09938;
+  color: #FFF;
+  font-weight: normal;
+  margin: 0px 0.5em 0.5em 0px;
+  padding: 0.5em;
+}
+.date_mix.date span {
+  display: block;
+}
+.date_mix.date span span {
+  display: inline;
+}
+.address {
+  width: 260px;
+  display: block;
+  clear: both;
+  line-height: 1.1em;
+}
+.address .name,
+.address .address,
+.address .room,
+.address .hint {
+  display: block;
+}
+@media all and (min-width: 530px) {
+  .address {
+    float: left;
+    clear: none;
+  }
+}

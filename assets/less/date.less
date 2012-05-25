@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.date,.time{
+	display:block;
+	float:left;
+	width:@block_width/2 - @space_size/2;
+	margin:@space_size @space_size/2 @space_size 0px;
+}
+
+.date {
+	.border-radius();
+	line-height:1em;
+	color: #FFF;
+	background:@highlight_color;
+	text-align:center;
+	padding:@space_size/2 0px;
+	span{
+		display:block;
+		margin:@space_size/2 @space_size;
+	}
+}
+.past .date{
+	color:@text_color;
+	background:lighten(@secondary_color,10%);
+}
+.time{
+	line-height:1em;
+	width:@block_width/2 - @space_size*3;
+	padding:0px @space_size;
+	.start,.end{
+		font-weight:bold;
+	}
+	.start{
+		display:block;
+	}
+}

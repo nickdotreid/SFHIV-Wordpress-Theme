@@ -1,0 +1,46 @@
+@import "variables";
+@import "mixins";
+
+.contact-form{
+	border-top:@secondary_color @border_width solid;
+	padding-top:@space_size;
+	.error,.wpcf7-not-valid-tip{
+		display:block;
+		width:@block_width - @space_size*4;
+		position:static;
+	}
+	.column{
+		width:@block_width;
+		display:block;
+		float:left;
+		input,textarea,select{
+			width:@block_width - @space_size*4;
+			clear:both;
+		}
+	}
+	.form-row{
+		display:block;
+		clear:both;
+		width:auto;
+	}
+	.submit-button,.wpcf7-submit{
+		width:@block_width;
+		border-color:@secondary_color;
+		background-color:@highlight_color;
+		color:#FFF;
+		display:block;
+		float:right;
+	}
+}
+
+@media all and (min-width: @size_medium) {
+	.contact-form{
+		.column-wide{
+			width:@block_width*2;
+			input,textarea,select{
+				width:@block_width*2 - @space_size*4;
+				clear:both;
+			}
+		}
+	}
+}

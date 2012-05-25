@@ -1,0 +1,1 @@
+<? do_action('sfhiv_loop',$wp_query,array("id" => "mini_archive"));	?>

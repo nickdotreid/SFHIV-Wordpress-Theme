@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+
+body{
+	font-family:@main_font;
+	font-size:@font_size;
+	line-height:1.4em;
+	color:@text_color;
+	background:#EEE url("../i/main_bg.gif") top left;
+	margin:0px;
+	padding:0px;
+}
+
+a{
+	text-decoration:underline;
+}
+
+a{
+	.link_mix(@link_color);
+}
+
+h1,h2,h3,h4{
+	color:@highlight_color;
+	font-family:@title_font;
+	font-weight:normal;
+	margin:0px;
+	padding:0px;
+	a,a:visited,a:hover{
+		color:@highlight_color;
+	}
+}
+
+#main{
+	h1,h2,h3,h4{
+		font-family:@main_font;
+	}
+}
+
+.assistive-text,.screen-reader-text{
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	overflow:hidden;
+	width:1px;
+	height:1px;
+	text-indent:3000px;
+}

@@ -1,0 +1,62 @@
+@import "variables";
+@import "mixins";
+
+.event,.sfhiv_event{
+	.date {
+		color: #FFF;
+		background:@highlight_color;
+		margin:@space_size 0px;
+		span{
+			display:block;
+			margin:@space_size/2 @space_size*2;
+		}
+	}
+	.past .date{
+		color:@text_color;
+		background:lighten(@secondary_color,10%);
+	}
+	.time{
+		margin:@space_size 0px;
+		span{
+			display:block;
+			font-weight:bold;
+			margin:@space_size/2 @space_size;
+			.label{
+				float:left;
+				padding:0px @space_size 0px 0px;
+				margin:0px;
+				font-weight:normal;
+				font-size:@small_font_size;
+			}
+		}
+	}
+	.date,.time{
+		display:block;
+		float:left;
+		width:@block_width/2;
+	}
+	.location{
+		display:block;
+		clear:both;
+	}
+	.entry-content{
+		clear:both;
+	}
+}
+@media all and (min-width: @size_tablet) {
+	.sfhiv_event{
+		.location{
+			display:block;
+			clear:none;
+			float:left;
+		}
+	}
+}
+
+@media all and (min-width: @size_medium) {
+	.sfhiv_event .event_date_time{
+		.date,.time{
+			float:left;
+		}
+	}
+}

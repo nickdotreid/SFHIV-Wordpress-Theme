@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+
+.address.line{
+	display:block;
+}
+
+.list{
+	.sfhiv_service,.sfhiv_service_hours{
+		.related-groups,.days,.category-list{
+			.menu_mix();
+		}
+		h4{
+			font-weight:300;
+			margin:@space_size/2 0px;
+		}
+		.days{
+			.menu_mix();
+			color: #FFF;
+			background:@highlight_color;
+			width:@block_width/2;
+			margin:@space_size/2 0px;
+			float:left;
+			li{
+				margin:@space_size/2 @space_size;
+			}
+		}
+		.time{
+			width:@block_width/2;
+			float:left;
+			span{
+				display:block;
+				font-weight:bold;
+				margin:@space_size/2 @space_size;
+				.label{
+					display:inline;
+					padding:0px;
+					font-weight:normal;
+					font-size:@small_font_size;
+				}
+			}
+		}
+		.location{
+			clear:both;
+		}
+		.category-list,.related-groups{
+			margin:@space_size/2 0px;
+			padding:0px;
+			clear:both;
+			li{
+				display:block;
+				float:left;
+				margin:0px @space_size 0px 0px;
+				padding:0px;
+				list-style-type:none;
+			}
+		}
+		nav{
+			clear:both;
+		}
+
+	}	
+}
+@media all and (min-width: @size_tablet) {
+	.list{
+		.sfhiv_service,.sfhiv_service_hour{
+			.location{
+				float:left;
+				clear:none;
+				width:@block_width - @space_size*7;
+			}
+		}
+	}
+}

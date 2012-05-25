@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.address{
+	width:@block_width - @space_size*3;
+	padding-left:@space_size*3;
+	position:relative;
+	display:block;
+	clear:both;
+	margin:@space_size 0px;
+	line-height:1.1em;
+	i{
+		position:absolute;
+		top:0px;
+		left:@space_size/2;
+	}
+	.name,.street,.room,.hint{
+		display:block;
+	}
+}
+
+@media all and (min-width: @size_tablet) {
+	.address{
+		float:left;
+		clear:none;
+	}
+}
+
