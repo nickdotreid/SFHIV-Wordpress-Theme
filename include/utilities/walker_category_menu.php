@@ -129,24 +129,25 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		if($show_all_link && !$this->displayed_show_all){
 			$output .= $this->draw_all_link($category,$args);
 		}
-		
-		if ( 'list' == $args['style'] ) {
-			$output .= "\t<li";
-			$class = 'cat-item cat-item-' . $category->term_id;
-			if ( !empty($current_category) ) {
-				$_current_category = get_term( $current_category, $category->taxonomy );
-				if ( $category->term_id == $current_category )
-					$class .=  ' current-cat';
-				elseif ( $category->term_id == $_current_category->parent )
-					$class .=  ' current-cat-parent';
+		if(!in_array($category->term_id,$exclude_cats)){
+			if ( 'list' == $args['style'] ) {
+				$output .= "\t<li";
+				$class = 'cat-item cat-item-' . $category->term_id;
+				if ( !empty($current_category) ) {
+					$_current_category = get_term( $current_category, $category->taxonomy );
+					if ( $category->term_id == $current_category )
+						$class .=  ' current-cat';
+					elseif ( $category->term_id == $_current_category->parent )
+						$class .=  ' current-cat-parent';
+				}
+				if(sfhiv_category_term_in_url($category->taxonomy,$category->slug)){
+					$class .= " current-cat";
+				}
+				$output .=  ' class="' . $class . '"';
+				$output .= ">$link\n";
+			} else {
+				$output .= "\t$link<br />\n";
 			}
-			if(sfhiv_category_term_in_url($category->taxonomy,$category->slug)){
-				$class .= " current-cat";
-			}
-			$output .=  ' class="' . $class . '"';
-			$output .= ">$link\n";
-		} else {
-			$output .= "\t$link<br />\n";
 		}
 	}
 }

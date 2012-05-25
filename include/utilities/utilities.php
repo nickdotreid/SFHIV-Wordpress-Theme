@@ -31,6 +31,27 @@ function sfhiv_get_archive_query(){
 	return $query;
 }
 
+function sfhiv_get_term_ids_in_query($query){
+	$tax_query = $query->query_vars['tax_query'];
+	$terms = array();
+	foreach($tax_query as $tax_q){
+		if(is_array($tax_q)){
+			$tax_terms = explode(",",$tax_q['terms']);
+			foreach($tax_terms as $t_value){
+				if($tax_q != "id"){
+					$term_obj = get_term_by($tax_q['field'],$t_value,$tax_q['taxonomy']);
+					if($term_obj){
+						array_push($terms,$term_obj->term_id);
+					}
+				}else{
+					array_push($terms,$t_value);
+				}
+			}
+		}
+	}
+	return $terms;
+}
+
 function sfhiv_remove_url_vars_from_query($query,$include_only_keys=array()){
 	$url_keys = $_GET;
 	foreach($url_keys as $key => $value){
