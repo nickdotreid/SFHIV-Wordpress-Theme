@@ -18,6 +18,21 @@ function sfhiv_service_hour_show_edit_link(){
 	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', $service->ID );
 }
 
+add_action('short_after_content','sfhiv_service_hour_population_display',3);
+function sfhiv_service_hour_population_display(){
+	if (get_post_type()!='sfhiv_service_hour') return;
+	$population_terms = wp_get_post_terms(get_the_ID(),'sfhiv_population_category');
+	if(count($population_terms)<1) return;
+	echo '<section class="populations categories">';
+	echo '<h4>Serves</h4>';
+	echo '<ul>';
+	foreach($population_terms as $term){
+		echo '<li class="population '.$term->slug.'">'.$term->name.'</li>';
+	}
+	echo '</ul>';
+	echo '</section>';
+}
+
 add_action('after_list-item','sfhiv_service_hour_display_day',7);
 add_action('short_before_content','sfhiv_service_hour_display_day',7);
 function sfhiv_service_hour_display_day(){

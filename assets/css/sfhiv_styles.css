@@ -13493,6 +13493,25 @@ h4 a:hover {
 .list .list-item a {
   clear: both;
 }
+.categories {
+  display: block;
+  clear: both;
+  margin: 3.5px 0px;
+}
+.categories h4 {
+  color: #2e3c62;
+  display: block;
+  float: left;
+  margin-right: 7px;
+  padding: 3.5px 0px;
+}
+.categories li {
+  display: block;
+  float: left;
+  margin-right: 3.5px;
+  padding: 3.5px;
+  background-color: #e2e2e2;
+}
 .divider {
   clear: both;
   margin: 0px;
