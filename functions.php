@@ -1,6 +1,5 @@
 <?php
 
-require_once('models/models.php');
 require_once('include/utilities/utilities.php');
 
 include_once('functions-menus.php');
