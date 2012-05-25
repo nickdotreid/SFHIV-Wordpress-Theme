@@ -15738,6 +15738,7 @@ h4 a:hover {
   background: transparent;
   color: #f09938;
   text-decoration: none;
+  font-weight: bold;
 }
 .menu .current_page_item .children a,
 .menu .children .current_page_item .children a,
@@ -15756,6 +15757,7 @@ h4 a:hover {
   color: #918bb3;
   color: #918bb3;
   color: #918bb3;
+  font-weight: normal;
 }
 .menu .current_page_item .children a:visited,
 .menu .children .current_page_item .children a:visited,
