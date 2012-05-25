@@ -10,11 +10,26 @@ function sfhiv_make_menu_walker_category_link($category,$href=false,$add=true){
 	return $href;
 }
 
+function sfhiv_category_term_in_url($taxonomy,$term){
+	$keys = array_keys($_GET);
+	foreach($keys as $key){
+		if($taxonomy == $key){
+			$terms = explode(",",$_GET[$key]);
+			foreach($terms as $t){
+				if($term == $t){
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
+
 class SFHIV_Category_Walker_Menu extends Walker_Category {
 	
 	var $displayed_show_all = false;
 	
-	function start_el(&$output, $category, $depth, $args) {
+	function draw_link($category,$args){
 		extract($args);
 		
 		$cat_name = esc_attr( $category->name );
@@ -33,8 +48,48 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 		$link .= '>';
 		$link .= $cat_name . '</a>';
 
-
-
+		return $link;
+	}
+	
+	function draw_all_link($category,$args){
+		extract($args);
+		
+		$output = '';
+		
+		$this->displayed_show_all = true;
+		$taxonomy = get_taxonomy($category->taxonomy);
+		
+		if(!empty($base_link) && $base_link) $href = sfhiv_make_menu_walker_category_link($category,$base_link,false);
+		else $href = sfhiv_make_menu_walker_category_link($category,false,false);
+		if ( 'list' == $args['style'] ) {
+			$output .= "\t<li";
+			$class = 'cat-item cat-item-' . $category->term_id;
+			if(!in_array($category->taxonomy,array_keys($_GET)) && (is_archive())){
+				$class .= " current-cat";
+			}
+			$output .=  ' class="' . $class . '"';
+			$output .= ">";
+		}
+		$output .= '<a href="'.$href.'">';
+		if(isset($all_taxonomy_name))
+			$output .= $all_taxonomy_name;
+		else
+			$output .= "All ".$taxonomy->label;
+		$output .= '</a>';
+		if ( 'list' == $args['style'] ) {
+			$output .= "</li>";
+		}else{
+			$output.="<br />";
+		}
+		
+		return $output;
+	}
+	
+	function start_el(&$output, $category, $depth, $args) {
+		extract($args);
+		
+		$link = $this->draw_link($category,$args);
+		
 		if ( !empty($feed_image) || !empty($feed) ) {
 			$link .= ' ';
 
@@ -72,31 +127,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 			$link .= ' ' . gmdate('Y-m-d', $category->last_update_timestamp);
 		
 		if($show_all_link && !$this->displayed_show_all){
-			$this->displayed_show_all = true;
-			$taxonomy = get_taxonomy($category->taxonomy);
-			
-			if(!empty($base_link) && $base_link) $href = sfhiv_make_menu_walker_category_link($category,$base_link,false);
-			else $href = sfhiv_make_menu_walker_category_link($category,false,false);
-			if ( 'list' == $args['style'] ) {
-				$output .= "\t<li";
-				$class = 'cat-item cat-item-' . $category->term_id;
-				if(!in_array($category->taxonomy,array_keys($_GET)) && (is_archive())){
-					$class .= " current-cat";
-				}
-				$output .=  ' class="' . $class . '"';
-				$output .= ">";
-			}
-			$output .= '<a href="'.$href.'">';
-			if(isset($all_taxonomy_name))
-				$output .= $all_taxonomy_name;
-			else
-				$output .= "All ".$taxonomy->label;
-			$output .= '</a>';
-			if ( 'list' == $args['style'] ) {
-				$output .= "</li>";
-			}else{
-				$output.="<br />";
-			}
+			$output .= $this->draw_all_link($category,$args);
 		}
 		
 		if ( 'list' == $args['style'] ) {
@@ -109,10 +140,8 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 				elseif ( $category->term_id == $_current_category->parent )
 					$class .=  ' current-cat-parent';
 			}
-			if(in_array($category->taxonomy,array_keys($_GET))){
-				if($_GET[$category->taxonomy]==$category->slug){
-					$class .= " current-cat";
-				}
+			if(sfhiv_category_term_in_url($category->taxonomy,$category->slug)){
+				$class .= " current-cat";
 			}
 			$output .=  ' class="' . $class . '"';
 			$output .= ">$link\n";
