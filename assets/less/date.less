@@ -9,7 +9,7 @@
 }
 
 .date {
-	.border-radius();
+	border-radius:5px;
 	line-height:1em;
 	color: #FFF;
 	background:@highlight_color;
@@ -34,4 +34,31 @@
 	.start{
 		display:block;
 	}
+}
+
+.date-calendar{
+	display:block;
+	float:left;
+	width:@space_size * 10;
+	background-color:transparent;
+	border:1px @secondary_color solid;
+	color:@text_color;
+	padding:0px;
+	margin-right:@space_size/2;
+	font-size:@small_font_size;
+	span{
+		padding:@space_size/2;
+	}
+	.date-number{
+		font-size:@big_font_size;
+	}
+	.today,.month,.year{
+		background-color:@highlight_color;
+		color:@white;
+		margin:0px;
+	}
+}
+
+.list-item .date-calendar{
+	margin-top:0px;
 }
