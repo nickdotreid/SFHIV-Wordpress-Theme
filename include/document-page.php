@@ -24,7 +24,7 @@ function sfhiv_document_show_date(){
 	if(get_post_type() != 'sfhiv_document') return;
 	$pub_date = sfhiv_document_get_pub_date();
 	if(!$pub_date) return;
-	echo '<span class="date">';
+	echo '<span class="date date-calendar">';
 	echo '<span class="month">'.date("F",$pub_date).'</span>';
 	echo '<span class="year">'.date("Y",$pub_date).'</span>';
 	echo '</span>';
