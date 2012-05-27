@@ -16,9 +16,6 @@
 	margin:0px auto;
 	padding:0px 0px;
 	background-color:#FFF;
-	background-image:url('../i/sf_seal_bg_large.jpg');
-	background-repeat:no-repeat;
-	background-position:-85px 0px;
 	position:relative;
 }
 @media all and (min-width: @size_tablet) {
@@ -29,13 +26,11 @@
 @media all and (min-width: @size_medium) {
 	#page{
 		width:@block_width*3 + @space_size * 4;
-		background-position:115px 0px;
 	}
 }
 @media all and (min-width: @size_large) {
 	#page{
 		width:@block_width*4  + @space_size * 8;
-		background-position:185px 0px;
 	}
 }
 
@@ -76,7 +71,7 @@
 			background-color:transparent;
 			background-image:url("../i/site-title-small.png");
 			background-repeat:no-repeat;
-			background-position:50px 100px;
+			background-position:10px 100px;
 			height:162px;
 			overflow:hidden;
 			a{
@@ -87,12 +82,7 @@
 				top:0px;
 				left:0px;
 				background-color:transparent;
-				background-image:url('../i/home_icon.png');
-				background-repeat:no-repeat;
-				background-position:5px 139px;
-				&:hover{
-					background-image:url('../i/home_icon_hover.png');
-				}
+				background-image:none;
 			}
 		}
 		#site-description{
@@ -102,14 +92,23 @@
 }
 @media all and (min-width: @size_tablet) {
 	#branding{
+		background-image:url('../i/sf_seal_bg_large.jpg');
+		background-repeat:no-repeat;
+		background-position:-120px 0px;
 		hgroup{
 			width:@block_width - @space_size;
 			float:left;
 		}
 	}
 }
+@media all and (min-width: @size_medium) {
+	#branding{
+		background-position:-100px 0px;
+	}
+}
 @media all and (min-width: @size_large) {
 	#branding{
+		background-position:120px 0px;
 		hgroup{
 			width:382px;
 			float:left;
@@ -117,7 +116,19 @@
 				background-image:url("../i/site-title.png");
 				background-position:60px 10px;
 				a{
+					width:100%;
+					height:100%;
+					text-indent:3000em;
+					position:absolute;
+					top:0px;
+					left:0px;
+					background-color:transparent;
+					background-image:url('../i/home_icon.png');
+					background-repeat:no-repeat;
 					background-position:24px 130px;
+					&:hover{
+						background-image:url('../i/home_icon_hover.png');
+					}
 				}
 			}
 		}
