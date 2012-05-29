@@ -104,6 +104,7 @@ function sfhiv_service_page_parent_groups(){
 add_action('short_after_content','sfhiv_service_page_service_hours',20);
 add_action('get_footer','sfhiv_service_page_service_hours',20);
 function sfhiv_service_page_service_hours(){
+	global $post;
 	if( get_post_type() != 'sfhiv_service' ) return;
 	$service_hours = new WP_Query( array(
 		'post_type' => 'sfhiv_service_hour',
@@ -111,12 +112,14 @@ function sfhiv_service_page_service_hours(){
 		'connected_items' => get_the_ID(),
 		'no_paging' => true,
 	));
+	$this_post = $post;
 	do_action('sfhiv_loop',$service_hours,array(
 		"id" => "service_times",
 		"title" => false,
 		"list_element" => "list-item",
 		"show_filters" => false,
 	));
+	$post = $this_post;
 }
 
 function sfhiv_service_get_groups($ID=false){
