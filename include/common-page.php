@@ -45,6 +45,7 @@ function sfhiv_page_list_attachments(){
 		"id" => "attachments",
 		"classes" => array("list","attachments"),
 		"list_element" => "short",
+		"show_filters" => false,
 	));
 }
 
