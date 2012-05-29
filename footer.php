@@ -1,6 +1,6 @@
 		<div class="clear"></div>
 	</div><!-- #main -->
-	<footer id="bottom">
+	<footer id="bottom" class="container pretty-top">
 		<?
 		wp_nav_menu(array(
 			'theme_location' => 'footer_menu',

@@ -58,7 +58,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 <?php do_action( 'before' ); ?>
-	<header id="branding" role="banner">
+	<header id="branding" class="container" role="banner">
 		<hgroup>
 			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -73,5 +73,11 @@
 		<?php do_action('after_access');	?>
 		<div class="divider" style="padding-top:16px;background-position:bottom center;"></div>
 	</header><!-- #branding -->
+	<?	if(is_singular() && get_post_status() != "publish"):	?>
+	<div id="status-warning" class="container <?=get_post_status();?>">
+		<span><i></i>This item is marked <?=get_post_status();?>.</span>
+		<div class="divider" style="padding-top:16px;background-position:bottom center;"></div>
+	</div>
+	<?	endif;	?>
 	<?php do_action('after_header');	?>
-	<div id="main">
+	<div id="main" class="container">

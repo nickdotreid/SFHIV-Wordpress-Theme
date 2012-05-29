@@ -19794,7 +19794,7 @@ h4 a:hover {
     width: 956px;
   }
 }
-#bottom {
+.pretty-top {
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -20420,9 +20420,7 @@ h4 a:hover {
   background-repeat: repeat-x;
   background-position: 0px 0px;
 }
-#branding,
-#main,
-#bottom {
+.container {
   clear: both;
   margin: 0px;
   padding: 0px;
@@ -20475,23 +20473,17 @@ h4 a:hover {
   width: 225px;
 }
 @media all and (min-width: 530px) {
-  #branding,
-  #main,
-  #bottom {
+  .container {
     width: 450px;
   }
 }
 @media all and (min-width: 800px) {
-  #branding,
-  #main,
-  #bottom {
+  .container {
     width: 675px;
   }
 }
 @media all and (min-width: 1100px) {
-  #branding,
-  #main,
-  #bottom {
+  .container {
     width: 900px;
   }
 }
@@ -20835,6 +20827,17 @@ h4 a:hover {
     padding: 7px 28px;
     font-size: 18px;
   }
+}
+#status-warning {
+  background-color: #ffe74b;
+}
+#status-warning span {
+  display: block;
+  text-align: center;
+  margin: 7px 0px 0px;
+}
+#status-warning.draft {
+  background-color: #e2e2e2;
 }
 #content {
   margin: 0px;
