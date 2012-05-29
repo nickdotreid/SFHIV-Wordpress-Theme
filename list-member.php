@@ -23,7 +23,7 @@ $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 		<span class="info phone"><i></i> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
 		<?	endif;	?>
 		<?	if(get_the_author_meta('email',$user->ID)):	?>
-		<a href="mailto:<?=get_the_author_meta('email',$user->ID);?>" class="info email"><i></i> <?=get_the_author_meta('email',$user->ID);?></span>
+		<a href="mailto:<?=get_the_author_meta('email',$user->ID);?>" class="info email"><i></i> <?=get_the_author_meta('email',$user->ID);?></a>
 		<?	endif;	?>
 	</section>
 	<?	endif;	?>
