@@ -24334,6 +24334,9 @@ h4 a:hover {
   margin-left: 0px;
   margin-right: 7px;
 }
+.list .pagnate {
+  border-bottom: 0px;
+}
 .list .info-query {
   background-color: #e2e2e2;
   clear: both;
