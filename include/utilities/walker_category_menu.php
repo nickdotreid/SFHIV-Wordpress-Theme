@@ -68,7 +68,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 				$class .= " current-cat";
 			}
 			$output .=  ' class="' . $class . '"';
-			$output .= ">";
+			$output .= "><i></i>";
 		}
 		$output .= '<a href="'.$href.'">';
 		if(isset($all_taxonomy_name))
@@ -144,7 +144,7 @@ class SFHIV_Category_Walker_Menu extends Walker_Category {
 					$class .= " current-cat";
 				}
 				$output .=  ' class="' . $class . '"';
-				$output .= ">$link\n";
+				$output .= "><i></i>$link\n";
 			} else {
 				$output .= "\t$link<br />\n";
 			}
