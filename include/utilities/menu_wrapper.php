@@ -63,43 +63,32 @@ function sfhiv_draw_menu($posts=array(),$args = array()){
 }
 
 function sfhiv_draw_taxonomy_menu($args){
-	?>
-	<nav><ul class="menu menu-<?=$args['taxonomy'];?> <?=$args['extra_classes'];?>">
-	<?
+	echo '<nav><ul class="menu menu-'.$args['taxonomy'].' '.$args['extra_classes'].'">';
 	if(is_singular()):
 		$current_categories =  wp_get_object_terms(get_the_ID(),$args['taxonomy'],array('fields'=>'ids'));
 		if(is_array($current_categories) && count($current_categories) > 0){
 			$args['current_category'] = $current_categories[0];
 		}
 	endif;
-	$args['walker'] = new SFHIV_Category_Walker_Menu();
+	if(!isset($args['walker'])) $args['walker'] = new SFHIV_Category_Walker_Menu();
 	wp_list_categories($args);
-	?></ul></nav><?
-}
-
-function sfhiv_draw_taxonomy_filter($args){
-	$args['walker'] = new SFHIV_Category_Walker_Filter();
-	?>
-	<form class="filters" action="" method="get">
-		<ul class="menu">
-			<?	wp_list_categories($args);	?>
-		</ul>
-		<input type="submit" value="Update Query" />
-	</form>
-	<?
+	echo "</ul></nav>";
 }
 
 function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	if(!is_object_in_taxonomy($query->query_vars['post_type'],$tax_name)) return;
 	
-	$query = sfhiv_remove_url_vars_from_query($query,array($tax_name));
-	$query = sfhiv_unpage_query($query);
-	
-	$categories = sfhiv_get_taxonomy_in($query,$tax_name,'ids');
-	
-	if(!isset($args['min_display'])) $args['min_display'] = 2;
-	if(count($categories) < $args['min_display']) return;
-	
+	if(!isset($args['include'])){
+		$query = sfhiv_remove_url_vars_from_query($query,array($tax_name));
+		$query = sfhiv_unpage_query($query);
+		
+		$categories = sfhiv_get_taxonomy_in($query,$tax_name,'ids');
+		$args['include'] = implode(",",$categories);
+		
+		if(!isset($args['min_display'])) $args['min_display'] = 2;
+		if(count($categories) < $args['min_display']) return;
+	}
+		
 	if(!isset($args['base_link'])){
 		if(is_page() && mini_archive_on_page(get_the_ID()))
 			$args['base_link'] = get_permalink();
@@ -118,10 +107,8 @@ function sfhiv_draw_taxonomy_query_menu($tax_name,$query,$args = array()){
 	
 	$args = array_merge(array(
 		'taxonomy' => $tax_name,
-		'include' => implode(",",$categories),
 		'show_all_link' => true,
 	),$args);
-	
 	sfhiv_draw_taxonomy_menu($args);
 }
 

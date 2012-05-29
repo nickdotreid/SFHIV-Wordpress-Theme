@@ -3,14 +3,16 @@
 add_action('sfhiv_pre_loop','sfhiv_service_archive_draw_menu',5,2);
 function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
-	$tax_term_ids = sfhiv_get_term_ids_in_query(sfhiv_remove_url_vars_from_query($query));
+	$new_query = sfhiv_remove_url_vars_from_query($query,array('sfhiv_service_category'));
+	$tax_term_ids = sfhiv_get_term_ids_in_query($new_query);
 	echo '<section class="filters">';
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => 'All Services',
-		'extra_classes' => 'filter',
+		'extra_classes' => 'filter additive',
 		'base_link' => $_SERVER['REQUEST_URI'],
 		'exclude_cats' => $tax_term_ids,
+		'walker' => new SFHIV_Category_Walker_Filter(),
 	));
 	sfhiv_draw_taxonomy_query_menu('sfhiv_day_of_week_taxonomy',$query,array(
 		'title_li' => false,
