@@ -113,12 +113,12 @@ function sfhiv_service_page_service_hours(){
 		'no_paging' => true,
 	));
 	$this_post = $post;
-	do_action('sfhiv_loop',$service_hours,array(
-		"id" => "service_times",
-		"title" => false,
-		"list_element" => "list-item",
-		"show_filters" => false,
-	));
+	foreach($service_hours->posts as $hour){
+		$post = $hour;
+		echo '<ul class="list">';
+		get_template_part('list-item',get_post_type());
+		echo '</ul>';
+	}
 	$post = $this_post;
 }
 
