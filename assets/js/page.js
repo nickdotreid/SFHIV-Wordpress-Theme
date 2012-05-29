@@ -51,14 +51,32 @@ $(document).ready(function(){
 			return;
 		}
 		menu_items.each(function(){
-			free_space = free_space - $(this).width();
+			if(!$(this).data("orig-padding")){
+				$(this).data("orig-padding",Number($(this).css("padding-right").replace("px","")));
+			}
+			free_space = free_space - $(this).outerWidth();
 		});
 		var num_items = menu_items.length;
 		if(num_items<1){
 			return;
 		}
 		free_space = free_space/num_items;
-		menu_items.css("margin-right",free_space+'px');
+		menu_items.each(function(){
+			m_space = free_space;
+			p_space = $(this).data("orig-padding");
+			if(Number($(this).css("padding-right").replace("px","")) != p_space){
+				p_space = Number($(this).css("padding-right").replace("px",""));
+			}
+			if(free_space<0){
+				m_space = 0;
+				p_space = $(this).data("orig-padding") + free_space/2;
+			}
+			$(this).css({
+				"margin-right":m_space+'px',
+				'padding-left':p_space+'px',
+				'padding-right':p_space+'px'
+			});
+		});
 		$(".menu-item:not(.sub-menu .menu-item):last",menu).css("margin-right",'0px');
 	});
 	

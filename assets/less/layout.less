@@ -183,7 +183,7 @@
 			display:block;
 			float:left;
 			width:auto;
-			padding:0px;
+			padding:@space_size @space_size*2;
 			font-family:@title_font;
 			font-weight:300;
 			font-size:@big_font_size;
@@ -196,7 +196,8 @@
 				color:@text_color;
 				text-decoration:none;
 				display:block;
-				margin:@space_size @space_size*2;
+				margin:0px;
+				padding:0px;
 			}
 			&.current-menu-item,&.current-page-ancestor{
 				background-color:transparent;
@@ -216,10 +217,8 @@
 		display:block;
 		.menu{
 			.menu-item{
+				padding:@space_size @space_size*3;
 				font-size:@big_font_size;
-				a,a:visited,a:hover{
-					margin:@space_size @space_size*3;
-				}
 			}
 		}
 	}
@@ -228,10 +227,8 @@
 	#access{
 		.menu{
 			.menu-item{
+				padding:@space_size @space_size*4;
 				font-size:@big_font_size;
-				a,a:visited,a:hover{
-					margin:@space_size @space_size*4;
-				}
 			}
 		}
 	}
