@@ -105,6 +105,7 @@ function sfhiv_group_page_list_group_services(){
 		"id" => "services",
 		"title" => "Services",
 		"list_element" => "short",
+		"show_filters" => false,
 	));
 }
 

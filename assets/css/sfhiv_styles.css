@@ -20902,6 +20902,7 @@ h4 a:hover {
   .main-column .filters {
     width: auto;
     margin: 0px;
+    float: none;
   }
   .filters .filter {
     float: left;
