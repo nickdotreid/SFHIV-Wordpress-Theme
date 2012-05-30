@@ -2,6 +2,7 @@
 @import "mixins";
 
 .address{
+	color:@secondary_color;
 	width:@block_width - @space_size*3;
 	padding-left:@space_size*3;
 	position:relative;
@@ -13,6 +14,12 @@
 		position:absolute;
 		top:0px;
 		left:@space_size/2;
+		background-color:transparent;
+		background-repeat:no-repeat;
+		background-image:url('../i/sfhiv_icon_set.png');
+		background-position:-110px 0px;
+		width:14px;
+		height:16px;
 	}
 	.name,.street,.room,.hint{
 		display:block;

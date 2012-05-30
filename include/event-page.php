@@ -1,6 +1,6 @@
 <?php
 
-add_action('before_list-item','sfhiv_event_page_show_date',5);
+add_action('after_list-item','sfhiv_event_page_show_date',5);
 add_action('short_before_content','sfhiv_event_page_show_date',5);
 add_action('before_content','sfhiv_event_page_show_date',5);
 function sfhiv_event_page_show_date(){
@@ -8,6 +8,7 @@ function sfhiv_event_page_show_date(){
 	get_template_part('date','event');
 }
 
+add_action('after_list-item','sfhiv_event_page_show_time',5);
 add_action('short_before_content','sfhiv_event_page_show_time',5);
 add_action('before_content','sfhiv_event_page_show_time',5);
 function sfhiv_event_page_show_time(){

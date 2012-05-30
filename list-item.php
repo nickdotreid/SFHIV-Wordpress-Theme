@@ -2,9 +2,9 @@
 	post_class("list-item");
 	do_action("list-item");
 	?>>
+	<?	do_action('before_list-item');	?>
 	<a href="<?=the_permalink();?>">
-		<?	do_action('before_list-item');	?>
-		<?=the_title();?>
-		<?	do_action('after_list-item');	?>
+		<span class="title"><?=the_title();?></span>
 	</a>
+	<?	do_action('after_list-item');	?>
 </li>

@@ -14,7 +14,7 @@ function sfhiv_display_location(){
 function sfhiv_location_format($post){
 	$location = sfhiv_location_get_address($post);
 	echo '<div class="address">';
-	echo '<i class="icon-map-marker"></i>';
+	echo '<i></i>';
 	sfhiv_location_format_line('room',$location);
 	sfhiv_location_format_line('address',$location);
 	sfhiv_location_format_line('zip_code',$location);

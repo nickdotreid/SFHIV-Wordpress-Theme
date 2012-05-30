@@ -15268,32 +15268,35 @@ h4 a:hover {
   color: #2e3c62;
   border-top: #bcbcbc 3px solid;
 }
-.list .list-item,
-.list .short {
+.list-item,
+.short {
   position: relative;
   clear: both;
-  margin: 0px 0px 28px;
+  margin: 0px 0px 7px;
 }
-.list .list-item .entry-title,
-.list .short .entry-title {
+.list-item .entry-title,
+.short .entry-title {
   font-size: 18px;
   padding: 3.5px 0px 0px;
   background-color: transparent;
 }
-.list .list-item .entry-content,
-.list .short .entry-content {
+.list-item .entry-content,
+.short .entry-content {
   display: block;
 }
-.list .list-item nav,
-.list .short nav {
+.list-item nav,
+.short nav {
   display: block;
   clear: both;
 }
-.list .list-item a .date {
+.short {
+  margin: 0px 0px 28px;
+}
+.list-item a .date {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.list .list-item a {
+.list-item a {
   clear: both;
 }
 .categories {
@@ -17950,6 +17953,7 @@ h4 a:hover {
   display: inline;
 }
 .address {
+  color: #bcbcbc;
   width: 204px;
   padding-left: 21px;
   position: relative;
@@ -17962,6 +17966,12 @@ h4 a:hover {
   position: absolute;
   top: 0px;
   left: 3.5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('../i/sfhiv_icon_set.png');
+  background-position: -110px 0px;
+  width: 14px;
+  height: 16px;
 }
 .address .name,
 .address .street,
@@ -18275,9 +18285,13 @@ h4 a:hover {
 .date_mix.date span span {
   display: inline;
 }
-.date {
+.date,
+.time {
   display: block;
   color: #bcbcbc;
+}
+.list-item .date {
+  display: inline;
 }
 .date-block,
 .time-block {
@@ -18343,6 +18357,27 @@ a .date-calendar {
 }
 .list-item .date-calendar {
   margin-top: 0px;
+}
+.sfhiv_event .entry-title {
+  font-size: 14px;
+  color: #918bb3;
+}
+.sfhiv_event .time,
+.sfhiv_event .date {
+  display: block;
+  float: left;
+  margin-top: 3.5px;
+  margin-right: 3.5px;
+}
+.sfhiv_event .time .start,
+.sfhiv_event .date .start {
+  font-weight: bold;
+}
+.sfhiv_event.list-item .time,
+.sfhiv_event.list-item .date {
+  display: inline;
+  float: none;
+  margin: 0px;
 }
 .list .member {
   position: relative;

@@ -362,31 +362,34 @@
 		color:@text_color;
 		border-top:@secondary_color @border_width*3 solid;
 	}
-	.list-item,.short{
-		position:relative;
-		clear:both;
-		margin:0px 0px @space_size*4;
-		.entry-title{
-			font-size:@big_font_size;
-			padding:@space_size/2 0px 0px;
-			background-color:transparent;
-		}
-		.entry-content{
-			display:block;
-		}
-		nav{
-			display:block;
-			clear:both;
-		}
+}
+.list-item,.short{
+	position:relative;
+	clear:both;
+	margin:0px 0px @space_size;
+	.entry-title{
+		font-size:@big_font_size;
+		padding:@space_size/2 0px 0px;
+		background-color:transparent;
 	}
-	.list-item{
-		a .date{
-			margin-top:0px;
-			margin-bottom:0px;
-		}
-		a{
-			clear:both;
-		}
+	.entry-content{
+		display:block;
+	}
+	nav{
+		display:block;
+		clear:both;
+	}
+}
+.short{
+	margin:0px 0px @space_size*4;
+}
+.list-item{
+	a .date{
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+	a{
+		clear:both;
 	}
 }
 
