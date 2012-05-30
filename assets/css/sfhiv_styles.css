@@ -17968,7 +17968,7 @@ h4 a:hover {
   display: inline;
 }
 .address {
-  color: #bcbcbc;
+  color: #2e3c62;
   width: 204px;
   padding-left: 21px;
   position: relative;
@@ -18303,7 +18303,20 @@ h4 a:hover {
 .date,
 .time {
   display: block;
-  color: #bcbcbc;
+  color: #2e3c62;
+  line-height: 1em;
+}
+.date .start,
+.time .start {
+  font-weight: bold;
+  display: block;
+}
+.time-float,
+.date-float {
+  display: block;
+  float: left;
+  margin-top: 3.5px;
+  margin-right: 3.5px;
 }
 .list-item .date {
   display: inline;
@@ -18347,25 +18360,26 @@ h4 a:hover {
   display: block;
   float: left;
   width: 70px;
-  background-color: transparent;
+  background-color: #f09938;
   border: 1px #bcbcbc solid;
-  color: #2e3c62;
+  color: #ffffff;
   padding: 0px;
+  margin-top: 3.5px;
   margin-right: 3.5px;
   font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
 }
 .date-calendar span {
   padding: 3.5px;
+  display: block;
+  float: none;
+  clear: both;
 }
 .date-calendar .date-number {
   font-size: 18px;
-}
-.date-calendar .today,
-.date-calendar .month,
-.date-calendar .year {
-  background-color: #f09938;
-  color: #ffffff;
-  margin: 0px;
+  background-color: #ffffff;
+  color: #2e3c62;
 }
 a .date-calendar {
   text-decoration: none;
@@ -18377,22 +18391,19 @@ a .date-calendar {
   font-size: 14px;
   color: #918bb3;
 }
-.sfhiv_event .time,
-.sfhiv_event .date {
+.sfhiv_service .entry-title,
+.sfhiv_service_hour .entry-title {
+  font-size: 14px;
+  color: #918bb3;
+}
+.sfhiv_service .day,
+.sfhiv_service_hour .day {
   display: block;
-  float: left;
-  margin-top: 3.5px;
-  margin-right: 3.5px;
-}
-.sfhiv_event .time .start,
-.sfhiv_event .date .start {
-  font-weight: bold;
-}
-.sfhiv_event.list-item .time,
-.sfhiv_event.list-item .date {
-  display: inline;
-  float: none;
+  border-radius: 5px;
+  background-color: #f09938;
+  color: #ffffff;
   margin: 0px;
+  padding: 3.5px 7px;
 }
 .list .member {
   position: relative;

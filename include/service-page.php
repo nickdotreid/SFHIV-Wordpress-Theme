@@ -54,7 +54,7 @@ add_action('short_before_content','sfhiv_service_hour_display_day',7);
 function sfhiv_service_hour_display_day(){
 	if (get_post_type()!='sfhiv_service_hour') return;
 	$days = sfhiv_service_get_service_days(get_post(get_the_ID()));
-	echo '<div class="date">';
+	echo '<div class="date date-float">';
 	foreach($days as $day){
 		$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
 		echo '<span class="day">'.$term->name.'</span>';
@@ -72,10 +72,10 @@ function sfhiv_service_hour_display_time(){
 	
 	$time_format = get_option('time_format');
 	
-	echo '<div class="time">';
+	echo '<div class="time time-float">';
 	echo '<span class="start">'.date($time_format,$start).'</span>';
 	if($start != $end){
-		echo '<span class="">until </span>';
+		echo '<span class=""> until </span>';
 		echo '<span class="end">'.date($time_format,$end).'</span>';		
 	}
 	echo '</div>';

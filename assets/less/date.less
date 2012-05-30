@@ -3,7 +3,19 @@
 
 .date,.time{
 	display:block;
-	color:@secondary_color;
+	color:@text_color;
+	line-height:1em;
+	.start{
+		font-weight:bold;
+		display:block;
+	}
+}
+
+.time-float,.date-float{
+	display:block;
+	float:left;
+	margin-top:@space_size/2;
+	margin-right:@space_size/2;
 }
 
 .list-item .date{
@@ -49,22 +61,25 @@
 	display:block;
 	float:left;
 	width:@space_size * 10;
-	background-color:transparent;
+	background-color:@highlight_color;
 	border:1px @secondary_color solid;
-	color:@text_color;
+	color:@white;
 	padding:0px;
+	margin-top:@space_size/2;
 	margin-right:@space_size/2;
 	font-size:@small_font_size;
+	text-align:center;
+	border-radius:5px;
 	span{
 		padding:@space_size/2;
+		display:block;
+		float:none;
+		clear:both;
 	}
 	.date-number{
 		font-size:@big_font_size;
-	}
-	.today,.month,.year{
-		background-color:@highlight_color;
-		color:@white;
-		margin:0px;
+		background-color:@white;
+		color:@text_color;
 	}
 }
 a .date-calendar{

@@ -4,7 +4,7 @@ $time_format = get_option('time_format');
 $start_time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
 $end_time = get_post_meta(get_the_ID(),'sfhiv_event_end',true);
 ?>
-<div class="time">
+<div class="time time-float">
 <?	if($end_time && $end_time!=$time):	?>
 	<span class="start">
 		<?=date($time_format,$start_time);?>
