@@ -19212,13 +19212,19 @@ h4 a:hover {
 .three-column .widget .widgettitle {
   border-top: 1px #2e3c62 solid;
   border-bottom: 1px #2e3c62 solid;
-  font-weight: 300;
-  font-size: 18px;
-  padding: 7px 0px;
   padding: 7px 14px;
   margin: 7px;
   font-weight: 300;
   font-size: 18px;
+}
+.two-column article .list .entry-title,
+.three-column article .list .entry-title,
+.two-column .widget .list .entry-title,
+.three-column .widget .list .entry-title {
+  font-size: 14px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 .two-column article nav .menu,
 .three-column article nav .menu,
@@ -21289,14 +21295,18 @@ h4 a:hover {
 .date_mix.date span span {
   display: inline;
 }
-.date,
-.time {
+.date {
+  display: block;
+  color: #bcbcbc;
+}
+.date-block,
+.time-block {
   display: block;
   float: left;
   width: 109px;
   margin: 7px 3.5px 7px 0px;
 }
-.date {
+.date-block {
   border-radius: 5px;
   line-height: 1em;
   color: #FFF;
@@ -21304,24 +21314,24 @@ h4 a:hover {
   text-align: center;
   padding: 3.5px 0px;
 }
-.date span {
+.date-block span {
   display: block;
   margin: 3.5px 7px;
 }
-.past .date {
+.past .date-block {
   color: #2e3c62;
   background: #d6d6d6;
 }
-.time {
+.time-block {
   line-height: 1em;
   width: 91.5px;
   padding: 0px 7px;
 }
-.time .start,
-.time .end {
+.time-block .start,
+.time-block .end {
   font-weight: bold;
 }
-.time .start {
+.time-block .start {
   display: block;
 }
 .date-calendar {

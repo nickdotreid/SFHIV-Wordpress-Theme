@@ -21,7 +21,7 @@ add_action('sfhiv-preview-menu','sfhiv_add_mini_archive_menu',3);
 function sfhiv_add_mini_archive_menu(){
 	global $post;
 	$archive_type = mini_archive_on_page(get_the_ID());
-	if($archive_type):
+	if($archive_type && !is_home()):
 		$output_archive = false;
 		$query = mini_archive_get_query(get_the_ID());
 		if(!in_array($archive_type,array(
@@ -54,6 +54,10 @@ function sfhiv_add_mini_archive_menu(){
 					));
 				}
 			}
+		}
+		if(is_home()){
+			$output_archive = true;
+			echo "FOO";
 		}
 		if(!$output_archive && !in_array($archive_type,array(
 			'sfhiv_service',

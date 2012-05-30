@@ -1,14 +1,19 @@
 @import "variables";
 @import "mixins";
 
-.date,.time{
+.date{
+	display:block;
+	color:@secondary_color;
+}
+
+.date-block,.time-block{
 	display:block;
 	float:left;
 	width:@block_width/2 - @space_size/2;
 	margin:@space_size @space_size/2 @space_size 0px;
 }
 
-.date {
+.date-block {
 	border-radius:5px;
 	line-height:1em;
 	color: #FFF;
@@ -20,11 +25,11 @@
 		margin:@space_size/2 @space_size;
 	}
 }
-.past .date{
+.past .date-block{
 	color:@text_color;
 	background:lighten(@secondary_color,10%);
 }
-.time{
+.time-block{
 	line-height:1em;
 	width:@block_width/2 - @space_size*3;
 	padding:0px @space_size;
