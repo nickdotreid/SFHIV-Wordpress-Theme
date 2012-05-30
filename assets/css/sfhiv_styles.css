@@ -17734,6 +17734,22 @@ h4 a:hover {
     clear: both;
   }
 }
+.blog #main,
+.single-post #main {
+  background-position: 675px 0px;
+}
+.blog #content,
+.single-post #content,
+.blog .filters,
+.single-post .filters,
+.blog .list,
+.single-post .list {
+  float: left;
+}
+.blog .sidebar,
+.single-post .sidebar {
+  float: right;
+}
 .clearfix {
   *zoom: 1;
 }
