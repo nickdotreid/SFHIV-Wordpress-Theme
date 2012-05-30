@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 function sfhiv_carousel_hide(options,item,index,state){
 	item = $(item);
-	$("article",item).animate({
+	$(".slider-item",item).animate({
 		'margin-top':item.height()+'px'
 	},{
 		'duration':500
@@ -22,9 +22,9 @@ function sfhiv_carousel_hide(options,item,index,state){
 
 function sfhiv_carousel_visible(options,item,index,state){
 	item = $(item);
-	val = $(item).height() - $("article",item).outerHeight();
-	$("article",item).css('margin-top',item.height()+'px');
-	$("article",item).animate({
+	val = $(item).height() - $(".slider-item",item).outerHeight();
+	$(".slider-item",item).css('margin-top',item.height()+'px');
+	$(".slider-item",item).animate({
 		'margin-top':val+'px'
 	},{
 		'duration':500
