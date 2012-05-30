@@ -56,7 +56,7 @@ $(document).ready(function(){
 			}
 			free_space = free_space - $(this).outerWidth();
 		});
-		var num_items = menu_items.length;
+		var num_items = menu_items.length-1;
 		if(num_items<1){
 			return;
 		}
