@@ -125,6 +125,7 @@ function sfhiv_group_page_list_group_studies(){
 	do_action('sfhiv_loop',$studies,array(
 		"id" => "studies",
 		"title" => "Studies",
+		'show_filters' => false
 	));
 }
 

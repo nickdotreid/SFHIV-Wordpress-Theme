@@ -17,7 +17,7 @@ function sfhiv_study_add_groups(){
 	));
 }
 
-add_action('get_sidebar','sfhiv_study_navigation',22);
+//add_action('get_sidebar','sfhiv_study_navigation',22);
 function sfhiv_study_navigation(){
 	if (!is_singular('sfhiv_study')) return;
 	sfhiv_draw_menu(array(get_post(get_the_ID())),array(
@@ -47,13 +47,15 @@ function sfhiv_study_add_reports(){
 		'post_type' => 'sfhiv_document',
 		'connected_type' => 'sfhiv_study_document',
 		'connected_items' => get_the_ID(),
+		'nopaging' => true,
 	));
 	do_action('sfhiv_loop',$reports,array(
 		"id" => "reports",
-		"title" => "Reports",
-		"list_element" => 'list-item',
-		"wrap_before" => '<ul>',
-		"wrap_after" => '</ul>',
+		"title" => "Publications",
+		"list_element" => 'short',
+		'show_filters' => false,
+		"wrap_before" => '<section>',
+		"wrap_after" => '</section>',
 	));
 }
 ?>
