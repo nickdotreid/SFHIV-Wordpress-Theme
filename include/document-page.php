@@ -19,20 +19,11 @@ function sfhiv_document_studies_sidebar(){
 
 add_action('before_content','sfhiv_document_show_date');
 add_action('short_before_content','sfhiv_document_show_date');
-add_action('before_list-item','sfhiv_document_show_date');
+add_action('after_list-item','sfhiv_document_show_date',3);
 function sfhiv_document_show_date(){
 	if(get_post_type() != 'sfhiv_document') return;
 	$pub_date = sfhiv_document_get_pub_date();
 	if(!$pub_date) return;
-	echo '<span class="date date-calendar">';
-	echo '<span class="month">'.date("F",$pub_date).'</span>';
-	echo '<span class="year">'.date("Y",$pub_date).'</span>';
-	echo '</span>';
-}
-
-add_action('after_list-item','sfhiv_document_clear_date');
-function sfhiv_document_clear_date(){
-	if(get_post_type() != 'sfhiv_document') return;
-	echo '<br class="clear" />';
+	echo '<span class="date">'.date("F Y",$pub_date).'</span>';
 }
 ?>
