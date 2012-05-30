@@ -24,7 +24,7 @@ function sfhiv_service_hour_population_display(){
 	$population_terms = wp_get_post_terms(get_the_ID(),'sfhiv_population_category');
 	if(count($population_terms)<1) return;
 	echo '<section class="populations categories">';
-	echo '<h4>Serves</h4>';
+	echo '<h4>Only Serves</h4>';
 	echo '<ul>';
 	foreach($population_terms as $term){
 		echo '<li class="population '.$term->slug.'">'.$term->name.'</li>';

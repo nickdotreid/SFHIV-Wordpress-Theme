@@ -8,7 +8,7 @@
 	position:relative;
 	display:block;
 	clear:both;
-	margin:@space_size 0px;
+	margin:@space_size/2 0px;
 	line-height:1.1em;
 	i{
 		position:absolute;
@@ -24,6 +24,9 @@
 	.name,.street,.room,.hint{
 		display:block;
 	}
+	.hint{
+		font-style:italic;
+	}
 }
 
 @media all and (min-width: @size_tablet) {
@@ -33,3 +36,8 @@
 	}
 }
 
+@media all and (min-width: @size_large) {
+	.address{
+		width:@block_width*2 - @space_size*3;
+	}
+}

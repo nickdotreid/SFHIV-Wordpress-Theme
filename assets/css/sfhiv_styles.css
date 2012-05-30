@@ -15302,12 +15302,11 @@ h4 a:hover {
 .categories {
   display: block;
   clear: both;
-  margin: 3.5px 0px;
+  margin: 3.5px 0px 0px;
 }
 .categories h4 {
   color: #2e3c62;
   display: block;
-  float: left;
   margin-right: 7px;
   padding: 3.5px 0px;
 }
@@ -15316,14 +15315,31 @@ h4 a:hover {
   float: left;
   border: 1px solid #bcbcbc;
   border-radius: 5px;
-  color: #bcbcbc;
+  margin-left: 0px;
+  margin-bottom: 3.5px;
   margin-right: 3.5px;
-  padding: 3.5px;
+  padding: 3.5px 7px;
 }
 .categories.populations li {
   border: 0px;
   color: #2e3c62;
   background-color: #e2e2e2;
+}
+@media all and (min-width: 800px) {
+  .categories {
+    display: block;
+    clear: both;
+    margin: 3.5px 0px;
+    position: relative;
+    padding-left: 112.5px;
+  }
+  .categories h4 {
+    width: 105.5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: right;
+  }
 }
 .divider {
   clear: both;
@@ -17974,7 +17990,7 @@ h4 a:hover {
   position: relative;
   display: block;
   clear: both;
-  margin: 7px 0px;
+  margin: 3.5px 0px;
   line-height: 1.1em;
 }
 .address i {
@@ -17994,10 +18010,18 @@ h4 a:hover {
 .address .hint {
   display: block;
 }
+.address .hint {
+  font-style: italic;
+}
 @media all and (min-width: 530px) {
   .address {
     float: left;
     clear: none;
+  }
+}
+@media all and (min-width: 1100px) {
+  .address {
+    width: 429px;
   }
 }
 .clearfix {
@@ -18399,11 +18423,13 @@ a .date-calendar {
 .sfhiv_service .day,
 .sfhiv_service_hour .day {
   display: block;
+  width: 112.5px;
+  text-align: center;
   border-radius: 5px;
   background-color: #f09938;
   color: #ffffff;
   margin: 0px;
-  padding: 3.5px 7px;
+  padding: 3.5px 0px;
 }
 .list .member {
   position: relative;

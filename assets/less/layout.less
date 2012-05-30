@@ -396,11 +396,10 @@
 .categories{
 	display:block;
 	clear:both;
-	margin:@space_size/2 0px;
+	margin:@space_size/2 0px 0px;
 	h4{
 		color:@text_color;
 		display:block;
-		float:left;
 		margin-right:@space_size;
 		padding:@space_size/2 0px;
 	}
@@ -409,15 +408,32 @@
 		float:left;
 		border:1px solid @secondary_color;
 		border-radius:5px;
-		color:@secondary_color;
+		margin-left:0px;
+		margin-bottom:@space_size/2;
 		margin-right:@space_size/2;
-		padding:@space_size/2;
+		padding:@space_size/2 @space_size;
 	}
 	&.populations{
 		li{
 			border:0px;
 			color:@text_color;
 			background-color:lighten(@secondary_color,15);
+		}
+	}
+}
+@media all and (min-width: @size_medium) {
+	.categories{
+		display:block;
+		clear:both;
+		margin:@space_size/2 0px;
+		position:relative;
+		padding-left:@block_width/2;
+		h4{
+			width:@block_width/2 - @space_size;
+			position:absolute;
+			top:0px;
+			left:0px;
+			text-align:right;
 		}
 	}
 }
