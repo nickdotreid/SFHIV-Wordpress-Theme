@@ -18413,6 +18413,12 @@ a .date-calendar {
   margin: 0px;
   padding: 7px 0px;
 }
+.sfhiv_service .populations li,
+.sfhiv_service_hour .populations li {
+  border: 0px;
+  color: #2e3c62;
+  background-color: #e2e2e2;
+}
 .sfhiv_service_hour .day,
 .sfhiv_service_hour .time,
 .sfhiv_service_hour .address .street {
