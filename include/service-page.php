@@ -110,7 +110,7 @@ function sfhiv_service_page_service_hours(){
 		'post_type' => 'sfhiv_service_hour',
 		'connected_type' => 'service_time',
 		'connected_items' => get_the_ID(),
-		'no_paging' => true,
+		'nopaging' => true,
 	));
 	if($service_hours->post_count < 1) return;
 	$this_post = $post;
