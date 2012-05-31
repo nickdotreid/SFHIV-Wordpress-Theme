@@ -18419,9 +18419,9 @@ a .date-calendar {
   color: #2e3c62;
   background-color: #e2e2e2;
 }
-.sfhiv_service_hour .day,
-.sfhiv_service_hour .time,
-.sfhiv_service_hour .address .street {
+.sfhiv_service_hour.short .day,
+.sfhiv_service_hour.short .time,
+.sfhiv_service_hour.short .address .street {
   font-size: 18px;
 }
 .list .member {
