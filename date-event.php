@@ -11,7 +11,7 @@ $time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
 	<span class="day"><?=date('l',$time);?></span>
 	<?	endif;	?>
 	<span class="date-number"><?=date("d",$time);?></span>
-	<span class="month"><?=date("F",$time);?></span>
+	<span class="month"><?=date("M",$time);?></span>
 	<?	if(date("Y",$now) != date("Y",$time)):	?>
 	<span class="year"><?=date("Y",$time);?></span>
 	<?	endif;	?>

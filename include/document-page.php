@@ -24,6 +24,17 @@ function sfhiv_document_show_date(){
 	if(get_post_type() != 'sfhiv_document') return;
 	$pub_date = sfhiv_document_get_pub_date();
 	if(!$pub_date) return;
-	echo '<span class="date">'.date("F Y",$pub_date).'</span>';
+	echo '<span class="date date-post">'.date("F Y",$pub_date).'</span>';
 }
+
+add_action('short_navigation','sfhiv_document_navigation_view_link',1);
+function sfhiv_document_navigation_view_link(){
+	if(get_post_type() != 'sfhiv_document') return;
+	echo '<a href="';
+	the_permalink();
+	echo '">';
+	_e("View Publication");
+	echo '</a>';
+}
+
 ?>
