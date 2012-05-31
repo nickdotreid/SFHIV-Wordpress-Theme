@@ -112,13 +112,14 @@ function sfhiv_service_page_service_hours(){
 		'connected_items' => get_the_ID(),
 		'no_paging' => true,
 	));
+	if($service_hours->post_count < 1) return;
 	$this_post = $post;
+	echo '<ul class="list">';
 	foreach($service_hours->posts as $hour){
 		$post = $hour;
-		echo '<ul class="list">';
 		get_template_part('list-item',get_post_type());
-		echo '</ul>';
 	}
+	echo '</ul>';
 	$post = $this_post;
 }
 
