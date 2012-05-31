@@ -381,7 +381,9 @@
 	}
 }
 .short{
-	margin:0px 0px @space_size*4;
+	margin:@space_size 0px;
+	padding-bottom:@space_size;
+	border-bottom:@border_width @secondary_color solid;
 }
 .list-item{
 	a .date{
@@ -397,20 +399,21 @@
 	display:block;
 	clear:both;
 	margin:@space_size/2 0px 0px;
+	font-size:@small_font_size;
 	h4{
 		color:@text_color;
 		display:block;
-		margin-right:@space_size;
+		float:left;
+		margin:0px @space_size 0px 0px;
 		padding:@space_size/2 0px;
+		font-size:@small_font_size;
 	}
 	li{
 		display:block;
 		float:left;
 		border:1px solid @secondary_color;
 		border-radius:5px;
-		margin-left:0px;
-		margin-bottom:@space_size/2;
-		margin-right:@space_size/2;
+		margin:0px @space_size/2 @space_size/2 0px;
 		padding:@space_size/2 @space_size;
 	}
 	&.populations{
@@ -418,22 +421,6 @@
 			border:0px;
 			color:@text_color;
 			background-color:lighten(@secondary_color,15);
-		}
-	}
-}
-@media all and (min-width: @size_medium) {
-	.categories{
-		display:block;
-		clear:both;
-		margin:@space_size/2 0px;
-		position:relative;
-		padding-left:@block_width/2;
-		h4{
-			width:@block_width/2 - @space_size;
-			position:absolute;
-			top:0px;
-			left:0px;
-			text-align:right;
 		}
 	}
 }

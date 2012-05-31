@@ -15290,7 +15290,9 @@ h4 a:hover {
   clear: both;
 }
 .short {
-  margin: 0px 0px 28px;
+  margin: 7px 0px;
+  padding-bottom: 7px;
+  border-bottom: 1px #bcbcbc solid;
 }
 .list-item a .date {
   margin-top: 0px;
@@ -15303,43 +15305,28 @@ h4 a:hover {
   display: block;
   clear: both;
   margin: 3.5px 0px 0px;
+  font-size: 12px;
 }
 .categories h4 {
   color: #2e3c62;
   display: block;
-  margin-right: 7px;
+  float: left;
+  margin: 0px 7px 0px 0px;
   padding: 3.5px 0px;
+  font-size: 12px;
 }
 .categories li {
   display: block;
   float: left;
   border: 1px solid #bcbcbc;
   border-radius: 5px;
-  margin-left: 0px;
-  margin-bottom: 3.5px;
-  margin-right: 3.5px;
+  margin: 0px 3.5px 3.5px 0px;
   padding: 3.5px 7px;
 }
 .categories.populations li {
   border: 0px;
   color: #2e3c62;
   background-color: #e2e2e2;
-}
-@media all and (min-width: 800px) {
-  .categories {
-    display: block;
-    clear: both;
-    margin: 3.5px 0px;
-    position: relative;
-    padding-left: 112.5px;
-  }
-  .categories h4 {
-    width: 105.5px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    text-align: right;
-  }
 }
 .divider {
   clear: both;
@@ -18424,7 +18411,12 @@ a .date-calendar {
   background-color: #f09938;
   color: #ffffff;
   margin: 0px;
-  padding: 3.5px 0px;
+  padding: 7px 0px;
+}
+.sfhiv_service_hour .day,
+.sfhiv_service_hour .time,
+.sfhiv_service_hour .address .street {
+  font-size: 18px;
 }
 .list .member {
   position: relative;
