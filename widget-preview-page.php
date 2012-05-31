@@ -44,20 +44,16 @@ class SFHIV_Page_Widget extends WP_Widget {
 			echo '<h2 class="entry-title"><a href="'.get_permalink($page_id).'">'.get_the_title($page_id).'</a></h2>';
 			echo '<div class="entry-content">';
 			echo '</div>';
-			echo '<ul class="list">';
+			echo '<nav><ul class="list">';
 			while($query->have_posts()):
 				$query->the_post();
-				echo '<li class="post">';
-				echo '<a href="'.get_permalink(get_the_ID()).'" class="entry-title">'.get_the_title(get_the_ID()).'</a>';
-				echo '<span class="date date-post">'.get_the_date().'</span>';
-				echo '<span class="entry-content">'.get_the_excerpt().'</span>';
-				echo '<a href="'.get_permalink(get_the_ID()).'">';
-				_e("Read more","sfhiv");
-				echo '</a>';
-				'</li>';
+				get_template_part("list-item",get_post_type());
 			endwhile;
-			echo '</ul>';
+			echo '</ul></nav>';
 			wp_reset_postdata();
+			echo '<a href="'.get_permalink($page_id).'" class="clear preview-bottom">';
+			echo get_the_title($page_id);
+			echo '</a>';
 			echo $after_widget;
 		else:
 		while($query->have_posts()):

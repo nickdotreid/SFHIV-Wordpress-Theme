@@ -18568,3 +18568,6 @@ a .date-calendar {
 .post-meta {
   font-size: 12px;
 }
+.list-item.post .date-post {
+  display: block;
+}

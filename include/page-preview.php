@@ -57,7 +57,6 @@ function sfhiv_add_mini_archive_menu(){
 		}
 		if(is_home()){
 			$output_archive = true;
-			echo "FOO";
 		}
 		if(!$output_archive && !in_array($archive_type,array(
 			'sfhiv_service',
