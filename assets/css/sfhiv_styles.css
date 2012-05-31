@@ -17268,67 +17268,147 @@ h4 a:hover {
   border-bottom: 1px solid #bcbcbc;
   padding: 7px 0px;
 }
-.sidebar .menu .current_page_ancestor a,
-.sidebar .menu .current_page_parent a,
-.sidebar .menu .current_page_ancestor .children a,
-.sidebar .menu .current_page_ancestor label,
-.sidebar .menu .current_page_parent label,
-.sidebar .menu .current_page_ancestor .children label {
+.sidebar .menu a i,
+.sidebar .menu a:visited i,
+.sidebar .menu a:hover i,
+.sidebar .menu label i {
+  display: none;
+}
+.sidebar .menu .current_ancestor a,
+.sidebar .menu .current_parent a,
+.sidebar .menu .current_ancestor .children a,
+.sidebar .menu .current_ancestor label,
+.sidebar .menu .current_parent label,
+.sidebar .menu .current_ancestor .children label {
   padding: 3.5px 0px 3.5px 14px;
 }
+.sidebar .menu .current_ancestor a i,
+.sidebar .menu .current_parent a i,
+.sidebar .menu .current_ancestor .children a i,
+.sidebar .menu .current_ancestor label i,
+.sidebar .menu .current_parent label i,
+.sidebar .menu .current_ancestor .children label i {
+  display: block;
+  float: left;
+  background-color: transparent;
+  background-image: url('../i/sfhiv_icon_set.png');
+  background-repeat: no-repeat;
+  background-position: -151px 0px;
+  width: 12px;
+  height: 20px;
+  margin-right: 3.5px;
+}
+.sidebar .menu .current_ancestor a:hover i,
+.sidebar .menu .current_parent a:hover i,
+.sidebar .menu .current_ancestor .children a:hover i,
+.sidebar .menu .current_ancestor label:hover i,
+.sidebar .menu .current_parent label:hover i,
+.sidebar .menu .current_ancestor .children label:hover i {
+  background-position: -151px -40px;
+}
 .sidebar .menu .children,
-.sidebar .menu .current_page_parent .children {
+.sidebar .menu .current_parent .children {
   font-size: 14px;
 }
 .sidebar .menu .children a,
-.sidebar .menu .current_page_parent .children a,
+.sidebar .menu .current_parent .children a,
 .sidebar .menu .children label,
-.sidebar .menu .current_page_parent .children label {
+.sidebar .menu .current_parent .children label {
   padding: 14px 0px 7px;
 }
-.sidebar .menu .current_page_item a,
-.sidebar .menu .children .current_page_item a,
-.sidebar .menu .current_page_ancestor .children .current_page_item a,
+.sidebar .menu .children a i,
+.sidebar .menu .current_parent .children a i,
+.sidebar .menu .children label i,
+.sidebar .menu .current_parent .children label i {
+  display: none;
+}
+.sidebar .menu .current_item a,
+.sidebar .menu .children .current_item a,
+.sidebar .menu .current_ancestor .children .current_item a,
 .sidebar .menu .current-cat a,
 .sidebar .menu .current_item a,
-.sidebar .menu .current_page_item a:visited,
-.sidebar .menu .children .current_page_item a:visited,
-.sidebar .menu .current_page_ancestor .children .current_page_item a:visited,
+.sidebar .menu .current_item a:visited,
+.sidebar .menu .children .current_item a:visited,
+.sidebar .menu .current_ancestor .children .current_item a:visited,
 .sidebar .menu .current-cat a:visited,
 .sidebar .menu .current_item a:visited,
-.sidebar .menu .current_page_item a:hover,
-.sidebar .menu .children .current_page_item a:hover,
-.sidebar .menu .current_page_ancestor .children .current_page_item a:hover,
+.sidebar .menu .current_item a:hover,
+.sidebar .menu .children .current_item a:hover,
+.sidebar .menu .current_ancestor .children .current_item a:hover,
 .sidebar .menu .current-cat a:hover,
 .sidebar .menu .current_item a:hover,
-.sidebar .menu .current_page_item label,
-.sidebar .menu .children .current_page_item label,
-.sidebar .menu .current_page_ancestor .children .current_page_item label,
+.sidebar .menu .current_item label,
+.sidebar .menu .children .current_item label,
+.sidebar .menu .current_ancestor .children .current_item label,
 .sidebar .menu .current-cat label,
 .sidebar .menu .current_item label {
   padding-top: 14px;
 }
-.sidebar .menu .current_page_item .children a,
-.sidebar .menu .children .current_page_item .children a,
-.sidebar .menu .current_page_ancestor .children .current_page_item .children a,
+.sidebar .menu .current_item a i,
+.sidebar .menu .children .current_item a i,
+.sidebar .menu .current_ancestor .children .current_item a i,
+.sidebar .menu .current-cat a i,
+.sidebar .menu .current_item a i,
+.sidebar .menu .current_item a:visited i,
+.sidebar .menu .children .current_item a:visited i,
+.sidebar .menu .current_ancestor .children .current_item a:visited i,
+.sidebar .menu .current-cat a:visited i,
+.sidebar .menu .current_item a:visited i,
+.sidebar .menu .current_item a:hover i,
+.sidebar .menu .children .current_item a:hover i,
+.sidebar .menu .current_ancestor .children .current_item a:hover i,
+.sidebar .menu .current-cat a:hover i,
+.sidebar .menu .current_item a:hover i,
+.sidebar .menu .current_item label i,
+.sidebar .menu .children .current_item label i,
+.sidebar .menu .current_ancestor .children .current_item label i,
+.sidebar .menu .current-cat label i,
+.sidebar .menu .current_item label i {
+  display: none;
+}
+.sidebar .menu .current_item .children a,
+.sidebar .menu .children .current_item .children a,
+.sidebar .menu .current_ancestor .children .current_item .children a,
 .sidebar .menu .current-cat .children a,
 .sidebar .menu .current_item .children a,
-.sidebar .menu .current_page_item .children a:visited,
-.sidebar .menu .children .current_page_item .children a:visited,
-.sidebar .menu .current_page_ancestor .children .current_page_item .children a:visited,
+.sidebar .menu .current_item .children a:visited,
+.sidebar .menu .children .current_item .children a:visited,
+.sidebar .menu .current_ancestor .children .current_item .children a:visited,
 .sidebar .menu .current-cat .children a:visited,
 .sidebar .menu .current_item .children a:visited,
-.sidebar .menu .current_page_item .children a:hover,
-.sidebar .menu .children .current_page_item .children a:hover,
-.sidebar .menu .current_page_ancestor .children .current_page_item .children a:hover,
+.sidebar .menu .current_item .children a:hover,
+.sidebar .menu .children .current_item .children a:hover,
+.sidebar .menu .current_ancestor .children .current_item .children a:hover,
 .sidebar .menu .current-cat .children a:hover,
 .sidebar .menu .current_item .children a:hover,
-.sidebar .menu .current_page_item .children label,
-.sidebar .menu .children .current_page_item .children label,
-.sidebar .menu .current_page_ancestor .children .current_page_item .children label,
+.sidebar .menu .current_item .children label,
+.sidebar .menu .children .current_item .children label,
+.sidebar .menu .current_ancestor .children .current_item .children label,
 .sidebar .menu .current-cat .children label,
 .sidebar .menu .current_item .children label {
   padding-left: 21px;
+}
+.sidebar .menu .current_item .children a i,
+.sidebar .menu .children .current_item .children a i,
+.sidebar .menu .current_ancestor .children .current_item .children a i,
+.sidebar .menu .current-cat .children a i,
+.sidebar .menu .current_item .children a i,
+.sidebar .menu .current_item .children a:visited i,
+.sidebar .menu .children .current_item .children a:visited i,
+.sidebar .menu .current_ancestor .children .current_item .children a:visited i,
+.sidebar .menu .current-cat .children a:visited i,
+.sidebar .menu .current_item .children a:visited i,
+.sidebar .menu .current_item .children a:hover i,
+.sidebar .menu .children .current_item .children a:hover i,
+.sidebar .menu .current_ancestor .children .current_item .children a:hover i,
+.sidebar .menu .current-cat .children a:hover i,
+.sidebar .menu .current_item .children a:hover i,
+.sidebar .menu .current_item .children label i,
+.sidebar .menu .children .current_item .children label i,
+.sidebar .menu .current_ancestor .children .current_item .children label i,
+.sidebar .menu .current-cat .children label i,
+.sidebar .menu .current_item .children label i {
+  display: none;
 }
 @media all and (min-width: 800px) {
   .sidebar .menu {

@@ -38,26 +38,52 @@
 		display:block;
 		padding-bottom:@space_size*3;
 		a,a:visited,a:hover,label{
+			i{
+				display:none;
+			}
 			border-bottom:1px solid @secondary_color;
 			padding:@space_size 0px;
 		}
-		.current_page_ancestor,.current_page_parent, .current_page_ancestor .children{
+		.current_ancestor,.current_parent, .current_ancestor .children{
 			a,label{
+				i{
+					display:block;
+					float:left;
+					background-color:transparent;
+					background-image:url('../i/sfhiv_icon_set.png');
+					background-repeat:no-repeat;
+					background-position:-151px 0px;
+					width:12px;
+					height:20px;
+					margin-right:@space_size/2;
+				}
+				&:hover i{
+					background-position:-151px -40px;
+				}
 				padding:@space_size/2 0px @space_size/2 @space_size*2;
 			}
 		}
-		.children, .current_page_parent .children{
+		.children, .current_parent .children{
 			font-size:@font_size;
 			a,label{
+				i{
+					display:none;
+				}
 				padding:@space_size*2 0px @space_size;
 			}
 		}
-		.current_page_item, .children .current_page_item, .current_page_ancestor .children .current_page_item, .current-cat,.current_item{
+		.current_item, .children .current_item, .current_ancestor .children .current_item, .current-cat,.current_item{
 			a,a:visited,a:hover,label{
+				i{
+					display:none;
+				}
 				padding-top:@space_size*2;
 			}
 			.children{
 				a,a:visited,a:hover,label{
+					i{
+						display:none;
+					}
 					padding-left:@space_size*3;
 				}
 			}
