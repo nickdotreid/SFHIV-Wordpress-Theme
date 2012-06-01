@@ -46,21 +46,6 @@
 		}
 		.current_ancestor,.current_parent, .current_ancestor .children{
 			a,label{
-				i{
-					display:block;
-					float:left;
-					background-color:transparent;
-					background-image:url('../i/sfhiv_icon_set.png');
-					background-repeat:no-repeat;
-					background-position:-150px 0px;
-					width:5px;
-					height:10px;
-					margin-top:4px;
-					margin-right:@space_size/2;
-				}
-				&:hover i{
-					background-position:-150px -40px;
-				}
 				padding:@space_size/2 0px;
 			}
 		}
@@ -70,7 +55,7 @@
 				i{
 					display:none;
 				}
-				padding:@space_size*2 0px @space_size;
+				padding:@space_size 0px @space_size @space_size*2;
 			}
 		}
 		.current_item, .children .current_item, .current_ancestor .children .current_item, .current-cat,.current_item{
@@ -78,14 +63,14 @@
 				i{
 					display:none;
 				}
-				padding-top:@space_size*2;
+				padding-top:@space_size;
 			}
 			.children{
 				a,a:visited,a:hover,label{
 					i{
 						display:none;
 					}
-					padding-left:@space_size*3;
+					padding-left:@space_size*4;
 				}
 			}
 		}

@@ -17282,31 +17282,6 @@ h4 a:hover {
 .sidebar .menu .current_ancestor .children label {
   padding: 3.5px 0px;
 }
-.sidebar .menu .current_ancestor a i,
-.sidebar .menu .current_parent a i,
-.sidebar .menu .current_ancestor .children a i,
-.sidebar .menu .current_ancestor label i,
-.sidebar .menu .current_parent label i,
-.sidebar .menu .current_ancestor .children label i {
-  display: block;
-  float: left;
-  background-color: transparent;
-  background-image: url('../i/sfhiv_icon_set.png');
-  background-repeat: no-repeat;
-  background-position: -150px 0px;
-  width: 5px;
-  height: 10px;
-  margin-top: 4px;
-  margin-right: 3.5px;
-}
-.sidebar .menu .current_ancestor a:hover i,
-.sidebar .menu .current_parent a:hover i,
-.sidebar .menu .current_ancestor .children a:hover i,
-.sidebar .menu .current_ancestor label:hover i,
-.sidebar .menu .current_parent label:hover i,
-.sidebar .menu .current_ancestor .children label:hover i {
-  background-position: -150px -40px;
-}
 .sidebar .menu .children,
 .sidebar .menu .current_parent .children {
   font-size: 14px;
@@ -17315,7 +17290,7 @@ h4 a:hover {
 .sidebar .menu .current_parent .children a,
 .sidebar .menu .children label,
 .sidebar .menu .current_parent .children label {
-  padding: 14px 0px 7px;
+  padding: 7px 0px 7px 14px;
 }
 .sidebar .menu .children a i,
 .sidebar .menu .current_parent .children a i,
@@ -17343,7 +17318,7 @@ h4 a:hover {
 .sidebar .menu .current_ancestor .children .current_item label,
 .sidebar .menu .current-cat label,
 .sidebar .menu .current_item label {
-  padding-top: 14px;
+  padding-top: 7px;
 }
 .sidebar .menu .current_item a i,
 .sidebar .menu .children .current_item a i,
@@ -17387,7 +17362,7 @@ h4 a:hover {
 .sidebar .menu .current_ancestor .children .current_item .children label,
 .sidebar .menu .current-cat .children label,
 .sidebar .menu .current_item .children label {
-  padding-left: 21px;
+  padding-left: 28px;
 }
 .sidebar .menu .current_item .children a i,
 .sidebar .menu .children .current_item .children a i,
