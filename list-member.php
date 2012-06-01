@@ -17,7 +17,7 @@ $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 		<span class="info department"><?=get_the_author_meta('sfhiv_department',$user->ID);?></span>
 		<?	endif;	?>
 	</section>
-	<?	if(p2p_get_meta( $user->p2p_id, 'show_contact_info', true )):	?>
+	<?	if($show_contact_info || p2p_get_meta( $user->p2p_id, 'show_contact_info', true )):	?>
 	<section class="contact">
 		<?	if(get_the_author_meta('sfhiv_telephone',$user->ID)):	?>
 		<span class="info phone"><i></i> <?=get_the_author_meta('sfhiv_telephone',$user->ID);?></span>
