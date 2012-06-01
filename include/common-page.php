@@ -19,6 +19,31 @@ function sfhiv_page_show_website_link(){
 	<?
 }
 
+add_action('get_sidebar','sfhiv_page_show_linked_page',11);
+function sfhiv_page_show_linked_page(){
+	if(!is_singular()) return;
+	$page = false;
+	
+	switch(get_post_type()){
+		case 'sfhiv_group':
+			if(has_term('hiv-prevention-planning-council','sfhiv_group_category',get_the_ID())){
+				$page = get_page_by_title('HIV Prevention Planning Council');
+			}
+			if(has_term('hps-units','sfhiv_group_category',get_the_ID())){
+				$page = get_page_by_title('Our Units');
+			}
+			break;
+		case 'sfhiv_study':
+			$page = get_page_by_title('Studies');
+			break;
+	}
+	
+	if(!$page) return;
+	sfhiv_draw_menu(array($page),array(
+		"show_parents" => true,
+	));
+}
+
 add_action('after_content','sfhiv_page_list_attachments',5);
 function sfhiv_page_list_attachments(){
 	if(!is_singular()) return;
