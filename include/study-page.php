@@ -33,10 +33,13 @@ function sfhiv_study_list_children(){
 	$children = new WP_Query( array(
 		'post_type' => 'sfhiv_study',
 		'post_parent' => get_the_ID(),
+		'nopaging' => true,
 	));
 	do_action('sfhiv_loop',$children,array(
 		"id" => "children",
 		"title" => "Related Studies",
+		"show_empty" => false,
+		"show_filters" => false,
 	));
 }
 
@@ -54,6 +57,7 @@ function sfhiv_study_add_reports(){
 		"title" => "Publications",
 		"list_element" => 'short',
 		'show_filters' => false,
+		'show_empty' => false,
 		"wrap_before" => '<section>',
 		"wrap_after" => '</section>',
 	));

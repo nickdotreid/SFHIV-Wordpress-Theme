@@ -100,7 +100,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 		"classes" => array("list"),
 		"list_element" => "short",
 		"show_filters" => true,
-		"show_empty" => true,
+		"show_empty" => false,
 	),$args);
 	$args = apply_filters('sfhiv_loop_arguments',$args,$query->query_vars['post_type']);
 	if($query->post_count<1 && !$args['show_empty']) return;
