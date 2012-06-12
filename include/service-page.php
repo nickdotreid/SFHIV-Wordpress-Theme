@@ -24,7 +24,7 @@ function sfhiv_service_population_display(){
 	sfhiv_population_cat_display();
 }
 
-add_action('short_before_content','sfhiv_service_hour_population_display',4);
+add_action('short_before_content','sfhiv_service_hour_population_display',10);
 function sfhiv_service_hour_population_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
 	sfhiv_population_cat_display();
@@ -35,7 +35,6 @@ function sfhiv_population_cat_display(){
 	$population_terms = wp_get_post_terms(get_the_ID(),'sfhiv_population_category');
 	if(count($population_terms)<1) return;
 	echo '<section class="populations categories">';
-	echo '<h4>Only Serves</h4>';
 	echo '<ul>';
 	foreach($population_terms as $term){
 		echo '<li class="population '.$term->slug.'">'.$term->name.'</li>';
@@ -50,7 +49,7 @@ function sfhiv_service_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service'))) return;
 	sfhiv_service_cat_display();
 }
-add_action('short_before_content','sfhiv_service_hour_service_cat_display',3);
+add_action('short_before_content','sfhiv_service_hour_service_cat_display',11);
 function sfhiv_service_hour_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
 	sfhiv_service_cat_display();
