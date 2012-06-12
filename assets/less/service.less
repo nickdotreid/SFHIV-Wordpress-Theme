@@ -20,6 +20,24 @@
 		color:@text_color;
 		background-color:lighten(@secondary_color,15);
 	}
+	.categories{
+		float:left;
+		clear:none;
+		width:@block_width/2 - @space_size;
+		h4,li{
+			float:none;
+		}
+	}
+}
+
+@media all and (min-width: @size_medium) {
+	.sfhiv_service,.sfhiv_service_hour{
+		.list{
+			float:left;
+			display:block;
+			width:@block_width*2 + @space_size*2;
+		}
+	}
 }
 
 .sfhiv_service_hour.short{

@@ -18073,7 +18073,7 @@ a .date-calendar {
 }
 @media all and (min-width: 1100px) {
   .address {
-    width: 415px;
+    width: 225px;
   }
 }
 .clearfix {
@@ -18474,6 +18474,26 @@ a .date-calendar {
   border: 0px;
   color: #2e3c62;
   background-color: #e2e2e2;
+}
+.sfhiv_service .categories,
+.sfhiv_service_hour .categories {
+  float: left;
+  clear: none;
+  width: 105.5px;
+}
+.sfhiv_service .categories h4,
+.sfhiv_service_hour .categories h4,
+.sfhiv_service .categories li,
+.sfhiv_service_hour .categories li {
+  float: none;
+}
+@media all and (min-width: 800px) {
+  .sfhiv_service .list,
+  .sfhiv_service_hour .list {
+    float: left;
+    display: block;
+    width: 464px;
+  }
 }
 .sfhiv_service_hour.short .info-service {
   margin-bottom: 7px;
