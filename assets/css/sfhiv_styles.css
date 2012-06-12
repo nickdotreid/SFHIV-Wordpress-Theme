@@ -17469,6 +17469,9 @@ h4 a:hover {
 .date_mix.date span span {
   display: inline;
 }
+#content header {
+  margin-bottom: 14px;
+}
 .entry-navigation {
   clear: both;
 }
@@ -17479,6 +17482,12 @@ h4 a:hover {
 }
 .entry-navigation .post-edit-link {
   float: right;
+}
+#content .entry-navigation {
+  clear: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 #content .entry-navigation a {
   padding: 3.5px;
