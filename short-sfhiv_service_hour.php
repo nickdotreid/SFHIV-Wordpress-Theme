@@ -17,4 +17,5 @@
 		<?	do_action("short_navigation");	?>
 		<br class="clear" />
 	</nav>
+	<br class="clear" />
 </article>
