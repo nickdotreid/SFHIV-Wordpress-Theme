@@ -32,8 +32,9 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 	echo '</span>';
 	echo '<nav class="filters pagnate">';
 	if($query->max_num_pages>1) echo paginate_links( $args );
+		echo '<br class="clear" />';
 	echo '</nav>';
-	echo '<br class="clear" />';
+	echo '<div class="clear" ></div>';
 	echo '</section>';
 }
 
