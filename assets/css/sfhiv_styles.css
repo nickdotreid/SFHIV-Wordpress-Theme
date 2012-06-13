@@ -18496,6 +18496,12 @@ a .date-calendar {
 .sfhiv_service_hour .categories li {
   float: none;
 }
+.sfhiv_service_hour .address {
+  width: 168.75px;
+}
+.sfhiv_service_hour .categories.populations {
+  width: 168.75px;
+}
 @media all and (min-width: 800px) {
   .sfhiv_service .list,
   .sfhiv_service_hour .list {
