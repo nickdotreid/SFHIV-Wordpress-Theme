@@ -22,6 +22,7 @@ function get_similar_to($post,$not_in_categories=array()){
 	$query = new WP_Query(array(
 		'post_type' => $post->post_type,
 		'tax_query' => $tax_query,
+		'nopaging' => true,
 	));
 	return $query;
 }
