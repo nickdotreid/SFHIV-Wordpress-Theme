@@ -15039,6 +15039,14 @@ h4 a:hover {
 #status-warning.draft {
   background-color: #e2e2e2;
 }
+.subtitle {
+  display: block;
+  line-height: 0.8em;
+}
+.preview-bottom .subtitle {
+  font-style: italic;
+  display: inline;
+}
 #content {
   margin: 0px;
   padding: 0px;
