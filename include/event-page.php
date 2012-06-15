@@ -15,20 +15,6 @@ function sfhiv_event_page_show_time(){
 	get_template_part('time','event');
 }
 
-add_action('get_sidebar','sfhiv_event_page_event_categories',23);
-function sfhiv_event_page_event_categories(){
-	if (!is_singular('sfhiv_event')) return;
-	$query = get_similar_to(get_post(get_the_ID()),array('sfhiv_event_category'));
-	$categories = sfhiv_get_taxonomy_in($query,'sfhiv_event_category','ids');
-	if(count($categories)<1) return;
-	sfhiv_draw_taxonomy_menu(array(
-		'taxonomy' => 'sfhiv_event_category',
-		'include' => implode(",",$categories),
-		'base_link' =>  get_post_type_archive_link( 'sfhiv_event' ),
-		'title_li' => 'Event Categories',
-	));
-}
-
 add_action('get_sidebar','sfhiv_event_page_parent_groups',22);
 function sfhiv_event_page_parent_groups(){
 	if (!is_singular('sfhiv_event')) return;
