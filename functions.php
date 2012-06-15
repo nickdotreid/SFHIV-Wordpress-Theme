@@ -35,7 +35,6 @@ include_once('include/report-archive.php');
 include_once('include/study-page.php');
 
 include_once('include/years-archive.php');
-include_once('include/contact-user.php');
 
 include_once('include/document-page.php');
 include_once('include/document-archive.php');
@@ -51,35 +50,6 @@ add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){
 	add_post_type_support( 'page', 'excerpt' );
 }
-
-function sfhiv_connection_types() {
-	// Make sure the Posts 2 Posts plugin is active.
-	if ( !function_exists( 'p2p_register_connection_type' ) )
-		return;
-	
-	p2p_register_connection_type( array(
-		'name' => 'contact_user',
-		'from' => array(
-			'sfhiv_group',
-			'sfhiv_event',
-			'page',
-			'post',
-			'sfhiv_training',
-			'sfhiv_document',
-		),
-		'to' => 'user',
-		'fields' => array(
-				'subject' => 'Subject',
-				),
-		'title' => 'User to Contact',
-		'admin_box' => array(
-			'show' => 'from',
-			'context' => 'advanced',
-		),
-		'sortable' => true,
-	) );
-}
-add_action( 'wp_loaded', 'sfhiv_connection_types' );
 
 add_action('get_sidebar','sfhiv_group_sidebar_start',10);
 function sfhiv_group_sidebar_start(){
