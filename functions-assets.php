@@ -20,6 +20,8 @@ function sfhiv_add_styles(){
 	?>
 	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 	<?
+	$base_dir = get_bloginfo('stylesheet_directory')."/assets/css/";
+	?><link href='<?=$base_dir.'print.css';?>' media="print" rel='stylesheet' type='text/css'><?	
 }
 
 function sfhiv_add_scripts(){

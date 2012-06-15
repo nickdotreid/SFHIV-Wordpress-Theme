@@ -1,0 +1,14 @@
+body{
+	color:#000;
+}
+a{
+	color:#00F;
+}
+
+.sidebar,#branding,#bottom{
+	display:none;
+}
+
+#content, .list, .filters, .main-column{
+	width:auto;
+}
