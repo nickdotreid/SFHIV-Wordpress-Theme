@@ -18,7 +18,7 @@ function sfhiv_group_page_add_featured_image(){
 add_action('get_sidebar','sfhiv_group_page_groups_by_year',22);
 function sfhiv_group_page_groups_by_year(){
 	if (!is_singular('sfhiv_group')) return;
-	$query = get_similar_to(get_post(get_the_ID()));
+	$query = sfhiv_get_similar_to(get_post(get_the_ID()));
 	if($query->post_count > 0 ){
 		sfhiv_draw_menu($query->posts);
 	}

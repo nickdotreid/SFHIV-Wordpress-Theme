@@ -1,6 +1,6 @@
 <?php
 
-function get_similar_to($post,$not_in_categories=array()){
+function sfhiv_get_similar_to($post,$not_in_categories=array()){
 	if(!is_array($not_in_categories)){
 		$not_in_categories = array();
 	}
