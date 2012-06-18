@@ -32,3 +32,31 @@
 		background-image:url('../i/sfhiv_icon_set.png');
 	}
 }
+
+#access .search-form-item{
+	display:block;
+	float:left;
+	width:auto;
+	#searchform{
+		width:auto;
+		margin:0px;
+		padding:0px @space_size;
+		input[type=text]{
+			display:none;
+		}
+		#searchsubmit{
+			background-color:transparent;
+			box-shadow:0px 0px 0px;
+			background-position:-128px -40px;
+		}
+		&.open{
+			input[type=text]{
+				display:block;
+				width:120px;
+			}
+			#searchsubmit{
+				background-color:@secondary_color;
+			}
+		}
+	}
+}
