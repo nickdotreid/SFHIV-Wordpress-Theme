@@ -20956,10 +20956,9 @@ h4 a:hover {
   margin-right: 3.5px;
   font-size: 12px;
   text-align: center;
-  border-radius: 5px;
 }
 .date-calendar span {
-  padding: 3.5px;
+  padding: 1.75px 3.5px;
   display: block;
   float: none;
   clear: both;
@@ -20968,6 +20967,7 @@ h4 a:hover {
   font-size: 18px;
   background-color: #ffffff;
   color: #2e3c62;
+  padding: 3.5px;
 }
 a .date-calendar {
   text-decoration: none;
