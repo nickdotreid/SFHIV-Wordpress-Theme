@@ -15094,7 +15094,6 @@ h4 a:hover {
   }
   #content,
   .list,
-  .filters,
   .main-column {
     width: 450px;
     float: right;
@@ -15102,12 +15101,7 @@ h4 a:hover {
   }
   #content .list,
   .list .list,
-  .filters .list,
-  .main-column .list,
-  #content .filters,
-  .list .filters,
-  .filters .filters,
-  .main-column .filters {
+  .main-column .list {
     width: auto;
     margin: 0px;
     float: none;

@@ -10,9 +10,6 @@ get_header(); ?>
 
 		<div class="sidebar">
 			<?php get_search_form(); ?>
-			<div class="">
-				<p><?_e("Showing ".$wp_query->post_count." of ".$wp_query->found_posts.' results');?></p>
-			</div>
 		</div>
 		<section id="primary">
 			<?php if ( have_posts() ) : ?>
@@ -20,14 +17,12 @@ get_header(); ?>
 				<header>
 					<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'toolbox' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header>
-			</div>
-				<?php do_action("sfhiv_pre_loop"); ?>	
-				<div class="list">
+				<?php do_action("sfhiv_pre_loop"); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'short', get_post_type() ); ?>
 				<?php endwhile; ?>
-				</div>
 				<?php do_action("sfhiv_post_loop"); ?>
+			</div>
 			<?php else : ?>
 			<div id="content" role="main" class="list">
 				<article id="post-0" class="post no-results not-found">
