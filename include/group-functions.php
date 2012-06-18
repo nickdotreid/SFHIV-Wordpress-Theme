@@ -80,6 +80,7 @@ function sfhiv_group_get_services($id=false){
 		'connected_type' => 'group_services',
 		'connected_items' => get_the_ID(),
 		'nopaging' => true,
+		'post_type' => 'sfhiv_service',
 	));
 	return $services;
 }
