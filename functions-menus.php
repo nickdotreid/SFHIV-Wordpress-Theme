@@ -17,15 +17,6 @@ function sfhiv_register_sidebars(){
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>',
 	));
-	register_sidebar(array(
-		'name' => 'Top Sidebar',
-		'id' => 'top-sidebar',
-		'description' => 'widgets here will be displayed at the top of the page',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => '</h2>',
-	));
 	
 	register_sidebar(array(
 		'name' => 'Home Page',
@@ -61,16 +52,6 @@ function sfhiv_add_home_page_widgets(){
 		<div class="divider"></div>
 		<?dynamic_sidebar("Home Page");?>
 		<br class="clear" />
-	</section>
-
-	<?
-}
-
-add_action('before_access','sfhiv_add_top_sidebar',40);
-function sfhiv_add_top_sidebar(){
-	?>
-	<section id="section-top" class="content top">
-		<?dynamic_sidebar("Top Sidebar");?>
 	</section>
 
 	<?
