@@ -26,7 +26,7 @@
 		margin:0px 3.5px;
 		padding:0px;
 		border:0px;
-		background-color:@secondary_color;
+		background-color:@light_secondary_color;
 		background-repeat:no-repeat;
 		background-position:-128px -35px;
 		background-image:url('../i/sfhiv_icon_set.png');
@@ -42,20 +42,13 @@
 		margin:0px;
 		padding:0px @space_size;
 		input[type=text]{
-			display:none;
-		}
-		#searchsubmit{
-			background-color:transparent;
-			box-shadow:0px 0px 0px;
-			background-position:-128px -40px;
+			display:block;
+			width:60px;
 		}
 		&.open{
 			input[type=text]{
 				display:block;
 				width:120px;
-			}
-			#searchsubmit{
-				background-color:@secondary_color;
 			}
 		}
 	}

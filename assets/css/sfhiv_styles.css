@@ -21875,7 +21875,7 @@ a .date-calendar {
   margin: 0px 3.5px;
   padding: 0px;
   border: 0px;
-  background-color: #bcbcbc;
+  background-color: #e2e2e2;
   background-repeat: no-repeat;
   background-position: -128px -35px;
   background-image: url('../i/sfhiv_icon_set.png');
@@ -21891,17 +21891,16 @@ a .date-calendar {
   padding: 0px 7px;
 }
 #access .search-form-item #searchform input[type=text] {
-  display: none;
-}
-#access .search-form-item #searchform #searchsubmit {
-  background-color: transparent;
-  box-shadow: 0px 0px 0px;
-  background-position: -128px -40px;
+  display: block;
+  width: 60px;
 }
 #access .search-form-item #searchform.open input[type=text] {
   display: block;
   width: 120px;
 }
-#access .search-form-item #searchform.open #searchsubmit {
-  background-color: #bcbcbc;
+.error404 #main {
+  background: transparent;
+}
+.error404 #content {
+  width: 100%;
 }
