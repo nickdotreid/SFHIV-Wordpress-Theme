@@ -18308,6 +18308,78 @@ a .date-calendar {
 .attachment {
   display: block;
 }
+.attachment .entry-title a {
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+  color: #918bb3;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
+.attachment .entry-title a:visited {
+  color: #918bb3;
+}
+.attachment .entry-title a:hover {
+  color: #5c5683;
+}
 .attachment i {
   display: block;
   float: left;
@@ -18332,15 +18404,6 @@ a .date-calendar {
 }
 .attachment .entry-navigation {
   border: 0;
-}
-.list.attachments .attachment {
-  padding-left: 28px;
-}
-@media all and (min-width: 530px) {
-  .list.attachments .attachment {
-    padding-left: 56px;
-    background-position: 0px 7px;
-  }
 }
 .short .attachments {
   display: block;

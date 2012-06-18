@@ -3,6 +3,11 @@
 
 .attachment{
 	display:block;
+	.entry-title{
+		a{
+			.link_mix(@link_color);
+		}
+	}
 	i{
 		display:block;
 		float:left;
@@ -31,20 +36,6 @@
 	}
 	.entry-navigation{
 		border:0;
-	}
-}
-
-.list.attachments{
-	.attachment{
-		padding-left:28px;
-	}
-}
-@media all and (min-width: @size_tablet) {
-	.list.attachments{
-		.attachment{
-			padding-left:@space_size*8;
-			background-position:0px @space_size;
-		}
 	}
 }
 
