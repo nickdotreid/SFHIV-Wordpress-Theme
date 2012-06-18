@@ -17902,7 +17902,7 @@ h4 a:hover {
 .date-float {
   display: block;
   float: left;
-  margin-top: 3.5px;
+  margin-top: 0px;
   margin-right: 7px;
 }
 .list-item .date {
@@ -18059,7 +18059,7 @@ a .date-calendar {
   position: relative;
   display: block;
   clear: both;
-  margin: 3.5px 0px;
+  margin: 0px;
   line-height: 1.1em;
 }
 .address i {
