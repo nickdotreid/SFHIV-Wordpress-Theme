@@ -89,7 +89,7 @@ function sfhiv_navigation_related_link(){
 
 add_action('before_content','sfhiv_content_add_navigation');
 function sfhiv_content_add_navigation(){
-	echo '<nav class="entry-navigation">';
+	echo '<nav class="entry-navigation top">';
 	do_action('navigation');
 	echo '<br class="clear" />';
 	echo '</nav>';

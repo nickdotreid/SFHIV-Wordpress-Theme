@@ -12,10 +12,10 @@ function sfhiv_post_meta(){
 	$user = get_user_by('login', get_the_author_meta('user_login'));
 	if(!$user) return;
 	echo '<div class="post-meta">';
-	echo 'Posted by ';
-	echo get_the_author_meta("first_name",$user->ID).' '.get_the_author_meta("last_name",$user->ID);
-	echo ' on ';
+	echo 'Posted on ';
 	echo get_the_date();
+	echo ' by ';
+	echo get_the_author_meta("first_name",$user->ID).' '.get_the_author_meta("last_name",$user->ID);
 	echo '</div>';
 }
 

@@ -17485,16 +17485,16 @@ h4 a:hover {
 .entry-navigation .post-edit-link {
   float: right;
 }
-#content .entry-navigation {
-  clear: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
 #content .entry-navigation a {
   padding: 3.5px;
   margin: 3.5px 0px;
   margin-right: 7px;
+}
+#content .entry-navigation.top {
+  clear: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 .entry-content h1,
 .entry-content h2,
@@ -17945,7 +17945,6 @@ h4 a:hover {
   border: 1px #bcbcbc solid;
   color: #ffffff;
   padding: 0px;
-  margin-top: 3.5px;
   margin-right: 3.5px;
   font-size: 12px;
   text-align: center;
@@ -18716,6 +18715,12 @@ a .date-calendar {
   margin-bottom: 7px;
   padding-bottom: 7px;
   border-bottom: 1px #bcbcbc solid;
+}
+.single-post #content .entry-header {
+  margin-bottom: 0px;
+}
+.single-post #content .post-meta {
+  margin-bottom: 14px;
 }
 .date-post,
 .entry-meta,
