@@ -60,8 +60,9 @@
 <?php do_action( 'before' ); ?>
 	<header id="branding" class="container" role="banner">
 		<hgroup>
-			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<div class="clear"></div>
 		</hgroup>
 		<?php do_action('before_access');	?>
 		<nav id="access" class="menu-justified" role="navigation">
@@ -71,7 +72,7 @@
 			<div class="menu-item search-form-item">
 				<?php get_search_form(); ?>
 			</div>
-			<br class="clear" />
+			<div class="clear"></div>
 		</nav><!-- #access -->
 		<?php do_action('after_access');	?>
 		<div class="divider" style="padding-top:16px;background-position:bottom center;"></div>
