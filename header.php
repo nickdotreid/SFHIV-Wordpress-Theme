@@ -35,7 +35,7 @@
 	bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
+	$site_description = preg_replace('/\/n/',' ',get_bloginfo( 'description', 'display' ));
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		echo " | $site_description";
 
@@ -61,7 +61,7 @@
 	<header id="branding" class="container" role="banner">
 		<hgroup>
 			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 id="site-description"><?php echo htmlspecialchars_decode(get_bloginfo( 'description', 'raw' )); ?></h2>
+			<h2 id="site-description"><?php echo preg_replace('/\/n/','<br />',get_bloginfo( 'description', 'raw' )); ?></h2>
 			<div class="clear"></div>
 		</hgroup>
 		<?php do_action('before_access');	?>
