@@ -16,6 +16,8 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 		$current_page = 1;
 	}
 	
+	if(isset($query->query_vars['nopaging']) && $query->query_vars['nopaging']) return;
+	
 	$base_url = preg_replace('/page\/(\d+)\//i','',$_SERVER[REQUEST_URI]); // strip out page var if in url
 	if(isset($args['id']))	$base_url .= "#".$args['id'];
 	$args = array(
