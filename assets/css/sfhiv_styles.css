@@ -21747,6 +21747,8 @@ a .date-calendar {
 .blog .sidebar,
 .single-post .sidebar {
   float: right;
+  clear: none;
+  width: 211px;
 }
 .list .post {
   margin-bottom: 7px;
