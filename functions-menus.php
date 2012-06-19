@@ -44,6 +44,15 @@ function sfhiv_register_custom_menu() {
 	register_nav_menu('footer_menu', 'Footer Menu');
 }
 
+add_action('get_sidebar','sfhiv_add_blog_sidebar',15);
+function sfhiv_add_blog_sidebar(){
+	if(is_home() || (is_singular() && get_post_type() == "post")):
+	?>
+	<?dynamic_sidebar("Blog Sidebar");?>
+	<?
+	endif;
+}
+
 add_action('get_footer','sfhiv_add_home_page_widgets',5);
 function sfhiv_add_home_page_widgets(){
 	if(!is_front_page()) return;
