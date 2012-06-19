@@ -2,8 +2,8 @@
 
 include_once('walker_category_menu.php');
 
-function make_filter_walker_link($category){
-	$href = $_SERVER['REQUEST_URI'];
+function make_filter_walker_link($category,$href=false){
+	if(!$href) $href = $_SERVER['REQUEST_URI'];
 	$argument = $category->slug;
 	if(isset($_GET[$category->taxonomy])){
 		$argument = $_GET[$category->taxonomy].",".$category->slug;
@@ -20,7 +20,8 @@ class SFHIV_Category_Walker_Filter extends SFHIV_Category_Walker_Menu {
 		$cat_name = apply_filters( 'list_cats', $cat_name, $category );
 		
 		$link = "";
-		$href = make_filter_walker_link($category);
+		if(!empty($base_link) && $base_link) $href = make_filter_walker_link($category,$base_link);
+		else make_filter_walker_link($category);
 		$href = remove_query_arg( "page", $href );
 		$link .= '<a href="';
 		$link .= $href.'" ';
