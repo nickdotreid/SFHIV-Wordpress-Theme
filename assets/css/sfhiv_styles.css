@@ -16818,17 +16818,17 @@ h4 a:hover {
   background-color: #FFF;
   position: relative;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   #page {
     width: 464px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   #page {
     width: 703px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #page {
     width: 956px;
   }
@@ -17411,17 +17411,17 @@ h4 a:hover {
   margin: 0px auto;
   width: 225px;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   .container {
     width: 450px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .container {
     width: 675px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   .container {
     width: 900px;
   }
@@ -17453,7 +17453,7 @@ h4 a:hover {
   line-height: 1.2em;
   font-style: italic;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   #branding {
     background-image: url('../i/sf_seal_bg_large.jpg');
     background-repeat: no-repeat;
@@ -17472,7 +17472,7 @@ h4 a:hover {
     padding-top: 100px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   #branding {
     background-position: -100px 0px;
   }
@@ -17483,7 +17483,7 @@ h4 a:hover {
     font-style: none;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #branding {
     background-position: 120px 0px;
   }
@@ -17516,7 +17516,7 @@ h4 a:hover {
   display: block;
   clear: both;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   #section-top {
     display: block;
     width: 225px;
@@ -17532,7 +17532,7 @@ h4 a:hover {
     margin-left: 7px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   #section-top {
     width: 450px;
     text-align: right;
@@ -17543,7 +17543,7 @@ h4 a:hover {
     margin-left: 14px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #section-top {
     width: 518px;
   }
@@ -17748,7 +17748,7 @@ h4 a:hover {
 #access .menu .menu-item.current-page-ancestor a:hover {
   color: #FFF;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   #access {
     display: block;
   }
@@ -17757,7 +17757,7 @@ h4 a:hover {
     font-size: 18px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #access .menu .menu-item {
     padding: 7px 28px;
     font-size: 18px;
@@ -17799,7 +17799,7 @@ h4 a:hover {
   margin: 0px;
   padding: 28px 7px 7px;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   #content,
   .list,
   .main-column {
@@ -17816,12 +17816,12 @@ h4 a:hover {
     margin-left: 0px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #content h1.entry-title {
     width: 382px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   #main {
     background-image: url('../i/background-line.gif');
     background-repeat: repeat-y;
@@ -17870,7 +17870,7 @@ h4 a:hover {
     margin-left: 0px;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   #content,
   .list,
   .filters,
@@ -19452,7 +19452,7 @@ h4 a:hover {
   padding: 14px;
   margin-bottom: 0px 14px 7px;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   .two-column,
   .three-column {
     background-image: url('../i/background-line.gif');
@@ -19466,7 +19466,7 @@ h4 a:hover {
     float: left;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .two-column,
   .footer.two-column {
     background-image: url('../i/background-line.gif');
@@ -19492,7 +19492,7 @@ h4 a:hover {
     float: left;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   .two-column article,
   .footer.two-column article,
   .two-column .widget,
@@ -19712,7 +19712,7 @@ h4 a:hover {
 .footer section.thin {
   font-size: 12px;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .footer .menu {
     text-align: left;
   }
@@ -19739,7 +19739,7 @@ h4 a:hover {
   padding-top: 214px;
   min-height: 200px;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .sfseal,
   .footer .sfseal {
     background-position: 7px 7px;
@@ -20381,7 +20381,7 @@ h4 a:hover {
 .sidebar .menu .current_item .children label i {
   display: none;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .sidebar .menu {
     margin-right: 14px;
   }
@@ -20749,7 +20749,7 @@ h4 a:hover {
 .js #main .slider .jcarousel-next .hover {
   background-position: -50px 0px;
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   .js #main .slider li {
     width: 286px;
     height: 372px;
@@ -20796,7 +20796,7 @@ h4 a:hover {
   display: block;
   float: right;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .contact-form .column-wide {
     width: 450px;
   }
@@ -21087,13 +21087,13 @@ a .date-calendar {
 .address .hint {
   font-style: italic;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   .address {
     float: left;
     clear: none;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   .address {
     width: 225px;
   }
@@ -21595,7 +21595,7 @@ a .date-calendar {
 .sfhiv_service_hour .categories li {
   float: none;
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 970px) {
   .sfhiv_service_hour .address {
     width: 168.75px;
   }
@@ -21603,7 +21603,7 @@ a .date-calendar {
     width: 161.75px;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   .sfhiv_service .list,
   .sfhiv_service_hour .list {
     float: left;
@@ -21705,7 +21705,7 @@ a .date-calendar {
 .contact.list .member {
   margin-right: 0px;
 }
-@media all and (min-width: 530px) {
+@media all and (min-width: 500px) {
   .list .member {
     float: left;
     clear: none;
@@ -21723,7 +21723,7 @@ a .date-calendar {
     clear: none;
   }
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 720px) {
   
 }
 .contact.list {
