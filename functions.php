@@ -44,6 +44,7 @@ include_once('functions-images.php');
 
 include_once('widget-preview-page.php');
 
+include_once('editor_styles.php');
 
 
 add_action('init','sfhiv_add_excerpt_to_page');
