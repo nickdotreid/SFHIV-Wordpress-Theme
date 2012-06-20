@@ -20545,6 +20545,16 @@ h4 a:hover {
   background: #FFF;
   padding: 7px 21px;
 }
+.plateau {
+  background-color: #ffffff;
+  border: 1px #bcbcbc solid;
+  padding: 0px 14px;
+  margin: 3.5px 21px;
+}
+.well {
+  background-color: #e2e2e2;
+  padding: 7px 28px;
+}
 .clearfix {
   *zoom: 1;
 }
