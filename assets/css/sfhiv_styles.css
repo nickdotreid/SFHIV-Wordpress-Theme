@@ -20554,6 +20554,7 @@ h4 a:hover {
 .well {
   background-color: #e2e2e2;
   padding: 7px 28px;
+  margin: 3.5px 0px;
 }
 .clearfix {
   *zoom: 1;
