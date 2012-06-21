@@ -1,22 +1,5 @@
 <?php
 
-add_action('sfhiv_pre_loop','sfhiv_service_archive_aamsm_alert',25,2);
-function sfhiv_service_archive_aamsm_alert($query,$args=array()){
-	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
-	$aa_msm_term = 'african-american-gay-and-bisexual-men';
-	$found = false;
-	foreach($query->query_vars['tax_query'] as $key => $query){
-		if(is_array($query) && $query['taxonomy'] == 'sfhiv_population_category' && $query['terms'] == $aa_msm_term){
-			$found = true;
-		}
-	}
-	if(!$found) return;
-	echo '<div class="plateau">';
-	echo '<h3>Mobile Testing for African American MSM</h3>';
-	echo '<p>This is placeholder content to describe the mobile testing for AA MSM. We will include contact info for this service.';
-	echo '</div>';
-}
-
 add_action('sfhiv_pre_loop','sfhiv_service_archive_draw_menu',5,2);
 function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
