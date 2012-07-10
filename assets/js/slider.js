@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#featured').jcarousel({
+	$('.slider').jcarousel({
 		'scroll': 1,
 		'wrap':'circular',
 		'auto':3,
