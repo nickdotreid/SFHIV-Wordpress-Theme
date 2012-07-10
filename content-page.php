@@ -1,7 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?	if(!is_front_page()):	?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
+	<?	endif;	?>
 	<? do_action('before_content');	?>
 	<div class="entry-content">
 		<?php the_content(); ?>
