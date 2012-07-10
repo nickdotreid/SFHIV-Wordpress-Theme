@@ -64,29 +64,6 @@ function sfhiv_page_list_attachments(){
 	));
 }
 
-add_action('after_content','sfhiv_page_list_related',10);
-function sfhiv_page_list_related(){
-	if(!is_singular() || is_front_page()) return;
-	$related = sfhiv_get_related_pages();
-	do_action('sfhiv_loop',$related,array(
-		"id" => "related",
-		"title" => sfhiv_get_related_title(),
-		"classes" => array("list","related"),
-		"list_element" => "short",
-		'show_empty' => false,
-		'show_filters' => false,
-	));
-}
-add_action('navigation','sfhiv_navigation_related_link',1);
-function sfhiv_navigation_related_link(){
-	if(!is_singular() || is_front_page()) return;
-	$related = sfhiv_get_related_pages();
-	if($related->post_count < 1) return;
-	$related_title = sfhiv_get_related_title();
-	if(!$related_title) return;
-	echo '<a href="#related">'.$related_title.'</a>';
-}
-
 add_action('before_content','sfhiv_content_add_navigation');
 function sfhiv_content_add_navigation(){
 	echo '<nav class="entry-navigation top">';
