@@ -33,6 +33,7 @@ get_header(); ?>
 					<div class="entry-content">
 						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'toolbox' ); ?></p>
 						<?php get_search_form(); ?>
+						<br class="clear" />
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 			</div>

@@ -21911,6 +21911,9 @@ a .date-calendar {
   display: block;
   width: 120px;
 }
+body.search .list .post.no-results {
+  border-bottom: 0px;
+}
 .error404 #main {
   background: transparent;
 }
