@@ -46,6 +46,8 @@ include_once('widget-preview-page.php');
 
 include_once('editor_styles.php');
 
+include_once('preview-shortcode.php');
+
 
 add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){
