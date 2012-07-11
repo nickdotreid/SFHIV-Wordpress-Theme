@@ -9,7 +9,7 @@ function sfhiv_preview_shortcode($atts, $content = null){
 		'title' => false,
 		'replace_title' => false,
 		'replace_content' => false,
-		'template' => 'short',
+		'template' => 'preview',
 	), $atts ) );
 	
 	$preview_post = false;
