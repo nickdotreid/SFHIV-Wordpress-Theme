@@ -20661,6 +20661,25 @@ h4 a:hover {
   background-position: center center;
   overflow: hidden;
 }
+.js #main .slider li .slider-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.js #main .slider li .slider-item-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
 .js #main .slider li .slider-item {
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
@@ -20731,6 +20750,7 @@ h4 a:hover {
 .js #main .slider .jcarousel-next {
   position: absolute;
   top: 70px;
+  z-index: 7;
   background-color: transparent;
   background-image: url('../i/btn-carousel-prev.png');
   background-repeat: no-repeat;

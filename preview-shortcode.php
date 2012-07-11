@@ -25,8 +25,14 @@ function sfhiv_preview_shortcode($atts, $content = null){
 		$org_post = $post;
 		$post = $preview_post;
 		if($replace_title) $post->post_title = $replace_title;
-		if($content != null) $post->post_content = $content;
-		if($replace_content) $post->post_content = $replace_content;
+		if($content != null){
+			$post->post_content = $content;
+			$post->post_excerpt = $content;
+		}
+		if($replace_content){
+			$post->post_content = $replace_content;
+			$post->post_excerpt = $replace_content;
+		}
 		ob_start();
 		get_template_part($template,$post->post_type);
 		$return_content = ob_get_clean();
