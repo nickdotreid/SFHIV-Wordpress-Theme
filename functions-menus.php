@@ -57,8 +57,8 @@ add_action('get_footer','sfhiv_add_home_page_widgets',5);
 function sfhiv_add_home_page_widgets(){
 	if(!is_front_page()) return;
 	?>
+	<div class="divider"></div>
 	<section id="home_page_widgets" class="three-column">
-		<div class="divider"></div>
 		<?dynamic_sidebar("Home Page");?>
 		<br class="clear" />
 	</section>
