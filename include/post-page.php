@@ -3,7 +3,7 @@
 add_action('get_sidebar','sfhiv_post_sidebar',27);
 function sfhiv_post_sidebar(){
 	if(!is_singular("post")) return;
-	dynamic_sidebar("Blog Sidebar");
+	
 }
 
 add_action('before_content','sfhiv_post_meta',7);
