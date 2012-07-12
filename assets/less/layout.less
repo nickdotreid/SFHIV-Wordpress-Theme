@@ -204,12 +204,15 @@
 				display:none;
 			}
 			color:@text_color;
-			a,a:visited,a:hover{
+			a,a:visited{
 				color:@text_color;
 				text-decoration:none;
 				display:block;
 				margin:0px;
 				padding:0px;
+			}
+			a:hover{
+				color:lighten(@text_color,15%);
 			}
 			&.current-menu-item,&.current-page-ancestor{
 				background-color:transparent;
@@ -583,8 +586,7 @@
 				color:@text_color;
 				text-decoration:none;
 				&:hover{
-					color:@highlight_color;
-					text-decoration:underline;
+					color:lighten(@text_color,15%);
 				}
 			}
 			&.current-menu-item{

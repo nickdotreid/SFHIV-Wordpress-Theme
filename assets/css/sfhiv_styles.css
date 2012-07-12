@@ -16697,12 +16697,14 @@ h4 a,
 h1 a:visited,
 h2 a:visited,
 h3 a:visited,
-h4 a:visited,
+h4 a:visited {
+  color: #f09938;
+}
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 h4 a:hover {
-  color: #f09938;
+  color: #cc730f;
 }
 #main h1,
 #main h2,
@@ -17735,13 +17737,15 @@ h4 a:hover {
   display: none;
 }
 #access .menu .menu-item a,
-#access .menu .menu-item a:visited,
-#access .menu .menu-item a:hover {
+#access .menu .menu-item a:visited {
   color: #2e3c62;
   text-decoration: none;
   display: block;
   margin: 0px;
   padding: 0px;
+}
+#access .menu .menu-item a:hover {
+  color: #465c96;
 }
 #access .menu .menu-item.current-menu-item,
 #access .menu .menu-item.current-page-ancestor {
@@ -20270,8 +20274,7 @@ h4 a:hover {
 }
 .footer .menu .menu-item a:hover,
 .footer .menu .menu-item a:visited:hover {
-  color: #f09938;
-  text-decoration: underline;
+  color: #465c96;
 }
 .footer .menu .menu-item.current-menu-item a,
 .footer .menu .menu-item.current-menu-item a:visited,
@@ -21310,9 +21313,19 @@ h4 a:hover {
 .js #main .slider li .slider-item .entry-title a,
 .js #main .slider li .slider-item h1 a,
 .js #main .slider li .slider-item h2 a,
-.js #main .slider li .slider-item h3 a {
+.js #main .slider li .slider-item h3 a,
+.js #main .slider li .slider-item .entry-title a:visited,
+.js #main .slider li .slider-item h1 a:visited,
+.js #main .slider li .slider-item h2 a:visited,
+.js #main .slider li .slider-item h3 a:visited {
   color: #FFF;
   text-decoration: underline;
+}
+.js #main .slider li .slider-item .entry-title a:hover,
+.js #main .slider li .slider-item h1 a:hover,
+.js #main .slider li .slider-item h2 a:hover,
+.js #main .slider li .slider-item h3 a:hover {
+  color: #d9d9d9;
 }
 .js #main .slider li .slider-item .entry-content {
   color: #FFF;
