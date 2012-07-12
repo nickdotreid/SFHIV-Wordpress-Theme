@@ -15,7 +15,10 @@
 get_header(); ?>
 
 		<div id="primary">
-			<div id="content" role="main">
+			<div id="content">
+				<header class="entry-header">
+				<h1 class="entry-title">News</h1>
+				</header>
 			<?php
 			if ( have_posts() ) :
 				do_action("sfhiv_loop",$wp_query);

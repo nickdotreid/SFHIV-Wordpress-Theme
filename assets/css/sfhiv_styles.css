@@ -21781,10 +21781,13 @@ a .date-calendar {
   clear: none;
   width: 211px;
 }
+.blog #content .short header,
+.single-post #content .short header {
+  margin-bottom: 0px;
+}
 .list .post {
   margin-bottom: 7px;
   padding-bottom: 7px;
-  border-bottom: 1px #bcbcbc solid;
 }
 .single-post #content .entry-header {
   margin-bottom: 0px;
