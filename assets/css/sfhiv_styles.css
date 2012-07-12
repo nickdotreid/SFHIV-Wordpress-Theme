@@ -22202,6 +22202,25 @@ a .date-calendar {
 .sfhiv_service_hour .categories li {
   float: none;
 }
+.sfhiv_service.short .categories,
+.sfhiv_service_hour.short .categories {
+  margin: 0px;
+  padding: 3.5px 0px 0px;
+  width: auto;
+  float: left;
+  clear: none;
+  display: block;
+}
+.sfhiv_service.short .categories h4,
+.sfhiv_service_hour.short .categories h4,
+.sfhiv_service.short .categories li,
+.sfhiv_service_hour.short .categories li {
+  float: left;
+}
+.sfhiv_service.short .categories.populations,
+.sfhiv_service_hour.short .categories.populations {
+  width: auto;
+}
 @media all and (min-width: 970px) {
   .sfhiv_service_hour .address {
     width: 168.75px;

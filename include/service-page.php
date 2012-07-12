@@ -24,7 +24,7 @@ function sfhiv_service_population_display(){
 	sfhiv_population_cat_display();
 }
 
-add_action('short_before_content','sfhiv_service_hour_population_display',10);
+add_action('short_after_content','sfhiv_service_hour_population_display',10);
 function sfhiv_service_hour_population_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
 	sfhiv_population_cat_display();
@@ -51,9 +51,10 @@ function sfhiv_service_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service'))) return;
 	sfhiv_service_cat_display();
 }
-add_action('short_before_content','sfhiv_service_hour_service_cat_display',11);
+add_action('short_after_content','sfhiv_service_hour_service_cat_display',9);
 function sfhiv_service_hour_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
+	echo '<br class="clear" />'; 
 	sfhiv_service_cat_display();
 }
 function sfhiv_service_cat_display(){
@@ -73,7 +74,7 @@ function sfhiv_service_cat_display(){
 }
 
 add_action('after_list-item','sfhiv_service_hour_display_day',7);
-add_action('short_before_content','sfhiv_service_hour_display_day',7);
+add_action('short_after_content','sfhiv_service_hour_display_day',7);
 function sfhiv_service_hour_display_day(){
 	if (get_post_type()!='sfhiv_service_hour') return;
 	$days = sfhiv_service_get_service_days(get_post(get_the_ID()));
@@ -86,7 +87,7 @@ function sfhiv_service_hour_display_day(){
 }
 
 add_action('after_list-item','sfhiv_service_hour_display_time',8);
-add_action('short_before_content','sfhiv_service_hour_display_time',8);
+add_action('short_after_content','sfhiv_service_hour_display_time',8);
 function sfhiv_service_hour_display_time(){
 	if (get_post_type()!='sfhiv_service_hour') return;
 	$post = get_post(get_the_ID());
@@ -103,7 +104,8 @@ function sfhiv_service_hour_display_time(){
 	}
 	echo '</div>';
 }
-
+add_action('before_content','sfhiv_service_hour_display_location',8);
+add_action('short_after_content','sfhiv_service_hour_display_location',8);
 add_action('after_list-item','sfhiv_service_hour_display_location',9);
 function sfhiv_service_hour_display_location(){
 	if (get_post_type()!='sfhiv_service_hour') return;
