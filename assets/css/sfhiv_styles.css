@@ -21381,34 +21381,43 @@ h4 a:hover {
     top: 190px;
   }
 }
-.contact-form {
-  border-top: #bcbcbc 1px solid;
+.contact-form,
+.wpcf7 {
   padding-top: 7px;
 }
 .contact-form .error,
-.contact-form .wpcf7-not-valid-tip {
+.wpcf7 .error,
+.contact-form .wpcf7-not-valid-tip,
+.wpcf7 .wpcf7-not-valid-tip {
   display: block;
   width: 197px;
   position: static;
 }
-.contact-form .column {
+.contact-form .column,
+.wpcf7 .column {
   width: 225px;
   display: block;
   float: left;
 }
 .contact-form .column input,
+.wpcf7 .column input,
 .contact-form .column textarea,
-.contact-form .column select {
+.wpcf7 .column textarea,
+.contact-form .column select,
+.wpcf7 .column select {
   width: 197px;
   clear: both;
 }
-.contact-form .form-row {
+.contact-form .form-row,
+.wpcf7 .form-row {
   display: block;
   clear: both;
   width: auto;
 }
 .contact-form .submit-button,
-.contact-form .wpcf7-submit {
+.wpcf7 .submit-button,
+.contact-form .wpcf7-submit,
+.wpcf7 .wpcf7-submit {
   width: 225px;
   border-color: #bcbcbc;
   background-color: #f09938;
@@ -21417,12 +21426,16 @@ h4 a:hover {
   float: right;
 }
 @media all and (min-width: 720px) {
-  .contact-form .column-wide {
+  .contact-form .column-wide,
+  .wpcf7 .column-wide {
     width: 450px;
   }
   .contact-form .column-wide input,
+  .wpcf7 .column-wide input,
   .contact-form .column-wide textarea,
-  .contact-form .column-wide select {
+  .wpcf7 .column-wide textarea,
+  .contact-form .column-wide select,
+  .wpcf7 .column-wide select {
     width: 440px;
     clear: both;
   }

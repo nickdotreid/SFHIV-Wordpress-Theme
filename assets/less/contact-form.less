@@ -1,8 +1,7 @@
 @import "variables";
 //@import "mixins";
 
-.contact-form{
-	border-top:@secondary_color @border_width solid;
+.contact-form,.wpcf7{
 	padding-top:@space_size;
 	.error,.wpcf7-not-valid-tip{
 		display:block;
@@ -34,7 +33,7 @@
 }
 
 @media all and (min-width: @size_medium) {
-	.contact-form{
+	.contact-form,.wpcf7{
 		.column-wide{
 			width:@block_width*2;
 			input,textarea,select{
