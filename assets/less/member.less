@@ -104,13 +104,25 @@
 		}
 	}
 }
-@media all and (min-width: @size_medium) {
-
-}
 
 .contact.list{
 	background-image:none;
 	padding-top:@space_size;
 	border-top:@border_width @secondary_color solid;
 	margin:@space_size 0px;
+}
+
+.profile-image{
+	display:block;
+	margin:@space_size 0px;
+	img{
+		display:block;
+		margin:@space_size auto;
+	}
+}
+@media all and (min-width: @size_medium) {
+	.profile-image{
+		border-bottom:@secondary_color @border_width solid;
+		margin:0px @space_size*2 @space_size*2 0px;
+	}
 }

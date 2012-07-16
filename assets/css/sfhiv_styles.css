@@ -22362,14 +22362,25 @@ a .date-calendar {
     clear: none;
   }
 }
-@media all and (min-width: 720px) {
-  
-}
 .contact.list {
   background-image: none;
   padding-top: 7px;
   border-top: 1px #bcbcbc solid;
   margin: 7px 0px;
+}
+.profile-image {
+  display: block;
+  margin: 7px 0px;
+}
+.profile-image img {
+  display: block;
+  margin: 7px auto;
+}
+@media all and (min-width: 720px) {
+  .profile-image {
+    border-bottom: #bcbcbc 1px solid;
+    margin: 0px 14px 14px 0px;
+  }
 }
 .blog #main,
 .single-post #main {
