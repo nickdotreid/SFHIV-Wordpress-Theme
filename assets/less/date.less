@@ -60,27 +60,34 @@
 .date-calendar{
 	display:block;
 	float:left;
-	width:@space_size * 5;
-	background-color:@highlight_color;
-	border:1px @secondary_color solid;
-	color:@white;
-	padding:0px;
+	width:@space_size * 7;
+	background-color:@light_secondary_color;
+	border-right:1px @secondary_color solid;
+	border-bottom:1px @secondary_color solid;
+	padding:@space_size/2 0px;
 	margin-right:@space_size/2;
 	font-size:@small_font_size;
 	text-align:center;
 	span{
 		padding:@space_size/4 @space_size/2;
+		margin:@space_size/4 @space_size/2;
+		background-color:@highlight_color;
+		color:@white;
 		display:block;
 		float:none;
 		clear:both;
 	}
 	.date-number{
 		font-size:@big_font_size;
-		background-color:@white;
+		background-color:transparent;
 		color:@text_color;
 		padding:@space_size/2;
 	}
 }
+a:hover .date-calendar{
+	background-color:@secondary_color;
+}
+
 a .date-calendar{
 	text-decoration:none;
 }

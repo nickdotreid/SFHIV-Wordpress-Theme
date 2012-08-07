@@ -21581,26 +21581,32 @@ h4 a:hover {
 .date-calendar {
   display: block;
   float: left;
-  width: 35px;
-  background-color: #f09938;
-  border: 1px #bcbcbc solid;
-  color: #ffffff;
-  padding: 0px;
+  width: 49px;
+  background-color: #e2e2e2;
+  border-right: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
+  padding: 3.5px 0px;
   margin-right: 3.5px;
   font-size: 12px;
   text-align: center;
 }
 .date-calendar span {
   padding: 1.75px 3.5px;
+  margin: 1.75px 3.5px;
+  background-color: #f09938;
+  color: #ffffff;
   display: block;
   float: none;
   clear: both;
 }
 .date-calendar .date-number {
   font-size: 18px;
-  background-color: #ffffff;
+  background-color: transparent;
   color: #2e3c62;
   padding: 3.5px;
+}
+a:hover .date-calendar {
+  background-color: #bcbcbc;
 }
 a .date-calendar {
   text-decoration: none;
