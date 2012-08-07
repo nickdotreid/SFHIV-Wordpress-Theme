@@ -22184,7 +22184,12 @@ a .date-calendar {
   list-style-type: none;
 }
 .short .attachments li {
-  margin-bottom: 7px;
+  display: block;
+  float: left;
+  clear: none;
+  width: 197px;
+  margin: 7px 0px;
+  margin-right: 14px;
   border-top: 0px;
 }
 .sfhiv_document.short {

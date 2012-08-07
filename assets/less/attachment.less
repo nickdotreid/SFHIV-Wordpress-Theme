@@ -44,7 +44,12 @@
 		.menu_mix();
 		display:block;
 		li{
-			margin-bottom:@space_size;
+			display:block;
+			float:left;
+			clear:none;
+			width:@block_width - @space_size * 4;
+			margin:@space_size 0px;
+			margin-right:@space_size*2;
 			border-top:0px;
 		}
 	}

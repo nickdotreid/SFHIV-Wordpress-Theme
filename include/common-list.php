@@ -20,6 +20,7 @@ function sfhiv_list_list_attachments(){
 		get_template_part('list-item',get_post_type());
 	}
 	echo '</ul>';
+	echo '<div class="clear" ></div>';
 	setup_postdata($post);
 	$post = $original_post;
 }
