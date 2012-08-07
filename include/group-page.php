@@ -54,7 +54,7 @@ function sfhiv_group_page_list_group_members(){
 			}
 		endforeach;
 		foreach($groupings as $title => $users):
-			echo '<h3>';
+			echo '<h3 class="list-title">';
 			_e($title,'sfhiv_theme');
 			echo '</h3>';
 			foreach($users as $user):
