@@ -5,10 +5,7 @@
 	<header>
 		<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
-	<div class="info-service">
-		<?	do_action("short_before_content");	?>
-		<br class="clear" />
-	</div>
+	<?	do_action("short_before_content");	?>
 	<div class="entry-content">
 		<?=the_content();?>
 	</div>
