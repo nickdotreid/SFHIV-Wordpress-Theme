@@ -16712,6 +16712,20 @@ h4 a:hover {
 #main h4 {
   font-family: arial, sans-serif;
 }
+#main h1.title,
+#main h2.title,
+#main h3.title,
+#main h4.title,
+#main h1.list-title,
+#main h2.list-title,
+#main h3.list-title,
+#main h4.list-title,
+#main h1.entry-title,
+#main h2.entry-title,
+#main h3.entry-title,
+#main h4.entry-title {
+  font-family: 'Dosis', verdana, sans-serif;
+}
 .assistive-text,
 .screen-reader-text {
   display: block;
