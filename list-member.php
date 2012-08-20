@@ -8,6 +8,7 @@ $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 			<?=get_the_author_meta('user_firstname',$user->ID);?> <?=get_the_author_meta('user_lastname',$user->ID);?> <span class="suffix"><?=get_the_author_meta('sfhiv_suffix',$user->ID);?></span>
 			<? if($profile_url) echo '</a>';	?>
 		</span>
+		<?	if(!p2p_get_meta( $user->p2p_id, 'hide', true )):	?>
 		<?	if(p2p_get_meta( $user->p2p_id, 'title', true )):	?>
 		<span class="info title"><?=p2p_get_meta( $user->p2p_id, 'title', true );?></span>
 		<?	elseif(get_the_author_meta('sfhiv_title',$user->ID)): ?>
@@ -15,6 +16,7 @@ $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 		<?	endif;	?>
 		<?	if(get_the_author_meta('sfhiv_department',$user->ID)):	?>
 		<span class="info department"><?=get_the_author_meta('sfhiv_department',$user->ID);?></span>
+		<?	endif;	?>
 		<?	endif;	?>
 	</section>
 	<?	if($show_contact_info || p2p_get_meta( $user->p2p_id, 'show_contact_info', true )):	?>
