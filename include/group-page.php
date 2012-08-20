@@ -25,7 +25,7 @@ function sfhiv_group_page_groups_by_year(){
 }
 
 add_action('navigation','sfhiv_group_navigation_members_link',1);
-add_action('short_navigation','sfhiv_group_navigation_members_link',1);
+//add_action('short_navigation','sfhiv_group_navigation_members_link',1);
 function sfhiv_group_navigation_members_link(){
 	if (get_post_type() != 'sfhiv_group') return;
 	if(!sfhiv_group_has_members()) return;
@@ -110,7 +110,7 @@ function sfhiv_group_page_list_group_services(){
 }
 
 add_action('navigation','sfhiv_group_navigation_studies_link',1);
-add_action('short_navigation','sfhiv_group_navigation_studies_link',1);
+//add_action('short_navigation','sfhiv_group_navigation_studies_link',1);
 function sfhiv_group_navigation_studies_link(){
 	if (get_post_type() != 'sfhiv_group') return;
 	$studies = sfhiv_group_get_studies();
