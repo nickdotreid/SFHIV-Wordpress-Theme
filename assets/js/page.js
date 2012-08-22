@@ -80,6 +80,20 @@ $(document).ready(function(){
 		$(".menu-item:not(.sub-menu .menu-item):last",menu).css("margin-right",'0px');
 	});
 	
+	$(".sticky").each(function(){
+		$(this).data("top",$(this).offset().top);
+	});
+	$(window).scroll(function(event){
+		$(".sticky").each(function(){
+			var sticky = $(this)
+			if($(window).scrollTop() > sticky.data("top") && sticky.width() != sticky.parents(".container").width()){
+				sticky.addClass("fixed");
+			}else{
+				sticky.removeClass("fixed");
+			}
+		});
+	});
+	
 	$(window).resize(function(){
 		$(".three-column,.two-column,#members").trigger("redraw");
 		$(".list-item").trigger("redraw");
