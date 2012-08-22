@@ -2,7 +2,11 @@
 @import "mixins";
 
 #content header{
-	margin-bottom:@space_size*2;
+	padding-bottom:@space_size*2;
+}
+
+#content header .entry-title{
+	float:left;
 }
 
 .entry-navigation{
@@ -18,17 +22,30 @@
 }
 
 #content .entry-navigation{
+	clear:none;
+	float:right;
+	width:@block_width;
 	a{
 		padding:@space_size/2;
-		margin:@space_size/2 0px;
-		margin-right:@space_size;
+		margin:0px;
+		display:block;
+		clear:both;
+		float:none;
+		text-align:right;
 	}
 	&.top{
 		clear:none;
-		position:absolute;
-		top:0px;
-		right:0px;
 	}
+}
+
+#content .entry-navigation.sticky.fixed{
+	position:static;
+}
+@media all and (min-width: @size_tablet) {
+	#content .entry-navigation.sticky.fixed{
+		position:fixed;
+		top:0px;
+	}	
 }
 
 .entry-content{

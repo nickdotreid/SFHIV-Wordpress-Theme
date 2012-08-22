@@ -1,6 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<? do_action('after_header');	?>
+		<div class="clear"></div>
 	</header><!-- .entry-header -->
 	<? do_action('before_content');	?>
 	<div class="entry-content">

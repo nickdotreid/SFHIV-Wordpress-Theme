@@ -21062,7 +21062,10 @@ h4 a:hover {
   display: inline;
 }
 #content header {
-  margin-bottom: 14px;
+  padding-bottom: 14px;
+}
+#content header .entry-title {
+  float: left;
 }
 .entry-navigation {
   clear: both;
@@ -21075,16 +21078,30 @@ h4 a:hover {
 .entry-navigation .post-edit-link {
   float: right;
 }
+#content .entry-navigation {
+  clear: none;
+  float: right;
+  width: 225px;
+}
 #content .entry-navigation a {
   padding: 3.5px;
-  margin: 3.5px 0px;
-  margin-right: 7px;
+  margin: 0px;
+  display: block;
+  clear: both;
+  float: none;
+  text-align: right;
 }
 #content .entry-navigation.top {
   clear: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+}
+#content .entry-navigation.sticky.fixed {
+  position: static;
+}
+@media all and (min-width: 500px) {
+  #content .entry-navigation.sticky.fixed {
+    position: fixed;
+    top: 0px;
+  }
 }
 .entry-content h1,
 .entry-content h2,
