@@ -2,7 +2,7 @@
 	<?	if(!is_front_page()):	?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<? do_action('after_header');	?>
+		<? do_action('after_content_header');	?>
 		<div class="clear"></div>
 	</header><!-- .entry-header -->
 	<?	endif;	?>

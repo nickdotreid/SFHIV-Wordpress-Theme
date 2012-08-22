@@ -64,7 +64,7 @@ function sfhiv_page_list_attachments(){
 	));
 }
 
-add_action('after_header','sfhiv_content_add_navigation');
+add_action('after_content_header','sfhiv_content_add_navigation');
 function sfhiv_content_add_navigation(){
 	echo '<nav class="entry-navigation sticky">';
 	$links = sfhiv_extract_toc(get_the_content(get_the_ID()));
