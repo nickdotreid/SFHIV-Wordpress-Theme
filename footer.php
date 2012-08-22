@@ -14,9 +14,15 @@
 			<?dynamic_sidebar("Bottom Sidebar");?>
 		</div>
 		<div class="footer small">
+			<div style="float:left;">
 			<?_e("Last updated on");?>
 			<?the_modified_date();?>
 			<?_e("by");?> <?the_modified_author();?>
+			</div>
+			<div style="float:right;">
+				Icons courtesy of the <a href="http://thenounproject.com">Noun Project</a>
+			</div>
+			<div class="clear"></div>
 			<nav>
 			<? if ( is_user_logged_in() ): ?>
 			<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a>
