@@ -21082,6 +21082,7 @@ h4 a:hover {
   clear: none;
   float: right;
   width: 225px;
+  background: transparent url('../i/white70.png') repeat top left;
 }
 #content .entry-navigation a {
   padding: 3.5px;
