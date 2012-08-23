@@ -77,14 +77,14 @@
 			</nav><!-- #access -->
 			<?php do_action('after_access');	?>
 			<div class="divider divider-flush" style="padding-top:16px;background-position:bottom center;"></div>
-			<?	if(is_singular() && get_post_status() != "publish"):	?>
-			<div id="status-warning" class="container <?=get_post_status();?>">
-				<span><i></i>This item is marked <?=get_post_status();?>.</span>
-			</div>
-			<div class="divider divider-flush"></div>
-			<?	endif;	?>
 			<div class="clear">&nbsp;</div>
 		</div>
 	</header><!-- #branding -->
+	<?	if(is_singular() && get_post_status() != "publish"):	?>
+	<div id="status-warning" class="container <?=get_post_status();?>">
+		<span><i></i>This item is marked <?=get_post_status();?>.</span>
+		<div class="divider divider-flush"></div>
+	</div>
+	<?	endif;	?>
 	<?php do_action('after_header');	?>
 	<div id="main" class="container">
