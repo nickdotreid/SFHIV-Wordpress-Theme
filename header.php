@@ -58,30 +58,32 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 <?php do_action( 'before' ); ?>
-	<header id="branding" class="container" role="banner">
-		<hgroup>
-			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 id="site-description"><?php echo preg_replace('/\/n/','<br />',get_bloginfo( 'description', 'raw' )); ?></h2>
-			<div class="clear"></div>
-		</hgroup>
-		<?php do_action('before_access');	?>
-		<nav id="access" class="menu-justified" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
-			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<div class="menu-item search-form-item">
-				<?php get_search_form(); ?>
+	<header id="branding" class="container" role="banner" style="<?=apply_filters("header-styles","");?>">
+		<div class="inner header-inner">
+			<hgroup>
+				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 id="site-description"><?php echo preg_replace('/\/n/','<br />',get_bloginfo( 'description', 'raw' )); ?></h2>
+				<div class="clear"></div>
+			</hgroup>
+			<?php do_action('before_access');	?>
+			<nav id="access" class="menu-justified" role="navigation">
+				<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
+				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<div class="menu-item search-form-item">
+					<?php get_search_form(); ?>
+				</div>
+				<div class="clear"></div>
+			</nav><!-- #access -->
+			<?php do_action('after_access');	?>
+			<div class="divider divider-flush" style="padding-top:16px;background-position:bottom center;"></div>
+			<?	if(is_singular() && get_post_status() != "publish"):	?>
+			<div id="status-warning" class="container <?=get_post_status();?>">
+				<span><i></i>This item is marked <?=get_post_status();?>.</span>
 			</div>
-			<div class="clear"></div>
-		</nav><!-- #access -->
-		<?php do_action('after_access');	?>
-		<div class="divider divider-flush" style="padding-top:16px;background-position:bottom center;"></div>
-		<?	if(is_singular() && get_post_status() != "publish"):	?>
-		<div id="status-warning" class="container <?=get_post_status();?>">
-			<span><i></i>This item is marked <?=get_post_status();?>.</span>
+			<div class="divider divider-flush"></div>
+			<?	endif;	?>
 		</div>
-		<div class="divider divider-flush"></div>
-		<?	endif;	?>
 	</header><!-- #branding -->
 	<?php do_action('after_header');	?>
 	<div id="main" class="container">
