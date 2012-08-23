@@ -83,6 +83,7 @@
 			</div>
 			<div class="divider divider-flush"></div>
 			<?	endif;	?>
+			<div class="clear">&nbsp;</div>
 		</div>
 	</header><!-- #branding -->
 	<?php do_action('after_header');	?>

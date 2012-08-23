@@ -35,6 +35,8 @@ function sfhiv_top_image_style($styles){
 		if($src){
 			$background_image = $src[0];
 			$styles .= 'background-image:url('.$background_image.');background-position:center center;';
+			$height = $src[2];
+			$styles .= 'height:'.$height.'px';
 		}
 	}
 	return $styles;

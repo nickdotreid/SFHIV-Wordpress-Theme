@@ -17484,6 +17484,24 @@ h4 a:hover {
   background-image: url('../i/white-gradient-up-50.png');
   background-repeat: repeat-x;
   background-position: center bottom;
+  position: relative;
+  height: 100%;
+}
+#branding .inner hgroup {
+  margin-bottom: 16px;
+}
+#branding .inner .divider-flush {
+  padding-top: 0px;
+  height: 9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#branding .inner #access {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
 }
 @media all and (min-width: 500px) {
   #branding {
@@ -17507,6 +17525,13 @@ h4 a:hover {
 @media all and (min-width: 720px) {
   #branding {
     background-position: -100px 0px;
+  }
+  #branding .inner hgroup {
+    margin-bottom: 55px;
+  }
+  #branding .inner #access {
+    height: 45px;
+    overflow: hidden;
   }
   #site-description {
     padding-top: 40px;
@@ -17542,6 +17567,12 @@ h4 a:hover {
   }
   #branding #site-title a i:hover {
     background-image: url('../i/home_icon_hover.png');
+  }
+  #branding .inner hgroup {
+    margin-bottom: 70px;
+  }
+  #branding .inner #access {
+    height: 55px;
   }
 }
 #section-top {
