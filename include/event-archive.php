@@ -8,22 +8,6 @@ function sfhiv_event_archive_loop_arguments($args,$post_type){
 	return $args;
 }
 
-add_action('sfhiv_pre_loop','sfhiv_event_filter',10,2);
-function sfhiv_event_filter($query=false,$args){
-	if(!$query || $query->query_vars['post_type'] != 'sfhiv_event') return;
-	sfhiv_draw_filters('sfhiv_event_time',$query->query_vars['sfhiv_event_selection'],array(
-		array(
-			"value" => "future",
-			"name" => "Upcoming",
-			'default' => true,
-		),
-		array(
-			"value" => "past",
-			"name" => "Past"
-		)
-	),'All','all');
-}
-
 add_action('get_sidebar','sfhiv_event_archive_event_categories',22);
 function sfhiv_event_archive_event_categories(){
 	$query = sfhiv_get_archive_query();
