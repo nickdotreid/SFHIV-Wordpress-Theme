@@ -20145,7 +20145,7 @@ h4 a:hover {
 }
 #bottom {
   background-color: #FFF;
-  color: #bcbcbc;
+  color: #969696;
   font-size: 12px;
   background-position: 0px 7px;
   border-top: 1px #bcbcbc solid;
@@ -20155,7 +20155,7 @@ h4 a:hover {
 }
 .footer {
   background: #FFF;
-  color: #bcbcbc;
+  color: #969696;
   font-size: 14px;
   clear: both;
   margin: 0px;
@@ -20350,7 +20350,7 @@ h4 a:hover {
   }
   .footer .menu .menu-item {
     float: left;
-    padding: 0px 7px;
+    padding: 0px 14px;
     margin: 0px;
   }
   .footer .menu .menu-item a {
@@ -20367,14 +20367,15 @@ h4 a:hover {
   background-color: #FFF;
   background-image: url('../i/sf_seal_bw_200.jpg');
   background-repeat: no-repeat;
-  background-position: top center;
-  padding-top: 214px;
+  background-position: center 14px;
+  padding-top: 221px;
+  padding-bottom: 7px;
   min-height: 200px;
 }
 @media all and (min-width: 720px) {
   .sfseal,
   .footer .sfseal {
-    background-position: 7px 7px;
+    background-position: 7px 14px;
     padding-top: 14px;
     padding-left: 225px;
   }
