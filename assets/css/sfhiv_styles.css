@@ -21106,7 +21106,7 @@ h4 a:hover {
 #content header {
   padding-bottom: 14px;
 }
-#content header .entry-title {
+#content header h1.entry-title {
   float: left;
 }
 .entry-navigation {
@@ -21120,13 +21120,13 @@ h4 a:hover {
 .entry-navigation .post-edit-link {
   float: right;
 }
-#content .entry-navigation {
+#content .entry-toc {
   clear: none;
   float: right;
-  width: 225px;
+  width: 211px;
   background: transparent url('../i/white70.png') repeat top left;
 }
-#content .entry-navigation a {
+#content .entry-toc a {
   padding: 3.5px;
   margin: 0px;
   display: block;
@@ -21134,7 +21134,7 @@ h4 a:hover {
   float: none;
   text-align: right;
 }
-#content .entry-navigation.top {
+#content .entry-toc.top {
   clear: none;
 }
 #content .entry-navigation.sticky.fixed {
