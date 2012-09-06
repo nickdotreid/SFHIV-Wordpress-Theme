@@ -17479,6 +17479,7 @@ h4 a:hover {
   font-size: 14px;
   line-height: 1.2em;
   font-style: italic;
+  font-size: 12px;
   text-shadow: 1px 1px 6px #FFF;
 }
 #branding .inner {
@@ -17864,6 +17865,7 @@ h4 a:hover {
   color: #FFF;
   background: #2e3c62;
   display: block;
+  width: 211px;
   margin: 0px;
   padding: 28px 7px 7px;
 }
