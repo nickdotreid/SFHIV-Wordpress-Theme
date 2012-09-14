@@ -12,7 +12,9 @@ if ( has_post_thumbnail() ) {
 	}
 }
 ?>
-<div class="slider-image" <?	if($background_image) echo 'style="background-image:url('.$background_image.');"';?> ></div>
+<a href="<? the_permalink(); ?>">
+	<div class="slider-image" <?	if($background_image) echo 'style="background-image:url('.$background_image.');"';?> ></div>
+</a>
 <div class="slider-item-container">
 	<div id="post-<?php the_ID(); ?>" <?php post_class("featured slider-item"); ?> >
 		<header class="entry-header">

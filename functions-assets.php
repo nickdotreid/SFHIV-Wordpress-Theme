@@ -28,7 +28,7 @@ function sfhiv_add_scripts(){
 	?>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/modernizr.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/bootstrap/js/bootstrap-carousel.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/page.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/faq.js"></script>
 	<script type="text/javascript" src="<?=get_bloginfo('stylesheet_directory');?>/assets/js/slider.js"></script>

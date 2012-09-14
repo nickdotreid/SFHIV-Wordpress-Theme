@@ -21291,169 +21291,274 @@ h4 a:hover {
 .date_mix.date span span {
   display: inline;
 }
-.slider {
-  display: none;
-}
-.js #main .slider {
-  display: block;
+.carousel {
   position: relative;
-  background-color: #FFF;
-  padding-top: 7px;
-  margin-bottom: 7px;
+  margin-bottom: 18px;
+  line-height: 1;
 }
-.js #main .slider li {
-  position: relative;
-  display: block;
-  float: left;
-  height: 290.6666666666667px;
-  width: 218px;
-  margin-left: 0px;
-  margin-right: 7px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
+.carousel-inner {
   overflow: hidden;
+  width: 100%;
+  position: relative;
 }
-.js #main .slider li .slider-image {
+.carousel .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -ms-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel .item > img {
+  display: block;
+  line-height: 1;
+}
+.carousel .active,
+.carousel .next,
+.carousel .prev {
+  display: block;
+}
+.carousel .active {
+  left: 0;
+}
+.carousel .next,
+.carousel .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel .next {
+  left: 100%;
+}
+.carousel .prev {
+  left: -100%;
+}
+.carousel .next.left,
+.carousel .prev.right {
+  left: 0;
+}
+.carousel .active.left {
+  left: -100%;
+}
+.carousel .active.right {
+  left: 100%;
+}
+.carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: #222222;
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.carousel-control.right {
+  left: auto;
+  right: 15px;
+}
+.carousel-control:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 15px 5px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+}
+.carousel-caption h4,
+.carousel-caption p {
+  color: #ffffff;
+}
+.carousel {
+  display: block;
+  clear: both;
+  height: 414px;
+  padding: 0px;
+  margin: 7px 0px;
+  border-top: 1px #bcbcbc solid;
+  border-bottom: 1px #bcbcbc solid;
+}
+.carousel .item {
+  position: relative;
+  height: 400px;
+  margin: 7px 0px;
+}
+.carousel .item .slider-image {
+  display: block;
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: transparent;
-  background-repeat: no-repeat;
+  width: 525px;
+  height: 400px;
   background-position: center center;
+  background-repeat: no-repeat;
 }
-.js #main .slider li .slider-item-container {
+.carousel .item .slider-item-container {
   position: absolute;
   top: 0px;
-  left: 0px;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
+  right: 0px;
+  width: 375px;
+  background-color: #2e3c62;
+  height: 400px;
 }
-.js #main .slider li .slider-item {
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-border-radius: 5px 5px 0px 0px;
-  -moz-border-radius: 5px 5px 0px 0px;
-  border-radius: 5px 5px 0px 0px;
-  width: auto;
-  margin: 0px 14px;
-  margin-top: 500px;
-  padding: 14px;
-  background-color: transparent;
-  background-image: url('../i/background-black-65.png');
-  background-repeat: repeat;
-  background-position: top left;
+.carousel .item .slider-item-container a {
   color: #FFF;
 }
-.js #main .slider li .slider-item .entry-title,
-.js #main .slider li .slider-item h1,
-.js #main .slider li .slider-item h2,
-.js #main .slider li .slider-item h3 {
+.carousel .item .slider-item-container .entry-header h1.entry-title,
+.carousel .item .slider-item-container .entry-header h2.entry-title,
+.carousel .item .slider-item-container .entry-header h3.entry-title {
+  margin: 28px 14px 0px;
+  font-size: 28px;
+  color: #FFF;
+}
+.carousel .item .slider-item-container .entry-header h1.entry-title a,
+.carousel .item .slider-item-container .entry-header h2.entry-title a,
+.carousel .item .slider-item-container .entry-header h3.entry-title a {
+  color: #FFF;
+  text-decoration: none;
+}
+.carousel .item .slider-item-container .entry-content {
+  margin: 7px 14px;
   color: #FFF;
   font-size: 18px;
-}
-.js #main .slider li .slider-item .entry-title a,
-.js #main .slider li .slider-item h1 a,
-.js #main .slider li .slider-item h2 a,
-.js #main .slider li .slider-item h3 a,
-.js #main .slider li .slider-item .entry-title a:visited,
-.js #main .slider li .slider-item h1 a:visited,
-.js #main .slider li .slider-item h2 a:visited,
-.js #main .slider li .slider-item h3 a:visited {
-  color: #FFF;
-  text-decoration: underline;
-}
-.js #main .slider li .slider-item .entry-title a:hover,
-.js #main .slider li .slider-item h1 a:hover,
-.js #main .slider li .slider-item h2 a:hover,
-.js #main .slider li .slider-item h3 a:hover {
-  color: #d9d9d9;
-}
-.js #main .slider li .slider-item .entry-content {
-  color: #FFF;
-  font-size: 14px;
-}
-.js #main .slider .jcarousel-clip {
-  overflow: hidden;
-}
-.js #main .slider .arrow,
-.js #main .slider .jcarousel-prev,
-.js #main .slider .jcarousel-next {
-  position: absolute;
-  top: 70px;
-  z-index: 7;
-  background-color: transparent;
-  background-image: url('../i/btn-carousel-prev.png');
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  width: 50px;
-  height: 50px;
-  display: block;
-  text-indent: -3000px;
-  overflow: hidden;
-}
-.js #main .slider .arrow.jcarousel-prev,
-.js #main .slider .jcarousel-prev.jcarousel-prev,
-.js #main .slider .jcarousel-next.jcarousel-prev {
-  left: -25px;
-}
-.js #main .slider .arrow.jcarousel-next,
-.js #main .slider .jcarousel-prev.jcarousel-next,
-.js #main .slider .jcarousel-next.jcarousel-next {
-  right: -25px;
-  background-image: url('../i/btn-carousel-next.png');
-}
-.js #main .slider .arrow:hover,
-.js #main .slider .jcarousel-prev:hover,
-.js #main .slider .jcarousel-next:hover,
-.js #main .slider .arrow .hover,
-.js #main .slider .jcarousel-prev .hover,
-.js #main .slider .jcarousel-next .hover {
-  background-position: -50px 0px;
-}
-@media all and (min-width: 970px) {
-  .js #main .slider li {
-    width: 286px;
-    height: 372px;
-    margin-right: 21px;
-  }
-  .js #main .slider .arrow,
-  .js #main .slider .jcarousel-prev,
-  .js #main .slider .jcarousel-next {
-    top: 190px;
-  }
 }
 .contact-form,
 .wpcf7 {
