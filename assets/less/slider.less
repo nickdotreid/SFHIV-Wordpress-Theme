@@ -5,6 +5,10 @@
 @carouselHeight:400px;
 
 .carousel{
+	margin-bottom:0px;
+}
+
+.carousel-inner{
 	display:block;
 	clear:both;
 	height:@carouselHeight + @space_size*2;
@@ -34,6 +38,9 @@
 		right:0px;
 		width:@block_width * 5 / 3;
 		background-color:@text_color;
+		background-image:url('../i/slider-content-gradient.png');
+		background-repeat:no-repeat;
+		background-position:center top;
 		height:@carouselHeight;
 		a{
 			color:#FFF;

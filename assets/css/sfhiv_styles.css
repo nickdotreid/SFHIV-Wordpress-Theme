@@ -21508,6 +21508,9 @@ h4 a:hover {
   color: #ffffff;
 }
 .carousel {
+  margin-bottom: 0px;
+}
+.carousel-inner {
   display: block;
   clear: both;
   height: 414px;
@@ -21537,6 +21540,9 @@ h4 a:hover {
   right: 0px;
   width: 375px;
   background-color: #2e3c62;
+  background-image: url('../i/slider-content-gradient.png');
+  background-repeat: no-repeat;
+  background-position: center top;
   height: 400px;
 }
 .carousel .item .slider-item-container a {
