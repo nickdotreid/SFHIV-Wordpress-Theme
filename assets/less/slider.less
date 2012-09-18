@@ -34,10 +34,10 @@
 		background-position:-50px 0px;
 	}
 	&.right{
-		right:-15px;
+		right:-28px;
 	}
 	&.left{
-		left:-15px;
+		left:-28px;
 		background-image:url('../i/btn-carousel-prev.png');
 	}
 }
@@ -49,10 +49,10 @@
 	.slider-image{
 		display:block;
 		position:absolute;
-		top:0px;
+		top:@space_size;
 		left:0px;
-		width:@block_width * 4 - @block_width * 5 / 3;
-		height:@carouselHeight;
+		width:@block_width * 4 - @block_width * 5 / 3 - @space_size;
+		height:@carouselHeight - @space_size*2;
 		background-position:right center;
 		background-repeat:no-repeat;
 	}
@@ -73,7 +73,7 @@
 			}
 		}
 		.entry-content{
-			margin:@space_size @space_size*2;
+			margin:@space_size @space_size*4 @space_size @space_size*2;
 			font-size:@big_font_size;
 		}
 	}

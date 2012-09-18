@@ -21536,10 +21536,10 @@ h4 a:hover {
   background-position: -50px 0px;
 }
 .carousel-control.right {
-  right: -15px;
+  right: -28px;
 }
 .carousel-control.left {
-  left: -15px;
+  left: -28px;
   background-image: url('../i/btn-carousel-prev.png');
 }
 .carousel .item {
@@ -21550,10 +21550,10 @@ h4 a:hover {
 .carousel .item .slider-image {
   display: block;
   position: absolute;
-  top: 0px;
+  top: 7px;
   left: 0px;
-  width: 525px;
-  height: 400px;
+  width: 518px;
+  height: 386px;
   background-position: right center;
   background-repeat: no-repeat;
 }
@@ -21573,7 +21573,7 @@ h4 a:hover {
   font-size: 28px;
 }
 .carousel .item .slider-item-container .entry-content {
-  margin: 7px 14px;
+  margin: 7px 28px 7px 14px;
   font-size: 18px;
 }
 .contact-form,
