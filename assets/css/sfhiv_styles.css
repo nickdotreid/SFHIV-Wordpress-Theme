@@ -21513,16 +21513,39 @@ h4 a:hover {
 .carousel-inner {
   display: block;
   clear: both;
-  height: 414px;
+  height: 400px;
   padding: 0px;
   margin: 7px 0px;
   border-top: 1px #bcbcbc solid;
   border-bottom: 1px #bcbcbc solid;
 }
+.carousel-control {
+  background-image: url('../i/btn-carousel-next.png');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  border: 0px;
+  border-radius: 0px;
+  overflow: hidden;
+  text-indent: 3000em;
+}
+.carousel-control:hover {
+  background-position: -50px 0px;
+}
+.carousel-control.right {
+  right: -15px;
+}
+.carousel-control.left {
+  left: -15px;
+  background-image: url('../i/btn-carousel-prev.png');
+}
 .carousel .item {
   position: relative;
   height: 400px;
-  margin: 7px 0px;
+  margin: 0px;
 }
 .carousel .item .slider-image {
   display: block;
@@ -21531,7 +21554,7 @@ h4 a:hover {
   left: 0px;
   width: 525px;
   height: 400px;
-  background-position: center center;
+  background-position: right center;
   background-repeat: no-repeat;
 }
 .carousel .item .slider-item-container {
@@ -21539,31 +21562,18 @@ h4 a:hover {
   top: 0px;
   right: 0px;
   width: 375px;
-  background-color: #2e3c62;
-  background-image: url('../i/slider-content-gradient.png');
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-color: #FFF;
+  border-left: 1px #bcbcbc solid;
   height: 400px;
-}
-.carousel .item .slider-item-container a {
-  color: #FFF;
 }
 .carousel .item .slider-item-container .entry-header h1.entry-title,
 .carousel .item .slider-item-container .entry-header h2.entry-title,
 .carousel .item .slider-item-container .entry-header h3.entry-title {
   margin: 28px 14px 0px;
   font-size: 28px;
-  color: #FFF;
-}
-.carousel .item .slider-item-container .entry-header h1.entry-title a,
-.carousel .item .slider-item-container .entry-header h2.entry-title a,
-.carousel .item .slider-item-container .entry-header h3.entry-title a {
-  color: #FFF;
-  text-decoration: none;
 }
 .carousel .item .slider-item-container .entry-content {
   margin: 7px 14px;
-  color: #FFF;
   font-size: 18px;
 }
 .contact-form,

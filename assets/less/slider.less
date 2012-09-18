@@ -11,17 +11,41 @@
 .carousel-inner{
 	display:block;
 	clear:both;
-	height:@carouselHeight + @space_size*2;
+	height:@carouselHeight;
 	padding:0px;
 	margin:@space_size 0px;
 	border-top:@border_width @secondary_color solid;
 	border-bottom:@border_width @secondary_color solid;
 }
 
+.carousel-control{
+	background-image:url('../i/btn-carousel-next.png');
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	background-color:transparent;
+	width:50px;
+	height:50px;
+	opacity:1;
+	border:0px;
+	border-radius:0px;
+	overflow:hidden;
+	text-indent:3000em;
+	&:hover{
+		background-position:-50px 0px;
+	}
+	&.right{
+		right:-15px;
+	}
+	&.left{
+		left:-15px;
+		background-image:url('../i/btn-carousel-prev.png');
+	}
+}
+
 .carousel .item{
 	position:relative;
 	height:@carouselHeight;
-	margin:@space_size 0px;
+	margin:0px;
 	.slider-image{
 		display:block;
 		position:absolute;
@@ -29,7 +53,7 @@
 		left:0px;
 		width:@block_width * 4 - @block_width * 5 / 3;
 		height:@carouselHeight;
-		background-position:center center;
+		background-position:right center;
 		background-repeat:no-repeat;
 	}
 	.slider-item-container{
@@ -37,30 +61,19 @@
 		top:0px;
 		right:0px;
 		width:@block_width * 5 / 3;
-		background-color:@text_color;
-		background-image:url('../i/slider-content-gradient.png');
-		background-repeat:no-repeat;
-		background-position:center top;
+		background-color:#FFF;
+		border-left:@border_width @secondary_color solid;
 		height:@carouselHeight;
-		a{
-			color:#FFF;
-		}
 		.entry-header{
 			h1,h2,h3{
 				&.entry-title{
 					margin:@space_size*4 @space_size*2 0px;
 					font-size:@biggest_font_size;
-					color:#FFF;
-					a{
-						color:#FFF;
-						text-decoration:none;
-					}					
 				}
 			}
 		}
 		.entry-content{
 			margin:@space_size @space_size*2;
-			color:#FFF;
 			font-size:@big_font_size;
 		}
 	}
