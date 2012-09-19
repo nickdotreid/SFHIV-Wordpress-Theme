@@ -13,6 +13,17 @@
 		<div class="footer sfseal">
 			<?dynamic_sidebar("Bottom Sidebar");?>
 		</div>
+		<?
+		if ( is_user_logged_in() ){
+			wp_nav_menu(array(
+				'theme_location' => 'admin_menu',
+				'container' => 'nav',
+				'container_class' => 'footer first menu-justified',
+				'depth'=>1,
+				));			
+		}
+		?>
+		<br class="clear" />
 		<div class="footer small">
 			<div style="float:left;">
 			<?_e("Last updated on");?>

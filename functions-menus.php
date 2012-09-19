@@ -42,6 +42,7 @@ function sfhiv_register_sidebars(){
 add_action('init', 'sfhiv_register_custom_menu');
 function sfhiv_register_custom_menu() {
 	register_nav_menu('footer_menu', 'Footer Menu');
+	register_nav_menu('admin_menu', 'Admin Menu');
 }
 
 add_action('get_sidebar','sfhiv_add_blog_sidebar',15);
