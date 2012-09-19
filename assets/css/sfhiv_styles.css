@@ -21548,33 +21548,85 @@ h4 a:hover {
   margin: 0px;
 }
 .carousel .item .slider-image {
-  display: block;
-  position: absolute;
-  top: 7px;
-  left: 0px;
-  width: 518px;
-  height: 386px;
-  background-position: right center;
-  background-repeat: no-repeat;
+  display: none;
 }
 .carousel .item .slider-item-container {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 375px;
+  width: 225px;
   background-color: #FFF;
   border-left: 1px #bcbcbc solid;
   height: 400px;
 }
+.carousel .item .slider-item-container .entry-header {
+  background-color: #2e3c62;
+  margin: 0px 0px 7px;
+}
 .carousel .item .slider-item-container .entry-header h1.entry-title,
 .carousel .item .slider-item-container .entry-header h2.entry-title,
 .carousel .item .slider-item-container .entry-header h3.entry-title {
-  margin: 28px 14px 0px;
+  margin: 0px;
+  padding: 28px 14px 3.5px;
   font-size: 28px;
+  color: #FFF;
+  font-weight: normal;
+}
+.carousel .item .slider-item-container .entry-header h1.entry-title a,
+.carousel .item .slider-item-container .entry-header h2.entry-title a,
+.carousel .item .slider-item-container .entry-header h3.entry-title a {
+  color: #FFF;
+  text-decoration: none;
 }
 .carousel .item .slider-item-container .entry-content {
   margin: 7px 28px 7px 14px;
   font-size: 18px;
+}
+@media all and (min-width: 500px) {
+  .carousel .item .slider-image {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    width: 518px;
+    height: 386px;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+}
+@media all and (min-width: 970px) {
+  .carousel .item .slider-item-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 375px;
+    background-color: #FFF;
+    border-left: 1px #bcbcbc solid;
+    height: 400px;
+  }
+  .carousel .item .slider-item-container .entry-header {
+    background-color: #2e3c62;
+    margin: 0px 0px 7px;
+  }
+  .carousel .item .slider-item-container .entry-header h1.entry-title,
+  .carousel .item .slider-item-container .entry-header h2.entry-title,
+  .carousel .item .slider-item-container .entry-header h3.entry-title {
+    margin: 0px;
+    padding: 28px 14px 3.5px;
+    font-size: 28px;
+    color: #FFF;
+    font-weight: normal;
+  }
+  .carousel .item .slider-item-container .entry-header h1.entry-title a,
+  .carousel .item .slider-item-container .entry-header h2.entry-title a,
+  .carousel .item .slider-item-container .entry-header h3.entry-title a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .carousel .item .slider-item-container .entry-content {
+    margin: 7px 28px 7px 14px;
+    font-size: 18px;
+  }
 }
 .contact-form,
 .wpcf7 {

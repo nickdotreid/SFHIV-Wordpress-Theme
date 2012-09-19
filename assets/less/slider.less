@@ -47,16 +47,57 @@
 	height:@carouselHeight;
 	margin:0px;
 	.slider-image{
-		display:block;
-		position:absolute;
-		top:@space_size;
-		left:0px;
-		width:@block_width * 4 - @block_width * 5 / 3 - @space_size;
-		height:@carouselHeight - @space_size*2;
-		background-position:right center;
-		background-repeat:no-repeat;
+		display:none;
 	}
 	.slider-item-container{
+		position:absolute;
+		top:0px;
+		right:0px;
+		width:@block_width;
+		background-color:#FFF;
+		border-left:@border_width @secondary_color solid;
+		height:@carouselHeight;
+		.entry-header{
+			background-color:@text_color;
+			margin:0px 0px @space_size;
+			h1,h2,h3{
+				&.entry-title{
+					margin:0px;
+					padding:@space_size*4 @space_size*2 @space_size/2;
+					font-size:@biggest_font_size;
+					color:#FFF;
+					font-weight:normal;
+					a{
+						color:#FFF;
+						text-decoration:none;
+					}
+				}
+			}
+		}
+		.entry-content{
+			margin:@space_size @space_size*4 @space_size @space_size*2;
+			font-size:@big_font_size;
+		}
+	}
+}
+
+@media all and (min-width: @size_tablet) {
+	.carousel .item{
+		.slider-image{
+			display:block;
+			position:absolute;
+			top:@space_size;
+			left:0px;
+			width:@block_width * 4 - @block_width * 5 / 3 - @space_size;
+			height:@carouselHeight - @space_size*2;
+			background-position:right center;
+			background-repeat:no-repeat;
+		}
+	}
+}
+
+@media all and (min-width: @size_large){
+	.carousel .item .slider-item-container{
 		position:absolute;
 		top:0px;
 		right:0px;
@@ -65,10 +106,19 @@
 		border-left:@border_width @secondary_color solid;
 		height:@carouselHeight;
 		.entry-header{
+			background-color:@text_color;
+			margin:0px 0px @space_size;
 			h1,h2,h3{
 				&.entry-title{
-					margin:@space_size*4 @space_size*2 0px;
+					margin:0px;
+					padding:@space_size*4 @space_size*2 @space_size/2;
 					font-size:@biggest_font_size;
+					color:#FFF;
+					font-weight:normal;
+					a{
+						color:#FFF;
+						text-decoration:none;
+					}
 				}
 			}
 		}
