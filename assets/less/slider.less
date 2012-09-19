@@ -70,9 +70,21 @@
 				}
 			}
 		}
-		.entry-content{
+		.entry-content,.entry-nav{
 			margin:@space_size @space_size*4 @space_size @space_size*2;
 			font-size:@big_font_size;
+		}
+		.entry-nav{
+			font-size:@font_size;
+			.preview-bottom{
+				clear:both;
+				font-size:@big_font_size;
+				text-align:right;
+			}
+		}
+		.menu .item{
+			display:block;
+			height:auto;
 		}
 	}
 }

@@ -23,5 +23,8 @@ if ( has_post_thumbnail() ) {
 		<div class="entry-content">
 			<? the_excerpt(); ?>
 		</div><!-- .entry-content -->
+		<div class="entry-nav">
+		<?	do_action("sfhiv-preview-menu");	?>
+		</div>
 	</div><!-- #post-<?php the_ID(); ?> -->
 </div>

@@ -21572,9 +21572,22 @@ h4 a:hover {
   font-size: 28px;
   font-weight: normal;
 }
-.carousel .item .slider-item-container .entry-content {
+.carousel .item .slider-item-container .entry-content,
+.carousel .item .slider-item-container .entry-nav {
   margin: 7px 28px 7px 14px;
   font-size: 18px;
+}
+.carousel .item .slider-item-container .entry-nav {
+  font-size: 14px;
+}
+.carousel .item .slider-item-container .entry-nav .preview-bottom {
+  clear: both;
+  font-size: 18px;
+  text-align: right;
+}
+.carousel .item .slider-item-container .menu .item {
+  display: block;
+  height: auto;
 }
 @media all and (min-width: 500px) {
   .carousel .item .slider-image {
