@@ -51,6 +51,7 @@ include_once('preview-shortcode.php');
 include_once('include/table_of_contents.php');
 
 include_once('functions-top-image.php');
+include_once('functions_service_hour_switch.php');
 
 add_action('init','sfhiv_add_excerpt_to_page');
 function sfhiv_add_excerpt_to_page(){
