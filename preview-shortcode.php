@@ -15,7 +15,7 @@ function sfhiv_preview_shortcode($atts, $content = null){
 	$preview_post = false;
 	$return_content = "";
 	if(isset($title)){
-		
+		$preview_post = get_page_by_title($title);
 	}
 	if(isset($id) && !$preview_post){
 		$num = (int) $id;
