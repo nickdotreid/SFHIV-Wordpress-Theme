@@ -15,7 +15,7 @@ function sfhiv_services_day_taxonomy_in_query_vars($query_vars){
 
 add_filter('mini_archive_pre_get_posts','sfhiv_service_hour_replace_with_sfhiv_service',10);
 function sfhiv_service_hour_replace_with_sfhiv_service( $query_vars ) {
-	if ( is_admin() || $query_vars['post_type'] != 'sfhiv_service_hour' ) return;
+	if ( is_admin() || $query_vars['post_type'] != 'sfhiv_service_hour' ) return $query_vars;
 	if(!sfhiv_services_day_taxonomy_in_query_vars($query_vars)){
 		$query_vars = $query_vars;
 		$query_vars['post_type'] = 'sfhiv_service';
