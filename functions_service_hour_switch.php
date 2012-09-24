@@ -26,12 +26,13 @@ function sfhiv_service_hour_replace_with_sfhiv_service( $query_vars ) {
 add_filter('sfhiv_loop_pre_display','sfhiv_service_list_by_providers',10);
 function sfhiv_service_list_by_providers($query){
 	if($query->query_vars['post_type'] != 'sfhiv_service') return $query;
-	p2p_type( 'provider_services' )->each_connected( $query );
+	p2p_type( 'provider_services' )->each_connected( $query, array(), 'providers' );
+	p2p_type( 'service_time' )->each_connected( $query, array(), 'times' );
 	$providers = array();
 	$services = array();
 	foreach( $query->posts as $service){
 		$has_provider = false;
-		foreach($service->connected as $provider){
+		foreach($service->providers as $provider){
 			$has_provider = true;
 			$found = false;
 			foreach($providers as $_p){
@@ -48,6 +49,7 @@ function sfhiv_service_list_by_providers($query){
 		if(!$has_provider){
 			$services[] = $service;
 		}
+		$service->providers = array();
 	}
 	// sort providers??
 	$query->posts = array_merge($providers,$services);
