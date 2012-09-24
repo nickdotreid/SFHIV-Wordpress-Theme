@@ -87,6 +87,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 		echo '<h2 class="list-title">'.$args['title'].'</h2>';
 	}
 	echo $args['wrap_before'];
+	$query = apply_filters('sfhiv_loop_pre_display',$query);
 	while($query->have_posts()){
 		$query->the_post();
 		get_template_part( $args['list_element'], get_post_type() );
