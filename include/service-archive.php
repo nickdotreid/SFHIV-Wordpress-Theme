@@ -1,5 +1,11 @@
 <?php
 
+add_action( 'pre_get_posts', 'sfhiv_service_no_pages', 5 );
+function sfhiv_service_no_pages( $query ) {
+	if ( is_admin() || !in_array($query->query_vars['post_type'],array('sfhiv_service_hour','sfhiv_service'))) return;
+	$query->query_vars['posts_per_page'] = -1;
+}
+
 add_action('sfhiv_pre_loop','sfhiv_service_archive_draw_menu',5,2);
 function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	if(!$query || !in_array($query->query_vars['post_type'],array("sfhiv_service","sfhiv_service_hour"))) return;
