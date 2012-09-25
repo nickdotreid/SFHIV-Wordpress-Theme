@@ -60,7 +60,7 @@ $(document).ready(function(){
 		if(num_items<1){
 			return;
 		}
-		free_space = free_space/num_items;
+		free_space = Math.floor(free_space/num_items);
 		menu_items.each(function(){
 			m_space = free_space;
 			p_space = $(this).data("orig-padding");
@@ -69,7 +69,7 @@ $(document).ready(function(){
 			}
 			if(free_space<0){
 				m_space = 0;
-				p_space = $(this).data("orig-padding") + free_space/2;
+				p_space = Math.floor($(this).data("orig-padding") + free_space/2);
 			}
 			$(this).css({
 				"margin-right":m_space+'px',
