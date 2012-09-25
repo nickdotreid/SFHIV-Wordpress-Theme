@@ -77,13 +77,17 @@ add_action('after_list-item','sfhiv_service_hour_display_day',7);
 add_action('short_after_content','sfhiv_service_hour_display_day',7);
 function sfhiv_service_hour_display_day(){
 	if (get_post_type()!='sfhiv_service_hour') return;
-	$days = sfhiv_service_get_service_days(get_post(get_the_ID()));
 	echo '<div class="date date-float">';
+	sfhiv_service_hour_display_day_markup( get_the_ID() );
+	echo '</div>';
+}
+
+function sfhiv_service_hour_display_day_markup($post_id){
+	$days = sfhiv_service_get_service_days(get_post($post_id));
 	foreach($days as $day){
 		$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
 		echo '<span class="day">'.$term->name.'</span>';
 	}
-	echo '</div>';
 }
 
 add_action('after_list-item','sfhiv_service_hour_display_time',8);
@@ -95,15 +99,20 @@ function sfhiv_service_hour_display_time(){
 	$end = sfhiv_service_get_end_time($post);
 	
 	$time_format = get_option('time_format');
-	
+	sfhiv_service_hour_display_time_markup($start,$end,$time_format);
+
+}
+
+function sfhiv_service_hour_display_time_markup($start,$end,$format){
 	echo '<div class="time time-float">';
-	echo '<span class="start">'.date($time_format,$start).'</span>';
+	echo '<span class="start">'.date($format,$start).'</span>';
 	if($start != $end){
 		echo '<span class=""> until </span>';
-		echo '<span class="end">'.date($time_format,$end).'</span>';		
+		echo '<span class="end">'.date($format,$end).'</span>';		
 	}
 	echo '</div>';
 }
+
 add_action('before_content','sfhiv_service_hour_display_location',8);
 add_action('short_after_content','sfhiv_service_hour_display_location',8);
 add_action('after_list-item','sfhiv_service_hour_display_location',9);
