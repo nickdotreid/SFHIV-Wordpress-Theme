@@ -14,9 +14,7 @@
 				<?=apply_filters("content",$service->post_content);?>
 			</div>
 			<?	foreach($service->times as $time):	?>
-			<p>Sort by location</p>
-			<p>Then Time of day</p>
-			<p>Then day of week</p>
+			
 			<?	endforeach; ?>
 		</div>
 	<?	endforeach; ?>
