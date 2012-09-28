@@ -103,15 +103,31 @@
 }
 
 .plateau{
-	background-color:@white;
-	border:@border_width @secondary_color solid;
-	padding:0px @space_size*2;
-	margin:@space_size/2 @space_size*3;
+	font-size:@big_font_size;
+	margin:@space_size*3 @space_size @space_size;
+	padding:0px 0px @space_size;
+	border-bottom:@border_width @secondary_color solid;
 }
 
 .well{
-	background-color:@light_secondary_color;
-	padding:@space_size @space_size * 4;
-	margin:@space_size/2 0px;
+	border-bottom:@border_width @secondary_color solid;
+	border-top:@border_width @secondary_color solid;
+	padding:@space_size @space_size;
+	margin:@space_size 0px;
+}
+@media all and (min-width: @size_tablet) {
+	.well{
+		padding:@space_size @space_size * 2;
+	}	
+}
+@media all and (min-width: @size_medium) {
+	.well{
+		padding:@space_size @space_size * 3;
+	}
+}
+@media all and (min-width: @size_large) {
+	.well{
+		padding:@space_size @space_size * 4;
+	}
 }
 

@@ -3462,15 +3462,31 @@ h4 a:hover {
   padding: 7px 21px;
 }
 .plateau {
-  background-color: #ffffff;
-  border: 1px #bcbcbc solid;
-  padding: 0px 14px;
-  margin: 3.5px 21px;
+  font-size: 18px;
+  margin: 21px 7px 7px;
+  padding: 0px 0px 7px;
+  border-bottom: 1px #bcbcbc solid;
 }
 .well {
-  background-color: #e2e2e2;
-  padding: 7px 28px;
-  margin: 3.5px 0px;
+  border-bottom: 1px #bcbcbc solid;
+  border-top: 1px #bcbcbc solid;
+  padding: 7px 7px;
+  margin: 7px 0px;
+}
+@media all and (min-width: 500px) {
+  .well {
+    padding: 7px 14px;
+  }
+}
+@media all and (min-width: 720px) {
+  .well {
+    padding: 7px 21px;
+  }
+}
+@media all and (min-width: 970px) {
+  .well {
+    padding: 7px 28px;
+  }
 }
 .carousel {
   position: relative;
