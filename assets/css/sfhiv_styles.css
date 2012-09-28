@@ -4075,6 +4075,20 @@ a .date-calendar {
 .sfhiv_service_hour.short .categories.populations {
   width: auto;
 }
+.services-list .service-list-item {
+  display: block;
+  clear: both;
+}
+.service-time-list .times-list {
+  float: left;
+  width: 225px;
+}
+.service-time-list .sfhiv_service_hour {
+  margin-bottom: 3.5px;
+}
+.service-time-list .sfhiv_service_hour .day {
+  margin-bottom: 3.5px;
+}
 @media all and (min-width: 970px) {
   .sfhiv_service_hour .address {
     width: 168.75px;

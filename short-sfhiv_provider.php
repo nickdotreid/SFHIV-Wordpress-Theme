@@ -7,19 +7,20 @@
 	<header>
 		<h3 class="entry-title"><?=the_title();?></h3>
 	</header>
-	<div class="services">
+	<div class="services services-list">
 	<?	foreach($post->services as $service):	?>
-		<div id="sfhiv-service-<?=$service->ID;?>" class="service">
+		<div id="sfhiv-service-<?=$service->ID;?>" class="service service-list-item">
 			<h4><a href="#"><?=get_the_title($service->ID);?></a></h4>
 			<div class="entry-content">
 				<?=apply_filters("content",$service->post_content);?>
 			</div>
-			<ul class="list">
+			<ul class="list sfhiv_service_time_hour service-time-list">
 			<?
 			$locations = sfhiv_service_hours_sort_by_location($service->times);
 			foreach($locations as $location){
 				echo '<li class="sfhiv_service_hour type-sfhiv_service_hour status-publish hentry list-item">';
 				$times = sfhiv_service_hours_sort_by_start_end($location->times);
+				echo '<div class="times-list">';
 				foreach($times as $time){
 					echo '<div class="time-container">';
 					echo '<div class="date date-float">';
@@ -32,6 +33,7 @@
 					echo '</div>';
 					echo '</div>';
 				}
+				echo '</div><!-- end .times-list -->';
 				sfhiv_location_format($location);
 				echo '</li>';
 			}
@@ -40,5 +42,5 @@
 		</div>
 	<?	endforeach; ?>
 	</div>
-	<br class="clear" />
+	<div class="clear"></div>
 </article>
