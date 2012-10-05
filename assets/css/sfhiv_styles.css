@@ -4111,6 +4111,11 @@ a .date-calendar {
 .services-list .service-list-item {
   margin-top: 7px;
 }
+#main .sfhiv_provider .entry-title {
+  font-size: 14px;
+  line-hight: 14px;
+  color: #2e3c62;
+}
 .list .member {
   position: relative;
   display: block;

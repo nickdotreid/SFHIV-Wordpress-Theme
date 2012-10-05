@@ -10,7 +10,7 @@
 	<div class="services services-list">
 	<?	foreach($post->services as $service):	?>
 		<div id="sfhiv-service-<?=$service->ID;?>" class="service service-list-item">
-			<h4><a href="#"><?=get_the_title($service->ID);?></a></h4>
+			<h4><a href="<?=get_permalink($service->ID);?>"><?=get_the_title($service->ID);?></a></h4>
 			<div class="entry-content">
 				<?=apply_filters("content",$service->post_content);?>
 			</div>
