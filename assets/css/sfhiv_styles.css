@@ -3916,7 +3916,7 @@ a .date-calendar {
   display: block;
   clear: both;
 }
-.list .filters.collapsable i {
+.list .filters.collapsable i.button {
   display: block;
   margin: 3.5px auto;
   clear: both;

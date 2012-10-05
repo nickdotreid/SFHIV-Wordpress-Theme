@@ -15,7 +15,7 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	$base_url = preg_replace('/page\/(\d+)\//i','',$_SERVER[REQUEST_URI]); // strip out page var if in url
 	if(isset($args['id']))	$base_url .= "#".$args['id'];
 	
-	echo '<section class="filters">';
+	echo '<section class="filters collapsable">';
 	sfhiv_draw_taxonomy_query_menu('sfhiv_service_category',$query,array(
 		'title_li' => false,
 		'all_taxonomy_name' => 'All Services',
@@ -37,7 +37,7 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 		'base_link' => $base_url,
 
 	));
-	echo '<i></i>';
+	echo '<i class="button"></i>';
 	echo '</section>';
 }
 
