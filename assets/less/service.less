@@ -16,7 +16,7 @@
 	}
 	.categories{
 		float:left;
-		clear:none;
+		clear:both;
 		width:@block_width/2 - @space_size;
 		h4,li{
 			float:none;
@@ -28,7 +28,6 @@
 			padding:@space_size/2 0px 0px;
 			width:auto;
 			float:left;
-			clear:none;
 			display:block;
 			h4,li{
 				float:left;
@@ -74,6 +73,7 @@
 		.list{
 			float:left;
 			display:block;
+			clear:both;
 			width:@block_width*2 + @space_size*2;
 		}
 	}
@@ -83,4 +83,8 @@
 	.info-service{
 		margin-bottom:@space_size;
 	}
+}
+
+.services-list .service-list-item{
+	margin-top:@space_size;
 }

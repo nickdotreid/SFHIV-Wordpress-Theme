@@ -39,6 +39,7 @@
 			}
 			?>
 			</ul>
+			<div class="clear">&nbsp;</div>
 		</div>
 	<?	endforeach; ?>
 	</div>

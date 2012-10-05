@@ -4047,7 +4047,7 @@ a .date-calendar {
 .sfhiv_service .categories,
 .sfhiv_service_hour .categories {
   float: left;
-  clear: none;
+  clear: both;
   width: 105.5px;
 }
 .sfhiv_service .categories h4,
@@ -4062,7 +4062,6 @@ a .date-calendar {
   padding: 3.5px 0px 0px;
   width: auto;
   float: left;
-  clear: none;
   display: block;
 }
 .sfhiv_service.short .categories h4,
@@ -4102,11 +4101,15 @@ a .date-calendar {
   .sfhiv_service_hour .list {
     float: left;
     display: block;
+    clear: both;
     width: 464px;
   }
 }
 .sfhiv_service_hour.short .info-service {
   margin-bottom: 7px;
+}
+.services-list .service-list-item {
+  margin-top: 7px;
 }
 .list .member {
   position: relative;
