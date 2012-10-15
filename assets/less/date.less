@@ -15,8 +15,34 @@
 	margin-right:@space_size;
 }
 
-.list-item .date{
-	display:inline;
+.date{
+	.day{
+		font-weight:bold;
+	}
+}
+
+.list-item{
+	.date,.time{
+		font-size:@small_font_size;
+		span{
+			text-decoration:none;
+		}
+	}
+	a .date{
+		text-decoration:none;
+	}
+	.time .start{
+		display:inline;
+	}
+}
+
+.short{
+	.date{
+		clear:both;
+	}
+	.time{
+		float:left;
+	}
 }
 
 .date-block,.time-block{
