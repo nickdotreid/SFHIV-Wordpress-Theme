@@ -3596,7 +3596,7 @@ h4 a:hover {
 .carousel-inner {
   display: block;
   clear: both;
-  height: 400px;
+  height: 350px;
   padding: 0px;
   margin: 7px 0px;
   border-top: 1px #bcbcbc solid;
@@ -3619,16 +3619,16 @@ h4 a:hover {
   background-position: -50px 0px;
 }
 .carousel-control.right {
-  right: -28px;
+  right: -3px;
 }
 .carousel-control.left {
-  left: -28px;
+  left: -3px;
   background-image: url('../i/btn-carousel-prev.png');
 }
 .carousel .item {
   position: relative;
-  height: 400px;
-  margin: 0px;
+  height: 350px;
+  margin: 0px 25px;
 }
 .carousel .item .slider-image {
   display: none;
@@ -3640,7 +3640,7 @@ h4 a:hover {
   width: 225px;
   background-color: #FFF;
   border-left: 1px #bcbcbc solid;
-  height: 400px;
+  height: 350px;
 }
 .carousel .item .slider-item-container .entry-header {
   border-top: #2e3c62 1px solid;
@@ -3679,7 +3679,7 @@ h4 a:hover {
     top: 7px;
     left: 0px;
     width: 518px;
-    height: 386px;
+    height: 336px;
     background-position: right center;
     background-repeat: no-repeat;
   }
