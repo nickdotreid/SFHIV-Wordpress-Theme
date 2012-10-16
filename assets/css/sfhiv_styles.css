@@ -3366,10 +3366,10 @@ h4 a:hover {
     margin-right: 14px;
   }
 }
-#content header {
+#content .entry-header-full {
   padding-bottom: 14px;
 }
-#content header h1.entry-title {
+#content .entry-header-full .entry-title {
   float: left;
 }
 .entry-navigation {

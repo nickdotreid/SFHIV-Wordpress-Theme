@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?	if(!is_front_page()):	?>
-	<header class="entry-header">
+	<header class="entry-header entry-header-full">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<? do_action('after_content_header');	?>
 		<div class="clear"></div>
