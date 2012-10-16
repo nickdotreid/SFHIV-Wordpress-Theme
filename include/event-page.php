@@ -1,19 +1,14 @@
 <?php
 
-add_action('after_list-item','sfhiv_event_page_show_date',5);
-add_action('short_before_content','sfhiv_event_page_show_date',5);
-add_action('before_content','sfhiv_event_page_show_date',5);
-function sfhiv_event_page_show_date(){
+add_action('after_list-item','sfhiv_event_page_show_date_time',5);
+add_action('short_before_content','sfhiv_event_page_show_date_time',5);
+add_action('before_content','sfhiv_event_page_show_date_time',5);
+function sfhiv_event_page_show_date_time(){
 	if(get_post_type() != 'sfhiv_event') return;
+	echo '<div class="date-time">';
 	get_template_part('date','event');
-}
-
-add_action('after_list-item','sfhiv_event_page_show_time',5);
-add_action('short_before_content','sfhiv_event_page_show_time',5);
-add_action('before_content','sfhiv_event_page_show_time',5);
-function sfhiv_event_page_show_time(){
-	if(get_post_type() != 'sfhiv_event') return;
 	get_template_part('time','event');
+	echo '</div>';
 }
 
 add_action('before_content','sfhiv_event_display_location',7);

@@ -4,15 +4,7 @@
 	line-height:1em;
 	.start{
 		font-weight:bold;
-		display:block;
 	}
-}
-
-.time-float,.date-float{
-	display:block;
-	float:left;
-	margin-top:0px;
-	margin-right:@space_size;
 }
 
 .date{
@@ -37,46 +29,10 @@
 }
 
 .short{
-	.date{
-		clear:both;
-	}
-	.time{
+	.date-time{
+		width:@block_width - @space_size;
+		display:block;
 		float:left;
-	}
-}
-
-.date-block,.time-block{
-	display:block;
-	float:left;
-	width:@block_width/2 - @space_size/2;
-	margin:@space_size @space_size/2 @space_size 0px;
-}
-
-.date-block {
-	border-radius:5px;
-	line-height:1em;
-	color: #FFF;
-	background:@highlight_color;
-	text-align:center;
-	padding:@space_size/2 0px;
-	span{
-		display:block;
-		margin:@space_size/2 @space_size;
-	}
-}
-.past .date-block{
-	color:@text_color;
-	background:lighten(@secondary_color,10%);
-}
-.time-block{
-	line-height:1em;
-	width:@block_width/2 - @space_size*3;
-	padding:0px @space_size;
-	.start,.end{
-		font-weight:bold;
-	}
-	.start{
-		display:block;
 	}
 }
 
