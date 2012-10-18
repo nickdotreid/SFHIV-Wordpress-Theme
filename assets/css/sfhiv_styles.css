@@ -3691,6 +3691,11 @@ h4 a:hover {
 .wpcf7 {
   padding-top: 7px;
 }
+.contact-form br,
+.wpcf7 br {
+  display: block;
+  height: 1px;
+}
 .contact-form .error,
 .wpcf7 .error,
 .contact-form .wpcf7-not-valid-tip,
@@ -3699,52 +3704,55 @@ h4 a:hover {
   width: 197px;
   position: static;
 }
-.contact-form .column,
-.wpcf7 .column {
-  width: 225px;
-  display: block;
-  float: left;
-}
-.contact-form .column input,
-.wpcf7 .column input,
-.contact-form .column textarea,
-.wpcf7 .column textarea,
-.contact-form .column select,
-.wpcf7 .column select {
-  width: 197px;
-  clear: both;
-}
-.contact-form .form-row,
-.wpcf7 .form-row {
-  display: block;
-  clear: both;
-  width: auto;
+.contact-form .row,
+.wpcf7 .row {
+  margin-left: 0px;
 }
 .contact-form .submit-button,
 .wpcf7 .submit-button,
 .contact-form .wpcf7-submit,
 .wpcf7 .wpcf7-submit {
   width: 225px;
-  border-color: #bcbcbc;
-  background-color: #f09938;
   color: #FFF;
   display: block;
-  float: right;
 }
-@media all and (min-width: 720px) {
-  .contact-form .column-wide,
-  .wpcf7 .column-wide {
-    width: 450px;
-  }
-  .contact-form .column-wide input,
-  .wpcf7 .column-wide input,
-  .contact-form .column-wide textarea,
-  .wpcf7 .column-wide textarea,
-  .contact-form .column-wide select,
-  .wpcf7 .column-wide select {
-    width: 440px;
-    clear: both;
-  }
+.contact-form input,
+.wpcf7 input,
+.contact-form textarea,
+.wpcf7 textarea {
+  display: block;
+  width: 98%;
+}
+.contact-form .wpcf7-list-item,
+.wpcf7 .wpcf7-list-item {
+  margin: 0px;
+  margin-bottom: 7px;
+}
+.contact-form .wpcf7-checkbox input,
+.wpcf7 .wpcf7-checkbox input,
+.contact-form .wpcf7-radio input,
+.wpcf7 .wpcf7-radio input {
+  float: left;
+  display: block;
+  width: auto;
+}
+.contact-form .wpcf7-checkbox .wpcf7-list-item-label,
+.wpcf7 .wpcf7-checkbox .wpcf7-list-item-label,
+.contact-form .wpcf7-radio .wpcf7-list-item-label,
+.wpcf7 .wpcf7-radio .wpcf7-list-item-label {
+  margin-left: 3.5px;
+}
+.contact-form .wpcf7-submit,
+.wpcf7 .wpcf7-submit {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 7px 0px;
+  width: 225px;
+  background-color: #f09938;
+}
+.contact-form .wpcf7-submit.center,
+.wpcf7 .wpcf7-submit.center {
+  margin: 0px auto;
 }
 .date,
 .time {
