@@ -18,31 +18,14 @@
 }
 
 
-#content .entry-toc{
-	clear:none;
-	float:right;
-	width:@block_width - @space_size*2;
-	background:transparent url('../i/white70.png') repeat top left;
-	a{
-		padding:@space_size/2;
-		margin:0px;
-		display:block;
-		clear:both;
-		float:none;
-		text-align:right;
-	}
-	&.top{
-		clear:none;
-	}
-}
-
-#content .entry-navigation.sticky.fixed{
+.sidebar .entry-menu.sticky{
 	position:static;
 }
 @media all and (min-width: @size_tablet) {
-	#content .entry-navigation.sticky.fixed{
+	.sidebar .entry-menu.sticky.fixed{
 		position:fixed;
 		top:0px;
+		width:@block_width;
 	}	
 }
 

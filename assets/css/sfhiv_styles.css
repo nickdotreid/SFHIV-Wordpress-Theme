@@ -3383,30 +3383,14 @@ h4 a:hover {
 .entry-navigation .post-edit-link {
   float: right;
 }
-#content .entry-toc {
-  clear: none;
-  float: right;
-  width: 211px;
-  background: transparent url('../i/white70.png') repeat top left;
-}
-#content .entry-toc a {
-  padding: 3.5px;
-  margin: 0px;
-  display: block;
-  clear: both;
-  float: none;
-  text-align: right;
-}
-#content .entry-toc.top {
-  clear: none;
-}
-#content .entry-navigation.sticky.fixed {
+.sidebar .entry-menu.sticky {
   position: static;
 }
 @media all and (min-width: 500px) {
-  #content .entry-navigation.sticky.fixed {
+  .sidebar .entry-menu.sticky.fixed {
     position: fixed;
     top: 0px;
+    width: 225px;
   }
 }
 .entry-content h1,

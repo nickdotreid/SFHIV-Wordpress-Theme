@@ -66,7 +66,7 @@ function sfhiv_page_list_attachments(){
 
 add_action('get_sidebar','sfhiv_content_add_navigation',30);
 function sfhiv_content_add_navigation(){
-	echo '<nav class="entry-toc sticky">';
+	echo '<nav class="entry-menu entry-toc sticky">';
 	echo '<div class="menu">';
 	$links = sfhiv_extract_toc(get_the_content(get_the_ID()));
 	foreach($links as $link){

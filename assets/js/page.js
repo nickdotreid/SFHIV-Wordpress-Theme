@@ -82,17 +82,14 @@ $(document).ready(function(){
 	
 	$(".sticky").each(function(){
 		$(this).data("top",$(this).offset().top);
-		$(this).data("left",$(this).offset().left);
 	});
 	$(window).scroll(function(event){
 		$(".sticky").each(function(){
 			var sticky = $(this)
-			if($(window).scrollTop() > sticky.data("top") && sticky.width() != sticky.parents(".container").width()){
+			if($(window).scrollTop() > sticky.data("top")){
 				sticky.addClass("fixed");
-				sticky.css("left",sticky.data("left")+'px');
 			}else{
 				sticky.removeClass("fixed");
-				sticky.css("left",false);
 			}
 		});
 	});
