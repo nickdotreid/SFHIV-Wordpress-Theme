@@ -27,6 +27,15 @@ function sfhiv_top_image_metabox( $metaboxes ){
 	return $metaboxes;
 }
 
+add_filter('header-class','sfhiv_top_image_class');
+function sfhiv_top_image_class($classes){
+	$image_id = get_post_meta(get_the_ID(),'sfhiv_top_image_id',true);
+	if($image_id){
+		return $classes.' top-header-image';
+	}
+	return $classes;
+}
+
 add_filter('header-styles','sfhiv_top_image_style');
 function sfhiv_top_image_style($styles){
 	$image_id = get_post_meta(get_the_ID(),'sfhiv_top_image_id',true);

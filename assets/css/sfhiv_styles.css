@@ -2462,6 +2462,13 @@ h4 a:hover {
   #site-description {
     padding-top: 100px;
   }
+  .top-header-image #site-title a {
+    background-position: 22px 20px;
+    height: 75px;
+  }
+  .top-header-image #site-description {
+    padding-top: 0px;
+  }
 }
 @media all and (min-width: 720px) {
   #branding {
@@ -2479,6 +2486,9 @@ h4 a:hover {
     text-align: right;
     font-size: 18px;
     font-style: none;
+  }
+  #branding.top-header-image #site-description {
+    padding-top: 0px;
   }
 }
 @media all and (min-width: 970px) {
@@ -2514,6 +2524,16 @@ h4 a:hover {
   }
   #branding .inner #access {
     height: 45px;
+  }
+  #branding.top-header-image #site-title a {
+    background-position: 80px -61px;
+    height: 75px;
+  }
+  #branding.top-header-image #site-title a i {
+    background-position: 24px 58px;
+  }
+  #branding.top-header-image #site-description {
+    padding-top: 0px;
   }
 }
 #section-top {

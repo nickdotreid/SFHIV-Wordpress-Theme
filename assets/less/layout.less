@@ -128,6 +128,15 @@
 	#site-description{
 		padding-top:100px;
 	}
+	.top-header-image{
+		#site-title a{
+			background-position:22px 20px;
+			height:75px;
+		}
+		#site-description{
+			padding-top:0px;
+		}
+	}
 }
 @media all and (min-width: @size_medium) {
 	#branding{
@@ -147,6 +156,11 @@
 		text-align:right;
 		font-size:@big_font_size;
 		font-style:none;
+	}
+	#branding.top-header-image{
+		#site-description{
+			padding-top:0px;
+		}
 	}
 }
 @media all and (min-width: @size_large) {
@@ -183,6 +197,18 @@
 			#access{
 				height:45px;
 			}
+		}
+	}
+	#branding.top-header-image{
+		#site-title a{
+			background-position:80px -61px;
+			height:75px;
+			i{
+				background-position:24px 58px;
+			}
+		}
+		#site-description{
+			padding-top:0px;
 		}
 	}
 }

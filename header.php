@@ -58,7 +58,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 <?php do_action( 'before' ); ?>
-	<header id="branding" class="container" role="banner" style="<?=apply_filters("header-styles","");?>">
+	<header id="branding" class="container <?=apply_filters("header-class","");?>" role="banner" style="<?=apply_filters("header-styles","");?>">
 		<div class="inner header-inner">
 			<hgroup>
 				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
