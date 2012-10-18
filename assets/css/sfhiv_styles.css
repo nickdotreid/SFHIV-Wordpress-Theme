@@ -3416,6 +3416,7 @@ h4 a:hover {
 .entry-content h5,
 .entry-content h6 {
   font-family: arial, sans-serif;
+  line-height: 1.5em;
 }
 .entry-content h1 {
   font-size: 28px;
