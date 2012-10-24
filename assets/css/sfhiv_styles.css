@@ -3011,6 +3011,7 @@ h4 a:hover {
   display: block;
   clear: both;
   width: auto;
+  line-height: 1.2em;
   text-align: right;
   padding: 14px;
   margin-bottom: 0px 14px 7px;
