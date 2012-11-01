@@ -19,19 +19,18 @@
 			$locations = sfhiv_service_hours_sort_by_location($service->times);
 			foreach($locations as $location){
 				echo '<li class="sfhiv_service_hour type-sfhiv_service_hour status-publish hentry list-item">';
-				$times = sfhiv_service_hours_sort_by_start_end($location->times);
+				$days = sfhiv_service_hours_sort_by_day($location->times);
 				echo '<div class="times-list">';
-				foreach($times as $time){
+				foreach($days as $day){
 					echo '<div class="time-container">';
 					echo '<div class="date date-float">';
-					foreach($time['times'] as $hour){
-						sfhiv_service_hour_display_day_markup($hour->ID);
+					sfhiv_service_hour_markup_day($day['day']);
+					echo '</div>';
+					foreach($day['times'] as $time){
+						sfhiv_service_hour_display_time_markup($time->start,$time->end,$time_format);	
 					}
-					echo '</div>';
-					echo '<div class="time time-float">';
-					sfhiv_service_hour_display_time_markup($time['start'],$time['end'],$time_format);
-					echo '</div>';
-					echo '</div>';
+					echo '<div class="clear">&nbsp;</div>';
+					echo '</div><!-- end .time-container -->';
 				}
 				echo '</div><!-- end .times-list -->';
 				sfhiv_location_format($location);

@@ -49,6 +49,15 @@
 	width:@block_width;
 }
 
+@media all and (min-width: @size_large) {
+	.service-time-list .times-list{
+		width:@block_width*1.5;
+		.date-float,.time-float{
+			width:@block_width*0.75;
+		}
+	}
+}
+
 .service-time-list .sfhiv_service_hour{
 	margin-bottom:@space_size/2;
 }

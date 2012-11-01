@@ -3843,6 +3843,11 @@ a .date-calendar {
 .list-item .date-calendar {
   margin-top: 0px;
 }
+.time-float,
+.date-float {
+  display: block;
+  float: left;
+}
 .address {
   color: #2e3c62;
   width: 204px;
@@ -4071,6 +4076,15 @@ a .date-calendar {
 .service-time-list .times-list {
   float: left;
   width: 225px;
+}
+@media all and (min-width: 970px) {
+  .service-time-list .times-list {
+    width: 337.5px;
+  }
+  .service-time-list .times-list .date-float,
+  .service-time-list .times-list .time-float {
+    width: 168.75px;
+  }
 }
 .service-time-list .sfhiv_service_hour {
   margin-bottom: 3.5px;

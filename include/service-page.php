@@ -85,9 +85,13 @@ function sfhiv_service_hour_display_day(){
 function sfhiv_service_hour_display_day_markup($post_id){
 	$days = sfhiv_service_get_service_days(get_post($post_id));
 	foreach($days as $day){
-		$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
-		echo '<span class="day">'.$term->name.'</span>';
+		sfhiv_service_hour_markup_day($day);
 	}
+}
+
+function sfhiv_service_hour_markup_day($day){
+	$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
+	echo '<span class="day">'.$term->name.'</span>';
 }
 
 add_action('after_list-item','sfhiv_service_hour_display_time',8);
