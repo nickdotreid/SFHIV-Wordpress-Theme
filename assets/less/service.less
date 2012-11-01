@@ -79,7 +79,13 @@
 @media all and (min-width: @size_large) {
 	.sfhiv_service_hour{
 		.address{
-			width:@block_width * 3/4;
+			width:@block_width * 1.5;
+			.address-postal,.hint{
+				width:@block_width*(3/4) - @space_size;
+				display:block;
+				float:left;
+				margin-right:@space_size;
+			}
 		}
 		.categories.populations{
 			width:@block_width * 3/4 - @space_size;

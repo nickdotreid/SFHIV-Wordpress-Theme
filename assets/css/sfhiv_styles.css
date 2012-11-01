@@ -4111,7 +4111,14 @@ a .date-calendar {
 }
 @media all and (min-width: 970px) {
   .sfhiv_service_hour .address {
-    width: 168.75px;
+    width: 337.5px;
+  }
+  .sfhiv_service_hour .address .address-postal,
+  .sfhiv_service_hour .address .hint {
+    width: 161.75px;
+    display: block;
+    float: left;
+    margin-right: 7px;
   }
   .sfhiv_service_hour .categories.populations {
     width: 161.75px;
