@@ -1,13 +1,7 @@
 .sfhiv_service,.sfhiv_service_hour{
 	.day{
 		display:block;
-		width:@block_width/2;
-		text-align:center;
-		border-radius:5px;
-		background-color:@highlight_color;
-		color:@white;
 		margin:0px;
-		padding:@space_size 0px;
 	}
 	.populations li{
 		border:0px;
@@ -44,22 +38,38 @@
 	clear:both;
 }
 
-.service-time-list .times-list{
-	float:left;
-	width:@block_width;
+.service-time-list .sfhiv_service_hour{
+	margin-bottom:@space_size/2;
+	.time-container{
+		margin-bottom:@space_size;
+	}
+	.date,.time{
+		font-size:@font_size;
+	}
 }
-
-@media all and (min-width: @size_large) {
+@media all and (min-width: @size_tablet) {
 	.service-time-list .times-list{
-		width:@block_width*1.5;
-		.date-float,.time-float{
-			width:@block_width*0.75;
+		float:left;
+	}
+	
+	.service-time-list .sfhiv_service_hour{
+		.time-container, .times-list{
+			width:@block_width;
 		}
 	}
 }
-
-.service-time-list .sfhiv_service_hour{
-	margin-bottom:@space_size/2;
+@media all and (min-width: @size_large) {
+	.service-time-list .sfhiv_service_hour{
+		.time-container,.times-list{
+			width:@block_width* (5/4);
+			.time{
+				width:@block_width* (3/4);
+			}
+			.date{
+				width:@block_width/2;
+			}
+		}
+	}
 }
 
 .service-time-list .sfhiv_service_hour .day{

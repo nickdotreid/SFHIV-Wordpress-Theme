@@ -77,5 +77,10 @@ a .date-calendar{
 
 .time-float,.date-float{
 	display:block;
-	float:left;
+}
+@media all and (min-width: @size_tablet) {
+	.time-float,.date-float{
+		float:left;
+		width:@block_width;
+	}
 }

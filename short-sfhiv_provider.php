@@ -34,6 +34,7 @@
 				}
 				echo '</div><!-- end .times-list -->';
 				sfhiv_location_format($location);
+				echo '<div class="clear">&nbsp;</div>';
 				echo '</li>';
 			}
 			?>
