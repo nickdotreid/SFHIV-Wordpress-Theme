@@ -17,6 +17,11 @@
 			<?	sfhiv_population_cat_sentence($service);	?>
 			<?	sfhiv_service_cat_display($service);	?>
 			<?	sfhiv_service_hours_print_list($service->times); ?>
+			<nav class="entry-navigation">
+				<a href="<?=get_permalink($service->ID);?>"><?=get_the_title($service->ID);?></a>
+				<?	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', $service->ID );	?>
+			</nav>
+			<div class="clear"></div>
 		</div>
 	<?	endforeach; ?>
 	</div>

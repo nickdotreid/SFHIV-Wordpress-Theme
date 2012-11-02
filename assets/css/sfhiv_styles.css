@@ -4078,9 +4078,10 @@ a .date-calendar {
 .sfhiv_service_hour.short .categories.populations {
   width: auto;
 }
-.services-list .service-list-item {
+.services-list .sfhiv_service-list-item {
   display: block;
   clear: both;
+  margin-top: 14px;
 }
 .service-time-list .sfhiv_service_hour {
   margin-bottom: 7px;
