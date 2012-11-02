@@ -4124,15 +4124,6 @@ a .date-calendar {
     width: 161.75px;
   }
 }
-@media all and (min-width: 720px) {
-  .sfhiv_service .list,
-  .sfhiv_service_hour .list {
-    float: left;
-    display: block;
-    clear: both;
-    width: 464px;
-  }
-}
 .sfhiv_service_hour.short .info-service {
   margin-bottom: 7px;
 }
