@@ -11,7 +11,7 @@
 	<?	sfhiv_service_cat_display($service);	?>
 	<?	sfhiv_service_hours_print_list($service->times); ?>
 	<nav class="entry-navigation">
-		<?	do_action("list-item_navigation");	?>
+		<?	do_action("short_navigation");	?>
 	</nav>
 	<div class="clear"></div>
 </li>

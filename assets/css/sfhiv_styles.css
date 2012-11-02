@@ -4134,6 +4134,7 @@ a .date-calendar {
 }
 .provider-title {
   font-size: 18px;
+  font-family: 'Dosis', verdana, sans-serif;
   line-height: 1.2em;
   color: #2e3c62;
 }

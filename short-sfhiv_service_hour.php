@@ -3,7 +3,7 @@
 	do_action("short_attributes");
 	?>>
 	<header>
-<!--		<div class="provider-title"></div>	-->
+		<?	do_action("get_service_provider_title");	?>
 		<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
 	<?	do_action("short_before_content");	?>

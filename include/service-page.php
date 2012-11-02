@@ -1,5 +1,19 @@
 <?php
 
+add_action('get_service_provider_title','sfhiv_service_get_provider_title');
+function sfhiv_service_get_provider_title(){
+	if(!in_array(get_post_type(),array('sfhiv_service_hour','sfhiv_service'))) return;
+	if(get_post_type() == 'sfhiv_service_hour'){
+		$service = sfhiv_service_hour_get_service(get_post(get_the_ID()));
+		if(!$service) return;
+	}else{
+		$service = get_post(get_the_ID());	
+	}
+	if(count($service->providers) < 1) return;
+	echo '<div class="provider-title">'.get_the_title($service->providers[0]->ID).'</div>';
+}
+
+
 add_filter('the_permalink','sfhiv_service_hour_change_permalink',1);
 function sfhiv_service_hour_change_permalink($link){
 	if(get_post_type() != 'sfhiv_service_hour') return $link;
