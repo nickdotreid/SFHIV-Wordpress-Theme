@@ -51,11 +51,16 @@
 }
 
 .list .info-query{
-	background-color:lighten(@secondary_color,15);
 	clear:both;
 	display:block;
 	width:inherit;
 	padding:@space_size/2 0px;
+	&.top{
+		border-bottom:1px @secondary_color solid;
+	}
+	&.bottom{
+		border-top:1px @secondary_color solid;	
+	}
 	.results{
 		display:block;
 		float:left;

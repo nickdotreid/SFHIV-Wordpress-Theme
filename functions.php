@@ -82,7 +82,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 	$args = apply_filters('sfhiv_loop_arguments',$args,$query->query_vars['post_type']);
 	if($query->post_count<1 && !$args['show_empty']) return;
 	echo '<'.$args['container'].' id="'.$args['id'].'" class="'.implode(" ",$args['classes']).'">';
-	if($args['show_filters']) do_action("sfhiv_pre_loop",$query,$args);
+	if($args['show_filters']) do_action("sfhiv_pre_loop",$query,array_merge($args,array("extra_classes" => 'top')));
 	if(isset($args['title']) && $args['title']!=""){
 		echo '<h2 class="list-title">'.$args['title'].'</h2>';
 	}
@@ -94,7 +94,7 @@ function sfhiv_loop_items($query=false,$args=array()){
 	}
 	wp_reset_postdata();
 	echo $args['wrap_after'];
-	if($args['show_filters']) do_action("sfhiv_post_loop",$query,$args);
+	if($args['show_filters']) do_action("sfhiv_post_loop",$query,array_merge($args,array("extra_classes" => 'bottom')));
 	echo '</'.$args['container'].'><!-- #'.$args['id'].'-->';
 }
 

@@ -15,6 +15,10 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 	if($current_page < 1){
 		$current_page = 1;
 	}
+	$extra_classes = "";
+	if(isset($args['extra_classes'])){
+		$extra_classes = $args['extra_classes'];
+	}
 	
 	if(isset($query->query_vars['nopaging']) && $query->query_vars['nopaging']) return;
 	
@@ -32,7 +36,7 @@ function sfhiv_archive_show_pages($query=false,$args=array()){
 	if( !empty($query->query_vars['s']) )
 		$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
 
-	echo '<section class="info-query">';
+	echo '<section class="info-query '.$extra_classes.'">';
 	echo '<span class="results">';
 	_e("Showing ".$query->post_count." of ".$query->found_posts.' results');
 	echo '</span>';

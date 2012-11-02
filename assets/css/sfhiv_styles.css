@@ -3941,11 +3941,16 @@ a .date-calendar {
   border-bottom: 0px;
 }
 .list .info-query {
-  background-color: #e2e2e2;
   clear: both;
   display: block;
   width: inherit;
   padding: 3.5px 0px;
+}
+.list .info-query.top {
+  border-bottom: 1px #bcbcbc solid;
+}
+.list .info-query.bottom {
+  border-top: 1px #bcbcbc solid;
 }
 .list .info-query .results {
   display: block;
