@@ -2280,6 +2280,7 @@ h4 {
   font-weight: normal;
   margin: 0px;
   padding: 0px;
+  line-height: 1.2em;
 }
 h1 a,
 h2 a,
@@ -2813,7 +2814,7 @@ h4 a:hover {
 .list-item .entry-title,
 .short .entry-title {
   font-size: 18px;
-  padding: 3.5px 0px 0px;
+  padding: 3.5px 0px 7px;
   background-color: transparent;
 }
 .list-item .entry-content,
@@ -3948,9 +3949,6 @@ a .date-calendar {
 }
 .list .info-query.top {
   border-bottom: 1px #bcbcbc solid;
-}
-.list .info-query.bottom {
-  border-top: 1px #bcbcbc solid;
 }
 .list .info-query .results {
   display: block;
