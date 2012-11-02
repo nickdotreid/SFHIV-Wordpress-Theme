@@ -11,6 +11,8 @@
 	<?	foreach($post->services as $service):	?>
 		<div id="sfhiv-service-<?=$service->ID;?>" class="service service-list-item">
 			<h4><a href="<?=get_permalink($service->ID);?>"><?=get_the_title($service->ID);?></a></h4>
+			<?	sfhiv_service_cat_display($service);	?>
+			<?	sfhiv_population_cat_sentence($service);	?>
 			<div class="entry-content">
 				<?=apply_filters("content",$service->post_content);?>
 			</div>

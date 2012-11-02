@@ -27,12 +27,11 @@ function sfhiv_service_population_display(){
 add_action('short_after_content','sfhiv_service_hour_population_display',10);
 function sfhiv_service_hour_population_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
-	sfhiv_population_cat_display();
+	sfhiv_population_cat_display(get_post(get_the_ID()));
 }
 
-function sfhiv_population_cat_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service_hour','sfhiv_service'))) return;
-	$population_terms = wp_get_post_terms(get_the_ID(),'sfhiv_population_category',array(
+function sfhiv_population_cat_display($post){
+	$population_terms = wp_get_post_terms($post->ID,'sfhiv_population_category',array(
 		'orderby' => 'term_order',
 	));
 	if(count($population_terms)<1) return;
@@ -46,6 +45,26 @@ function sfhiv_population_cat_display(){
 	echo '</section>';
 }
 
+function sfhiv_population_cat_sentence($post){
+	$population_terms = wp_get_post_terms($post->ID,'sfhiv_population_category',array(
+		'orderby' => 'term_order',
+	));
+	if(count($population_terms)<1) return;
+	echo '<section class="populations categories">';
+	echo '<p> Serves:';
+	for($i=0;$i<sizeof($population_terms);$i++){
+		echo $population_terms[$i]->name;
+		if($i+1<sizeof($population_terms)){
+			echo ", ";
+		}
+		if($i!=0 && $i+2 == sizeof($population_terms)){
+			echo "and ";
+		}
+	}
+	echo '</p>';
+	echo '</section>';
+}
+
 add_action('short_after_content','sfhiv_service_service_cat_display',3);
 function sfhiv_service_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service'))) return;
@@ -55,11 +74,10 @@ add_action('short_after_content','sfhiv_service_hour_service_cat_display',9);
 function sfhiv_service_hour_service_cat_display(){
 	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
 	echo '<br class="clear" />'; 
-	sfhiv_service_cat_display();
+	sfhiv_service_cat_display(get_post(get_the_ID()));
 }
-function sfhiv_service_cat_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service_hour','sfhiv_service'))) return;
-	$service_terms = wp_get_post_terms(get_the_ID(),'sfhiv_service_category',array(
+function sfhiv_service_cat_display($post){
+	$service_terms = wp_get_post_terms($post->ID,'sfhiv_service_category',array(
 		'orderby' => 'term_order',
 	));
 	if(count($service_terms)<1) return;

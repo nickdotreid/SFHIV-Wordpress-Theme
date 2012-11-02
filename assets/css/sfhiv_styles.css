@@ -4074,10 +4074,10 @@ a .date-calendar {
   clear: both;
 }
 .service-time-list .sfhiv_service_hour {
-  margin-bottom: 3.5px;
+  margin-bottom: 7px;
 }
 .service-time-list .sfhiv_service_hour .time-container {
-  margin-bottom: 7px;
+  margin-bottom: 3.5px;
 }
 .service-time-list .sfhiv_service_hour .date,
 .service-time-list .sfhiv_service_hour .time {

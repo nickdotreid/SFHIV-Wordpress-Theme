@@ -3,6 +3,7 @@
 	do_action("short_attributes");
 	?>>
 	<header>
+		<div class="provider-title">HEY</div>
 		<h3 class="entry-title"><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	</header>
 	<?	do_action("short_before_content");	?>
