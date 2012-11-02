@@ -7,5 +7,6 @@
 		<span class="title"><?=the_title();?></span>
 	</a>
 	<span class="date date-post"><?=get_the_date();?></span>
+	<div class="post-excerpt"><?=the_excerpt();?></div>
 	<?	do_action('after_list-item');	?>
 </li>
