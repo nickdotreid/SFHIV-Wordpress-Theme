@@ -19,6 +19,7 @@
 		float:left;
 		clear:both;
 		width:@block_width/2 - @space_size;
+		margin-right:@space_size;
 		h4,li{
 			float:none;
 		}
@@ -103,6 +104,17 @@
 .sfhiv_service_hour.short{
 	.info-service{
 		margin-bottom:@space_size;
+	}
+}
+
+@media all and (min-width: @size_large) {
+	#main .service-time-list{
+		display:block;
+		float:left;
+		width:@block_width*3 - @block_width/2;
+		.address{
+			width:@block_width;
+		}
 	}
 }
 
