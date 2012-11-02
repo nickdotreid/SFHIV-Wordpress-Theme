@@ -86,57 +86,15 @@ function sfhiv_service_cat_display($post){
 	echo '</section>';
 }
 
-add_action('after_list-item','sfhiv_service_hour_display_day',7);
-add_action('short_after_content','sfhiv_service_hour_display_day',7);
-function sfhiv_service_hour_display_day(){
-	if (get_post_type()!='sfhiv_service_hour') return;
-	echo '<div class="date date-float">';
-	sfhiv_service_hour_display_day_markup( get_the_ID() );
-	echo '</div>';
-}
-
-function sfhiv_service_hour_display_day_markup($post_id){
-	$days = sfhiv_service_get_service_days(get_post($post_id));
-	foreach($days as $day){
-		sfhiv_service_hour_markup_day($day);
-	}
-}
-
-function sfhiv_service_hour_markup_day($day){
-	$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
-	echo '<span class="day">'.$term->name.'</span>';
-}
-
-add_action('after_list-item','sfhiv_service_hour_display_time',8);
-add_action('short_after_content','sfhiv_service_hour_display_time',8);
+add_action('after_list-item','sfhiv_service_hour_display_time',7);
+add_action('short_after_content','sfhiv_service_hour_display_time',7);
 function sfhiv_service_hour_display_time(){
 	if (get_post_type()!='sfhiv_service_hour') return;
-	$post = get_post(get_the_ID());
-	$start = sfhiv_service_get_start_time($post);
-	$end = sfhiv_service_get_end_time($post);
-	
-	$time_format = get_option('time_format');
-	sfhiv_service_hour_display_time_markup($start,$end,$time_format);
-
+	sfhiv_service_hours_print_list(array(
+		get_post(get_the_ID())
+		));
 }
 
-function sfhiv_service_hour_display_time_markup($start,$end,$format){
-	echo '<div class="time time-float">';
-	echo '<span class="start">'.date($format,$start).'</span>';
-	if($start != $end){
-		echo '<span class=""> until </span>';
-		echo '<span class="end">'.date($format,$end).'</span>';		
-	}
-	echo '</div>';
-}
-
-add_action('before_content','sfhiv_service_hour_display_location',8);
-add_action('short_after_content','sfhiv_service_hour_display_location',8);
-add_action('after_list-item','sfhiv_service_hour_display_location',9);
-function sfhiv_service_hour_display_location(){
-	if (get_post_type()!='sfhiv_service_hour') return;
-	sfhiv_display_location();
-}
 
 add_action('get_sidebar','sfhiv_service_page_parent_groups',20);
 function sfhiv_service_page_parent_groups(){
@@ -156,24 +114,8 @@ add_action('short_after_content','sfhiv_service_page_service_hours',20);
 add_action('get_footer','sfhiv_service_page_service_hours',20);
 function sfhiv_service_page_service_hours(){
 	if( get_post_type() != 'sfhiv_service' ) return;
-	$service_hours = new WP_Query( array(
-		'post_type' => 'sfhiv_service_hour',
-		'connected_type' => 'service_time',
-		'connected_items' => get_the_ID(),
-		'nopaging' => true,
-	));
-	sfhiv_service_hours_print_list($service_hours->posts);
-}
-
-function sfhiv_service_get_groups($ID=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$groups = new WP_Query( array(
-		'connected_type' => 'group_services',
-		'connected_items' => $ID,
-	));
-	return $groups->posts;
+	$service = get_post(get_the_ID());
+	sfhiv_service_hours_print_list($service->times);
 }
 
 function sfhiv_service_hours_print_list($times){
@@ -202,6 +144,28 @@ function sfhiv_service_hours_print_list($times){
 	}
 	echo '</ul>';
 	echo '<div class="clear">&nbsp;</div>';
+}
+
+function sfhiv_service_hour_display_day_markup($post_id){
+	$days = sfhiv_service_get_service_days(get_post($post_id));
+	foreach($days as $day){
+		sfhiv_service_hour_markup_day($day);
+	}
+}
+
+function sfhiv_service_hour_markup_day($day){
+	$term = get_term_by('slug',$day,'sfhiv_day_of_week_taxonomy');
+	echo '<span class="day">'.$term->name.'</span>';
+}
+
+function sfhiv_service_hour_display_time_markup($start,$end,$format){
+	echo '<div class="time time-float">';
+	echo '<span class="start">'.date($format,$start).'</span>';
+	if($start != $end){
+		echo '<span class=""> until </span>';
+		echo '<span class="end">'.date($format,$end).'</span>';		
+	}
+	echo '</div>';
 }
 
 ?>
