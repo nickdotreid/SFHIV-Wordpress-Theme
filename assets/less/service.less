@@ -8,6 +8,13 @@
 		color:@text_color;
 		background-color:lighten(@secondary_color,15);
 	}
+	.populations-sentence{
+		color:@text_color;
+		background-color:lighten(@secondary_color,15);
+		padding:@space_size;
+		margin:@space_size 0px;
+		clear:both;
+	}
 	.categories{
 		float:left;
 		clear:both;
@@ -103,10 +110,11 @@
 	margin-top:@space_size;
 }
 
-#main .sfhiv_provider{
-	.entry-title{
-		font-size:@font_size;
-		line-height:@font_size;
+.provider-title{
+	font-size:@big_font_size;
+	line-height:1.2em;
+	color:@text_color;
+	a{
 		color:@text_color;
 	}
 }

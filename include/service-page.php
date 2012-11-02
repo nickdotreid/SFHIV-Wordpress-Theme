@@ -50,18 +50,22 @@ function sfhiv_population_cat_sentence($post){
 		'orderby' => 'term_order',
 	));
 	if(count($population_terms)<1) return;
-	echo '<section class="populations categories">';
-	echo '<p> Serves:';
-	for($i=0;$i<sizeof($population_terms);$i++){
-		echo $population_terms[$i]->name;
-		if($i+1<sizeof($population_terms)){
-			echo ", ";
+	echo '<section class="populations populations-sentence">';
+	if(count($population_terms) == 1 && $population_terms[0]->slug == 'anyone'){
+		echo '<p><strong>Open to Everyone</strong></p>';
+	}else{
+		echo '<p><span><strong>Only serves</strong> </span>';
+		for($i=0;$i<sizeof($population_terms);$i++){
+			echo $population_terms[$i]->name;
+			if($i+1<sizeof($population_terms)){
+				echo ", ";
+			}
+			if($i!=0 && $i+2 == sizeof($population_terms)){
+				echo "and ";
+			}
 		}
-		if($i!=0 && $i+2 == sizeof($population_terms)){
-			echo "and ";
-		}
+		echo '</p>';		
 	}
-	echo '</p>';
 	echo '</section>';
 }
 

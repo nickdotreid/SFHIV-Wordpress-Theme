@@ -4039,6 +4039,14 @@ a .date-calendar {
   color: #2e3c62;
   background-color: #e2e2e2;
 }
+.sfhiv_service .populations-sentence,
+.sfhiv_service_hour .populations-sentence {
+  color: #2e3c62;
+  background-color: #e2e2e2;
+  padding: 7px;
+  margin: 7px 0px;
+  clear: both;
+}
 .sfhiv_service .categories,
 .sfhiv_service_hour .categories {
   float: left;
@@ -4130,9 +4138,12 @@ a .date-calendar {
 .services-list .service-list-item {
   margin-top: 7px;
 }
-#main .sfhiv_provider .entry-title {
-  font-size: 14px;
-  line-height: 14px;
+.provider-title {
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #2e3c62;
+}
+.provider-title a {
   color: #2e3c62;
 }
 .list .member {

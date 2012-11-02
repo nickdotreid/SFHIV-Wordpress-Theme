@@ -5,17 +5,17 @@
 	do_action("short_attributes");
 	?>>
 	<header>
-		<h3 class="entry-title"><?=the_title();?></h3>
+		<h3 class="entry-title provider-title"><?=the_title();?></h3>
 	</header>
 	<div class="services services-list">
 	<?	foreach($post->services as $service):	?>
-		<div id="sfhiv-service-<?=$service->ID;?>" class="service service-list-item">
+		<div id="sfhiv-service-<?=$service->ID;?>" class="sfhiv_service sfhiv_service-list-item">
 			<h4><a href="<?=get_permalink($service->ID);?>"><?=get_the_title($service->ID);?></a></h4>
-			<?	sfhiv_service_cat_display($service);	?>
-			<?	sfhiv_population_cat_sentence($service);	?>
 			<div class="entry-content">
 				<?=apply_filters("content",$service->post_content);?>
 			</div>
+			<?	sfhiv_population_cat_sentence($service);	?>
+			<?	sfhiv_service_cat_display($service);	?>
 			<?	sfhiv_service_hours_print_list($service->times); ?>
 		</div>
 	<?	endforeach; ?>
