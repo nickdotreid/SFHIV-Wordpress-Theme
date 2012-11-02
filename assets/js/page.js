@@ -9,9 +9,19 @@ $(document).ready(function(){
 		$(this).removeClass("collapse-open");
 		$(".item,.cat-item:not(.current-cat)",menu).slideUp();
 	}).mouseenter(function(){
-		$(".collapsable",$(this).parents(".list:first")).trigger("open");
+		var list = $(this).parents(".list:first");
+		if(list.data("timeout")){
+			clearTimeout(list.data("timeout"));
+		}
+		list.data("timeout",setTimeout(function(){
+			$(".collapsable",list).trigger("open");
+		},500));
 	}).mouseleave(function(){
-		$(".collapsable",$(this).parents(".list:first")).trigger("close");
+		var list = $(this).parents(".list:first");
+		if(list.data("timeout")){
+			clearTimeout(list.data("timeout"));
+		}
+		$(".collapsable",list).trigger("close");
 	}).trigger("close");
 	
 	$("#members,.three-column,.two-column").bind("redraw",function(){
