@@ -18,16 +18,11 @@ function sfhiv_service_hour_show_edit_link(){
 	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', $service->ID );
 }
 
-add_action('short_after_content','sfhiv_service_population_display',4);
+add_action('list-item_content','sfhiv_service_population_display',2);
+add_action('short_after_content','sfhiv_service_population_display',2);
 function sfhiv_service_population_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service'))) return;
-	sfhiv_population_cat_display();
-}
-
-add_action('short_after_content','sfhiv_service_hour_population_display',10);
-function sfhiv_service_hour_population_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
-	sfhiv_population_cat_display(get_post(get_the_ID()));
+	if(!in_array(get_post_type(),array('sfhiv_service_hour','sfhiv_service'))) return;
+	sfhiv_population_cat_sentence(get_post(get_the_ID()));
 }
 
 function sfhiv_population_cat_display($post){
@@ -69,15 +64,11 @@ function sfhiv_population_cat_sentence($post){
 	echo '</section>';
 }
 
-add_action('short_after_content','sfhiv_service_service_cat_display',3);
-function sfhiv_service_service_cat_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service'))) return;
-	sfhiv_service_cat_display();
-}
-add_action('short_after_content','sfhiv_service_hour_service_cat_display',9);
+
+add_action('list-item_content','sfhiv_service_hour_service_cat_display',2);
+add_action('short_after_content','sfhiv_service_hour_service_cat_display',2);
 function sfhiv_service_hour_service_cat_display(){
-	if(!in_array(get_post_type(),array('sfhiv_service_hour'))) return;
-	echo '<br class="clear" />'; 
+	if(!in_array(get_post_type(),array('sfhiv_service_hour','sfhiv_service'))) return;
 	sfhiv_service_cat_display(get_post(get_the_ID()));
 }
 function sfhiv_service_cat_display($post){
