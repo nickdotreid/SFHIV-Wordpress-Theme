@@ -15,7 +15,15 @@ add_action('before_content','sfhiv_event_display_location',7);
 add_action('short_before_content','sfhiv_event_display_location',10);
 function sfhiv_event_display_location(){
 	if(get_post_type() != 'sfhiv_event') return;
-	sfhiv_display_location();
+	$location = sfhiv_location_get_related_location(get_the_ID());
+	if($location){
+		sfhiv_location_format($location);
+	}else{ ?>
+	<div class="address address-tba">
+		<i></i>
+		<span>Location To Be Announced</span>
+	</div>
+	<?}
 }
 
 add_action('get_sidebar','sfhiv_event_page_parent_groups',22);
