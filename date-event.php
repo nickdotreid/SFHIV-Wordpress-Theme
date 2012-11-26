@@ -1,11 +1,5 @@
 <?php
-
-$date_status = get_post_meta(get_the_ID(),'sfhiv_event_date_status');
-if(count($date_status) > 0){
-	$date_status = $date_status[0];
-}else{
-	$date_status = false;
-}
+$date_status = get_post_meta(get_the_ID(),'sfhiv_event_date_status',true);
 if($date_status == 'tba'):	?>
 <div class="date date-tba tba">
 	<span class="tba">Date To Be Announced</span>

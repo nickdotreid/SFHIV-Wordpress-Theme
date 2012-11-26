@@ -1,10 +1,5 @@
 <?php
-$date_status = get_post_meta(get_the_ID(),'sfhiv_event_date_status');
-if(count($date_status) > 0){
-	$date_status = $date_status[0];
-}else{
-	$date_status = false;
-}
+$date_status = get_post_meta(get_the_ID(),'sfhiv_event_date_status',true);
 if(in_array($date_status,array('tba','month','day'))):
 	if($date_status == 'day'):	?>
 <div class="time time-tba tba">
