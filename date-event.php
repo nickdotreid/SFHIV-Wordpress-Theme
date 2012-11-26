@@ -6,7 +6,7 @@ if($date_status == 'tba'):	?>
 </div>
 <?	else:
 $now = time();
-$time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
+$time = sfhiv_event_get_start_time(get_the_ID());
 	if($date_status == 'month'):
 ?>
 <div class="date date-tba tba">

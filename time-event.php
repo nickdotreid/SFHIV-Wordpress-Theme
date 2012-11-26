@@ -9,7 +9,7 @@ if(in_array($date_status,array('tba','month','day'))):
 else:
 	$time_format = get_option('time_format');
 	$start_time = get_post_meta(get_the_ID(),'sfhiv_event_start',true);
-	$end_time = get_post_meta(get_the_ID(),'sfhiv_event_end',true);
+	$end_time = sfhiv_event_get_end_time(get_the_ID());
 ?>
 <div class="time">
 <?	if($end_time && $end_time!=$time):	?>
