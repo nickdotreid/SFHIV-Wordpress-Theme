@@ -13,6 +13,20 @@ function sfhiv_service_get_provider_title(){
 	echo '<div class="provider-title">'.get_the_title($service->providers[0]->ID).'</div>';
 }
 
+add_filter('the_title','sfhiv_service_filter_provider_title',10,2);
+function sfhiv_service_filter_provider_title($title,$id){
+	if(is_admin()) return $title;
+	if(!in_array(get_post_type($id),array('sfhiv_service_hour','sfhiv_service'))) return $title;
+	if(get_post_type() == 'sfhiv_service_hour'){
+		$service = sfhiv_service_hour_get_service(get_post(get_the_ID()));
+		if(!$service) return $title;
+	}else{
+		$service = get_post(get_the_ID());	
+	}
+	if(count($service->providers) < 1) return $title;
+	return get_the_title($service->providers[0]->ID);
+}
+
 
 add_filter('the_permalink','sfhiv_service_hour_change_permalink',1);
 function sfhiv_service_hour_change_permalink($link){
