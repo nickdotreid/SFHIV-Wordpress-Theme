@@ -135,7 +135,7 @@ textarea {
 .date_mix.date {
   display: block;
   float: left;
-  background-color: #f09938;
+  background-color: #df5d2f;
   color: #FFF;
   font-weight: normal;
   margin: 0px 0.5em 0.5em 0px;
@@ -156,11 +156,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #918bb3;
+  color: #7fbcd2;
   text-decoration: none;
 }
 a:hover {
-  color: #676092;
+  color: #469ebe;
   text-decoration: underline;
 }
 .img-rounded {
@@ -2254,7 +2254,7 @@ body {
   font-family: arial, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
-  color: #2e3c62;
+  color: #005575;
   background: #eeeeee url("../i/main_bg.gif") top left;
   margin: 0px;
   padding: 0px;
@@ -2263,19 +2263,19 @@ a {
   text-decoration: underline;
 }
 a {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 a:visited {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 a:hover {
-  color: #5c5683;
+  color: #3d90ae;
 }
 h1,
 h2,
 h3,
 h4 {
-  color: #f09938;
+  color: #df5d2f;
   font-family: 'Dosis', verdana, sans-serif;
   font-weight: normal;
   margin: 0px;
@@ -2290,13 +2290,13 @@ h1 a:visited,
 h2 a:visited,
 h3 a:visited,
 h4 a:visited {
-  color: #f09938;
+  color: #df5d2f;
 }
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 h4 a:hover {
-  color: #cc730f;
+  color: #a83f1a;
 }
 #main h1,
 #main h2,
@@ -2412,7 +2412,7 @@ h4 a:hover {
 }
 #site-description {
   display: block;
-  color: #2e3c62;
+  color: #007aa8;
   font-size: 14px;
   line-height: 1.2em;
   font-style: italic;
@@ -2455,7 +2455,7 @@ h4 a:hover {
   }
   #site-title a {
     background-position: 10px 100px;
-    height: 162px;
+    height: 113px;
   }
   #site-description {
     padding-top: 100px;
@@ -2494,15 +2494,18 @@ h4 a:hover {
     background-position: 120px 0px;
   }
   #branding #site-title {
+    margin-top: 25px;
     width: 382px;
     float: left;
   }
   #branding #site-title a {
     background-image: url("../i/site-title.png");
-    background-position: 0px 25px;
+    background-position: 0px 0px;
+    height: 113px;
+    width: 382px;
   }
   #branding .inner hgroup {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
   #branding .inner #access {
     height: 45px;
@@ -2516,6 +2519,12 @@ h4 a:hover {
   }
   #branding.top-header-image #site-description {
     padding-top: 0px;
+  }
+  .home #branding #site-title {
+    margin-top: 45px;
+  }
+  .home #branding #site-description {
+    padding-top: 60px;
   }
 }
 #section-top {
@@ -2584,14 +2593,14 @@ h4 a:hover {
   font-weight: 300;
   font-size: 18px;
   margin: 0px;
-  color: #2e3c62;
+  color: #007aa8;
 }
 #access .menu .menu-item .sub-menu {
   display: none;
 }
 #access .menu .menu-item a,
 #access .menu .menu-item a:visited {
-  color: #2e3c62;
+  color: #007aa8;
   text-decoration: none;
   display: block;
   margin: 0px;
@@ -2599,7 +2608,7 @@ h4 a:hover {
   text-shadow: 1px 1px 3px #FFF;
 }
 #access .menu .menu-item a:hover {
-  color: #465c96;
+  color: #00b2f4;
 }
 #access .menu .menu-item.current-menu-item,
 #access .menu .menu-item.current-page-ancestor {
@@ -2664,7 +2673,7 @@ h4 a:hover {
   font-size: 28px;
   font-weight: 300;
   color: #FFF;
-  background: #2e3c62;
+  background: #007aa8;
   display: block;
   width: 211px;
   margin: 0px;
@@ -2783,7 +2792,7 @@ h4 a:hover {
 .list .list-heading {
   padding: 7px 14px 7px;
   font-size: 18px;
-  color: #2e3c62;
+  color: #007aa8;
   border-top: #bcbcbc 3px solid;
 }
 .list-item,
@@ -2826,7 +2835,7 @@ h4 a:hover {
   font-size: 12px;
 }
 .categories h4 {
-  color: #2e3c62;
+  color: #007aa8;
   display: block;
   float: left;
   margin: 0px 7px 0px 0px;
@@ -2843,7 +2852,7 @@ h4 a:hover {
 }
 .categories.populations li {
   border: 0px;
-  color: #2e3c62;
+  color: #007aa8;
   background-color: #e2e2e2;
 }
 .divider {
@@ -2933,8 +2942,8 @@ h4 a:hover {
 .three-column article .widgettitle,
 .two-column .widget .widgettitle,
 .three-column .widget .widgettitle {
-  border-top: 1px #2e3c62 solid;
-  border-bottom: 1px #2e3c62 solid;
+  border-top: 1px #007aa8 solid;
+  border-bottom: 1px #007aa8 solid;
   padding: 7px 14px;
   margin: 7px;
   font-weight: 300;
@@ -3094,17 +3103,17 @@ h4 a:hover {
 }
 .footer .menu .menu-item a,
 .footer .menu .menu-item a:visited {
-  color: #2e3c62;
+  color: #007aa8;
   text-decoration: none;
 }
 .footer .menu .menu-item a:hover,
 .footer .menu .menu-item a:visited:hover {
-  color: #465c96;
+  color: #00b2f4;
 }
 .footer .menu .menu-item.current-menu-item a,
 .footer .menu .menu-item.current-menu-item a:visited,
 .footer .menu .menu-item.current-menu-item a:hover {
-  color: #f09938;
+  color: #df5d2f;
 }
 .footer section {
   display: block;
@@ -3180,15 +3189,15 @@ h4 a:hover {
 .menu .children a,
 .menu .current_page_parent .children a {
   padding-left: 14px;
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .menu .children a:visited,
 .menu .current_page_parent .children a:visited {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .menu .children a:hover,
 .menu .current_page_parent .children a:hover {
-  color: #5c5683;
+  color: #3d90ae;
 }
 .menu .current_page_item a,
 .menu .children .current_page_item a,
@@ -3206,7 +3215,7 @@ h4 a:hover {
 .menu .current-cat a:hover,
 .menu .current_item a:hover {
   background: transparent;
-  color: #f09938;
+  color: #df5d2f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -3215,7 +3224,7 @@ h4 a:hover {
 .menu .current_page_ancestor .children .current_page_item .children a,
 .menu .current-cat .children a,
 .menu .current_item .children a {
-  color: #918bb3;
+  color: #7fbcd2;
   font-weight: normal;
 }
 .menu .current_page_item .children a:visited,
@@ -3223,14 +3232,14 @@ h4 a:hover {
 .menu .current_page_ancestor .children .current_page_item .children a:visited,
 .menu .current-cat .children a:visited,
 .menu .current_item .children a:visited {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .menu .current_page_item .children a:hover,
 .menu .children .current_page_item .children a:hover,
 .menu .current_page_ancestor .children .current_page_item .children a:hover,
 .menu .current-cat .children a:hover,
 .menu .current_item .children a:hover {
-  color: #5c5683;
+  color: #3d90ae;
 }
 .menu .draft {
   background-color: #EEE;
@@ -3418,7 +3427,7 @@ h4 a:hover {
 .entry-content h4 {
   font-size: 14px;
   font-weight: bold;
-  color: #2e3c62;
+  color: #007aa8;
 }
 .entry-content {
   padding: 0px;
@@ -3430,8 +3439,8 @@ h4 a:hover {
   width: auto;
   margin: 0px auto 7px;
   padding: 7px 14px 3.5px;
-  border-top: 1px #2e3c62 solid;
-  border-bottom: 1px #2e3c62 solid;
+  border-top: 1px #007aa8 solid;
+  border-bottom: 1px #007aa8 solid;
   text-align: center;
 }
 .entry-content img.aligncenter img,
@@ -3444,7 +3453,7 @@ h4 a:hover {
   display: block;
   clear: both;
   font-size: 12px;
-  color: #2e3c62;
+  color: #007aa8;
   border-top: 1px #bcbcbc solid;
   background: #FFF;
   padding: 7px 21px;
@@ -3631,8 +3640,8 @@ h4 a:hover {
   height: 350px;
 }
 .carousel .item .slider-item-container .entry-header {
-  border-top: #2e3c62 1px solid;
-  border-bottom: #2e3c62 1px solid;
+  border-top: #007aa8 1px solid;
+  border-bottom: #007aa8 1px solid;
   margin: 7px 7px;
 }
 .carousel .item .slider-item-container .entry-header h1.entry-title,
@@ -3751,7 +3760,7 @@ h4 a:hover {
   font-weight: bold;
   padding: 7px 0px;
   width: 225px;
-  background-color: #f09938;
+  background-color: #df5d2f;
 }
 .contact-form .wpcf7-submit.center,
 .wpcf7 .wpcf7-submit.center {
@@ -3760,7 +3769,7 @@ h4 a:hover {
 .date,
 .time {
   display: block;
-  color: #2e3c62;
+  color: #007aa8;
   line-height: 1em;
 }
 .date .start,
@@ -3809,7 +3818,7 @@ h4 a:hover {
 .date-calendar span {
   padding: 1.75px 3.5px;
   margin: 1.75px 3.5px;
-  background-color: #f09938;
+  background-color: #df5d2f;
   color: #ffffff;
   display: block;
   float: none;
@@ -3818,7 +3827,7 @@ h4 a:hover {
 .date-calendar .date-number {
   font-size: 18px;
   background-color: transparent;
-  color: #2e3c62;
+  color: #007aa8;
   padding: 3.5px;
 }
 a:hover .date-calendar {
@@ -3842,7 +3851,7 @@ a .date-calendar {
   }
 }
 .address {
-  color: #2e3c62;
+  color: #007aa8;
   width: 204px;
   padding-left: 21px;
   position: relative;
@@ -3950,13 +3959,13 @@ a .date-calendar {
   display: block;
 }
 .attachment .entry-title a {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .attachment .entry-title a:visited {
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .attachment .entry-title a:hover {
-  color: #5c5683;
+  color: #3d90ae;
 }
 .attachment i {
   display: block;
@@ -4015,7 +4024,7 @@ a .date-calendar {
 }
 .sfhiv_event .entry-title {
   font-size: 14px;
-  color: #918bb3;
+  color: #7fbcd2;
 }
 .sfhiv_service .day,
 .sfhiv_service_hour .day {
@@ -4025,12 +4034,12 @@ a .date-calendar {
 .sfhiv_service .populations li,
 .sfhiv_service_hour .populations li {
   border: 0px;
-  color: #2e3c62;
+  color: #007aa8;
   background-color: #e2e2e2;
 }
 .sfhiv_service .populations-sentence,
 .sfhiv_service_hour .populations-sentence {
-  color: #2e3c62;
+  color: #007aa8;
   background-color: #e2e2e2;
   padding: 7px;
   margin: 7px 0px;
@@ -4125,10 +4134,10 @@ a .date-calendar {
   font-size: 18px;
   font-family: 'Dosis', verdana, sans-serif;
   line-height: 1.2em;
-  color: #2e3c62;
+  color: #007aa8;
 }
 .provider-title a {
-  color: #2e3c62;
+  color: #007aa8;
 }
 .list .member {
   position: relative;
@@ -4146,12 +4155,12 @@ a .date-calendar {
   display: block;
 }
 .list .member .name {
-  color: #f09938;
+  color: #df5d2f;
   font-weight: bold;
   font-size: 18px;
 }
 .list .member .name a {
-  color: #f09938;
+  color: #df5d2f;
 }
 .list .member .suffix {
   font-size: 14px;
