@@ -2,7 +2,6 @@
 <li id="sfhiv-service-<?=get_the_ID();?>" <?
 	post_class("list-item");
 	do_action("list-item_attributes"); ?>>
-	<h4><a href="<?=get_permalink($service->ID);?>"><?=get_the_title($service->ID);?></a></h4>
 	<div class="entry-content">
 		<?	the_content();	?>
 	</div>
