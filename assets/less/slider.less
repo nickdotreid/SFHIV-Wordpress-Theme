@@ -32,10 +32,10 @@
 		background-position:-50px 0px;
 	}
 	&.right{
-		right:-3px;
+		right:-35px;
 	}
 	&.left{
-		left:-3px;
+		left:-35px;
 		background-image:url('../i/btn-carousel-prev.png');
 	}
 }
@@ -43,7 +43,7 @@
 .carousel .item{
 	position:relative;
 	height:@carouselHeight;
-	margin:0px 25px;
+	margin:0px 0px;
 	.slider-image{
 		display:none;
 	}
@@ -89,20 +89,38 @@
 
 @media all and (min-width: @size_tablet) {
 	.carousel .item{
+		margin:0px 25px;
 		.slider-image{
 			display:block;
 			position:absolute;
 			top:@space_size;
 			left:0px;
-			width:@block_width * 4 - @block_width * 5 / 3 - @space_size;
+			width:@block_width;
 			height:@carouselHeight - @space_size*2;
 			background-position:right center;
 			background-repeat:no-repeat;
 		}
 	}
+	.carousel-control{
+	&.right{
+		right:-3px;
+	}
+	&.left{
+		left:-3px;
+	}
+}
+}
+
+@media all and (min-width: @size_medium) {
+	.carousel .item .slider-image{
+		width:@block_width * 7/4;
+	}
 }
 
 @media all and (min-width: @size_large){
+	.carousel .item .slider-image{
+		width:@block_width * 2 + @space_size*2;
+	}
 	.carousel .item .slider-item-container{
 		width:@block_width * 5 / 3;
 		.entry-header{
