@@ -44,26 +44,6 @@ function sfhiv_page_show_linked_page(){
 	));
 }
 
-add_action('after_content','sfhiv_page_list_attachments',5);
-function sfhiv_page_list_attachments(){
-	if(!is_singular()) return;
-	$attachments = new WP_Query(array(
-		'post_status' => 'any',
-		'post_type' => 'attachment',
-		'post_parent' => get_the_ID(),
-		'nopaging' => true,
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
-		'post_mime_type' => 'application'
-		) );
-	do_action('sfhiv_loop',$attachments,array(
-		"id" => "attachments",
-		"classes" => array("list","attachments"),
-		"list_element" => "short",
-		"show_filters" => false,
-	));
-}
-
 add_action('get_sidebar','sfhiv_content_add_navigation',30);
 function sfhiv_content_add_navigation(){
 	echo '<nav class="entry-menu entry-toc sticky">';
