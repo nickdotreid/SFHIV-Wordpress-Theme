@@ -2,6 +2,7 @@
 <li id="sfhiv-service-<?=get_the_ID();?>" <?
 	post_class("list-item");
 	do_action("list-item_attributes"); ?>>
+	<h3><a href="<?=the_permalink();?>"><?=the_title();?></a></h3>
 	<div class="entry-content">
 		<?	the_content();	?>
 	</div>
