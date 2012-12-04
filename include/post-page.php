@@ -20,4 +20,16 @@ function sfhiv_post_meta(){
 	echo '</div>';
 }
 
+add_action('after_list-item','sfhiv_post_show_date',3);
+function sfhiv_post_show_date(){
+	if(get_post_type() != "post") return;
+	?><span class="date date-post"><?=get_the_date();?></span><?
+}
+
+add_action('after_list-item','sfhiv_post_show_excerpt',5);
+function sfhiv_post_show_excerpt(){
+	if(get_post_type() != "post") return;
+	?><div class="post-excerpt"><?=the_excerpt();?></div><?
+}
+
 ?>
