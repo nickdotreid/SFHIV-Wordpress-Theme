@@ -6,9 +6,10 @@ function sfhiv_post_sidebar(){
 	
 }
 
+add_action('short_before_content','sfhiv_post_meta',7);
 add_action('before_content','sfhiv_post_meta',7);
 function sfhiv_post_meta(){
-	if(!is_singular("post")) return;
+	if(get_post_type() != "post");
 	$user = get_user_by('login', get_the_author_meta('user_login'));
 	if(!$user) return;
 	echo '<div class="post-meta">';
