@@ -2755,11 +2755,14 @@ h4 a:hover {
     float: left;
     clear: left;
   }
-  .page-template-full-width-page-php #main {
+  .page-template-full-width-page-php #main,
+  .page-template-splash_page_nosidebar-php #main {
     background-image: none;
   }
   .page-template-full-width-page-php #content,
-  .page-template-full-width-page-php .list {
+  .page-template-splash_page_nosidebar-php #content,
+  .page-template-full-width-page-php .list,
+  .page-template-splash_page_nosidebar-php .list {
     width: auto;
     float: none;
     clear: both;
