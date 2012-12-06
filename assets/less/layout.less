@@ -60,7 +60,6 @@
 
 #access{
 	.section();
-	display:none;
 	.menu{
 		.menu_mix();
 		padding:@space_size 0px;
@@ -103,9 +102,15 @@
 		}
 	}
 }
-@media all and (min-width: @size_medium) {
+
+@media all and (max-width: @size_large) {
 	#access{
-		display:block;
+		.menu{
+			.menu-item{
+				padding:@space_size @space_size*4;
+				font-size:@big_font_size;
+			}
+		}
 		.menu{
 			.menu-item{
 				padding:@space_size @space_size*3;
@@ -114,14 +119,9 @@
 		}
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_medium) {
 	#access{
-		.menu{
-			.menu-item{
-				padding:@space_size @space_size*4;
-				font-size:@big_font_size;
-			}
-		}
+		display:none;
 	}
 }
 
