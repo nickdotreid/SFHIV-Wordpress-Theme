@@ -9,28 +9,29 @@
 
 #page{
 	display:block;
-	width:@block_width + @space_size*2;
+	width:@block_width*4  + @space_size * 8;
 	margin:0px auto;
 	padding:0px 0px;
 	background-color:#FFF;
 	position:relative;
 	box-shadow:#666 0px 0px @space_size;
 }
-@media all and (min-width: @size_tablet) {
+@media all and (max-width: @size_large) {
+	#page{
+		width:@block_width*3 + @space_size * 4;		
+	}
+}
+@media all and (max-width: @size_medium) {
 	#page{
 		width:@block_width*2 + @space_size * 2;
-	}	
-}
-@media all and (min-width: @size_medium) {
-	#page{
-		width:@block_width*3 + @space_size * 4;
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_tablet) {
 	#page{
-		width:@block_width*4  + @space_size * 8;
+		width:auto;
 	}
 }
+
 
 .pretty-top{
 	.divider();
@@ -39,23 +40,25 @@
 .container{
 	.section();
 	margin:0px auto;
-	width:@block_width;
+	width:@block_width*4;
 }
-@media all and (min-width: @size_tablet) {
-	.container{
-		width:@block_width*2;
-	}	
-}
-@media all and (min-width: @size_medium) {
+@media all and (max-width: @size_large) {
 	.container{
 		width:@block_width*3;
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_medium) {
 	.container{
-		width:@block_width*4;
+		width:@block_width*2;		
 	}
 }
+@media all and (max-width: @size_tablet) {
+	.container{
+		width:auto;
+	}	
+}
+
+
 
 #site-title{
 	background-color:transparent;

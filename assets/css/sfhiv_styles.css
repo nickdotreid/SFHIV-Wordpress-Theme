@@ -2338,26 +2338,26 @@ h4 a:hover {
 }
 #page {
   display: block;
-  width: 239px;
+  width: 956px;
   margin: 0px auto;
   padding: 0px 0px;
   background-color: #FFF;
   position: relative;
   box-shadow: #666666 0px 0px 7px;
 }
-@media all and (min-width: 500px) {
-  #page {
-    width: 464px;
-  }
-}
-@media all and (min-width: 720px) {
+@media all and (max-width: 970px) {
   #page {
     width: 703px;
   }
 }
-@media all and (min-width: 970px) {
+@media all and (max-width: 720px) {
   #page {
-    width: 956px;
+    width: 464px;
+  }
+}
+@media all and (max-width: 500px) {
+  #page {
+    width: auto;
   }
 }
 .pretty-top {
@@ -2377,21 +2377,21 @@ h4 a:hover {
   padding: 0px;
   position: relative;
   margin: 0px auto;
-  width: 225px;
+  width: 900px;
 }
-@media all and (min-width: 500px) {
-  .container {
-    width: 450px;
-  }
-}
-@media all and (min-width: 720px) {
+@media all and (max-width: 970px) {
   .container {
     width: 675px;
   }
 }
-@media all and (min-width: 970px) {
+@media all and (max-width: 720px) {
   .container {
-    width: 900px;
+    width: 450px;
+  }
+}
+@media all and (max-width: 500px) {
+  .container {
+    width: auto;
   }
 }
 #site-title {
