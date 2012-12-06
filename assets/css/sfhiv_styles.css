@@ -2343,6 +2343,7 @@ h4 a:hover {
   padding: 0px 0px;
   background-color: #FFF;
   position: relative;
+  box-shadow: #666666 0px 0px 7px;
 }
 @media all and (min-width: 500px) {
   #page {
