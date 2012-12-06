@@ -2394,156 +2394,6 @@ h4 a:hover {
     width: auto;
   }
 }
-#site-title {
-  background-color: transparent;
-  background-image: url("../i/background-orange.png");
-  background-repeat: repeat;
-  background-position: top left;
-}
-#site-title a {
-  display: block;
-  position: relative;
-  background-color: transparent;
-  background-image: url("../i/site-title-small.png");
-  background-repeat: no-repeat;
-  background-position: 10px 20px;
-  height: 80px;
-  overflow: hidden;
-  text-indent: 3000em;
-}
-#site-title a i {
-  display: none;
-}
-#site-description {
-  display: block;
-  color: #2e3c62;
-  font-size: 14px;
-  line-height: 1.2em;
-  font-style: italic;
-  font-size: 12px;
-  text-shadow: 1px 1px 6px #FFF;
-}
-#branding .inner {
-  background-image: url('../i/white-gradient-up-50.png');
-  background-repeat: repeat-x;
-  background-position: center bottom;
-  position: relative;
-  height: 100%;
-}
-#branding .inner hgroup {
-  margin-bottom: 16px;
-}
-#branding .inner .divider-flush {
-  padding-top: 0px;
-  height: 9px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-}
-#branding .inner #access {
-  position: absolute;
-  bottom: 9px;
-  width: 100%;
-}
-@media all and (min-width: 500px) {
-  #branding {
-    background-image: url('../i/sf_seal_bg_large.jpg');
-    background-repeat: no-repeat;
-    background-position: -120px 0px;
-  }
-  #site-title {
-    float: left;
-    width: 225px;
-    margin-right: 7px;
-  }
-  #site-title a {
-    background-position: 10px 100px;
-    height: 162px;
-  }
-  #site-description {
-    padding-top: 100px;
-  }
-  .top-header-image #site-title a {
-    background-position: 22px 20px;
-    height: 75px;
-  }
-  .top-header-image #site-description {
-    padding-top: 0px;
-  }
-}
-@media all and (min-width: 720px) {
-  #branding {
-    background-position: -100px 0px;
-  }
-  #branding .inner hgroup {
-    margin-bottom: 55px;
-  }
-  #branding .inner #access {
-    height: 40px;
-    overflow: hidden;
-  }
-  #site-description {
-    padding-top: 95px;
-    text-align: right;
-    font-size: 18px;
-    font-style: none;
-  }
-  #branding.top-header-image #site-description {
-    padding-top: 0px;
-  }
-}
-@media all and (min-width: 970px) {
-  #branding {
-    background-position: 120px 0px;
-  }
-  #branding #site-title {
-    width: 382px;
-    float: left;
-  }
-  #branding #site-title a {
-    background-image: url("../i/site-title.png");
-    background-position: 60px 10px;
-  }
-  #branding #site-title a i {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-indent: 3000em;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: transparent;
-    background-image: url('../i/home_icon.png');
-    background-repeat: no-repeat;
-    background-position: 24px 130px;
-  }
-  #branding #site-title a i:hover {
-    background-image: url('../i/home_icon_hover.png');
-  }
-  #branding .inner hgroup {
-    margin-bottom: 70px;
-  }
-  #branding .inner #access {
-    height: 45px;
-  }
-  #site-description {
-    padding-top: 75px;
-    text-align: right;
-    font-size: 18px;
-    font-style: none;
-  }
-  #branding.top-header-image #site-title a {
-    background-position: 80px -61px;
-    height: 75px;
-  }
-  #branding.top-header-image #site-title a i {
-    background-position: 24px 58px;
-  }
-  #branding.top-header-image #site-description {
-    padding-top: 0px;
-  }
-}
 #access {
   clear: both;
   margin: 0px;
@@ -3890,6 +3740,156 @@ a .date-calendar {
 @media all and (min-width: 970px) {
   .address {
     width: 225px;
+  }
+}
+#site-title {
+  background-color: transparent;
+  background-image: url("../i/background-orange.png");
+  background-repeat: repeat;
+  background-position: top left;
+}
+#site-title a {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  background-image: url("../i/site-title-small.png");
+  background-repeat: no-repeat;
+  background-position: 10px 20px;
+  height: 80px;
+  overflow: hidden;
+  text-indent: 3000em;
+}
+#site-title a i {
+  display: none;
+}
+#site-description {
+  display: block;
+  color: #2e3c62;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-style: italic;
+  font-size: 12px;
+  text-shadow: 1px 1px 6px #FFF;
+}
+#branding .inner {
+  background-image: url('../i/white-gradient-up-50.png');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  position: relative;
+  height: 100%;
+}
+#branding .inner hgroup {
+  margin-bottom: 16px;
+}
+#branding .inner .divider-flush {
+  padding-top: 0px;
+  height: 9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#branding .inner #access {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
+}
+@media all and (min-width: 500px) {
+  #branding {
+    background-image: url('../i/sf_seal_bg_large.jpg');
+    background-repeat: no-repeat;
+    background-position: -120px 0px;
+  }
+  #site-title {
+    float: left;
+    width: 225px;
+    margin-right: 7px;
+  }
+  #site-title a {
+    background-position: 10px 100px;
+    height: 162px;
+  }
+  #site-description {
+    padding-top: 100px;
+  }
+  .top-header-image #site-title a {
+    background-position: 22px 20px;
+    height: 75px;
+  }
+  .top-header-image #site-description {
+    padding-top: 0px;
+  }
+}
+@media all and (min-width: 720px) {
+  #branding {
+    background-position: -100px 0px;
+  }
+  #branding .inner hgroup {
+    margin-bottom: 55px;
+  }
+  #branding .inner #access {
+    height: 40px;
+    overflow: hidden;
+  }
+  #site-description {
+    padding-top: 95px;
+    text-align: right;
+    font-size: 18px;
+    font-style: none;
+  }
+  #branding.top-header-image #site-description {
+    padding-top: 0px;
+  }
+}
+@media all and (min-width: 970px) {
+  #branding {
+    background-position: 120px 0px;
+  }
+  #branding #site-title {
+    width: 382px;
+    float: left;
+  }
+  #branding #site-title a {
+    background-image: url("../i/site-title.png");
+    background-position: 60px 10px;
+  }
+  #branding #site-title a i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: 3000em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: transparent;
+    background-image: url('../i/home_icon.png');
+    background-repeat: no-repeat;
+    background-position: 24px 130px;
+  }
+  #branding #site-title a i:hover {
+    background-image: url('../i/home_icon_hover.png');
+  }
+  #branding .inner hgroup {
+    margin-bottom: 70px;
+  }
+  #branding .inner #access {
+    height: 45px;
+  }
+  #site-description {
+    padding-top: 75px;
+    text-align: right;
+    font-size: 18px;
+    font-style: none;
+  }
+  #branding.top-header-image #site-title a {
+    background-position: 80px -61px;
+    height: 75px;
+  }
+  #branding.top-header-image #site-title a i {
+    background-position: 24px 58px;
+  }
+  #branding.top-header-image #site-description {
+    padding-top: 0px;
   }
 }
 .list .filters {
