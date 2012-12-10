@@ -34,8 +34,6 @@ include_once('include/report-archive.php');
 
 include_once('include/study-page.php');
 
-include_once('include/years-archive.php');
-
 include_once('include/document-page.php');
 include_once('include/document-archive.php');
 
