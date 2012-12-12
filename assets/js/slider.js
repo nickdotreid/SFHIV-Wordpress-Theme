@@ -23,11 +23,6 @@ $(document).ready(function(){
 		});
 		$('.carousel-to-remove',slider).remove();
 		$(".item:first",slider).addClass("active");
-		slider.bind("slide",function(event){
-			$('.item.active',$(this)).fadeOut('slow');
-		}).bind("slid",function(event){
-			$('.item.active',$(this)).fadeIn('slow');
-		});
 		slider.carousel({
 			interval:5000
 		});
