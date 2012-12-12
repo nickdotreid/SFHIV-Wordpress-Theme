@@ -29,6 +29,16 @@ function sfhiv_register_sidebars(){
 	));
 	
 	register_sidebar(array(
+		'name' => 'Home Page Slider',
+		'id' => 'home-slider-widgets',
+		'description' => 'widgets here will be as slider widgets',
+		'before_widget' => '<div id="%1$s" class="item widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title'  => '<h3 class="title widgettitle">',
+		'after_title'   => '</h3>',
+	));
+	
+	register_sidebar(array(
 		'name' => 'Blog Sidebar',
 		'id' => 'blog-widgets',
 		'description' => 'widgets here will be shown next to the blog',
