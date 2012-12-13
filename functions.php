@@ -45,6 +45,7 @@ include_once('widget-preview-page.php');
 include_once('editor_styles.php');
 
 include_once('preview-shortcode.php');
+include_once('document-shortcode.php');
 
 include_once('include/table_of_contents.php');
 

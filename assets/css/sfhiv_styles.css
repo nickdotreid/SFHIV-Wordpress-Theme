@@ -3978,7 +3978,7 @@ a .date-calendar {
 .attachment.hover i {
   background-position: -60px -40px;
 }
-.attachment .description {
+.attachment .type {
   display: block;
   clear: both;
   color: #bcbcbc;
