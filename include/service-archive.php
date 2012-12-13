@@ -2,7 +2,7 @@
 
 add_action( 'pre_get_posts', 'sfhiv_service_no_pages', 5 );
 function sfhiv_service_no_pages( $query ) {
-	if ( is_admin() || !in_array($query->query_vars['post_type'],array('sfhiv_service_hour','sfhiv_service'))) return;
+	if ( is_admin() || !isset($query->query_vars['post_type']) || !in_array($query->query_vars['post_type'],array('sfhiv_service_hour','sfhiv_service')) ) return;
 	$query->query_vars['posts_per_page'] = -1;
 }
 

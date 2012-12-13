@@ -16,8 +16,8 @@ function sfhiv_location_format($post){
 	echo '<div class="address">';
 	echo '<i></i>';
 	echo '<div class="address-postal">';
-	sfhiv_location_format_line('room',$location);
 	sfhiv_location_format_line('address',$location);
+	sfhiv_location_format_line('room',$location);
 	sfhiv_location_format_line('zip_code',$location);
 	sfhiv_location_format_line('city',$location);
 	sfhiv_location_format_line('state',$location);

@@ -8,6 +8,15 @@
 	<?	endif;	?>
 	<? do_action('before_content');	?>
 	<div class="entry-content">
+		<?	if(is_front_page()):	?>
+		<div id="homepage-slider" class="carousel">
+			<div class="carousel-inner">
+			<?	dynamic_sidebar("Home Page Slider");	?>
+			</div>
+			<a class="carousel-control left" href="#homepage-slider" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#homepage-slider" data-slide="next">&rsaquo;</a>
+		</div>
+		<?	endif;	?>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 	<? do_action('after_content');	?>

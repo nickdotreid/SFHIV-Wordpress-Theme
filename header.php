@@ -46,6 +46,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/i/favicon.ico" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -61,7 +62,7 @@
 	<header id="branding" class="container <?=apply_filters("header-class","");?>" role="banner" style="<?=apply_filters("header-styles","");?>">
 		<div class="inner header-inner">
 			<hgroup>
-				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><i></i><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 id="site-description"><?php echo preg_replace('/\/n/','<br />',get_bloginfo( 'description', 'raw' )); ?></h2>
 				<div class="clear"></div>
 			</hgroup>
@@ -69,6 +70,9 @@
 			<nav id="access" class="menu-justified" role="navigation">
 				<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
+				<div class="menu-item">
+					<a class="home home-nav-item" href="<?php echo home_url( '/' ); ?>"><i></i>Home</a>
+				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				<div class="menu-item search-form-item">
 					<?php get_search_form(); ?>

@@ -2254,7 +2254,7 @@ body {
   font-family: arial, sans-serif;
   font-size: 14px;
   line-height: 1.4em;
-  color: #000000;
+  color: #00678c;
   background: #eeeeee url("../i/main_bg.gif") top left;
   margin: 0px;
   padding: 0px;
@@ -2338,25 +2338,26 @@ h4 a:hover {
 }
 #page {
   display: block;
-  width: 239px;
+  width: 956px;
   margin: 0px auto;
   padding: 0px 0px;
   background-color: #FFF;
   position: relative;
+  box-shadow: #666666 0px 0px 7px;
 }
-@media all and (min-width: 500px) {
-  #page {
-    width: 464px;
-  }
-}
-@media all and (min-width: 720px) {
+@media all and (max-width: 970px) {
   #page {
     width: 703px;
   }
 }
-@media all and (min-width: 970px) {
+@media all and (max-width: 720px) {
   #page {
-    width: 956px;
+    width: 464px;
+  }
+}
+@media all and (max-width: 500px) {
+  #page {
+    width: auto;
   }
 }
 .pretty-top {
@@ -2376,191 +2377,21 @@ h4 a:hover {
   padding: 0px;
   position: relative;
   margin: 0px auto;
-  width: 225px;
+  width: 900px;
 }
-@media all and (min-width: 500px) {
-  .container {
-    width: 450px;
-  }
-}
-@media all and (min-width: 720px) {
+@media all and (max-width: 970px) {
   .container {
     width: 675px;
   }
 }
-@media all and (min-width: 970px) {
+@media all and (max-width: 720px) {
   .container {
     width: 900px;
   }
 }
-#site-title {
-  background-color: transparent;
-}
-#site-title a {
-  display: block;
-  position: relative;
-  background-color: transparent;
-  background-image: url("../i/site-title-small.png");
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  height: 80px;
-  overflow: hidden;
-  text-indent: 3000em;
-}
-#site-title a i {
-  display: none;
-}
-#site-description {
-  display: block;
-  color: #00678c;
-  font-size: 14px;
-  line-height: 1.2em;
-  font-style: italic;
-  font-size: 12px;
-  text-shadow: 1px 1px 6px #FFF;
-}
-#branding .inner {
-  background-image: url('../i/white-gradient-up-50.png');
-  background-repeat: repeat-x;
-  background-position: center bottom;
-  position: relative;
-  height: 100%;
-}
-#branding .inner hgroup {
-  margin-bottom: 16px;
-}
-#branding .inner .divider-flush {
-  padding-top: 0px;
-  height: 9px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-}
-#branding .inner #access {
-  position: absolute;
-  bottom: 9px;
-  width: 100%;
-}
-@media all and (min-width: 500px) {
-  #branding {
-    background-image: url('../i/sf_seal_bg_large.jpg');
-    background-repeat: no-repeat;
-    background-position: -120px 0px;
-  }
-  #site-title {
-    float: left;
-    width: 225px;
-    margin-right: 7px;
-  }
-  #site-title a {
-    background-position: 10px 100px;
-    height: 113px;
-  }
-  #site-description {
-    padding-top: 100px;
-  }
-  .top-header-image #site-title a {
-    background-position: 22px 20px;
-    height: 75px;
-  }
-  .top-header-image #site-description {
-    padding-top: 0px;
-  }
-}
-@media all and (min-width: 720px) {
-  #branding {
-    background-position: -100px 0px;
-  }
-  #branding .inner hgroup {
-    margin-bottom: 55px;
-  }
-  #branding .inner #access {
-    height: 40px;
-    overflow: hidden;
-  }
-  #site-description {
-    padding-top: 40px;
-    text-align: right;
-    font-size: 18px;
-    font-style: none;
-  }
-  #branding.top-header-image #site-description {
-    padding-top: 0px;
-  }
-}
-@media all and (min-width: 970px) {
-  #branding {
-    background-position: 120px 0px;
-  }
-  #branding #site-title {
-    margin-top: 25px;
-    width: 382px;
-    float: left;
-  }
-  #branding #site-title a {
-    background-image: url("../i/site-title.png");
-    background-position: 0px 0px;
-    height: 113px;
-    width: 382px;
-  }
-  #branding .inner hgroup {
-    margin-bottom: 55px;
-  }
-  #branding .inner #access {
-    height: 45px;
-  }
-  #branding.top-header-image #site-title a {
-    background-position: 80px -61px;
-    height: 75px;
-  }
-  #branding.top-header-image #site-title a i {
-    background-position: 24px 58px;
-  }
-  #branding.top-header-image #site-description {
-    padding-top: 0px;
-  }
-  .home #branding #site-title {
-    margin-top: 45px;
-  }
-  .home #branding #site-description {
-    padding-top: 60px;
-  }
-}
-#section-top {
-  display: block;
-  clear: both;
-}
-@media all and (min-width: 500px) {
-  #section-top {
-    display: block;
-    width: 225px;
-    clear: none;
-    float: right;
-    font-size: 14px;
-    line-height: 1.2em;
-    font-family: 'Dosis', verdana, sans-serif;
-    font-weight: 300;
-  }
-  #section-top .widget {
-    margin-top: 7px;
-    margin-left: 7px;
-  }
-}
-@media all and (min-width: 720px) {
-  #section-top {
-    width: 450px;
-    text-align: right;
-    font-size: 18px;
-    line-height: 1.2em;
-  }
-  #section-top .widget {
-    margin-left: 14px;
-  }
-}
-@media all and (min-width: 970px) {
-  #section-top {
-    width: 518px;
+@media all and (max-width: 500px) {
+  .container {
+    width: auto;
   }
 }
 #access {
@@ -2568,7 +2399,6 @@ h4 a:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
-  display: none;
 }
 #access .menu {
   display: block;
@@ -2588,9 +2418,9 @@ h4 a:hover {
   display: block;
   float: left;
   width: auto;
-  padding: 7px 14px;
   font-family: 'Dosis', verdana, sans-serif;
   font-weight: 300;
+  padding: 7px 28px;
   font-size: 18px;
   margin: 0px;
   color: #00678c;
@@ -2627,19 +2457,15 @@ h4 a:hover {
   color: #FFF;
   text-shadow: 0px 0px 0px #FFF;
 }
-@media all and (min-width: 720px) {
-  #access {
-    display: block;
-  }
+@media all and (max-width: 970px) {
   #access .menu .menu-item {
     padding: 7px 21px;
     font-size: 18px;
   }
 }
-@media all and (min-width: 970px) {
-  #access .menu .menu-item {
-    padding: 7px 28px;
-    font-size: 18px;
+@media all and (max-width: 720px) {
+  #access {
+    display: none;
   }
 }
 #status-warning {
@@ -2739,11 +2565,14 @@ h4 a:hover {
     float: left;
     clear: left;
   }
-  .page-template-full-width-page-php #main {
+  .page-template-full-width-page-php #main,
+  .page-template-splash_page_nosidebar-php #main {
     background-image: none;
   }
   .page-template-full-width-page-php #content,
-  .page-template-full-width-page-php .list {
+  .page-template-splash_page_nosidebar-php #content,
+  .page-template-full-width-page-php .list,
+  .page-template-splash_page_nosidebar-php .list {
     width: auto;
     float: none;
     clear: both;
@@ -3002,7 +2831,7 @@ h4 a:hover {
   display: block;
   clear: both;
   width: auto;
-  line-height: 1.2em;
+  line-height: 1em;
   text-align: right;
   padding: 14px;
   margin-bottom: 0px 14px 7px;
@@ -3616,90 +3445,153 @@ h4 a:hover {
   background-position: -50px 0px;
 }
 .carousel-control.right {
-  right: -3px;
+  right: -35px;
 }
 .carousel-control.left {
-  left: -3px;
+  left: -35px;
   background-image: url('../i/btn-carousel-prev.png');
 }
-.carousel .item {
+.carousel-item {
   position: relative;
   height: 350px;
-  margin: 0px 25px;
+  margin: 7px 0px;
+  width: auto;
+  font-size: 18px;
 }
-.carousel .item .slider-image {
-  display: none;
-}
-.carousel .item .slider-item-container {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 225px;
-  background-color: #FFF;
-  border-left: 1px #bcbcbc solid;
-  height: 350px;
-}
-.carousel .item .slider-item-container .entry-header {
-  border-top: #00678c 1px solid;
-  border-bottom: #00678c 1px solid;
-  margin: 7px 7px;
-}
-.carousel .item .slider-item-container .entry-header h1.entry-title,
-.carousel .item .slider-item-container .entry-header h2.entry-title,
-.carousel .item .slider-item-container .entry-header h3.entry-title {
-  margin: 0px;
-  padding: 7px 0px;
+.carousel-item .title {
+  margin: 7px 0px;
+  padding: 14px 28px;
   font-size: 28px;
-  font-weight: normal;
+  border-top: 1px #00678c solid;
+  border-bottom: 1px #00678c solid;
 }
-.carousel .item .slider-item-container .entry-content,
-.carousel .item .slider-item-container .entry-nav {
-  margin: 7px 28px 7px 14px;
-  font-size: 18px;
+.carousel-item p {
+  margin-left: 28px;
+  margin-right: 28px;
 }
-.carousel .item .slider-item-container .entry-nav {
-  font-size: 14px;
+.carousel-item .slider-item {
+  position: relative;
+  width: 375px;
+  padding-left: 525px;
 }
-.carousel .item .slider-item-container .entry-nav .preview-bottom {
-  clear: both;
-  font-size: 18px;
-  text-align: right;
-}
-.carousel .item .slider-item-container .menu .item {
+.carousel-item .slider-item .slider-image {
   display: block;
-  height: auto;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0px;
+  left: 0px;
+  width: 518px;
+  height: 336px;
 }
-@media all and (min-width: 500px) {
-  .carousel .item .slider-image {
-    display: block;
-    position: absolute;
-    top: 7px;
-    left: 0px;
-    width: 518px;
-    height: 336px;
-    background-position: right center;
-    background-repeat: no-repeat;
+@media all and (max-width: 970px) {
+  .carousel-item {
+    font-size: 14px;
   }
-}
-@media all and (min-width: 970px) {
-  .carousel .item .slider-item-container {
-    width: 375px;
-  }
-  .carousel .item .slider-item-container .entry-header {
-    margin: 7px 14px;
-  }
-  .carousel .item .slider-item-container .entry-header h1.entry-title,
-  .carousel .item .slider-item-container .entry-header h2.entry-title,
-  .carousel .item .slider-item-container .entry-header h3.entry-title {
-    padding: 14px 0px;
-    font-size: 28px;
-  }
-  .carousel .item .slider-item-container .entry-content {
-    margin: 7px 28px 7px 14px;
+  .carousel-item .title {
+    padding: 7px 14px;
     font-size: 18px;
   }
+  .carousel-item p {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .carousel-item .slider-item {
+    width: 300px;
+    padding-left: 375px;
+  }
+  .carousel-item .slider-item .slider-image {
+    width: 368px;
+  }
 }
-.contact-form,
+@media all and (max-width: 720px) {
+  .carousel-item,
+  .carousel .item {
+    display: block;
+    height: auto;
+    margin: 3.5px 7px;
+  }
+  .carousel-item .title,
+  .carousel .item .title {
+    padding: 7px 7px;
+  }
+  .carousel-item p,
+  .carousel .item p {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .carousel-item .slider-item {
+    width: 225px;
+    padding-left: 225px;
+  }
+  .carousel-item .slider-item .slider-image {
+    width: 218px;
+  }
+  .carousel-control.right {
+    right: -35px;
+  }
+  .carousel-control.left {
+    left: -35px;
+  }
+}
+@media all and (max-width: 500px) {
+  .carousel-inner {
+    height: auto;
+    border-width: 0px;
+  }
+  .carousel-control {
+    display: none;
+  }
+  .carousel-item .slider-item {
+    width: auto;
+    padding-left: 0px;
+    margin: 0px;
+    font-size: 14px;
+  }
+  .carousel-item .slider-item .slider-image {
+    display: none;
+  }
+}
+/*
+.slider-item-container{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:@block_width;
+	background-color:#FFF;
+	border-left:@border_width @secondary_color solid;
+	height:@carouselHeight;
+	.entry-header{
+		border-top:@text_color @border_width solid;
+		border-bottom:@text_color @border_width solid;
+		margin:@space_size @space_size;
+		h1,h2,h3{
+			&.entry-title{
+				margin:0px;
+				padding:@space_size 0px;
+				font-size:@biggest_font_size;
+				font-weight:normal;
+			}
+		}
+	}
+	.entry-content,.entry-nav{
+		margin:@space_size @space_size*4 @space_size @space_size*2;
+		font-size:@big_font_size;
+	}
+	.entry-nav{
+		font-size:@font_size;
+		.preview-bottom{
+			clear:both;
+			font-size:@big_font_size;
+			text-align:right;
+		}
+	}
+	.menu .item{
+		display:block;
+		height:auto;
+	}
+}
+*/.contact-form,
 .wpcf7 {
   padding-top: 7px;
 }
@@ -3891,6 +3783,97 @@ a .date-calendar {
     width: 225px;
   }
 }
+#site-title {
+  background-color: transparent;
+}
+#site-title a {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  background-image: url("../i/site-title.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  height: 80px;
+  overflow: hidden;
+  text-indent: 3000em;
+}
+#site-title a i {
+  display: none;
+}
+#site-description {
+  display: block;
+  color: #00678c;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-style: italic;
+  font-size: 12px;
+  text-shadow: 1px 1px 6px #FFF;
+}
+#branding .inner {
+  position: relative;
+  height: 100%;
+}
+#branding .inner hgroup {
+  margin-bottom: 16px;
+}
+#branding .inner .divider-flush {
+  padding-top: 0px;
+  height: 9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#branding .inner #access {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
+}
+@media all and (max-width: 970px) {
+  
+}
+@media all and (max-width: 720px) {
+  
+}
+@media all and (max-width: 500px) {
+  
+}
+#section-top {
+  width: 518px;
+}
+@media all and (max-width: 970px) {
+  #section-top {
+    width: 450px;
+    text-align: right;
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+  #section-top .widget {
+    margin-left: 14px;
+  }
+}
+@media all and (max-width: 720px) {
+  #section-top {
+    display: block;
+    width: 225px;
+    clear: none;
+    float: right;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-family: 'Dosis', verdana, sans-serif;
+    font-weight: 300;
+  }
+  #section-top .widget {
+    margin-top: 7px;
+    margin-left: 7px;
+  }
+}
+@media all and (max-width: 500px) {
+  #section-top {
+    display: block;
+    clear: both;
+  }
+}
 .list .filters {
   display: block;
   float: none;
@@ -3982,7 +3965,7 @@ a .date-calendar {
 .attachment.hover i {
   background-position: -60px -40px;
 }
-.attachment .description {
+.attachment .type {
   display: block;
   clear: both;
   color: #bcbcbc;

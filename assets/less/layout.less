@@ -9,27 +9,29 @@
 
 #page{
 	display:block;
-	width:@block_width + @space_size*2;
+	width:@block_width*4  + @space_size * 8;
 	margin:0px auto;
 	padding:0px 0px;
 	background-color:#FFF;
 	position:relative;
+	box-shadow:#666 0px 0px @space_size;
 }
-@media all and (min-width: @size_tablet) {
+@media all and (max-width: @size_large) {
+	#page{
+		width:@block_width*3 + @space_size * 4;		
+	}
+}
+@media all and (max-width: @size_medium) {
 	#page{
 		width:@block_width*2 + @space_size * 2;
-	}	
-}
-@media all and (min-width: @size_medium) {
-	#page{
-		width:@block_width*3 + @space_size * 4;
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_tablet) {
 	#page{
-		width:@block_width*4  + @space_size * 8;
+		width:auto;
 	}
 }
+
 
 .pretty-top{
 	.divider();
@@ -38,213 +40,27 @@
 .container{
 	.section();
 	margin:0px auto;
-	width:@block_width;
+	width:@block_width*4;
 }
-@media all and (min-width: @size_tablet) {
-	.container{
-		width:@block_width*2;
-	}	
-}
-@media all and (min-width: @size_medium) {
+@media all and (max-width: @size_large) {
 	.container{
 		width:@block_width*3;
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_medium) {
 	.container{
 		width:@block_width*4;
 	}
 }
 
-#site-title{
-	background-color:transparent;
-	a{
-		display:block;
-		position:relative;
-		background-color:transparent;
-		background-image:url("../i/site-title-small.png");
-		background-repeat:no-repeat;
-		background-position:0px 0px;
-		height:80px;
-		overflow:hidden;
-		text-indent:3000em;
-		i{
-			display:none;
-		}
-	}
-}
-#site-description{
-	display:block;
-	color:@text_color;
-	font-size:@font_size;
-	line-height:1.2em;
-	font-style:italic;
-	font-size:@small_font_size;
-	text-shadow:1px 1px 6px #FFF;
-}
-#branding{
-	.inner{
-		background-image:url('../i/white-gradient-up-50.png');
-		background-repeat:repeat-x;
-		background-position:center bottom;
-		position:relative;
-		height:100%;
-		hgroup{
-			margin-bottom:16px;
-		}
-		.divider-flush{
-			padding-top:0px;
-			height:9px;
-			width:100%;
-			position:absolute;
-			bottom:0px;
-			left:0px;
-		}
-		#access{
-			position:absolute;
-			bottom:9px;
-			width:100%;
-		}
-	}
-}
-@media all and (min-width: @size_tablet) {
-	#branding{
-		background-image:url('../i/sf_seal_bg_large.jpg');
-		background-repeat:no-repeat;
-		background-position:-120px 0px;
-	}
-	#site-title{
-		float:left;
-		width:@block_width;
-		margin-right:@space_size;
-		a{
-			background-position:10px 100px;
-			height:113px;
-		}
-	}
-	#site-description{
-		padding-top:100px;
-	}
-	.top-header-image{
-		#site-title a{
-			background-position:22px 20px;
-			height:75px;
-		}
-		#site-description{
-			padding-top:0px;
-		}
-	}
-}
-@media all and (min-width: @size_medium) {
-	#branding{
-		background-position:-100px 0px;
-		.inner{
-			hgroup{
-				margin-bottom:55px;	
-			}
-			#access{
-				height:40px;
-				overflow:hidden;
-			}
-		}
-	}
-	#site-description{
-		padding-top:40px;
-		text-align:right;
-		font-size:@big_font_size;
-		font-style:none;
-	}
-	#branding.top-header-image{
-		#site-description{
-			padding-top:0px;
-		}
-	}
-}
-@media all and (min-width: @size_large) {
-	#branding{
-		background-position:120px 0px;
-		#site-title{
-			margin-top:25px;
-			width:382px;
-			float:left;
-			a{
-				background-image:url("../i/site-title.png");
-				background-position:0px 0px;
-				height:113px;
-				width:382px;
-			}
-		}
-		.inner{
-			hgroup{
-				margin-bottom:55px;	
-			}
-			#access{
-				height:45px;
-			}
-		}
-	}
-	#branding.top-header-image{
-		#site-title a{
-			background-position:80px -61px;
-			height:75px;
-			i{
-				background-position:24px 58px;
-			}
-		}
-		#site-description{
-			padding-top:0px;
-		}
-	}
-	.home #branding{
-		#site-title{
-			margin-top:45px;
-		}
-		#site-description{
-			padding-top:60px;
-		}
-	}
-}
-
-#section-top{
-	display:block;
-	clear:both;
-}
-@media all and (min-width: @size_tablet) {
-	#section-top{
-		display:block;
-		width:@block_width;
-		clear:none;
-		float:right;
-		font-size:@font_size;
-		line-height:1.2em;
-		font-family:@title_font;
-		font-weight:300;
-		.widget{
-			margin-top:@space_size;
-			margin-left:@space_size;			
-		}
-	}
-}
-@media all and (min-width: @size_medium) {
-	#section-top{
-		width:@block_width*2;
-		text-align:right;
-		font-size:@big_font_size;
-		line-height:1.2em;
-		.widget{
-			margin-left:@space_size*2;
-		}
-	}
-}
-@media all and (min-width: @size_large) {
-	#section-top{
-		width:@block_width*4 - 382px;
-	}
+@media all and (max-width: @size_tablet) {
+	.container{
+		width:auto;
+	}	
 }
 
 #access{
 	.section();
-	display:none;
 	.menu{
 		.menu_mix();
 		padding:@space_size 0px;
@@ -253,9 +69,9 @@
 			display:block;
 			float:left;
 			width:auto;
-			padding:@space_size @space_size*2;
 			font-family:@title_font;
 			font-weight:300;
+			padding:@space_size @space_size*4;
 			font-size:@big_font_size;
 			margin:0px;
 			.sub-menu{
@@ -287,9 +103,14 @@
 		}
 	}
 }
-@media all and (min-width: @size_medium) {
+
+@media all and (max-width: @size_large) {
 	#access{
-		display:block;
+		.menu{
+			.menu-item{
+
+			}
+		}
 		.menu{
 			.menu-item{
 				padding:@space_size @space_size*3;
@@ -298,14 +119,9 @@
 		}
 	}
 }
-@media all and (min-width: @size_large) {
+@media all and (max-width: @size_medium) {
 	#access{
-		.menu{
-			.menu-item{
-				padding:@space_size @space_size*4;
-				font-size:@big_font_size;
-			}
-		}
+		display:none;
 	}
 }
 
@@ -341,7 +157,7 @@
 		font-size:@biggest_font_size;
 		font-weight:300;
 		color:#FFF;
-		background:@text_color;
+		background:@primary_color;
 		display:block;
 		width:@block_width - @space_size*2;
 		margin:0px;
@@ -407,7 +223,7 @@
 		float:left;
 		clear:left;
 	}
-	.page-template-full-width-page-php{
+	.page-template-full-width-page-php,.page-template-splash_page_nosidebar-php{
 		#main{
 			background-image:none;
 		}
@@ -568,7 +384,7 @@
 			display:block;
 			clear:both;
 			width:auto;
-			line-height:1.2em;
+			line-height:1em;
 			text-align:right;
 			padding:@space_size*2;
 			margin-bottom:0px @space_size*2 @space_size;

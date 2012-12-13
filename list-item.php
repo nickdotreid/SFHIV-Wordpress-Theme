@@ -6,6 +6,5 @@
 	<a href="<?=the_permalink();?>">
 		<span class="title"><?=the_title();?></span>
 	</a>
-	<div class="post-excerpt"><?=the_excerpt();?></div>
 	<?	do_action('after_list-item');	?>
 </li>

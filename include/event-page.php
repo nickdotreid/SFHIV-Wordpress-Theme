@@ -43,4 +43,24 @@ function sfhiv_event_page_parent_groups(){
 	));
 }
 
+add_action('after_content','sfhiv_event_page_list_attachments',5);
+function sfhiv_event_page_list_attachments(){
+	if(!is_singular('sfhiv_event')) return;
+	$attachments = new WP_Query(array(
+		'post_status' => 'any',
+		'post_type' => 'attachment',
+		'post_parent' => get_the_ID(),
+		'nopaging' => true,
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
+		'post_mime_type' => 'application'
+		) );
+	do_action('sfhiv_loop',$attachments,array(
+		"id" => "attachments",
+		"classes" => array("list","attachments"),
+		"list_element" => "short",
+		"show_filters" => false,
+	));
+}
+
 ?>
