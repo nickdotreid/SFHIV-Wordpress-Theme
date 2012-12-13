@@ -12,7 +12,7 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 	$new_query = sfhiv_remove_url_vars_from_query($query,array('sfhiv_service_category'));
 	$tax_term_ids = sfhiv_get_term_ids_in_query($new_query);
 	
-	$base_url = preg_replace('/page\/(\d+)\//i','',$_SERVER[REQUEST_URI]); // strip out page var if in url
+	$base_url = preg_replace('/page\/(\d+)\//i','',$_SERVER['REQUEST_URI']); // strip out page var if in url
 	if(isset($args['id']))	$base_url .= "#".$args['id'];
 	
 	echo '<section class="filters collapsable">';
@@ -35,7 +35,6 @@ function sfhiv_service_archive_draw_menu($query=false,$args=array()){
 		'all_taxonomy_name' => "All Populations",
 		'extra_classes' => 'filter population',
 		'base_link' => $base_url,
-
 	));
 	echo '<i class="button"></i>';
 	echo '</section>';
