@@ -57,7 +57,7 @@ function sfhiv_service_hour_change_permalink($link){
 add_action('short_navigation','sfhiv_service_hour_show_edit_link',1);
 function sfhiv_service_hour_show_edit_link(){
 	if(get_post_type() != 'sfhiv_service_hour') return;
-	$service = sfhiv_service_hour_get_parent(get_post());
+	$service = sfhiv_service_hour_get_parent(get_post(get_the_ID()));
 	if(!$service) return;
 	edit_post_link( __( 'Edit', 'toolbox' ), '<span class="edit-link">', '</span>', $service->ID );
 }
