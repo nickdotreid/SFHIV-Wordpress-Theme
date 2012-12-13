@@ -35,11 +35,6 @@ function sfhiv_get_taxonomy_in($query,$taxonomy_name,$fields=false){
 			}
 		}
 	}
-	foreach($taxonomies as $taxonomy){	// loop all entries to error check
-		if(array_key_exists('invalid_taxonomy',$taxonomy)){
-			return array();
-		}
-	}
 	if(!$fields){
 		usort($taxonomies,function($a,$b){
 			if($a->term_order > $b->term_order){
