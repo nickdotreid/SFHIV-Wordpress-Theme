@@ -60,9 +60,9 @@ class SFHIV_Page_Widget extends WP_Widget {
 			$query->the_post();
 			echo $before_widget;
 			if($id == 'home-slider-widgets'){
-				get_template_part('preview-featured',$post->post_type);
+				get_template_part('preview-featured',get_post_type());
 			}else{
-				get_template_part('preview',$post->post_type);	
+				get_template_part('preview',get_post_type());	
 			}
 			echo $after_widget;
 		endwhile;
