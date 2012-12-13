@@ -40,101 +40,131 @@
 	}
 }
 
-.carousel .item{
+.carousel-item{
 	position:relative;
 	height:@carouselHeight;
-	margin:0px 0px;
-	.slider-image{
-		display:none;
+	margin:@space_size 0px;
+	width:auto;
+	font-size:@big_font_size;
+	.title{
+		margin:@space_size 0px;
+		padding:@space_size*2 @space_size*4;
+		font-size:@biggest_font_size;
+		border-top:@border_width @text_color solid;
+		border-bottom:@border_width @text_color solid;
 	}
-	.slider-item-container{
+	p{
+		margin-left:@space_size*4;
+		margin-right:@space_size*4;
+	}
+}
+.carousel-item .slider-item{
+	position:relative;
+	width:@block_width * 5 / 3;
+	padding-left:@block_width*4 - @block_width * 5 / 3;
+	.slider-image{
+		display:block;
 		position:absolute;
+		background-position:center center;
+		background-repeat:no-repeat;
 		top:0px;
-		right:0px;
-		width:@block_width;
-		background-color:#FFF;
-		border-left:@border_width @secondary_color solid;
-		height:@carouselHeight;
-		.entry-header{
-			border-top:@text_color @border_width solid;
-			border-bottom:@text_color @border_width solid;
-			margin:@space_size @space_size;
-			h1,h2,h3{
-				&.entry-title{
-					margin:0px;
-					padding:@space_size 0px;
-					font-size:@biggest_font_size;
-					font-weight:normal;
-				}
-			}
-		}
-		.entry-content,.entry-nav{
-			margin:@space_size @space_size*4 @space_size @space_size*2;
-			font-size:@big_font_size;
-		}
-		.entry-nav{
-			font-size:@font_size;
-			.preview-bottom{
-				clear:both;
-				font-size:@big_font_size;
-				text-align:right;
-			}
-		}
-		.menu .item{
-			display:block;
-			height:auto;
+		left:0px;
+		width:@block_width*4 - @block_width * 5 / 3 - @space_size;
+		height:@carouselHeight - @space_size*2;
+	}
+}
+
+@media all and (max-width: @size_large){
+	.carousel-item .slider-item{
+		width:@block_width * 4/3;
+		padding-left:@block_width*3 - @block_width * 4 / 3;
+		.slider-image{
+			width:@block_width*3 - @block_width * 4 / 3 - @space_size;
 		}
 	}
 }
 
-@media all and (min-width: @size_tablet) {
-	.carousel .item{
-		margin:0px 25px;
+@media all and (max-width: @size_medium) {
+	.carousel-item .slider-item{
+		width:@block_width;
+		padding-left:@block_width;
 		.slider-image{
-			display:block;
-			position:absolute;
-			top:@space_size;
-			left:0px;
-			width:@block_width;
-			height:@carouselHeight - @space_size*2;
-			background-position:right center;
-			background-repeat:no-repeat;
+			width:@block_width - @space_size;
 		}
 	}
 	.carousel-control{
 	&.right{
-		right:-3px;
+		right:-35px;
 	}
 	&.left{
-		left:-3px;
+		left:-35px;
 	}
 }
 }
 
-@media all and (min-width: @size_medium) {
-	.carousel .item .slider-image{
-		width:@block_width * 7/4;
+@media all and (max-width: @size_tablet) {
+	.carousel-inner{
+		height:auto;
+		border-width:0px;
+	}
+	.carousel-control{
+		display:none;
+	}
+	.carousel-item,.carousel .item{
+		display:block;
+		height:auto;
+		margin:@space_size/2 @space_size;
+	}
+	.carousel-item .slider-item{
+		width:auto;
+		padding-left:0px;
+		margin:0px;
+		font-size:@font_size;
+		.slider-image{
+			display:none;
+		}
 	}
 }
 
-@media all and (min-width: @size_large){
-	.carousel .item .slider-image{
-		width:@block_width * 2 + @space_size*2;
-	}
-	.carousel .item .slider-item-container{
-		width:@block_width * 5 / 3;
-		.entry-header{
-			margin:@space_size @space_size*2;
-			h1,h2,h3{
-				&.entry-title{
-					padding:@space_size*2 0px;
-					font-size:@biggest_font_size;
-				}
+
+
+/*
+.slider-item-container{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:@block_width;
+	background-color:#FFF;
+	border-left:@border_width @secondary_color solid;
+	height:@carouselHeight;
+	.entry-header{
+		border-top:@text_color @border_width solid;
+		border-bottom:@text_color @border_width solid;
+		margin:@space_size @space_size;
+		h1,h2,h3{
+			&.entry-title{
+				margin:0px;
+				padding:@space_size 0px;
+				font-size:@biggest_font_size;
+				font-weight:normal;
 			}
 		}
-		.entry-content{
-			margin:@space_size @space_size*4 @space_size @space_size*2;
+	}
+	.entry-content,.entry-nav{
+		margin:@space_size @space_size*4 @space_size @space_size*2;
+		font-size:@big_font_size;
+	}
+	.entry-nav{
+		font-size:@font_size;
+		.preview-bottom{
+			clear:both;
 			font-size:@big_font_size;
+			text-align:right;
 		}
 	}
+	.menu .item{
+		display:block;
+		height:auto;
+	}
 }
+*/
