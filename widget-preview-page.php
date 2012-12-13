@@ -59,15 +59,7 @@ class SFHIV_Page_Widget extends WP_Widget {
 		while($query->have_posts()):
 			$query->the_post();
 			echo $before_widget;
-		?>
-		<header class="entry-header">
-			<h2 class="entry-title"><a href="<? the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		</header><!-- .entry-header -->
-		<div class="entry-content">
-			<? the_excerpt(); ?>
-		</div><!-- .entry-content -->
-		<?	do_action("sfhiv-preview-menu");	?>
-		<?
+			get_template_part('preview',$post->post_type);
 			echo $after_widget;
 		endwhile;
 		wp_reset_postdata();
