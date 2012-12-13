@@ -44,12 +44,6 @@ function sfhiv_mce_before_init( $settings ) {
 	        'classes' => 'well',
 	        'wrapper' => true
 	    ),
-		array(
-			'title' => 'Slider',
-			'block' => 'div',
-			'classes' => 'slider',
-			'wrapper' => true
-		),
     );
 
     $settings['style_formats'] = json_encode( $style_formats );
