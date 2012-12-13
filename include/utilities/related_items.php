@@ -35,6 +35,11 @@ function sfhiv_get_taxonomy_in($query,$taxonomy_name,$fields=false){
 			}
 		}
 	}
+	foreach($taxonomies as $taxonomy){
+		if(is_array($taxonomy) && isset($taxonomy['invalid_taxonomy'])){
+			return array();
+		}
+	}
 	if(!$fields){
 		usort($taxonomies,function($a,$b){
 			if($a->term_order > $b->term_order){
