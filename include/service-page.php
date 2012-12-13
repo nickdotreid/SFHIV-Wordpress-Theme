@@ -4,15 +4,16 @@ add_action('short_after_content','sfhiv_service_provider_list_hours');
 function sfhiv_service_provider_list_hours(){
 	global $post;
 	if(get_post_type() != 'sfhiv_provider') return;
-	$provider = get_post();
-	$time_format = get_option('time_format');
-	?><ul class="services services-list"><?
-	foreach($provider->services as $service){
-		$post = $service;
-		get_template_part('list-item','sfhiv_service');		
+	$provider = $post;
+	if(isset($provider->services)){
+		?><ul class="services services-list"><?
+		foreach($provider->services as $service){
+			$post = $service;
+			get_template_part('list-item','sfhiv_service');		
+		}
+		$post = $provider;
+		?></ul><?		
 	}
-	$post = $provider;
-	?></ul><?
 }
 
 add_action('get_service_provider_title','sfhiv_service_get_provider_title');

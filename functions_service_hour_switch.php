@@ -50,7 +50,6 @@ function sfhiv_service_list_by_providers($query){
 		}
 		$service->providers = array();
 	}
-	// sort providers??
 	$query->posts = array_merge($providers,$services);
 	$query->post_count = count($query->posts);
 	return $query;
