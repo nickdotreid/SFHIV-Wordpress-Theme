@@ -24,7 +24,7 @@ function sfhiv_format_document($link=false,$title=false,$description=false){
 	<div class="attachment <?= $mime_type; ?>">
 		<?	if($link):	?><a href="<?=$link;?>"><? endif; ?>
 			<i class="attachment"></i>
-			<?=apply_filters('the_title',$title);?>
+			<?=apply_filters('the_title',$title,false);?>
 		<?	if($link):	?></a><? endif; ?>
 		<span class="document-type type" ><?=$mime_type;?></span>
 		<span class="document-description description">
