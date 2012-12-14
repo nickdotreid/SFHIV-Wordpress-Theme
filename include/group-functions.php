@@ -58,27 +58,6 @@ function sfhiv_group_get_events($ID=false,$args=array()){
 	return $events;
 }
 
-function sfhiv_group_has_services($ID=false){
-	$services = sfhiv_group_get_services($ID);
-	if($services->have_posts()){
-		return true;
-	}
-	return false;
-}
-
-function sfhiv_group_get_services($ID=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$services = new WP_Query( array(
-		'connected_type' => 'group_services',
-		'connected_items' => $ID,
-		'nopaging' => true,
-		'post_type' => 'sfhiv_service',
-	));
-	return $services;
-}
-
 function sfhiv_group_has_studies($ID=false){
 	$studies = sfhiv_group_get_studies($ID);
 	if($studies->have_posts()){
