@@ -80,14 +80,8 @@ function sfhiv_group_get_services($ID=false){
 }
 
 function sfhiv_group_has_studies($ID=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$services = new WP_Query( array(
-		'connected_type' => 'sfhiv_group_study',
-		'connected_items' => get_the_ID(),
-	));
-	if($services->have_posts()){
+	$studies = sfhiv_group_get_studies($ID);
+	if($studies->have_posts()){
 		return true;
 	}
 	return false;
@@ -97,13 +91,13 @@ function sfhiv_group_get_studies($id=false){
 	if(!$ID){
 		$ID = get_the_ID();
 	}
-	$services = new WP_Query( array(
+	$studies = new WP_Query( array(
 		'post_type' => 'sfhiv_study',
 		'connected_type' => 'sfhiv_group_study',
-		'connected_items' => get_the_ID(),
+		'connected_items' => $ID,
 		'nopaging' => true,
 	));
-	return $services;
+	return $studies;
 }
 
 ?>
