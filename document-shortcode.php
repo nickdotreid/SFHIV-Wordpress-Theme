@@ -24,7 +24,7 @@ function sfhiv_format_document($link=false,$title=false,$description=false){
 	<div class="attachment <?= $mime_type; ?>">
 		<?	if($link):	?><a href="<?=$link;?>"><? endif; ?>
 			<i class="attachment"></i>
-			<?=apply_filters('the_title',$title);?>
+			<?=apply_filters('the_title',$title,false);?>
 		<?	if($link):	?></a><? endif; ?>
 		<span class="document-type type" ><?=$mime_type;?></span>
 		<span class="document-description description">
@@ -48,7 +48,9 @@ function sfhiv_get_mime_type($file){
 		,"docx"=>"application/msword"
 		,"doc"=>"application/msword"
 		,"xls"=>"application/vnd.ms-excel"
+		,"xlsx"=>"application/vnd.ms-excel"
 		,"ppt"=>"application/vnd.ms-powerpoint"
+		,"pptx"=>"application/vnd.ms-powerpoint"
 		,"gif"=>"image/gif"
 		,"png"=>"image/png"
 		,"jpeg"=>"image/jpg"
@@ -69,6 +71,7 @@ function sfhiv_get_mime_type($file){
 		,"html"=>"text/html"
 	);
 	$extension = strtolower(end(explode('.',$file)));
+	if(!isset($mime_types[$extension])) return false;
 	return $mime_types[$extension];
 }
 

@@ -50,7 +50,7 @@ function sfhiv_group_get_events($ID=false,$args=array()){
 	}
 	$events = new WP_Query( array_merge(array(
 		'connected_type' => 'group_events',
-		'connected_items' => get_the_ID(),
+		'connected_items' => $ID,
 		'nopaging' => true,
 		'post_type' => 'sfhiv_event',
 		'sfhiv_event_selection' => 'all',
@@ -58,58 +58,25 @@ function sfhiv_group_get_events($ID=false,$args=array()){
 	return $events;
 }
 
-function sfhiv_group_has_services($ID=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$services = new WP_Query( array(
-		'connected_type' => 'group_services',
-		'connected_items' => get_the_ID(),
-	));
-	if($services->have_posts()){
-		return true;
-	}
-	return false;
-}
-
-function sfhiv_group_get_services($id=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$services = new WP_Query( array(
-		'connected_type' => 'group_services',
-		'connected_items' => get_the_ID(),
-		'nopaging' => true,
-		'post_type' => 'sfhiv_service',
-	));
-	return $services;
-}
-
 function sfhiv_group_has_studies($ID=false){
-	if(!$ID){
-		$ID = get_the_ID();
-	}
-	$services = new WP_Query( array(
-		'connected_type' => 'sfhiv_group_study',
-		'connected_items' => get_the_ID(),
-	));
-	if($services->have_posts()){
+	$studies = sfhiv_group_get_studies($ID);
+	if($studies->have_posts()){
 		return true;
 	}
 	return false;
 }
 
-function sfhiv_group_get_studies($id=false){
+function sfhiv_group_get_studies($ID=false){
 	if(!$ID){
 		$ID = get_the_ID();
 	}
-	$services = new WP_Query( array(
+	$studies = new WP_Query( array(
 		'post_type' => 'sfhiv_study',
 		'connected_type' => 'sfhiv_group_study',
-		'connected_items' => get_the_ID(),
+		'connected_items' => $ID,
 		'nopaging' => true,
 	));
-	return $services;
+	return $studies;
 }
 
 ?>

@@ -12,7 +12,7 @@ else:
 	$end_time = sfhiv_event_get_end_time(get_the_ID());
 ?>
 <div class="time">
-<?	if($end_time && $end_time!=$time):	?>
+<?	if($end_time && $end_time!=$start_time):	?>
 	<span class="start">
 		<?=date($time_format,$start_time);?>
 	</span>

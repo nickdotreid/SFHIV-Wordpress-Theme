@@ -88,27 +88,6 @@ function sfhiv_group_page_list_group_events(){
 	));
 }
 
-add_action('navigation','sfhiv_group_navigation_services_link',1);
-add_action('short_navigation','sfhiv_group_navigation_services_link',1);
-function sfhiv_group_navigation_services_link(){
-	if (get_post_type() != 'sfhiv_group') return;
-	$services = sfhiv_group_get_services();
-	if($services->post_count < 1) return;
-	echo '<a href="'.get_permalink().'#services">Services</a>';
-}
-
-add_action('get_footer','sfhiv_group_page_list_group_services',22);
-function sfhiv_group_page_list_group_services(){
-	if (!is_singular('sfhiv_group')) return;
-	$services = sfhiv_group_get_services();
-	do_action('sfhiv_loop',$services,array(
-		"id" => "services",
-		"title" => "Services",
-		"list_element" => "short",
-		"show_filters" => false,
-	));
-}
-
 add_action('navigation','sfhiv_group_navigation_studies_link',1);
 //add_action('short_navigation','sfhiv_group_navigation_studies_link',1);
 function sfhiv_group_navigation_studies_link(){

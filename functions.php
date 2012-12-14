@@ -77,6 +77,8 @@ function sfhiv_loop_items($query=false,$args=array()){
 		"list_element" => "short",
 		"show_filters" => true,
 		"show_empty" => false,
+		"wrap_before" => false,
+		"wrap_after" => false,
 	),$args);
 	$args = apply_filters('sfhiv_loop_arguments',$args,$query->query_vars['post_type']);
 	if($query->post_count<1 && !$args['show_empty']) return;

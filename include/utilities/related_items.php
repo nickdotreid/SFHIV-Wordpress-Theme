@@ -35,8 +35,8 @@ function sfhiv_get_taxonomy_in($query,$taxonomy_name,$fields=false){
 			}
 		}
 	}
-	foreach($taxonomies as $taxonomy){	// loop all entries to error check
-		if(array_key_exists('invalid_taxonomy',$taxonomy)){
+	foreach($taxonomies as $taxonomy){
+		if(is_array($taxonomy) && isset($taxonomy['invalid_taxonomy'])){
 			return array();
 		}
 	}

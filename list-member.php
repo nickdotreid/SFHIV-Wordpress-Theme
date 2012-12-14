@@ -1,4 +1,5 @@
 <?
+if(!isset($show_contact_info)) $show_contact_info = false;
 $profile_url = get_the_author_meta('sfhiv_website',$user->ID);
 ?>
 <article id="user-<?=$user->ID;?>" class="member <?if($show_phone || $show_email) echo "has_contact";?>">
