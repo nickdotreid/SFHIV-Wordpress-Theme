@@ -70,8 +70,8 @@
 			<nav id="access" class="menu-justified" role="navigation">
 				<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
-				<div class="menu-item">
-					<a class="home home-nav-item" href="<?php echo home_url( '/' ); ?>"><i></i>Home</a>
+				<div class="menu-item menu-item-home <? if(is_front_page()) echo "current-menu-item"; ?>">
+					<a href="<?php echo home_url( '/' ); ?>"><i></i>Home</a>
 				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				<div class="menu-item search-form-item">

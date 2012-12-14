@@ -2394,80 +2394,6 @@ h4 a:hover {
     width: auto;
   }
 }
-#access {
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-}
-#access .menu {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  padding: 7px 0px;
-  clear: both;
-}
-#access .menu ul {
-  margin: 0px;
-  padding: 0px;
-}
-#access .menu li {
-  list-style-type: none;
-}
-#access .menu .menu-item {
-  display: block;
-  float: left;
-  width: auto;
-  font-family: 'Dosis', verdana, sans-serif;
-  font-weight: 300;
-  padding: 7px 28px;
-  font-size: 18px;
-  margin: 0px;
-  color: #00678c;
-}
-#access .menu .menu-item .sub-menu {
-  display: none;
-}
-#access .menu .menu-item a,
-#access .menu .menu-item a:visited {
-  color: #00678c;
-  text-decoration: none;
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  text-shadow: 1px 1px 3px #FFF;
-}
-#access .menu .menu-item a:hover {
-  color: #009fd9;
-}
-#access .menu .menu-item.current-menu-item,
-#access .menu .menu-item.current-page-ancestor {
-  background-color: transparent;
-  background-image: url("../i/background-orange.png");
-  background-repeat: repeat;
-  background-position: top left;
-  color: #FFF;
-}
-#access .menu .menu-item.current-menu-item a,
-#access .menu .menu-item.current-page-ancestor a,
-#access .menu .menu-item.current-menu-item a:visited,
-#access .menu .menu-item.current-page-ancestor a:visited,
-#access .menu .menu-item.current-menu-item a:hover,
-#access .menu .menu-item.current-page-ancestor a:hover {
-  color: #FFF;
-  text-shadow: 0px 0px 0px #FFF;
-}
-@media all and (max-width: 970px) {
-  #access .menu .menu-item {
-    padding: 7px 21px;
-    font-size: 18px;
-  }
-}
-@media all and (max-width: 720px) {
-  #access {
-    display: none;
-  }
-}
 #status-warning {
   background-color: #fdf1af;
 }
@@ -3205,6 +3131,115 @@ h4 a:hover {
 @media all and (min-width: 720px) {
   .sidebar .menu {
     margin-right: 14px;
+  }
+}
+#access {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+#access .menu {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+#access .menu ul {
+  margin: 0px;
+  padding: 0px;
+}
+#access .menu li {
+  list-style-type: none;
+}
+#access .menu .menu-item {
+  display: block;
+  float: left;
+  width: auto;
+  font-family: 'Dosis', verdana, sans-serif;
+  font-weight: 300;
+  padding: 7px 28px;
+  font-size: 18px;
+  margin: 0px;
+  color: #00678c;
+}
+#access .menu .menu-item .sub-menu {
+  display: none;
+}
+#access .menu .menu-item a,
+#access .menu .menu-item a:visited {
+  color: #00678c;
+  text-decoration: none;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  text-shadow: 1px 1px 3px #FFF;
+}
+#access .menu .menu-item a:hover {
+  color: #009fd9;
+}
+#access .menu .menu-item.current-menu-item,
+#access .menu .menu-item.current-page-ancestor {
+  background-color: transparent;
+  background-image: url("../i/background-orange.png");
+  background-repeat: repeat;
+  background-position: top left;
+  color: #FFF;
+}
+#access .menu .menu-item.current-menu-item a,
+#access .menu .menu-item.current-page-ancestor a,
+#access .menu .menu-item.current-menu-item a:visited,
+#access .menu .menu-item.current-page-ancestor a:visited,
+#access .menu .menu-item.current-menu-item a:hover,
+#access .menu .menu-item.current-page-ancestor a:hover {
+  color: #FFF;
+  text-shadow: 0px 0px 0px #FFF;
+}
+#access .menu-item-home {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 30px;
+  float: left;
+  background-color: transparent;
+  background-image: none;
+  background-repeat: repeat;
+  background-position: top left;
+}
+#access .menu-item-home a {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../i/home_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  text-indent: 3000em;
+}
+#access .menu-item-home a:hover {
+  background-image: url("../i/home_icon_hover.png");
+}
+#access .menu-item-home.current-menu-item {
+  background-image: url("../i/background-orange.png");
+}
+#access .menu-item-home.current-menu-item a {
+  background-image: url("../i/home_icon_hover.png");
+}
+#access .menu-item-home.current-menu-item a:hover {
+  background-image: url("../i/home_icon.png");
+}
+@media all and (max-width: 970px) {
+  #access .menu .menu-item {
+    padding: 7px 21px;
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 720px) {
+  #access {
+    display: none;
   }
 }
 #content .entry-header-full {
