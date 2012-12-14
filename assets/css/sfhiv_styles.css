@@ -2386,7 +2386,7 @@ h4 a:hover {
 }
 @media all and (max-width: 720px) {
   .container {
-    width: 900px;
+    width: 450px;
   }
 }
 @media all and (max-width: 500px) {
@@ -3812,18 +3812,81 @@ a .date-calendar {
   line-height: 1.2em;
   font-style: italic;
 }
-.brand-container {
+#branding {
+  background-image: url('../i/sf_seal_bg_large.jpg');
+  background-repeat: no-repeat;
+  background-position: 30px 0px;
+}
+#branding .inner {
+  background-image: url('../i/white-gradient-up-50.png');
+  background-repeat: repeat-x;
+  background-position: center bottom;
   position: relative;
-  margin-top: 28px;
+  height: 100%;
+}
+#branding .brand-container {
+  position: relative;
+  margin-top: 21px;
+  margin-bottom: 70px;
+}
+#branding .divider-flush {
+  padding-top: 0px;
+  height: 9px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+#access {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
 }
 @media all and (max-width: 970px) {
-  
+  #site-title {
+    background-color: transparent;
+  }
+  #site-title a {
+    background-image: url("../i/site-title-small.png");
+    height: 59px;
+    width: 200px;
+  }
+  #site-description {
+    top: 5px;
+    font-size: 14px;
+  }
+  #branding {
+    background-position: -100px 0px;
+  }
 }
 @media all and (max-width: 720px) {
-  
+  #branding {
+    background-position: -200px 0px;
+  }
+  #branding .brand-container {
+    margin-top: 21px;
+    margin-bottom: 14px;
+  }
 }
 @media all and (max-width: 500px) {
-  
+  #branding {
+    background-image: none;
+  }
+  #branding .brand-container {
+    margin: 7px 14px 14px;
+  }
+  #site-title {
+    background-color: transparent;
+  }
+  #site-title a {
+    background-image: url("../i/site-title-small.png");
+    height: 59px;
+    width: 200px;
+  }
+  #site-description {
+    position: static;
+    text-align: left;
+  }
 }
 .list .filters {
   display: block;
