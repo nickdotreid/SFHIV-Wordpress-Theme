@@ -66,7 +66,7 @@ function sfhiv_group_has_studies($ID=false){
 	return false;
 }
 
-function sfhiv_group_get_studies($id=false){
+function sfhiv_group_get_studies($ID=false){
 	if(!$ID){
 		$ID = get_the_ID();
 	}
