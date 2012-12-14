@@ -3793,7 +3793,8 @@ a .date-calendar {
   background-image: url("../i/site-title.png");
   background-repeat: no-repeat;
   background-position: 0px 0px;
-  height: 80px;
+  height: 113px;
+  width: 382px;
   overflow: hidden;
   text-indent: 3000em;
 }
@@ -3802,32 +3803,18 @@ a .date-calendar {
 }
 #site-description {
   display: block;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  text-align: right;
   color: #00678c;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.2em;
   font-style: italic;
-  font-size: 12px;
-  text-shadow: 1px 1px 6px #FFF;
 }
-#branding .inner {
+.brand-container {
   position: relative;
-  height: 100%;
-}
-#branding .inner hgroup {
-  margin-bottom: 16px;
-}
-#branding .inner .divider-flush {
-  padding-top: 0px;
-  height: 9px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-}
-#branding .inner #access {
-  position: absolute;
-  bottom: 9px;
-  width: 100%;
+  margin-top: 28px;
 }
 @media all and (max-width: 970px) {
   
@@ -3837,42 +3824,6 @@ a .date-calendar {
 }
 @media all and (max-width: 500px) {
   
-}
-#section-top {
-  width: 518px;
-}
-@media all and (max-width: 970px) {
-  #section-top {
-    width: 450px;
-    text-align: right;
-    font-size: 18px;
-    line-height: 1.2em;
-  }
-  #section-top .widget {
-    margin-left: 14px;
-  }
-}
-@media all and (max-width: 720px) {
-  #section-top {
-    display: block;
-    width: 225px;
-    clear: none;
-    float: right;
-    font-size: 14px;
-    line-height: 1.2em;
-    font-family: 'Dosis', verdana, sans-serif;
-    font-weight: 300;
-  }
-  #section-top .widget {
-    margin-top: 7px;
-    margin-left: 7px;
-  }
-}
-@media all and (max-width: 500px) {
-  #section-top {
-    display: block;
-    clear: both;
-  }
 }
 .list .filters {
   display: block;

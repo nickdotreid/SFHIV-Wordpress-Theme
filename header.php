@@ -61,7 +61,7 @@
 <?php do_action( 'before' ); ?>
 	<header id="branding" class="container <?=apply_filters("header-class","");?>" role="banner" style="<?=apply_filters("header-styles","");?>">
 		<div class="inner header-inner">
-			<hgroup>
+			<hgroup class="brand-container">
 				<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 id="site-description"><?php echo preg_replace('/\/n/','<br />',get_bloginfo( 'description', 'raw' )); ?></h2>
 				<div class="clear"></div>
