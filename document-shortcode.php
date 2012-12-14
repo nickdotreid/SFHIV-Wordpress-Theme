@@ -69,6 +69,7 @@ function sfhiv_get_mime_type($file){
 		,"html"=>"text/html"
 	);
 	$extension = strtolower(end(explode('.',$file)));
+	if(!isset($mime_types[$extension])) return false;
 	return $mime_types[$extension];
 }
 
