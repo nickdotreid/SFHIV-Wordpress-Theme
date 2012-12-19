@@ -3214,25 +3214,25 @@ h4 a:hover {
   height: 100%;
   background-color: transparent;
   background-image: url("../i/sfhiv_icon_set.png");
-  background-position: -180px -35px;
+  background-position: -185px 5px;
   background-repeat: no-repeat;
   overflow: hidden;
   text-indent: 3000em;
 }
 #access .menu-item-home a:hover {
   background-image: url("../i/sfhiv_icon_set.png");
-  background-position: -180px 5px;
+  background-position: -220px 5px;
 }
 #access .menu-item-home.current-menu-item {
   background-image: url("../i/background-orange.png");
 }
 #access .menu-item-home.current-menu-item a {
   background-image: url("../i/sfhiv_icon_set.png");
-  background-position: -153px 5px;
+  background-position: -150px 5px;
 }
 #access .menu-item-home.current-menu-item a:hover {
   background-image: url("../i/sfhiv_icon_set.png");
-  background-position: -153px 5px;
+  background-position: -150px 5px;
 }
 @media all and (max-width: 970px) {
   #access .menu .menu-item {
