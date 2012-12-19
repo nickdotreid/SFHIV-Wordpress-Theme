@@ -4391,6 +4391,11 @@ a .date-calendar {
   display: block;
   width: 120px;
 }
+@media all and (max-width: 970px) {
+  #access .search-form-item {
+    display: none;
+  }
+}
 body.search .list .post.no-results {
   border-bottom: 0px;
 }
